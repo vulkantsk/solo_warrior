@@ -1,0 +1,257 @@
+"lang"
+{
+	"Language"		"russian"
+	"Tokens"
+	{		
+
+		"addon_game_name"							"Solo Warrior"
+		"DOTA_GameMode_15"	                        "Solo Warrior"
+		"game_mode_15"				                "Solo Warrior"
+		"DOTA_GoodGuys"                             "Solo Warrior"
+
+		"donate_list_name_heroes"		"Расходники"
+		"donate_list_name_artifacts"	"Артефакты"
+		"donate_button_text"			"Patreon"
+
+		"DOTA_SUBSHOP_CONSUMABLES"			"Специальные"
+		"DOTA_SUBSHOP_ATTRIBUTES"			"Базовые"
+		"DOTA_SUBSHOP_WEAPONS_ARMOR"		"Улучшенные"
+		"DOTA_SUBSHOP_MISC"					"Финальные"
+		"DOTA_SUBSHOP_SECRETSHOP"			"555"
+
+		"DOTA_SUBSHOP_RECIPE_BASICS"		"Аксессуары"
+		"DOTA_SUBSHOP_RECIPE_SUPPORT"		"Поддержка"
+		"DOTA_SUBSHOP_RECIPE_MAGICS"		"Магический"
+		"DOTA_SUBSHOP_RECIPE_DEFENSE"		"Броня"
+		"DOTA_SUBSHOP_RECIPE_WEAPONS"		"Оружие"
+		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		"Артефакты"
+
+//Items
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+
+//Baseitems
+//str
+		"DOTA_Tooltip_ability_item_str_1_1"							"Str"
+		"DOTA_Tooltip_ability_item_str_1_1_Description"				"Str описание" 		
+		"DOTA_Tooltip_ability_item_str_1_1_bonus_value"				"+$str" 		
+		
+		"DOTA_Tooltip_ability_item_str_1_2"							"Str"
+		"DOTA_Tooltip_ability_item_str_1_2_Description"				"Str описание" 		
+		"DOTA_Tooltip_ability_item_str_1_2_bonus_value"				"+$str" 		
+		
+		"DOTA_Tooltip_ability_item_str_1_3"							"Str"
+		"DOTA_Tooltip_ability_item_str_1_3_Description"				"Str описание" 		
+		"DOTA_Tooltip_ability_item_str_1_3_bonus_value"				"+$str" 		
+//agi
+		"DOTA_Tooltip_ability_item_agi_1_1"							"agi"
+		"DOTA_Tooltip_ability_item_agi_1_1_Description"				"agi описание" 		
+		"DOTA_Tooltip_ability_item_agi_1_1_bonus_value"				"+$agi" 		
+		
+		"DOTA_Tooltip_ability_item_agi_1_2"							"agi"
+		"DOTA_Tooltip_ability_item_agi_1_2_Description"				"agi описание" 		
+		"DOTA_Tooltip_ability_item_agi_1_2_bonus_value"				"+$agi" 		
+		
+		"DOTA_Tooltip_ability_item_agi_1_3"							"agi"
+		"DOTA_Tooltip_ability_item_agi_1_3_Description"				"agi описание" 		
+		"DOTA_Tooltip_ability_item_agi_1_3_bonus_value"				"+$agi" 		
+//int
+		"DOTA_Tooltip_ability_item_int_1_1"							"int"
+		"DOTA_Tooltip_ability_item_int_1_1_Description"				"int описание" 		
+		"DOTA_Tooltip_ability_item_int_1_1_bonus_value"				"+$int" 		
+		
+		"DOTA_Tooltip_ability_item_int_1_2"							"int"
+		"DOTA_Tooltip_ability_item_int_1_2_Description"				"int описание" 		
+		"DOTA_Tooltip_ability_item_int_1_2_bonus_value"				"+$int" 		
+		
+		"DOTA_Tooltip_ability_item_int_1_3"							"int"
+		"DOTA_Tooltip_ability_item_int_1_3_Description"				"int описание" 		
+		"DOTA_Tooltip_ability_item_int_1_3_bonus_value"				"+$int" 		
+//stat
+		"DOTA_Tooltip_ability_item_stat_1_1"							"stat"
+		"DOTA_Tooltip_ability_item_stat_1_1_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_1_bonus_value"				"+$all" 		
+		
+		"DOTA_Tooltip_ability_item_stat_1_2"							"stat"
+		"DOTA_Tooltip_ability_item_stat_1_2_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_2_bonus_value"				"+$all" 		
+		
+		"DOTA_Tooltip_ability_item_stat_1_3"							"stat"
+		"DOTA_Tooltip_ability_item_stat_1_3_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_3_bonus_value"				"+$all" 		
+//dmg
+		"DOTA_Tooltip_ability_item_dmg_1_1"							"dmg"
+		"DOTA_Tooltip_ability_item_dmg_1_1_Description"				"dmg описание" 		
+		"DOTA_Tooltip_ability_item_dmg_1_1_bonus_value"				"+$damage" 		
+		
+		"DOTA_Tooltip_ability_item_dmg_1_2"							"dmg"
+		"DOTA_Tooltip_ability_item_dmg_1_2_Description"				"dmg описание" 		
+		"DOTA_Tooltip_ability_item_dmg_1_2_bonus_value"				"+$damage" 		
+		
+		"DOTA_Tooltip_ability_item_dmg_1_3"							"dmg"
+		"DOTA_Tooltip_ability_item_dmg_1_3_Description"				"dmg описание" 		
+		"DOTA_Tooltip_ability_item_dmg_1_3_bonus_value"				"+$damage" 		
+//as
+		"DOTA_Tooltip_ability_item_as_1_1"							"as"
+		"DOTA_Tooltip_ability_item_as_1_1_Description"				"as описание" 		
+		"DOTA_Tooltip_ability_item_as_1_1_bonus_value"				"+$attack" 		
+		
+		"DOTA_Tooltip_ability_item_as_1_2"							"as"
+		"DOTA_Tooltip_ability_item_as_1_2_Description"				"as описание" 		
+		"DOTA_Tooltip_ability_item_as_1_2_bonus_value"				"+$attack" 		
+		
+		"DOTA_Tooltip_ability_item_as_1_3"							"as"
+		"DOTA_Tooltip_ability_item_as_1_3_Description"				"as описание" 		
+		"DOTA_Tooltip_ability_item_as_1_3_bonus_value"				"+$attack" 		
+//hp
+		"DOTA_Tooltip_ability_item_hp_1_1"							"hp"
+		"DOTA_Tooltip_ability_item_hp_1_1_Description"				"hp описание" 		
+		"DOTA_Tooltip_ability_item_hp_1_1_bonus_value"				"+$health" 		
+		
+		"DOTA_Tooltip_ability_item_hp_1_2"							"hp"
+		"DOTA_Tooltip_ability_item_hp_1_2_Description"				"hp описание" 		
+		"DOTA_Tooltip_ability_item_hp_1_2_bonus_value"				"+$health" 		
+		
+		"DOTA_Tooltip_ability_item_hp_1_3"							"hp"
+		"DOTA_Tooltip_ability_item_hp_1_3_Description"				"hp описание" 		
+		"DOTA_Tooltip_ability_item_hp_1_3_bonus_value"				"+$health" 		
+//hpreg
+		"DOTA_Tooltip_ability_item_hpreg_1_1"							"hpreg"
+		"DOTA_Tooltip_ability_item_hpreg_1_1_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_1_bonus_value"				"+$hp_regen"
+		
+		"DOTA_Tooltip_ability_item_hpreg_1_2"							"hpreg"
+		"DOTA_Tooltip_ability_item_hpreg_1_2_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_2_bonus_value"				"+$hp_regen"
+		
+		"DOTA_Tooltip_ability_item_hpreg_1_3"							"hpreg"
+		"DOTA_Tooltip_ability_item_hpreg_1_3_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_3_bonus_value"				"+$hp_regen"
+//mp
+		"DOTA_Tooltip_ability_item_mp_1_1"							"mp"
+		"DOTA_Tooltip_ability_item_mp_1_1_Description"				"mp описание" 		
+		"DOTA_Tooltip_ability_item_mp_1_1_bonus_value"				"+$mana" 		
+		
+		"DOTA_Tooltip_ability_item_mp_1_2"							"mp"
+		"DOTA_Tooltip_ability_item_mp_1_2_Description"				"mp описание" 		
+		"DOTA_Tooltip_ability_item_mp_1_2_bonus_value"				"+$mana" 		
+		
+		"DOTA_Tooltip_ability_item_mp_1_3"							"mp"
+		"DOTA_Tooltip_ability_item_mp_1_3_Description"				"mp описание" 		
+		"DOTA_Tooltip_ability_item_mp_1_3_bonus_value"				"+$mana" 		
+//mpreg
+		"DOTA_Tooltip_ability_item_mpreg_1_1"							"mpreg"
+		"DOTA_Tooltip_ability_item_mpreg_1_1_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_1_bonus_value"				"+$mana_regen"
+		
+		"DOTA_Tooltip_ability_item_mpreg_1_2"							"mpreg"
+		"DOTA_Tooltip_ability_item_mpreg_1_2_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_2_bonus_value"				"+$mana_regen"
+		
+		"DOTA_Tooltip_ability_item_mpreg_1_3"							"mpreg"
+		"DOTA_Tooltip_ability_item_mpreg_1_3_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_3_bonus_value"				"+$mana_regen"
+//resist
+		"DOTA_Tooltip_ability_item_resist_1_1"							"resist"
+		"DOTA_Tooltip_ability_item_resist_1_1_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_1_bonus_value"				"%+$spell_resist"
+		
+		"DOTA_Tooltip_ability_item_resist_1_2"							"resist"
+		"DOTA_Tooltip_ability_item_resist_1_2_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_2_bonus_value"				"%+$spell_resist"
+		
+		"DOTA_Tooltip_ability_item_resist_1_3"							"resist"
+		"DOTA_Tooltip_ability_item_resist_1_3_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_3_bonus_value"				"%+$spell_resist"
+//spell
+		"DOTA_Tooltip_ability_item_spell_1_1"							"spell"
+		"DOTA_Tooltip_ability_item_spell_1_1_Description"				"spell описание"
+		"DOTA_Tooltip_ability_item_spell_1_1_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+		
+		"DOTA_Tooltip_ability_item_spell_1_2"							"spell"
+		"DOTA_Tooltip_ability_item_spell_1_2_Description"				"spell описание"
+		"DOTA_Tooltip_ability_item_spell_1_2_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+		
+		"DOTA_Tooltip_ability_item_spell_1_3"							"spell"
+		"DOTA_Tooltip_ability_item_spell_1_3_Description"				"spell описание"
+		"DOTA_Tooltip_ability_item_spell_1_3_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+//armor
+		"DOTA_Tooltip_ability_item_armor_1_1"							"armor"
+		"DOTA_Tooltip_ability_item_armor_1_1_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_1_bonus_value"				"+$armor" 		
+		
+		"DOTA_Tooltip_ability_item_armor_1_2"							"armor"
+		"DOTA_Tooltip_ability_item_armor_1_2_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_2_bonus_value"				"+$armor" 		
+		
+		"DOTA_Tooltip_ability_item_armor_1_3"							"armor"
+		"DOTA_Tooltip_ability_item_armor_1_3_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_3_bonus_value"				"+$armor" 		
+//block
+		"DOTA_Tooltip_ability_item_block_1_1"							"block"
+		"DOTA_Tooltip_ability_item_block_1_1_Description"				"block описание"
+		"DOTA_Tooltip_ability_item_block_1_1_bonus_value"				"+БЛОК УРОНА:"
+		
+		"DOTA_Tooltip_ability_item_block_1_2"							"block"
+		"DOTA_Tooltip_ability_item_block_1_2_Description"				"block описание"
+		"DOTA_Tooltip_ability_item_block_1_2_bonus_value"				"+БЛОК УРОНА:"
+		
+		"DOTA_Tooltip_ability_item_block_1_3"							"block"
+		"DOTA_Tooltip_ability_item_block_1_3_Description"				"block описание"
+		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"+БЛОК УРОНА:"
+//Craft1
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+
+		"DOTA_Tooltip_ability_item_str_armor_1_1"							"Прочная кольчуга"
+		"DOTA_Tooltip_ability_item_str_armor_1_1_Description"				"Делает героя гораздо живучее"
+		"DOTA_Tooltip_ability_item_str_armor_1_1_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_str_armor_1_1_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_str_armor_1_1_dmg_resist_pct"			"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
+
+		"DOTA_Tooltip_ability_item_str_armor_1_2"							"Прочная кольчуга"
+		"DOTA_Tooltip_ability_item_str_armor_1_2_Description"				"Делает героя гораздо живучее"
+		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_str_armor_1_2_dmg_resist_pct"			"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
+
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1"							"Шипованая накидка"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1_Description"				"Возвращает урон"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
+
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая накидка"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"Возвращает урон"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
+
+//Craft2
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1"							"Blade mail"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_Description"				"Броня, которая сокращает и отражает получаемый урон."
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_dmg"				"+$damage"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_resist_pct"				"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_return_pct"				"%ВОЗВРАЩЕНИЕ УРОНА:"
+
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2"							"Blade mail"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_Description"				"Броня, которая сокращает и отражает получаемый урон."
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_dmg"				"+$damage"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_resist_pct"				"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_return_pct"				"%ВОЗВРАЩЕНИЕ УРОНА:"
+
+	}	
+}

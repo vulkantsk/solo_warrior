@@ -1,0 +1,71 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	"npc_dota_hero_axe"
+	{
+		"override hero"				"npc_dota_hero_axe"
+		"ModelScale"				"1.2"
+		"HealthBarOffset"		"275"
+
+		"Ability1"		"axe_culling_blade_custom"
+		"Ability2"		"axe_anger_roar"
+		"Ability3"		"axe_counter_helix_custom"
+		"Ability4"		"axe_hot_blood"
+		"Ability5"		"axe_true_strength"		
+		"Ability6"		"axe_berserk_form"
+		"Ability7"					"generic_hidden"		
+		"Ability8"					"generic_hidden"		
+		"Ability10"		"special_bonus_exp_boost_20"
+		"Ability11"		"special_bonus_gold_income_240"
+		"Ability12"		"special_bonus_armor_5"
+		"Ability13"		"special_bonus_magic_resistance_15"
+		"Ability14"		"special_bonus_all_stats_10"
+		"Ability15"		"special_bonus_strength_25"
+		"Ability16"		"special_bonus_hp_regen_25"
+		"Ability17"		"special_bonus_strength_40"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"			"10"										// Damage range min.
+		"AttackDamageMax"			"30"										// Damage range max.
+		"AttackRate"				"2.2"									// Speed of attack.
+		"ProjectileSpeed"			"1550"									// Speed of projectile.
+		"AttackAnimationPoint"		"0.55"
+
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"									// Physical protection.
+		"MagicalResistance"			"50"									// Magical protection (percentage).
+
+		
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"25"										// Base strength
+		"AttributeStrengthGain"		"5"										// Strength bonus per level.
+		"AttributeBaseIntelligence"	"15"										// Base intelligence
+		"AttributeIntelligenceGain"	"3"										// Intelligence bonus per level.
+		"AttributeBaseAgility"		"20"										// Base agility
+		"AttributeAgilityGain"		"2"										// Agility bonus per level.
+	
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"									// Speed.
+		"MovementTurnRate"			"0.5"									// Turning rate.
+	
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"				"200"									// Base health.
+		"StatusHealthRegen"			"0.5"									// Health regeneration rate.
+		"StatusMana"				"100"											// Base mana.
+		"StatusManaRegen"			"1"									// Mana regeneration rate.
+		
+
+		"VisionNighttimeRange"		"1000"
+		"VisionDaytimeRange"		"1500"
+	}
+}

@@ -1,0 +1,364 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	//=================================================================================================================
+	// Templar Assassin: Refraction Holdout
+	//=================================================================================================================
+	"destructible_gate"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/gate/destructible_gate"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attacks_required"		"2"
+			}
+		}
+
+	}
+	"undestructible_gate"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/gate/undestructible_gate"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attacks_required"		"5"
+			}
+		}
+
+	}
+	"destructible_gate_anim"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/gate/destructible_gate_anim"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	}
+	"ability_test_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+	"ability_test_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+	"ability_test_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+	"ability_test_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+	"ability_test_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+	"ability_test_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tester"
+		"AbilityTextureName"			"zuus_arc_lightning"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	}
+
+	"axe_hot_blood"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/hot_blood"
+		"AbilityTextureName"			"axe/hot_blood"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"required_hp"		"35"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_regen"		"10"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_regen_pct"	"1"
+			}
+
+		}
+	}
+	"axe_culling_blade_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/culling_blade_custom"
+		"AbilityTextureName"			"axe/culling_blade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"8"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastRange"				"400"
+
+
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"125 150 175 200 250 300 350"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"300"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"150 200 250 300 400 500 600"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"		"10 20 30 40 60 80 100"
+			}
+
+		}
+	}
+	"axe_anger_roar"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/anger_roar"
+		"AbilityTextureName"			"axe/anger_roar"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"						"8"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"		
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"100"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"10 15 20 25 35 45 55"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_pct"		"10 15 20 25 35 45 55"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_scale"		"30"
+			}
+
+		}
+	}
+	"axe_counter_helix_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/counter_helix_custom"
+		"AbilityTextureName"			"axe/counter_helix"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"8"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		"AbilityCooldown"				"0.1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"trigger_chance"		"25"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"base_damage"			"35 70 105 140 180 220 260"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"attack_damage"			"50"
+			}
+		}
+	}
+	"axe_berserk_form"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/berserk_form"
+		"AbilityTextureName"			"axe/berserk_form"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"						"3"
+		"RequiredLevel"					"8"
+		"LevelsBetweenUpgrades"			"8"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"
+
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 300 400 600 800"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"decrease_armor"		"5 10 15 20 25"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"				"100 150 200 300 400"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_ms"				"50 75 100 150 200"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_bat"				"1.5 1.3 1.1 1 0.9"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cleave_damage_pct"		"50"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cleave_radius"			"350"
+			}
+
+		}
+	}
+	"axe_true_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/true_strength"
+		"AbilityTextureName"			"axe/true_strength"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"30"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str_pct"			"75"
+			}
+		}
+	}	
+}

@@ -1,0 +1,1597 @@
+
+"DOTAAbilities"
+{
+	"item_recipe_str_armor_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_armor_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_armor_1_3"
+		}
+	}
+	"item_str_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_armor_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_resist_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_str_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_str_armor_1_1"
+		}
+	}
+
+	"item_str_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_armor_1_2"
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_resist_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_dmg_armor_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_armor_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_1_3;item_armor_1_3"
+		}
+	}
+	"item_dmg_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"100 200"
+			}
+		}
+	}
+	"item_recipe_dmg_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_armor_1_1"
+		}
+	}
+
+	"item_dmg_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_2"
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"100 200"
+			}
+		}
+	}
+	"item_recipe_hp_block_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_1_3;item_block_1_3"
+		}
+	}
+	"item_hp_block_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_block_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_per_attack"			"25 50"
+			}
+		}
+	}
+	"item_recipe_hp_block_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_block_1_1"
+		}
+	}
+
+	"item_hp_block_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_block_1_2"
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_per_attack"			"25 50"
+			}
+		}
+	}
+	"item_recipe_stat_block_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_block_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_block_1_3"
+		}
+	}
+	"item_stat_block_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"			"25 50"
+			}
+		}
+	}
+	"item_recipe_stat_block_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_block_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_block_1_1"
+		}
+	}
+
+	"item_stat_block_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_2"
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"			"25 50"
+			}
+		}
+	}
+	"item_recipe_stat_armor_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_armor_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_armor_1_3"
+		}
+	}
+	"item_stat_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_armor_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_block_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_stat_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_armor_1_1"
+		}
+	}
+
+	"item_stat_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_armor_1_2"
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_block_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_hp_hpreg_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_hpreg_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_1_3;item_hpreg_1_3"
+		}
+	}
+	"item_hp_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_hpreg_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_hp_hpreg_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_hpreg_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_hpreg_1_1"
+		}
+	}
+
+	"item_hp_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_hpreg_1_2"
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_pct"			"50 100"
+			}
+		}
+	}
+	"item_recipe_dmg_str_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_str_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_1_3;item_str_1_3"
+		}
+	}
+	"item_dmg_str_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"			"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"0.2"
+			}
+		}
+	}
+	"item_recipe_dmg_str_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_str_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_str_1_1"
+		}
+	}
+
+	"item_dmg_str_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_2"
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"			"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"0.2"
+			}
+		}
+	}
+	"item_recipe_hp_stat_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_stat_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_1_3;item_stat_1_3"
+		}
+	}
+	"item_hp_stat_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"			"4 8"
+			}
+		}
+	}
+	"item_recipe_hp_stat_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_stat_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_stat_1_1"
+		}
+	}
+
+	"item_hp_stat_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_2"
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"			"4 8"
+			}
+		}
+	}
+	"item_recipe_str_resist_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_resist_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_resist_1_3"
+		}
+	}
+	"item_str_resist_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/str_resist_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"4 8"
+			}
+		}
+	}
+	"item_recipe_str_resist_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_resist_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_str_resist_1_1"
+		}
+	}
+
+	"item_str_resist_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/str_resist_1_2"
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"4 8"
+			}
+		}
+	}
+	"item_recipe_stat_hpreg_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_hpreg_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_hpreg_1_3"
+		}
+	}
+	"item_stat_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/stat_hpreg_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"4 8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_regen"			"100 200"
+			}
+		}
+	}
+	"item_recipe_stat_hpreg_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_hpreg_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_hpreg_1_1"
+		}
+	}
+
+	"item_stat_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/stat_hpreg_1_2"
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"4 8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_regen"			"100 200"
+			}
+		}
+	}
+	"item_recipe_stat_resist_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_resist_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_resist_1_3"
+		}
+	}
+	"item_stat_resist_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_resist_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"50 75"
+			}
+		}
+	}
+	"item_recipe_stat_resist_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_resist_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_resist_1_1"
+		}
+	}
+
+	"item_stat_resist_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_resist_1_2"
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"50 75"
+			}
+		}
+	}
+	"item_recipe_str_hpreg_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_hpreg_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_hpreg_1_3"
+		}
+	}
+	"item_str_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"4 8"
+			}
+		}
+	}
+	"item_recipe_str_hpreg_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_hpreg_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_str_hpreg_1_1"
+		}
+	}
+
+	"item_str_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_2"
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"4 8"
+			}
+		}
+	}
+	"item_recipe_dmg_stat_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_stat_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_1_3;item_stat_1_3"
+		}
+	}
+	"item_dmg_stat_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_stat_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_per_sec"			"50 100"
+			}
+		}
+	}
+	"item_recipe_dmg_stat_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_stat_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_stat_1_1"
+		}
+	}
+
+	"item_dmg_stat_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_stat_1_2"
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_per_sec"			"50 100"
+			}
+		}
+	}
+	"item_recipe_hp_armor_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"16"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_armor_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_1_3;item_armor_1_3"
+		}
+	}
+	"item_hp_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_armor_1_1"
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_decrease"			"50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_ms_decrease"			"50 100"
+			}
+		}
+	}
+	"item_recipe_hp_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"32"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_armor_1_1"
+		}
+	}
+
+	"item_hp_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_armor_1_2"
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_decrease"			"50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_ms_decrease"			"50 100"
+			}
+		}
+	}
+
+}

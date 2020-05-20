@@ -1,0 +1,6 @@
+"AddonInfo"
+{
+	"maps"			"template_map test"
+	"IsPlayable"	"1"
+	"MaxPlayers"	"5"
+}
