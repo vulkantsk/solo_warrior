@@ -7,7 +7,8 @@
 	//=================================================================================================================
 	"npc_gate_destructible_tier1"
 	{
-		"BaseClass"					"npc_dota_rotatable_building"	
+////		"BaseClass"					"npc_dota_rotatable_building"	
+		"BaseClass"					"npc_dota_creature"	
 		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
 		"ModelScale"				"1.0"
 		"IsDiscoverable"			"1"
@@ -59,7 +60,8 @@
 	//=================================================================================================================
 	"npc_gate_destructible_tier1_anim"
 	{
-		"BaseClass"					"npc_dota_rotatable_building"	
+//		"BaseClass"					"npc_dota_rotatable_building"	
+		"BaseClass"					"npc_dota_creature"	
 		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
 		"ModelScale"				"1.0"
 		"IsDiscoverable"			"1"
@@ -110,7 +112,8 @@
 	//=================================================================================================================
 	"npc_gate_undestructible_tier1"
 	{
-		"BaseClass"					"npc_dota_rotatable_building"	
+//		"BaseClass"					"npc_dota_rotatable_building"	
+		"BaseClass"					"npc_dota_creature"	
 		"Model"						"models/props_generic/gate_wooden_locked_03.vmdl"
 		"ModelScale"				"1.0"
 		"IsDiscoverable"			"1"
@@ -161,7 +164,8 @@
 	//=================================================================================================================
 	"npc_gate_undestructible_tier1_anim"
 	{
-		"BaseClass"					"npc_dota_rotatable_building"	
+//		"BaseClass"					"npc_dota_rotatable_building"	
+		"BaseClass"					"npc_dota_creature"	
 		"Model"						"models/props_generic/gate_wooden_destruction_03.vmdl"
 		"ModelScale"				"1.0"
 		"IsDiscoverable"			"1"
@@ -212,7 +216,8 @@
 	//=================================================================================================================
 	"npc_gate_blocked"
 	{
-		"BaseClass"					"npc_dota_rotatable_building"	
+//		"BaseClass"					"npc_dota_rotatable_building"	
+		"BaseClass"					"npc_dota_creature"	
 		"Model"						"models/props_rock/riveredge_rock_wall003a.vmdl"
 		"ModelScale"				"0.75"
 		"IsDiscoverable"			"1"

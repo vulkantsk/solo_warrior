@@ -13,7 +13,6 @@ end
 
 function Activate()
 	GameSettings:InitGameSettings()
---	GameRules:SetUseUniversalShopMode( true )
 
 
 	local GM = GameRules:GetGameModeEntity()
