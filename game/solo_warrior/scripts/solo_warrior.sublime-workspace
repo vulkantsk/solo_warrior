@@ -532,7 +532,7 @@
 			"file": "npc/npc_units_custom.txt",
 			"settings":
 			{
-				"buffer_size": 23264,
+				"buffer_size": 23498,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -550,7 +550,7 @@
 			"file": "vscripts/addon_game_mode.lua",
 			"settings":
 			{
-				"buffer_size": 796,
+				"buffer_size": 751,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -672,70 +672,10 @@
 			}
 		},
 		{
-			"file": "vscripts/items/tier1/craft_2/item_str_armor_dmg_armor_1.lua",
-			"settings":
-			{
-				"buffer_size": 2761,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "vscripts/game_settings.lua",
 			"settings":
 			{
 				"buffer_size": 25358,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "npc/tier1/craft_1_base.txt",
-			"settings":
-			{
-				"buffer_size": 5738,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "npc/tier1/craft_2_base.txt",
-			"settings":
-			{
-				"buffer_size": 3542,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vscripts/abilities/gate/undestructible_gate.lua",
-			"settings":
-			{
-				"buffer_size": 6241,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vscripts/items/tier1/craft_1/dmg_armor_1_1.lua",
-			"settings":
-			{
-				"buffer_size": 1083,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vscripts/items/tier1/craft_1/item_hp_stat_1.lua",
-			"settings":
-			{
-				"buffer_size": 2191,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "npc/tier1/craft_2.txt",
-			"settings":
-			{
-				"buffer_size": 25179,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -747,6 +687,39 @@
 				"buffer_size": 2271,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/game_spawner.lua",
+			"settings":
+			{
+				"buffer_size": 5608,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vscripts/abilities/gate/destructible_gate_anim.lua",
+			"settings":
+			{
+				"buffer_size": 2398,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/abilities/gate/destructible_gate.lua",
+			"settings":
+			{
+				"buffer_size": 6204,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vscripts/abilities/gate/undestructible_gate.lua",
+			"settings":
+			{
+				"buffer_size": 6241,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -867,6 +840,14 @@
 	],
 	"file_history":
 	[
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/npc/tier1/craft_1_base.txt",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/npc/tier1/craft_2_base.txt",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/npc/tier1/craft_2.txt",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/gate/destructible_gate.lua",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_hp_stat_1.lua",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/dmg_armor_1_1.lua",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/gate/undestructible_gate.lua",
+		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_2/item_str_armor_dmg_armor_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_dmg_armor_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_str_resist_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_hp_block_1.lua",
@@ -874,7 +855,6 @@
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_stat_armor_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_hp_hpreg_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_dmg_str_1.lua",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_hp_stat_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_stat_hpreg_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_stat_resist_1.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/items/tier1/craft_1/item_str_hpreg_1.lua",
@@ -905,7 +885,6 @@
 		"/C/Users/vulka/Desktop/scripts/npc/npc_abilities_custom.txt",
 		"/C/Users/vulka/Desktop/scripts/npc/npc_units_custom.txt",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/game_spawner.lua",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/gate/destructible_gate.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/spawn.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/npc/npc_heroes_custom.txt",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/resource/addon_english.txt",
@@ -916,7 +895,6 @@
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/boss_spawner.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/tester.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/gate/destructible_gate_anim.lua",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/vscripts/abilities/gate/undestructible_gate.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/libraries/keyvalues.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/scripts/npc/npc_units_custom.txt",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/boss_spawner.lua",
@@ -989,16 +967,11 @@
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/heroes/hero_axe/true_strength.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/heroes/hero_sven/shockwave.lua",
 		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/heroes/hero_meepo/master_shovel.lua",
-		"/C/Users/Виталий/Documents/roshdef/ability_template.lua.txt",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/roshan_def/scripts/vscripts/heroes/hero_monkey_king/immortal_secret.lua",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/gold_td/scripts/npc/npc_items_custom.txt",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/gold_td/scripts/vscripts/modifiers/mod_tracker.lua",
-		"/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/gold_td/scripts/vscripts/spawner.lua",
-		"/C/Users/Виталий/Desktop/npc/items.txt"
+		"/C/Users/Виталий/Documents/roshdef/ability_template.lua.txt"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -1012,6 +985,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"DOTA_HULL_SIZE_BARRACKS",
+			"destructible_gate_anim",
+			"npc_dota_creature",
+			"--",
+			"\t\t\"BaseClass\"\t\t\t\t\t\"npc_dota_rotatable_building\"\t\n",
 			"duration",
 			"decrease_manacost",
 			"modifier_item_hp_armor_1",
@@ -1134,12 +1112,7 @@
 			"1_1",
 			"Number",
 			"modifier_arena_rune_spikes",
-			"item_base_2",
-			"item_str_stat_agi_stat_1",
-			"modifier_item_str_armor_1",
-			"dmg_resist_pct",
-			"dmg_resist",
-			"bonus_value3"
+			"item_base_2"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1157,7 +1130,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1186,7 +1159,7 @@
 						"translation.y": 168.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1195,15 +1168,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23264,
+						"buffer_size": 23498,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								217,
-								217
+								398,
+								415
 							]
 						],
 						"settings":
@@ -1212,10 +1185,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 28.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1231,8 +1204,8 @@
 						"selection":
 						[
 							[
-								9640,
-								9640
+								948,
+								970
 							]
 						],
 						"settings":
@@ -1241,10 +1214,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 547.2,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1253,15 +1226,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 796,
+						"buffer_size": 751,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								511
+								25,
+								25
+							],
+							[
+								49,
+								49
+							],
+							[
+								70,
+								70
+							],
+							[
+								91,
+								91
 							]
 						],
 						"settings":
@@ -1301,7 +1286,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1330,7 +1315,7 @@
 						"translation.y": 2352.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1356,10 +1341,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 12264.8,
+						"translation.y": 10445.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1388,7 +1373,7 @@
 						"translation.y": 42.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1417,7 +1402,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -1446,7 +1431,7 @@
 						"translation.y": 77.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -1475,7 +1460,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1504,7 +1489,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1533,7 +1518,7 @@
 						"translation.y": 658.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1562,7 +1547,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -1591,7 +1576,7 @@
 						"translation.y": 280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -1620,7 +1605,7 @@
 						"translation.y": 495111.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1649,46 +1634,17 @@
 						"translation.y": 269753.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 22,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 17,
-					"file": "vscripts/items/tier1/craft_2/item_str_armor_dmg_armor_1.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1219,
-								1219
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
 					"file": "vscripts/game_settings.lua",
 					"semi_transient": false,
 					"settings":
@@ -1713,185 +1669,11 @@
 						"translation.y": 687.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "npc/tier1/craft_1_base.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5738,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5735,
-								19
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "npc/tier1/craft_2_base.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "vscripts/abilities/gate/undestructible_gate.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6241,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								254,
-								254
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "vscripts/items/tier1/craft_1/dmg_armor_1_1.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1083,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								643,
-								643
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "vscripts/items/tier1/craft_1/item_hp_stat_1.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								669,
-								697
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "npc/tier1/craft_2.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 25179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8555,
-								8555
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Dota Reborn Package/dota-kv/dotaKV.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4479.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 18,
 					"file": "vscripts/gamemode.lua",
 					"semi_transient": false,
 					"settings":
@@ -1903,8 +1685,66 @@
 						"selection":
 						[
 							[
-								530,
-								530
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 714.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "vscripts/game_spawner.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4920,
+								4929
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1784.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "vscripts/abilities/gate/destructible_gate_anim.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
 							]
 						],
 						"settings":
@@ -1916,11 +1756,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 21,
+					"file": "vscripts/abilities/gate/destructible_gate.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1672,
+								1698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "vscripts/abilities/gate/undestructible_gate.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
 					"file": "shops/test_shops.txt",
 					"semi_transient": false,
 					"settings":
@@ -1945,11 +1843,11 @@
 						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 24,
 					"file": "/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/resource/addon_russian.txt",
 					"semi_transient": false,
 					"settings":
@@ -1974,11 +1872,11 @@
 						"translation.y": 2389.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 25,
 					"file": "vscripts/items/tier1/baseitem/item_dmg_1.lua",
 					"semi_transient": false,
 					"settings":
@@ -2002,11 +1900,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 26,
 					"file": "vscripts/items/tier1/baseitem/item_spell_1.lua",
 					"semi_transient": false,
 					"settings":
@@ -2030,11 +1928,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 27,
 					"file": "/D/games/steam/steamapps/common/dota 2 beta/game/dota_addons/solo_warrior/resource/addon_english.txt",
 					"semi_transient": false,
 					"settings":
@@ -2059,7 +1957,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 26,
 					"type": "text"
 				}
 			]
@@ -2125,16 +2023,28 @@
 		"selected_items":
 		[
 			[
+				"de",
+				"vscripts\\abilities\\gate\\destructible_gate.lua"
+			],
+			[
+				"und",
+				"vscripts\\abilities\\gate\\undestructible_gate.lua"
+			],
+			[
+				"anim",
+				"vscripts\\abilities\\gate\\destructible_gate_anim.lua"
+			],
+			[
+				"game",
+				"vscripts\\game_spawner.lua"
+			],
+			[
 				"hp_st",
 				"vscripts\\items\\tier1\\craft_1\\item_hp_stat_1.lua"
 			],
 			[
 				"dmg_ar",
 				"vscripts\\items\\tier1\\craft_1\\item_dmg_armor_1.lua"
-			],
-			[
-				"und",
-				"vscripts\\abilities\\gate\\undestructible_gate.lua"
 			],
 			[
 				"str_re",
@@ -2167,10 +2077,6 @@
 			[
 				"abi",
 				"npc\\npc_abilities_custom.txt"
-			],
-			[
-				"game",
-				"vscripts\\game_settings.lua"
 			],
 			[
 				"dmg",
@@ -2223,10 +2129,6 @@
 			[
 				"gate",
 				"vscripts\\abilities\\gate\\destructible_gate.lua"
-			],
-			[
-				"anim",
-				"vscripts\\modifiers\\modifier_destructible_gate_anim.lua"
 			],
 			[
 				"uni",
@@ -2631,10 +2533,6 @@
 			[
 				"midas",
 				"scripts\\vscripts\\items\\custom\\midas_crown.lua"
-			],
-			[
-				"overr",
-				"scripts\\npc\\npc_abilities_override.txt"
 			]
 		],
 		"width": 0.0
@@ -2657,7 +2555,7 @@
 		],
 		"width": 587.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
