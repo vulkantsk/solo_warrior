@@ -207,25 +207,25 @@
 		"DOTA_Tooltip_ability__Description"				"Desc"
 		"DOTA_Tooltip_ability__"				""
 
-		"DOTA_Tooltip_ability_item_str_armor_1_1"							"Прочная кольчуга"
+		"DOTA_Tooltip_ability_item_str_armor_1_1"							"Крепкая броня"
 		"DOTA_Tooltip_ability_item_str_armor_1_1_Description"				"Делает героя гораздо живучее"
 		"DOTA_Tooltip_ability_item_str_armor_1_1_bonus_str"					"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_1_1_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_str_armor_1_1_dmg_resist_pct"			"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
 
-		"DOTA_Tooltip_ability_item_str_armor_1_2"							"Прочная кольчуга"
+		"DOTA_Tooltip_ability_item_str_armor_1_2"							"Крепкая броня"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_Description"				"Делает героя гораздо живучее"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_str"					"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_dmg_resist_pct"			"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
 
-		"DOTA_Tooltip_ability_item_dmg_armor_1_1"							"Шипованая накидка"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_Description"				"Возвращает урон"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
 
-		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая накидка"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"Возвращает урон"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
@@ -237,7 +237,7 @@
 		"DOTA_Tooltip_ability__Description"				"Desc"
 		"DOTA_Tooltip_ability__"				""
 
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1"							"Blade mail"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1"							"Кольчуга из лезвий"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_Description"				"Броня, которая сокращает и отражает получаемый урон."
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_armor"				"+$armor"
@@ -245,7 +245,7 @@
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_resist_pct"				"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_return_pct"				"%ВОЗВРАЩЕНИЕ УРОНА:"
 
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2"							"Blade mail"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2"							"Кольчуга из лезвий"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_Description"				"Броня, которая сокращает и отражает получаемый урон."
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_armor"				"+$armor"
