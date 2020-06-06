@@ -32,7 +32,8 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+//		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"150"
 		"HealthBarOffset"			"310"
 
@@ -84,7 +85,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"150"
 		"HealthBarOffset"			"310"
 
@@ -96,7 +97,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"900"
+		"StatusHealth"				"100"
 		"StatusHealthRegen"			"0"
 
 		// Team
@@ -136,7 +137,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"150"
 		"HealthBarOffset"			"390"
 
@@ -148,7 +149,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"
+		"StatusHealth"				"100"
 		"StatusHealthRegen"			"0"
 
 		// Team
@@ -188,7 +189,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"150"
 		"HealthBarOffset"			"410"
 
@@ -200,7 +201,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"
+		"StatusHealth"				"100"
 		"StatusHealthRegen"			"0"
 
 		// Team
@@ -237,7 +238,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"150"
 
 		// Movement
