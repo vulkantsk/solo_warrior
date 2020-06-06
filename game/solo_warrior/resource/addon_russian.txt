@@ -178,29 +178,29 @@
 		"DOTA_Tooltip_ability_item_spell_1_3_Description"				"spell описание"
 		"DOTA_Tooltip_ability_item_spell_1_3_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
 //armor
-		"DOTA_Tooltip_ability_item_armor_1_1"							"armor"
-		"DOTA_Tooltip_ability_item_armor_1_1_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_1"							"Ржавая Кольчуга"
+		"DOTA_Tooltip_ability_item_armor_1_1_Description"				"Старая ржавая кольчуга.<br>Вряд ли она спасет вам жизнь в трудную минуту, но лучше иметь хотя бы такую броню - чем вообще никакой."
 		"DOTA_Tooltip_ability_item_armor_1_1_bonus_value"				"+$armor" 		
 		
-		"DOTA_Tooltip_ability_item_armor_1_2"							"armor"
-		"DOTA_Tooltip_ability_item_armor_1_2_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_2"							"Ржавая Кольчуга"
+		"DOTA_Tooltip_ability_item_armor_1_2_Description"				"Старая ржавая кольчуга.<br>Вряд ли она спасет вам жизнь в трудную минуту, но лучше иметь хотя бы такую броню - чем вообще никакой."
 		"DOTA_Tooltip_ability_item_armor_1_2_bonus_value"				"+$armor" 		
 		
-		"DOTA_Tooltip_ability_item_armor_1_3"							"armor"
-		"DOTA_Tooltip_ability_item_armor_1_3_Description"				"armor описание"
+		"DOTA_Tooltip_ability_item_armor_1_3"							"Ржавая Кольчуга"
+		"DOTA_Tooltip_ability_item_armor_1_3_Description"				"Старая ржавая кольчуга.<br>Вряд ли она спасет вам жизнь в трудную минуту, но лучше иметь хотя бы такую броню - чем вообще никакой."
 		"DOTA_Tooltip_ability_item_armor_1_3_bonus_value"				"+$armor" 		
 //block
-		"DOTA_Tooltip_ability_item_block_1_1"							"block"
-		"DOTA_Tooltip_ability_item_block_1_1_Description"				"block описание"
-		"DOTA_Tooltip_ability_item_block_1_1_bonus_value"				"+БЛОК УРОНА:"
+		"DOTA_Tooltip_ability_item_block_1_1"							"Деревянный Баклер"
+		"DOTA_Tooltip_ability_item_block_1_1_Description"				"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
+		"DOTA_Tooltip_ability_item_block_1_1_bonus_value"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
 		
-		"DOTA_Tooltip_ability_item_block_1_2"							"block"
-		"DOTA_Tooltip_ability_item_block_1_2_Description"				"block описание"
-		"DOTA_Tooltip_ability_item_block_1_2_bonus_value"				"+БЛОК УРОНА:"
+		"DOTA_Tooltip_ability_item_block_1_2"							"Деревянный Баклер"
+		"DOTA_Tooltip_ability_item_block_1_2_Description"				"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
+		"DOTA_Tooltip_ability_item_block_1_2_bonus_value"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
 		
-		"DOTA_Tooltip_ability_item_block_1_3"							"block"
-		"DOTA_Tooltip_ability_item_block_1_3_Description"				"block описание"
-		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"+БЛОК УРОНА:"
+		"DOTA_Tooltip_ability_item_block_1_3"							"Деревянный Баклер"
+		"DOTA_Tooltip_ability_item_block_1_3_Description"				"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
+		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
 //Craft1 //тут начинаются наши новые итемы , а точнее крафтовые шмотки ~EHOT
 
 		"DOTA_Tooltip_ability_"							"Name"
@@ -223,13 +223,13 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_Description"				"Возвращает урон"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_armor"				"+$armor"
-		"DOTA_Tooltip_ability_item_dmg_armor_1_1_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_1_dmg_return_pct"			"%<h1>Пассивная: <font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона :"
 
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"Возвращает урон"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
-		"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%<h1>Пассивная: <font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона :"
 
 //Craft2 //А тут - Топ шмотки ~EHOT
 
@@ -238,20 +238,38 @@
 		"DOTA_Tooltip_ability__"				""
 
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1"							"Кольчуга из лезвий"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_Description"				"Броня, которая сокращает и отражает получаемый урон."
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_Description"				"Крепкая нагрудная броня, которая значительно сокращает получаемый урон.<br><br>Лезвия и шипы усеянные по всей броне, вовсе не для украшения.<br> Острые как бритва лезвия сильно ранят врагов, посмевших напасть на вас!"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_bonus_dmg"				"+$damage"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_resist_pct"				"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_return_pct"				"%ВОЗВРАЩЕНИЕ УРОНА:"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_resist_pct"				"%<h1>Пассивная: Ходячая Крепость</h1> Снижение входящего урона :"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_1_dmg_return_pct"				"%<h1>Пассивная: <font color='#960202'>Острые Лезвия</font></h1>Возвращение входящего урона :"
 
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2"							"Кольчуга из лезвий"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_Description"				"Броня, которая сокращает и отражает получаемый урон."
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_Description"				"Крепкая нагрудная броня, которая значительно сокращает получаемый урон.<br><br>Лезвия и шипы усеянные по всей броне, вовсе не для украшения.<br> Острые как бритва лезвия сильно ранят врагов, посмевших напасть на вас!"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_bonus_dmg"				"+$damage"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_resist_pct"				"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
-		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_return_pct"				"%ВОЗВРАЩЕНИЕ УРОНА:"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_resist_pct"				"%<h1>Пассивная: Ходячая Крепость</h1> Снижение входящего урона :"
+		"DOTA_Tooltip_ability_item_str_armor_dmg_armor_1_2_dmg_return_pct"				"%<h1>Пассивная: <font color='#960202'>Острые Лезвия</font></h1>Возвращение входящего урона :"
+	
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1"							"Щит из веток Энта"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_Description"				"Этот щит - словно живой.<br> Даже ощущается как ветки из которых собран щит, щекочат руку.<br><br>Щит признал нового хозяина - и часть силы Энта теперь в ваших руках!"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_hp"				"+$health"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_block"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_stat"				"+$all"
+		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_block"				"+$block"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_heal_per_attack"				"<h1>Пассивная: <font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_abs_block"					"<h1>Пассивная: <font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона :"
+        
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2"							"Щит из веток Энта"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Description"				"Этот щит - словно живой.<br> Даже ощущается как ветки из которых собран щит, щекочат руку.<br><br>Щит признал нового хозяина - и часть силы Энта теперь в ваших руках!"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_hp"				"+$health"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_stat"				"+$all"
+		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"+$block"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_heal_per_attack"				"<h1>Пассивная: <font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_abs_block"					"<h1>Пассивная: <font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона :"
 
 	}	
 }

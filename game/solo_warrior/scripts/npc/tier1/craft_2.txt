@@ -190,11 +190,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_stat"			"8 16"
 			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"8 16"
-			}
+			//"04"
+			//{
+			//	"var_type"				"FIELD_INTEGER"
+			//	"bonus_block"			"8 16"
+			//}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
@@ -259,11 +259,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_stat"			"8 16"
 			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"8 16"
-			}
+			//"04"
+			//{
+			//	"var_type"				"FIELD_INTEGER"
+			//	"bonus_block"			"8 16"
+			//}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
