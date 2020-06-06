@@ -1,7 +1,16 @@
+//перечень названий (иконок) Всех ТОПовых вешей  !!!НЕ удаляйте до релиза в массы!!!
+//
+//SW_Blade_Mail 					= str + armor + dmg + armor					-- БМ = Кольчуга из лезвий
+//SW_Frost_Sword 					= dmg + stat + hp + armor					-- Ледяной Клинок Килгора (еще нужен клинок армагеддона Джелу, гы)
+//SW_Sky_axe 						= dmg + str + hp + stat 					-- Рассекатель Небес
+//SW_living_armor					= stat + armor + hp + hpreg					-- Живая Броня
+//SW_Living_Shield 					= hp + block + stat + block					-- Живой Щит\Щит из веток Энта
+//SW_WereWolf_Cape 					= str + resist + stat + hpreg 				-- Накидка из шкуры оборотня
+//SW_Rune_Ring 						= stat + resist + str + hpreg 				-- Руническое Кольцо
 
 "DOTAAbilities"
 {
-	"item_recipe_str_armor_dmg_armor_1_1"
+	"item_recipe_str_armor_dmg_armor_1_1" //БМ рецепт
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -22,12 +31,12 @@
 			"01"						"item_str_armor_1_2;item_dmg_armor_1_2"
 		}
 	}
-	"item_str_armor_dmg_armor_1_1"
+	"item_str_armor_dmg_armor_1_1" //БМ
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_str_armor_dmg_armor_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/str_armor_dmg_armor_1_1"
+		"AbilityTextureName"			"tier1/top/SW_Blade_Mail"			//иконка
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"str;armor;dmg;armor"
@@ -65,7 +74,7 @@
 			}
 		}
 	}
-	"item_recipe_str_armor_dmg_armor_1_2"
+	"item_recipe_str_armor_dmg_armor_1_2" //БМ рецепт
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -87,12 +96,12 @@
 		}
 	}
 
-	"item_str_armor_dmg_armor_1_2"
+	"item_str_armor_dmg_armor_1_2" //БМ
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_str_armor_dmg_armor_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/str_armor_dmg_armor_1_2"
+		"AbilityTextureName"			"tier1/top/SW_Blade_Mail"		//иконка
 
 		"ItemAliases"    				"str;armor;dmg;armor"
 		"MaxUpgradeLevel"				"2"
@@ -155,7 +164,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_hp_block_stat_block_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/hp_block_stat_block_1_1"
+		"AbilityTextureName"			"tier1/top/SW_Living_Shield"		//icon
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp;block;stat;block"
@@ -225,7 +234,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_hp_block_stat_block_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/hp_block_stat_block_1_2"
+		"AbilityTextureName"			"tier1/top/SW_Living_Shield"		//icon
 
 		"ItemAliases"    				"hp;block;stat;block"
 		"MaxUpgradeLevel"				"2"
@@ -294,7 +303,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_stat_armor_hp_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/stat_armor_hp_hpreg_1_1"
+		"AbilityTextureName"			"tier1/top/SW_living_armor"		//icon
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat;armor;hp;hpreg"
@@ -364,7 +373,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_stat_armor_hp_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/stat_armor_hp_hpreg_1_2"
+		"AbilityTextureName"			"tier1/top/SW_living_armor"		//icon
 
 		"ItemAliases"    				"stat;armor;hp;hpreg"
 		"MaxUpgradeLevel"				"2"
@@ -432,7 +441,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_dmg_str_hp_stat_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/dmg_str_hp_stat_1_1"
+		"AbilityTextureName"			"tier1/top/SW_Sky_axe"		//icon
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"dmg;str;hp;stat"
@@ -522,7 +531,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_dmg_str_hp_stat_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/dmg_str_hp_stat_1_2"
+		"AbilityTextureName"			"tier1/top/SW_Sky_axe"		//icon
 
 		"ItemAliases"    				"dmg;str;hp;stat"
 		"MaxUpgradeLevel"				"2"
@@ -610,7 +619,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_str_resist_stat_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"			"tier1/craft_2/str_resist_stat_hpreg_1_1"
+		"AbilityTextureName"			"tier1/top/SW_WereWolf_Cape"		//icon
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"str;resist;stat;hpreg"
@@ -680,7 +689,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_str_resist_stat_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"			"tier1/craft_2/str_resist_stat_hpreg_1_2"
+		"AbilityTextureName"			"tier1/top/SW_WereWolf_Cape"		//icon
 
 		"ItemAliases"    				"str;resist;stat;hpreg"
 		"MaxUpgradeLevel"				"2"
@@ -748,7 +757,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_stat_resist_str_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/stat_resist_str_hpreg_1_1"
+		"AbilityTextureName"			"tier1/top/SW_Rune_Ring"			//ico
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat;resist;str;hpreg"
@@ -818,7 +827,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_stat_resist_str_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/stat_resist_str_hpreg_1_2"
+		"AbilityTextureName"			"tier1/top/SW_Rune_Ring"			//ico
 
 		"ItemAliases"    				"stat;resist;str;hpreg"
 		"MaxUpgradeLevel"				"2"
@@ -886,7 +895,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_dmg_stat_hp_armor_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/dmg_stat_hp_armor_1_1"
+		"AbilityTextureName"			"tier1/top/SW_Frost_Sword"		//icon
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"dmg;stat;hp;armor"
@@ -966,7 +975,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_dmg_stat_hp_armor_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_2/dmg_stat_hp_armor_1_2"
+		"AbilityTextureName"			"tier1/top/SW_Frost_Sword"		//icon
 
 		"ItemAliases"    				"dmg;stat;hp;armor"
 		"MaxUpgradeLevel"				"2"

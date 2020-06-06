@@ -201,7 +201,7 @@
 		"DOTA_Tooltip_ability_item_block_1_3"							"block"
 		"DOTA_Tooltip_ability_item_block_1_3_Description"				"block описание"
 		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"+БЛОК УРОНА:"
-//Craft1
+//Craft1 //тут начинаются наши новые итемы , а точнее крафтовые шмотки ~EHOT
 
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"
@@ -231,7 +231,7 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%ВОЗВРАЩЕНИЕ УРОНА:"
 
-//Craft2
+//Craft2 //А тут - Топ шмотки ~EHOT
 
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"
