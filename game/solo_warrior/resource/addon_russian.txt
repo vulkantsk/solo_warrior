@@ -233,6 +233,8 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
 		//"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%<h1>Пассивная: <font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона :"
+		//"<h1>Дарует  Активные  Способности :</h1> <h1>Антимагия</h1>Даёт невосприимчивость к магии.<br><br> Длительность действия : %buff_duration% "
+		//"<h1><font color='#50c10e'>Исцеление</font></h1> Восстанавливает здоровья в секунду : %buff_regen%<br><br> Длительность действия : %buff_duration% "
 
 //Craft2 //А тут - Топ шмотки ~EHOT
 
@@ -273,7 +275,7 @@
 
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1"							"Живой Доспех"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_Lore"					"Такие доспехи куют только Эльфийские маги-кузнецы.<br><br>Материалы из которых состоит доспех можно найти только в Волшебном Лесу.<br>Руны внутри доспеха укрепляют Тело и Дух.<br>Магические свойства материалов из Волшебного Леса - сильно повышают жизнеспособность и могут залечить любые раны.<br><br> Вам крупно повезло стать обладателем такого редкого артефакта!"
-		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Несокрушимость</h1>С вероятностью в %chance_block_pct%%% броня поглощает весь полученный урон.<br><br><font color='#50c10e'>Природная Стойкость</font></h1> Здоровье увеличивается на %bonus_health_pct%% "
+		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Несокрушимость</h1>Вероятность полностью поглотить весь полученный урон : %chance_block_pct%%% <br><br><font color='#50c10e'>Природная Стойкость</font></h1> Здоровье увеличивается на %bonus_health_pct%% "
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_bonus_hp"				"+$health"
@@ -281,7 +283,7 @@
 
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2"							"Живой Доспех"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_Lore"					"Такие доспехи куют только Эльфийские маги-кузнецы.<br><br>Материалы из которых состоит доспех можно найти только в Волшебном Лесу.<br>Руны внутри доспеха укрепляют Тело и Дух.<br>Магические свойства материалов из Волшебного Леса - сильно повышают жизнеспособность и могут залечить любые раны.<br><br> Вам крупно повезло стать обладателем такого редкого артефакта!"
-		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Несокрушимость</h1>С вероятностью в %chance_block_pct%%% броня поглощает весь полученный урон.<br><br><h1><font color='#50c10e'>Природная Стойкость</font></h1> Здоровье увеличивается на %bonus_health_pct%% "
+		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Несокрушимость</h1> Вероятность полностью поглотить весь полученный урон : %chance_block_pct%%% <br><br><h1><font color='#50c10e'>Природная Стойкость</font></h1> Здоровье увеличивается на %bonus_health_pct%% "
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_2_bonus_hp"				"+$health"
@@ -302,6 +304,77 @@
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_stat"					"+$all"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_hp"					"+$health"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_str"					"+$str"
-		
+
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1"						"Накидка из шкуры оборотня"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_Lore"					"Ощутите себя в волчьей шкуре!"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_Description"			"<h1>Дарует  Активные  Способности :</h1> <h1>Непоколебимость</h1> Даёт невосприимчивость к магии и %buff_regen% Восстановления здоровья в секунду.<br><br>Длительность действия : %buff_duration% "
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_stat"			"+$all"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_hpreg"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_resist"			"%+$spell_resist"
+		//откуда тянется и как называется этот модификатор???
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"						"Накидка из шкуры оборотня"
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"			"Существо сильно регенерирует и невосприимчиво к магии."
+        
+        "DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2"						"Накидка из шкуры оборотня"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Lore"					"Ощутите себя в волчьей шкуре!"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Description"			"<h1>Дарует  Активные  Способности :</h1> <h1>Непоколебимость</h1> Даёт невосприимчивость к магии и %buff_regen% Восстановления здоровья в секунду.<br><br>Длительность действия : %buff_duration% "
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_stat"			"+$all"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_hpreg"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_resist"			"%+$spell_resist"
+		//откуда тянется и как называется этот модификатор???
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"							"Накидка из шкуры оборотня"
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"				"Существо сильно регенерирует и невосприимчиво к магии."
+
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1"						"Руническое Кольцо"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Lore"					"Руны на этом древнем кольце источают сильнейшую магию!"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Description"			"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магия Рун</h1> Снижает затраты манны на : %manacost_reduction% <br><br><h1><font color='#50c10e'>Сильная Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_stat"			"+$all"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_hpreg"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_resist"			"%+$spell_resist"
+
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2"						"Руническое Кольцо"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_Lore"					"Руны на этом древнем кольце источают сильнейшую магию!"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_Description"			"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магия Рун</h1> Снижает затраты манны на : %manacost_reduction% <br><br><h1><font color='#50c10e'>Сильная Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_stat"			"+$all"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_hpreg"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_resist"			"%+$spell_resist"
+
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1"							"Клинок Зимы"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_Lore"						"Этот ледяной клинок некогда принадлежал безжалостному вождю варваров.<br><br> Легенда гласит - что этот меч один из виновников Катаклизма сгубившего целый Мир!<br> Правда это или вымысел - неизвестно.<br><br> Но Сила и Мощь этого клинка - взаправду ПОРАЗИТЕЛЬНА!"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Жгучий Холод</h1> Враги сильно страдают от жуткого холода.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br><h1><font color='#60dcff'>Вечная Мерзлота</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_hp"					"+$health"
+
+		//откуда тянется и как называется эти модификаторы???
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec"						"Жгучий Холод"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec_Description"			"Существо получает %dmg_per_sec% урона в секунду."
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Замедление атаки"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Земедление передвижения"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%."
+	
+
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2"							"Клинок Зимы"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_Lore"						"Этот ледяной клинок некогда принадлежал безжалостному вождю варваров.<br><br> Легенда гласит - что этот меч один из виновников Катаклизма сгубившего целый Мир!<br> Правда это или вымысел - неизвестно.<br><br> Но Сила и Мощь этого клинка - взаправду ПОРАЗИТЕЛЬНА!"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Жгучий Холод</h1> Враги сильно страдают от жуткого холода.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br><h1><font color='#60dcff'>Вечная Мерзлота</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_hp"					"+$health"
+
+		//откуда тянется и как называется эти модификаторы???
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec"						"Жгучий Холод"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec_Description"			"Существо получает %dmg_per_sec% урона в секунду."
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Замедление атаки"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Земедление передвижения"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%."
+	
 	}
 }
