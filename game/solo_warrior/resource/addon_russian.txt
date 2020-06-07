@@ -265,11 +265,11 @@
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2"							"Щит из веток Энта"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Description"				"Этот щит - словно живой.<br> Даже ощущается как ветки из которых собран щит, щекочат руку.<br><br>Щит признал нового хозяина - и часть силы Энта теперь в ваших руках!"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_hp"				"+$health"
-		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"<h1>    Дарует Пассивные Способности : <br><br>Блок урона </h1> Блокирует урона от атак :"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_stat"				"+$all"
 		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"+$block"
-		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_heal_per_attack"				"<h1>Пассивная: <font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона :"
-		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_abs_block"					"<h1>Пассивная: <font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_heal_per_attack"				"<h1><font color='#50c10e'>Объятья Энта </font></h1> Лечение при получении урона :"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_abs_block"					"<h1><font color='#8b4900'>Кора Энта </font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона :"
 
 	}	
 }
