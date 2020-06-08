@@ -192,16 +192,19 @@
 //block
 		"DOTA_Tooltip_ability_item_block_1_1"							"Деревянный Баклер"
 		"DOTA_Tooltip_ability_item_block_1_1_Lore"						"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
-		"DOTA_Tooltip_ability_item_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_value% "
+		"DOTA_Tooltip_ability_item_block_1_1_bonus_value"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_block_1_1_Note0"                     "<em>Гарантированно блокирует : %bonus_value%  \n урона от атак<em>"
 		
 		"DOTA_Tooltip_ability_item_block_1_2"							"Деревянный Баклер"
 		"DOTA_Tooltip_ability_item_block_1_2_Lore"						"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
-		"DOTA_Tooltip_ability_item_block_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_value% "
+		"DOTA_Tooltip_ability_item_block_1_2_bonus_value"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_block_1_2_Note0"                     "<em>Гарантированно блокирует : %bonus_value%  \n урона от атак</em>"
 		
 		"DOTA_Tooltip_ability_item_block_1_3"							"Деревянный Баклер"
 		"DOTA_Tooltip_ability_item_block_1_3_Lore"						"Старый деревянный кулачный щит.<br>Скорее всего он развалится от пары ударов молота или топора, но от стрел и мечей защитит."
-		"DOTA_Tooltip_ability_item_block_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_value% "
-		//"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"<h1>Пассивная: Блок урона</h1> Блокирует урона от атак :"		
+		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_block_1_3_Note0"                     "<em>Гарантированно блокирует : %bonus_value%  \n урона от атак</em>"
+        //"DOTA_Tooltip_ability_item_block_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_value% " ~RIP по указанию Витали (квак-плак) ~EHOT	
 //Craft1 //тут начинаются наши новые итемы , а точнее крафтовые шмотки ~EHOT
 
 		"DOTA_Tooltip_ability_"							"Name"
@@ -258,18 +261,19 @@
 
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1"							"Щит из веток Энта"
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_Lore"				    "Этот щит - словно живой.<br> Даже ощущается как ветки из которых собран щит, щекочат руку.<br><br>Щит признал нового хозяина - и часть силы Энта теперь в ваших руках!"
-		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_block% <br><br><h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack% <br><br><h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack% <br><br><h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_hp"				"+$health"
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_stat"				"+$all"
-		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_block"				"+$block"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_hp_block_stat_block_1_1_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
         
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2"							"Щит из веток Энта"
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Lore"				    "Этот щит - словно живой.<br> Даже ощущается как ветки из которых собран щит, щекочат руку.<br><br>Щит признал нового хозяина - и часть силы Энта теперь в ваших руках!"
-		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_block% <br><br><h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack% <br><br><h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack% <br><br><h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_hp"				"+$health"
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_stat"				"+$all"
-		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"<h1>Блок урона</h1> Блокирует урона от атак : %bonus_block%"
-		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"+$block"
+		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
 		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_heal_per_attack"			"<h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack%"
 		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_abs_block"					"<h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
 
@@ -313,8 +317,8 @@
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_hpreg"			"+$hp_regen"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_resist"			"%+$spell_resist"
 		//откуда тянется и как называется этот модификатор???
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"						"Накидка из шкуры оборотня"
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"			"Существо сильно регенерирует и невосприимчиво к магии."
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"							"Накидка из шкуры оборотня"
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"				"Существо сильно регенерирует и невосприимчиво к магии."
         
         "DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2"						"Накидка из шкуры оборотня"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Lore"					"Ощутите себя в волчьей шкуре!"
@@ -375,6 +379,7 @@
 		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Земедление передвижения"
 		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%."
+		//"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_ms_decrease_Description"		"Скорость передвижения и атаки существа уменьшены на %dMODIFIER_PROPERTY_DECREASE_AURA%."
 	
 	}
 }
