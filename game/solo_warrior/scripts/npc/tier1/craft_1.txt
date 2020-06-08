@@ -423,7 +423,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_1/SW_Rune_Buckler"		//icon
+		"AbilityTextureName"			"tier1/craft_1/SW_Rune_Buckler_2"		//icon
 
 		"ItemAliases"    				"stat"
 		"MaxUpgradeLevel"				"2"
@@ -639,7 +639,7 @@
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/craft_1/SW_HP_regen_Ring"		//icon
+		"AbilityTextureName"			"tier1/craft_1/SW_HP_regen_Ring_1"		//icon
 
 		"ItemAliases"    				"hp"
 		"MaxUpgradeLevel"				"2"

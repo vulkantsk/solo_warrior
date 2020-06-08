@@ -291,7 +291,7 @@
 
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1"								"Рассекатель Небес"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_Lore"						"Сам Зевс наполнил эту секиру своей силой!<br>Держа топор вы прямо ощущаете силу молний.<br>С таким мощным оружием можно на любых чудищ ходить.<br> А главное - без света не останешся!"
-		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магический Вампиризм</h1> Восполняет здоровья от урона способностей героя и предметов : %spell_lifesteal_pct%%% <h1><font color='#9600ff'>Дар Зевса</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
+		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магический Вампиризм</h1> Восполняет здоровья от урона способностей героя и предметов : %spell_lifesteal_pct%%% <br><br><h1><font color='#9600ff'>Дар Зевса</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_bonus_stat"					"+$all"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_1_bonus_hp"					"+$health"
@@ -299,7 +299,7 @@
 		
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2"								"Рассекатель Небес"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_Lore"						"Сам Зевс наполнил эту секиру своей силой!<br>Держа топор вы прямо ощущаете силу молний.<br>С таким мощным оружием можно на любых чудищ ходить.<br> А главное - без света не останешся!"
-		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магический Вампиризм</h1> Восполняет здоровья от урона способностей героя и предметов : %spell_lifesteal_pct%%% <h1><font color='#9600ff'>Дар Зевса</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
+		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магический Вампиризм</h1> Восполняет здоровья от урона способностей героя и предметов : %spell_lifesteal_pct%%% <br><br><h1><font color='#9600ff'>Дар Зевса</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_stat"					"+$all"
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_hp"					"+$health"
