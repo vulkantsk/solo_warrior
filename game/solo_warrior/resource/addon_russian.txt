@@ -230,6 +230,9 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_armor"				"+$armor"
 
+        //"DOTA_Tooltip_modifier_item_hp_armor_1"							    "Аура Земедления"
+		//"DOTA_Tooltip_modifier_item_hp_armor_1_Desc"				    "Существо сильно замедленно."
+
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Lore"						"Острые шипы на кольчуге - обращают атаки врагов против них самих"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона : %dmg_return_pct%% "
@@ -238,6 +241,7 @@
 		//"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%<h1>Пассивная: <font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона :"
 		//"<h1>Дарует  Активные  Способности :</h1> <h1>Антимагия</h1>Даёт невосприимчивость к магии.<br><br> Длительность действия : %buff_duration% "
 		//"<h1><font color='#50c10e'>Исцеление</font></h1> Восстанавливает здоровья в секунду : %buff_regen%<br><br> Длительность действия : %buff_duration% "
+
 
 //Craft2 //А тут - Топ шмотки ~EHOT
 
@@ -274,8 +278,6 @@
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_bonus_block"				"+к блокировке урона"
         "DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
-		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_heal_per_attack"			"<h1><font color='#50c10e'>Объятья Энта</font></h1> Лечение при получении урона : %heal_per_attack%"
-		//"DOTA_Tooltip_ability_item_hp_block_stat_block_1_2_abs_block"					"<h1><font color='#8b4900'>Кора Энта</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
 
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1"							"Живой Доспех"
 		"DOTA_Tooltip_ability_item_stat_armor_hp_hpreg_1_1_Lore"					"Такие доспехи куют только Эльфийские маги-кузнецы.<br><br>Материалы из которых состоит доспех можно найти только в Волшебном Лесу.<br>Руны внутри доспеха укрепляют Тело и Дух.<br>Магические свойства материалов из Волшебного Леса - сильно повышают жизнеспособность и могут залечить любые раны.<br><br> Вам крупно повезло стать обладателем такого редкого артефакта!"
@@ -316,9 +318,6 @@
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_hpreg"			"+$hp_regen"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_resist"			"%+$spell_resist"
-		//откуда тянется и как называется этот модификатор???
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"							"Накидка из шкуры оборотня"
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"				"Существо сильно регенерирует и невосприимчиво к магии."
         
         "DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2"						"Накидка из шкуры оборотня"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Lore"					"Ощутите себя в волчьей шкуре!"
@@ -327,9 +326,6 @@
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_hpreg"			"+$hp_regen"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_resist"			"%+$spell_resist"
-		//откуда тянется и как называется этот модификатор???
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg"							"Накидка из шкуры оборотня"
-		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_Description"				"Существо сильно регенерирует и невосприимчиво к магии."
 
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1"						"Руническое Кольцо"
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Lore"					"Руны на этом древнем кольце источают сильнейшую магию!"
@@ -371,15 +367,25 @@
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_hp"					"+$health"
+//Auras buff debuff - ALL	//все ауры и баффы тут	
 
-		//откуда тянется и как называется эти модификаторы???
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec"						"Жгучий Холод"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec_Description"			"Существо получает %dmg_per_sec% урона в секунду."
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Замедление атаки"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Земедление передвижения"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%."
-		//"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_ms_decrease_Description"		"Скорость передвижения и атаки существа уменьшены на %dMODIFIER_PROPERTY_DECREASE_AURA%."
+		"DOTA_Tooltip_modifier_item_str_resist_buff_1"										"Антимагия"
+		"DOTA_Tooltip_modifier_item_str_resist_buff_1_Description"							"Существо невосприимчиво к магии."
+
+		"DOTA_Tooltip_modifier_item_stat_hpreg_buff_1"										"Исцеление"
+		"DOTA_Tooltip_modifier_item_stat_hpreg_buff_1_Description"							"Существо сильно регенерирует."
+
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_buff_1"							"В волчьей шкуре!"
+		"DOTA_Tooltip_modifier_item_str_resist_stat_hpreg_buff_1_Description"				"Существо сильно регенерирует и невосприимчиво к магии."
+
+		"DOTA_Tooltip_modifier_item_dmg_stat_aura_1"										"Аура Выжигания"
+		"DOTA_Tooltip_modifier_item_dmg_stat_aura_1_Description"							"Существо ежесекундно получает урон."   //"Существо получает 50 урона в секунду." - нужно писать обычные цифры ибо это : dmg_per_sec - дота не понимает...А так как у нас один и тот же модификатор на 50 и на 100...но лучше чем то что есть не придумал...или делать отдельный модификатор для каждого уровня предмета
+
+        "DOTA_Tooltip_modifier_item_hp_armor_aura_1"										"Аура Земедления"
+		"DOTA_Tooltip_modifier_item_hp_armor_aura_1_Description"							"Существо сильно замедленно. \n Скорость передвижения и атаки существа сильно уменьшены."
+
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_1"								"Вечная Мерзлота"
+		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_1_Description"					"Существо ежесекундно получает урон. \n Скорость передвижения и атаки существа сильно уменьшены."
 	
 	}
 }

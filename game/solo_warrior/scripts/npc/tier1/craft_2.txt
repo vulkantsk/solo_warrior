@@ -2,7 +2,7 @@
 //
 //SW_Blade_Mail 					= str + armor + dmg + armor					-- БМ = Кольчуга из лезвий
 //SW_Frost_Sword 					= dmg + stat + hp + armor					-- Ледяной Клинок Килгора (еще нужен клинок армагеддона Джелу, гы)
-//SW_Sky_Divider 						= dmg + str + hp + stat 					-- Рассекатель Небес
+//SW_Sky_Divider 					= dmg + str + hp + stat 					-- Рассекатель Небес
 //SW_living_armor					= stat + armor + hp + hpreg					-- Живая Броня
 //SW_Living_Shield 					= hp + block + stat + block					-- Живой Щит\Щит из веток Энта
 //SW_WereWolf_Cape 					= str + resist + stat + hpreg 				-- Накидка из шкуры оборотня
@@ -934,7 +934,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"100 200"
+				"dmg_per_sec"			"1 2"   //"100 200" для тестов аур
 			}
 			"07"
 			{
@@ -1013,7 +1013,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"100 200"
+				"dmg_per_sec"			"1 2"   //"100 200" для тестов аур
 			}
 			"07"
 			{

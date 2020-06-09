@@ -1419,7 +1419,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"50 100"
+				"dmg_per_sec"			"1 2" //"50 100"  для тестов аур
 			}
 		}
 	}
@@ -1478,7 +1478,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"50 100"
+				"dmg_per_sec"			"1 2" //"50 100"  для тестов аур
 			}
 		}
 	}
