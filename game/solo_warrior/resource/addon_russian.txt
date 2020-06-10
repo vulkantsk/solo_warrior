@@ -222,7 +222,6 @@
 		"DOTA_Tooltip_ability_item_str_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Ходячая Крепость</h1> Снижение входящего урона : %dmg_resist_pct%% "
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_str"					"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_armor"				"+$armor"
-		//"DOTA_Tooltip_ability_item_str_armor_1_2_dmg_resist_pct"			"%СНИЖЕНИЕ ВХОДЯЩЕГО УРОНА:"
 
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Lore"						"Острые шипы на кольчуге - обращают атаки врагов против них самих"
@@ -230,19 +229,39 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_bonus_armor"				"+$armor"
 
-        //"DOTA_Tooltip_modifier_item_hp_armor_1"							    "Аура Земедления"
-		//"DOTA_Tooltip_modifier_item_hp_armor_1_Desc"				    "Существо сильно замедленно."
-
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Lore"						"Острые шипы на кольчуге - обращают атаки врагов против них самих"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона : %dmg_return_pct%% "
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
-		//"DOTA_Tooltip_ability_item_dmg_armor_1_2_dmg_return_pct"			"%<h1>Пассивная: <font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона :"
-		//"<h1>Дарует  Активные  Способности :</h1> <h1>Антимагия</h1>Даёт невосприимчивость к магии.<br><br> Длительность действия : %buff_duration% "
-		//"<h1><font color='#50c10e'>Исцеление</font></h1> Восстанавливает здоровья в секунду : %buff_regen%<br><br> Длительность действия : %buff_duration% "
 
+		"DOTA_Tooltip_ability_item_stat_block_1_1"							"Рунный Щит"
+        "DOTA_Tooltip_ability_item_stat_block_1_1_Lore"				    	"Круглый деревянный щит укрепленный мифрилом.<br> Руны выгравированные по всему щиту - имеют сильные защитные свойства.<br><br>Такой щит способен отразить почти любой урон!"
+		"DOTA_Tooltip_ability_item_stat_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#8b4900'>Защитные Руны</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
+        "DOTA_Tooltip_ability_item_stat_block_1_1_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_block_1_1_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_stat_block_1_1_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
 
+		"DOTA_Tooltip_ability_item_stat_block_1_2"							"Рунный Щит"
+        "DOTA_Tooltip_ability_item_stat_block_1_2_Lore"				    	"Круглый деревянный щит укрепленный мифрилом.<br> Руны выгравированные по всему щиту - имеют сильные защитные свойства.<br><br>Такой щит способен отразить почти любой урон!"
+		"DOTA_Tooltip_ability_item_stat_block_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#8b4900'>Защитные Руны</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
+        "DOTA_Tooltip_ability_item_stat_block_1_2_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_block_1_2_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_stat_block_1_2_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
+
+		"DOTA_Tooltip_ability_item_hp_block_1_1"							"Ловец Боли"
+        "DOTA_Tooltip_ability_item_hp_block_1_1_Lore"				    	"Ловец Боли - это большой крепкий щит, способный отразить самые яростные атаки врагов.<br> Но это всего лишь с виду, истинная сила этого предмета в другом.<br><br>Щит зачарован друидами - и способен обращать боль вспять.<br> Раны полученные от ударов врагов моментально затягиваются!"
+		"DOTA_Tooltip_ability_item_hp_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Обновление</font></h1> Лечение при получении урона : %heal_per_attack% "
+		"DOTA_Tooltip_ability_item_hp_block_1_1_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_block_1_1_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_hp_block_1_1_Note0"             			"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
+
+		"DOTA_Tooltip_ability_item_hp_block_1_2"							"Ловец Боли"
+        "DOTA_Tooltip_ability_item_hp_block_1_2_Lore"				    	"Ловец Боли - это большой крепкий щит, способный отразить самые яростные атаки врагов.<br> Но это всего лишь с виду, истинная сила этого предмета в другом.<br><br>Щит зачарован друидами - и способен обращать боль вспять.<br> Раны полученные от ударов врагов моментально затягиваются!"
+		"DOTA_Tooltip_ability_item_hp_block_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Обновление</font></h1> Лечение при получении урона : %heal_per_attack% "
+		"DOTA_Tooltip_ability_item_hp_block_1_2_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_block_1_2_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_hp_block_1_2_Note0"             			"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
 //Craft2 //А тут - Топ шмотки ~EHOT
 
 		"DOTA_Tooltip_ability_"							"Name"
@@ -350,16 +369,7 @@
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_1_bonus_hp"					"+$health"
-
-		//откуда тянется и как называется эти модификаторы???
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec"						"Жгучий Холод"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_dmg_per_sec_Description"			"Существо получает %dmg_per_sec% урона в секунду."
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Замедление атаки"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease"					"Земедление передвижения"
-		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_as_decrease_Description"		"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%."
 	
-
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2"							"Клинок Зимы"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_Lore"						"Этот ледяной клинок некогда принадлежал безжалостному вождю варваров.<br><br> Легенда гласит - что этот меч один из виновников Катаклизма сгубившего целый Мир!<br> Правда это или вымысел - неизвестно.<br><br> Но Сила и Мощь этого клинка - взаправду ПОРАЗИТЕЛЬНА!"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Жгучий Холод</h1> Враги сильно страдают от жуткого холода.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br><h1><font color='#60dcff'>Вечная Мерзлота</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
