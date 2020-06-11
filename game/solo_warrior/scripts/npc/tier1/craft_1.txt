@@ -2,7 +2,7 @@
 //Ингридиент - 1
 //SW_Guard 					= stat + armor 				-- Рунный нагрудник
 //SW_Heavy_Cuirass 			= str + armor 				-- Крепкая броня
-//SW_HP_regen_Ring 			= HP = HPreg 				-- Кольцо с рубином
+//SW_HP_regen_Ring 			= HP + HPreg 				-- Перстень с рубином
 //SW_Rune_Buckler 			= stat + Block 				-- Круглый рунный щит
 //SW_Spike_Chest 			= dmg + armor 				-- Шипастая кольчуга
 //SW_Strom_axe 				= dmg + str 				-- Электро-Топор

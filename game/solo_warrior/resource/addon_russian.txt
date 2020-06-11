@@ -34,149 +34,149 @@
 
 //Baseitems
 //str
-		"DOTA_Tooltip_ability_item_str_1_1"							"Str"
-		"DOTA_Tooltip_ability_item_str_1_1_Description"				"Str описание" 		
-		"DOTA_Tooltip_ability_item_str_1_1_bonus_value"				"+$str" 		
+		"DOTA_Tooltip_ability_item_str_1_1"								"Топор лесоруба"
+		"DOTA_Tooltip_ability_item_str_1_1_Lore"						"Топор сельского лесоруба - отлично рубит сплеча!" 		
+		"DOTA_Tooltip_ability_item_str_1_1_bonus_value"					"+$str" 		
 		
-		"DOTA_Tooltip_ability_item_str_1_2"							"Str"
-		"DOTA_Tooltip_ability_item_str_1_2_Description"				"Str описание" 		
-		"DOTA_Tooltip_ability_item_str_1_2_bonus_value"				"+$str" 		
+		"DOTA_Tooltip_ability_item_str_1_2"								"Топор лесоруба"
+		"DOTA_Tooltip_ability_item_str_1_2_Lore"						"Топор сельского лесоруба - отлично рубит сплеча!"  		
+		"DOTA_Tooltip_ability_item_str_1_2_bonus_value"					"+$str" 		
 		
-		"DOTA_Tooltip_ability_item_str_1_3"							"Str"
-		"DOTA_Tooltip_ability_item_str_1_3_Description"				"Str описание" 		
-		"DOTA_Tooltip_ability_item_str_1_3_bonus_value"				"+$str" 		
+		"DOTA_Tooltip_ability_item_str_1_3"								"Топор лесоруба"
+		"DOTA_Tooltip_ability_item_str_1_3_Lore"						"Топор сельского лесоруба - отлично рубит сплеча!"  		
+		"DOTA_Tooltip_ability_item_str_1_3_bonus_value"					"+$str" 		
 //agi
-		"DOTA_Tooltip_ability_item_agi_1_1"							"agi"
-		"DOTA_Tooltip_ability_item_agi_1_1_Description"				"agi описание" 		
-		"DOTA_Tooltip_ability_item_agi_1_1_bonus_value"				"+$agi" 		
+		"DOTA_Tooltip_ability_item_agi_1_1"								"Кинжал негодяя"
+		"DOTA_Tooltip_ability_item_agi_1_1_Lore"						"Такие кинжалы обычно носят воришки или прочие злодеи."
+		"DOTA_Tooltip_ability_item_agi_1_1_bonus_value"					"+$agi" 		
 		
-		"DOTA_Tooltip_ability_item_agi_1_2"							"agi"
-		"DOTA_Tooltip_ability_item_agi_1_2_Description"				"agi описание" 		
-		"DOTA_Tooltip_ability_item_agi_1_2_bonus_value"				"+$agi" 		
+		"DOTA_Tooltip_ability_item_agi_1_2"								"Кинжал негодяя"
+		"DOTA_Tooltip_ability_item_agi_1_2_Lore"						"Такие кинжалы обычно носят воришки или прочие злодеи." 		
+		"DOTA_Tooltip_ability_item_agi_1_2_bonus_value"					"+$agi" 		
 		
-		"DOTA_Tooltip_ability_item_agi_1_3"							"agi"
-		"DOTA_Tooltip_ability_item_agi_1_3_Description"				"agi описание" 		
-		"DOTA_Tooltip_ability_item_agi_1_3_bonus_value"				"+$agi" 		
+		"DOTA_Tooltip_ability_item_agi_1_3"								"Кинжал негодяя"
+		"DOTA_Tooltip_ability_item_agi_1_3_Lore"						"Такие кинжалы обычно носят воришки или прочие злодеи." 		
+		"DOTA_Tooltip_ability_item_agi_1_3_bonus_value"					"+$agi" 		
 //int
-		"DOTA_Tooltip_ability_item_int_1_1"							"int"
-		"DOTA_Tooltip_ability_item_int_1_1_Description"				"int описание" 		
-		"DOTA_Tooltip_ability_item_int_1_1_bonus_value"				"+$int" 		
+		"DOTA_Tooltip_ability_item_int_1_1"								"Посох ученика"
+		"DOTA_Tooltip_ability_item_int_1_1_Lore"						"Данными посохами награждают всех вступивших в гильдую магов.<br> Вас ждёт долгий и тернистый путь в постижении магии и раскрытии таланта к волшебству!" 		
+		"DOTA_Tooltip_ability_item_int_1_1_bonus_value"					"+$int" 		
 		
-		"DOTA_Tooltip_ability_item_int_1_2"							"int"
-		"DOTA_Tooltip_ability_item_int_1_2_Description"				"int описание" 		
-		"DOTA_Tooltip_ability_item_int_1_2_bonus_value"				"+$int" 		
+		"DOTA_Tooltip_ability_item_int_1_2"								"Посох ученика"
+		"DOTA_Tooltip_ability_item_int_1_2_Lore"						"Данными посохами награждают всех вступивших в гильдую магов.<br> Вас ждёт долгий и тернистый путь в постижении магии и раскрытии таланта к волшебству!" 		
+		"DOTA_Tooltip_ability_item_int_1_2_bonus_value"					"+$int" 		
 		
-		"DOTA_Tooltip_ability_item_int_1_3"							"int"
-		"DOTA_Tooltip_ability_item_int_1_3_Description"				"int описание" 		
-		"DOTA_Tooltip_ability_item_int_1_3_bonus_value"				"+$int" 		
+		"DOTA_Tooltip_ability_item_int_1_3"								"Посох ученика"
+		"DOTA_Tooltip_ability_item_int_1_3_Lore"						"Данными посохами награждают всех вступивших в гильдую магов.<br> Вас ждёт долгий и тернистый путь в постижении магии и раскрытии таланта к волшебству!" 		
+		"DOTA_Tooltip_ability_item_int_1_3_bonus_value"					"+$int" 		
 //stat
-		"DOTA_Tooltip_ability_item_stat_1_1"							"stat"
-		"DOTA_Tooltip_ability_item_stat_1_1_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_1"							"Рунная Сфера"
+		"DOTA_Tooltip_ability_item_stat_1_1_Lore"						"Золотй шар с высеченными рунами.<br> Внутри шара таится сильная магия.<br> Увеличивает Силу, Ловкость и Интеллект владельца."
 		"DOTA_Tooltip_ability_item_stat_1_1_bonus_value"				"+$all" 		
 		
-		"DOTA_Tooltip_ability_item_stat_1_2"							"stat"
-		"DOTA_Tooltip_ability_item_stat_1_2_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_2"							"Рунная Сфера"
+		"DOTA_Tooltip_ability_item_stat_1_2_Lore"						"Золотй шар с высеченными рунами.<br> Внутри шара таится сильная магия.<br> Увеличивает Силу, Ловкость и Интеллект владельца."
 		"DOTA_Tooltip_ability_item_stat_1_2_bonus_value"				"+$all" 		
 		
-		"DOTA_Tooltip_ability_item_stat_1_3"							"stat"
-		"DOTA_Tooltip_ability_item_stat_1_3_Description"				"stat описание"
+		"DOTA_Tooltip_ability_item_stat_1_3"							"Рунная Сфера"
+		"DOTA_Tooltip_ability_item_stat_1_3_Lore"						"Золотй шар с высеченными рунами.<br> Внутри шара таится сильная магия.<br> Увеличивает Силу, Ловкость и Интеллект владельца."
 		"DOTA_Tooltip_ability_item_stat_1_3_bonus_value"				"+$all" 		
 //dmg
-		"DOTA_Tooltip_ability_item_dmg_1_1"							"dmg"
-		"DOTA_Tooltip_ability_item_dmg_1_1_Description"				"dmg описание" 		
-		"DOTA_Tooltip_ability_item_dmg_1_1_bonus_value"				"+$damage" 		
+		"DOTA_Tooltip_ability_item_dmg_1_1"								"Железный меч"
+		"DOTA_Tooltip_ability_item_dmg_1_1_Lore"						"Дешевый и тупой железный меч.<br> Такие мечи выдают ополченцам и деревенским стражникам." 		
+		"DOTA_Tooltip_ability_item_dmg_1_1_bonus_value"					"+$damage" 		
 		
-		"DOTA_Tooltip_ability_item_dmg_1_2"							"dmg"
-		"DOTA_Tooltip_ability_item_dmg_1_2_Description"				"dmg описание" 		
-		"DOTA_Tooltip_ability_item_dmg_1_2_bonus_value"				"+$damage" 		
+		"DOTA_Tooltip_ability_item_dmg_1_2"								"Железный меч"
+		"DOTA_Tooltip_ability_item_dmg_1_2_Lore"						"Дешевый и тупой железный меч.<br> Такие мечи выдают ополченцам и деревенским стражникам." 		
+		"DOTA_Tooltip_ability_item_dmg_1_2_bonus_value"					"+$damage" 		
 		
-		"DOTA_Tooltip_ability_item_dmg_1_3"							"dmg"
-		"DOTA_Tooltip_ability_item_dmg_1_3_Description"				"dmg описание" 		
-		"DOTA_Tooltip_ability_item_dmg_1_3_bonus_value"				"+$damage" 		
+		"DOTA_Tooltip_ability_item_dmg_1_3"								"Железный меч"
+		"DOTA_Tooltip_ability_item_dmg_1_3_Lore"						"Дешевый и тупой железный меч.<br> Такие мечи выдают ополченцам и деревенским стражникам." 		
+		"DOTA_Tooltip_ability_item_dmg_1_3_bonus_value"					"+$damage" 		
 //as
-		"DOTA_Tooltip_ability_item_as_1_1"							"as"
-		"DOTA_Tooltip_ability_item_as_1_1_Description"				"as описание" 		
-		"DOTA_Tooltip_ability_item_as_1_1_bonus_value"				"+$attack" 		
+		"DOTA_Tooltip_ability_item_as_1_1"								"Перчатки всадника"
+		"DOTA_Tooltip_ability_item_as_1_1_Lore"							"Крепкие кожанные перчатки.<br> Такие обычно носят всадники и наездники, чтобы не травмировать руки.<br>  Повышают провороство владельца." 		
+		"DOTA_Tooltip_ability_item_as_1_1_bonus_value"					"+$attack" 		
 		
-		"DOTA_Tooltip_ability_item_as_1_2"							"as"
-		"DOTA_Tooltip_ability_item_as_1_2_Description"				"as описание" 		
-		"DOTA_Tooltip_ability_item_as_1_2_bonus_value"				"+$attack" 		
+		"DOTA_Tooltip_ability_item_as_1_2"								"Перчатки всадника"
+		"DOTA_Tooltip_ability_item_as_1_2_Lore"							"Крепкие кожанные перчатки.<br> Такие обычно носят всадники и наездники, чтобы не травмировать руки.<br>  Повышают провороство владельца." 		
+		"DOTA_Tooltip_ability_item_as_1_2_bonus_value"					"+$attack" 		
 		
-		"DOTA_Tooltip_ability_item_as_1_3"							"as"
-		"DOTA_Tooltip_ability_item_as_1_3_Description"				"as описание" 		
-		"DOTA_Tooltip_ability_item_as_1_3_bonus_value"				"+$attack" 		
+		"DOTA_Tooltip_ability_item_as_1_3"								"Перчатки всадника"
+		"DOTA_Tooltip_ability_item_as_1_3_Lore"							"Крепкие кожанные перчатки.<br> Такие обычно носят всадники и наездники, чтобы не травмировать руки.<br>  Повышают провороство владельца." 		
+		"DOTA_Tooltip_ability_item_as_1_3_bonus_value"					"+$attack" 		
 //hp
-		"DOTA_Tooltip_ability_item_hp_1_1"							"hp"
-		"DOTA_Tooltip_ability_item_hp_1_1_Description"				"hp описание" 		
-		"DOTA_Tooltip_ability_item_hp_1_1_bonus_value"				"+$health" 		
+		"DOTA_Tooltip_ability_item_hp_1_1"								"Сфера жизни"
+		"DOTA_Tooltip_ability_item_hp_1_1_Lore"							"Рубиновая сфера источающая красное свечение.<br> Сильно укрепляет Тело владельца." 		
+		"DOTA_Tooltip_ability_item_hp_1_1_bonus_value"					"+$health" 		
 		
-		"DOTA_Tooltip_ability_item_hp_1_2"							"hp"
-		"DOTA_Tooltip_ability_item_hp_1_2_Description"				"hp описание" 		
-		"DOTA_Tooltip_ability_item_hp_1_2_bonus_value"				"+$health" 		
+		"DOTA_Tooltip_ability_item_hp_1_2"								"Сфера жизни"
+		"DOTA_Tooltip_ability_item_hp_1_2_Lore"							"Рубиновая сфера источающая красное свечение.<br> Сильно укрепляет Тело владельца."		
+		"DOTA_Tooltip_ability_item_hp_1_2_bonus_value"					"+$health" 		
 		
-		"DOTA_Tooltip_ability_item_hp_1_3"							"hp"
-		"DOTA_Tooltip_ability_item_hp_1_3_Description"				"hp описание" 		
-		"DOTA_Tooltip_ability_item_hp_1_3_bonus_value"				"+$health" 		
+		"DOTA_Tooltip_ability_item_hp_1_3"								"Сфера жизни"
+		"DOTA_Tooltip_ability_item_hp_1_3_Lore"							"Рубиновая сфера источающая красное свечение.<br> Сильно укрепляет Тело владельца."		
+		"DOTA_Tooltip_ability_item_hp_1_3_bonus_value"					"+$health" 		
 //hpreg
-		"DOTA_Tooltip_ability_item_hpreg_1_1"							"hpreg"
-		"DOTA_Tooltip_ability_item_hpreg_1_1_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_1"							"Печать Надежды"
+		"DOTA_Tooltip_ability_item_hpreg_1_1_Lore"						"Это кольцо - символ ордена Надежды.<br> Рыцари этого ордена славятся невиданной стойкостью в бою!"
 		"DOTA_Tooltip_ability_item_hpreg_1_1_bonus_value"				"+$hp_regen"
 		
-		"DOTA_Tooltip_ability_item_hpreg_1_2"							"hpreg"
-		"DOTA_Tooltip_ability_item_hpreg_1_2_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_2"							"Печать Надежды"
+		"DOTA_Tooltip_ability_item_hpreg_1_2_Lore"						"Это кольцо - символ ордена Надежды.<br> Рыцари этого ордена славятся невиданной стойкостью в бою!"
 		"DOTA_Tooltip_ability_item_hpreg_1_2_bonus_value"				"+$hp_regen"
 		
-		"DOTA_Tooltip_ability_item_hpreg_1_3"							"hpreg"
-		"DOTA_Tooltip_ability_item_hpreg_1_3_Description"				"hpreg описание"
+		"DOTA_Tooltip_ability_item_hpreg_1_3"							"Печать Надежды"
+		"DOTA_Tooltip_ability_item_hpreg_1_3_Lore"						"Это кольцо - символ ордена Надежды.<br> Рыцари этого ордена славятся невиданной стойкостью в бою!"
 		"DOTA_Tooltip_ability_item_hpreg_1_3_bonus_value"				"+$hp_regen"
 //mp
-		"DOTA_Tooltip_ability_item_mp_1_1"							"mp"
-		"DOTA_Tooltip_ability_item_mp_1_1_Description"				"mp описание" 		
-		"DOTA_Tooltip_ability_item_mp_1_1_bonus_value"				"+$mana" 		
+		"DOTA_Tooltip_ability_item_mp_1_1"								"Сфера магии"
+		"DOTA_Tooltip_ability_item_mp_1_1_Lore"							"Сфера из неизвестного минерала.<br>Укрепляет Разум владельца." 		
+		"DOTA_Tooltip_ability_item_mp_1_1_bonus_value"					"+$mana" 		
 		
-		"DOTA_Tooltip_ability_item_mp_1_2"							"mp"
-		"DOTA_Tooltip_ability_item_mp_1_2_Description"				"mp описание" 		
-		"DOTA_Tooltip_ability_item_mp_1_2_bonus_value"				"+$mana" 		
+		"DOTA_Tooltip_ability_item_mp_1_2"								"Сфера магии"
+		"DOTA_Tooltip_ability_item_mp_1_2_Lore"							"Сфера из неизвестного минерала.<br>Укрепляет Разум владельца." 		
+		"DOTA_Tooltip_ability_item_mp_1_2_bonus_value"					"+$mana" 		
 		
-		"DOTA_Tooltip_ability_item_mp_1_3"							"mp"
-		"DOTA_Tooltip_ability_item_mp_1_3_Description"				"mp описание" 		
-		"DOTA_Tooltip_ability_item_mp_1_3_bonus_value"				"+$mana" 		
+		"DOTA_Tooltip_ability_item_mp_1_3"								"Сфера магии"
+		"DOTA_Tooltip_ability_item_mp_1_3_Lore"							"Сфера из неизвестного минерала.<br>Укрепляет Разум владельца." 		
+		"DOTA_Tooltip_ability_item_mp_1_3_bonus_value"					"+$mana" 		
 //mpreg
-		"DOTA_Tooltip_ability_item_mpreg_1_1"							"mpreg"
-		"DOTA_Tooltip_ability_item_mpreg_1_1_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_1"							"Кольцо Прилива"
+		"DOTA_Tooltip_ability_item_mpreg_1_1_Lore"						"Кольцо добытое со дна океана.<br>Обладает свойством ускорять восполнение запасов манны."
 		"DOTA_Tooltip_ability_item_mpreg_1_1_bonus_value"				"+$mana_regen"
 		
-		"DOTA_Tooltip_ability_item_mpreg_1_2"							"mpreg"
-		"DOTA_Tooltip_ability_item_mpreg_1_2_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_2"							"Кольцо Прилива"
+		"DOTA_Tooltip_ability_item_mpreg_1_2_Lore"						"Кольцо добытое со дна океана.<br>Обладает свойством ускорять восполнение запасов манны."
 		"DOTA_Tooltip_ability_item_mpreg_1_2_bonus_value"				"+$mana_regen"
 		
-		"DOTA_Tooltip_ability_item_mpreg_1_3"							"mpreg"
-		"DOTA_Tooltip_ability_item_mpreg_1_3_Description"				"mpreg описание"
+		"DOTA_Tooltip_ability_item_mpreg_1_3"							"Кольцо Прилива"
+		"DOTA_Tooltip_ability_item_mpreg_1_3_Lore"						"Кольцо добытое со дна океана.<br>Обладает свойством ускорять восполнение запасов манны."
 		"DOTA_Tooltip_ability_item_mpreg_1_3_bonus_value"				"+$mana_regen"
 //resist
-		"DOTA_Tooltip_ability_item_resist_1_1"							"resist"
-		"DOTA_Tooltip_ability_item_resist_1_1_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_1"							"Накидка ведьмолова"
+		"DOTA_Tooltip_ability_item_resist_1_1_Lore"						"Такие накидки и плащи носят охотники на ведьм.<br> Обладает сильным сопротивлением к чарам и заклинаниям."
 		"DOTA_Tooltip_ability_item_resist_1_1_bonus_value"				"%+$spell_resist"
 		
-		"DOTA_Tooltip_ability_item_resist_1_2"							"resist"
-		"DOTA_Tooltip_ability_item_resist_1_2_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_2"							"Накидка ведьмолова"
+		"DOTA_Tooltip_ability_item_resist_1_2_Lore"						"Такие накидки и плащи носят охотники на ведьм.<br> Обладает сильным сопротивлением к чарам и заклинаниям."
 		"DOTA_Tooltip_ability_item_resist_1_2_bonus_value"				"%+$spell_resist"
 		
-		"DOTA_Tooltip_ability_item_resist_1_3"							"resist"
-		"DOTA_Tooltip_ability_item_resist_1_3_Description"				"resist описание"
+		"DOTA_Tooltip_ability_item_resist_1_3"							"Накидка ведьмолова"
+		"DOTA_Tooltip_ability_item_resist_1_3_Lore"						"Такие накидки и плащи носят охотники на ведьм.<br> Обладает сильным сопротивлением к чарам и заклинаниям."
 		"DOTA_Tooltip_ability_item_resist_1_3_bonus_value"				"%+$spell_resist"
 //spell
-		"DOTA_Tooltip_ability_item_spell_1_1"							"spell"
-		"DOTA_Tooltip_ability_item_spell_1_1_Description"				"spell описание"
-		"DOTA_Tooltip_ability_item_spell_1_1_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+		"DOTA_Tooltip_ability_item_spell_1_1"							"Слёзы Дракона"
+		"DOTA_Tooltip_ability_item_spell_1_1_Lore"						"Неизвестно кто и при каких обстоятельства добыл эту жидкость.<br> Но её чудесные свойства - неоспоримы!"
+		"DOTA_Tooltip_ability_item_spell_1_1_bonus_value"				"%+ к Усилению урона от способностей" 		
 		
-		"DOTA_Tooltip_ability_item_spell_1_2"							"spell"
-		"DOTA_Tooltip_ability_item_spell_1_2_Description"				"spell описание"
-		"DOTA_Tooltip_ability_item_spell_1_2_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+		"DOTA_Tooltip_ability_item_spell_1_2"							"Слёзы Дракона"
+		"DOTA_Tooltip_ability_item_spell_1_2_Lore"						"Неизвестно кто и при каких обстоятельства добыл эту жидкость.<br> Но её чудесные свойства - неоспоримы!"
+		"DOTA_Tooltip_ability_item_spell_1_2_bonus_value"				"%+ к Усилению урона от способностей" 		
 		
-		"DOTA_Tooltip_ability_item_spell_1_3"							"spell"
-		"DOTA_Tooltip_ability_item_spell_1_3_Description"				"spell описание"
-		"DOTA_Tooltip_ability_item_spell_1_3_bonus_value"				"%+УСИЛЕНИЕ СПОСОБНОСТЕЙ" 		
+		"DOTA_Tooltip_ability_item_spell_1_3"							"Слёзы Дракона"
+		"DOTA_Tooltip_ability_item_spell_1_3_Lore"						"Неизвестно кто и при каких обстоятельства добыл эту жидкость.<br> Но её чудесные свойства - неоспоримы!"
+		"DOTA_Tooltip_ability_item_spell_1_3_bonus_value"				"%+ к Усилению урона от способностей" 		
 //armor
 		"DOTA_Tooltip_ability_item_armor_1_1"							"Ржавая Кольчуга"
 		"DOTA_Tooltip_ability_item_armor_1_1_Lore"						"Старая ржавая кольчуга.<br>Вряд ли она спасет вам жизнь в трудную минуту, но лучше иметь хотя бы такую броню - чем вообще никакой."
@@ -205,7 +205,9 @@
 		"DOTA_Tooltip_ability_item_block_1_3_bonus_value"				"+к блокировке урона"
         "DOTA_Tooltip_ability_item_block_1_3_Note0"                     "<em>Гарантированно блокирует : %bonus_value%  \n урона от атак</em>"
         //"DOTA_Tooltip_ability_item_block_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Блок урона</h1> Блокирует урона от атак : %bonus_value% " ~RIP по указанию Витали (квак-плак) ~EHOT	
+//=================================================================================================================
 //Craft1 //тут начинаются наши новые итемы , а точнее крафтовые шмотки ~EHOT
+//=================================================================================================================
 
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"
@@ -262,7 +264,33 @@
 		"DOTA_Tooltip_ability_item_hp_block_1_2_bonus_hp"					"+$health"
 		"DOTA_Tooltip_ability_item_hp_block_1_2_bonus_block"				"+к блокировке урона"
         "DOTA_Tooltip_ability_item_hp_block_1_2_Note0"             			"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
+
+        "DOTA_Tooltip_ability_item_hp_hpreg_1_1"							"Перстень с рубином"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Lore"						"Золотой перстень инкрустирован огромным волшебным рубином.<br><br>Такие рубины можно добыть только в одной волшебной шахте.<br> Эти самоцветы сильно ускоряют врожденную регенерацию и укрепляют здоровье."
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Укрепление</font></h1> Здоровье увеличивается на : %bonus_health_pct%% "
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_bonus_hpreg"				"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1"							"Перстень с рубином"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Lore"						"Золотой перстень инкрустирован огромным волшебным рубином.<br><br>Такие рубины можно добыть только в одной волшебной шахте.<br> Эти самоцветы сильно ускоряют врожденную регенерацию и укрепляют здоровье."
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Укрепление</font></h1> Здоровье увеличивается на : %bonus_health_pct%% "
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_bonus_hpreg"				"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_hp_armor_1_1"							"Кушак Великана"
+		"DOTA_Tooltip_ability_item_hp_armor_1_1_Lore"						"Такие кольца носят ледяные великаны.<br>Да, да : что для великана колечко - то для вас - отличный пояс!<br>Поэтому и прозвали этот кушак Великанским.<br><br>Великаны черпают энергию для своей ледяной магии именно из таких колец.<br>От артефакта исходит сильный холод, который оледеняет все вокруг, кроме самого владельца!"
+		"DOTA_Tooltip_ability_item_hp_armor_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#60dcff'>Аура Холода</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_hp_armor_1_1_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_armor_1_1_bonus_armor"				"+$armor"
+
+		"DOTA_Tooltip_ability_item_hp_armor_1_2"							"Кушак Великана"
+		"DOTA_Tooltip_ability_item_hp_armor_1_2_Lore"						"Такие кольца носят ледяные великаны.<br>Да, да : что для великана колечко - то для вас - отличный пояс!<br>Поэтому и прозвали этот кушак Великанским.<br><br>Великаны черпают энергию для своей ледяной магии именно из таких колец.<br>От артефакта исходит сильный холод, который оледеняет все вокруг, кроме самого владельца!"
+		"DOTA_Tooltip_ability_item_hp_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#60dcff'>Аура Холода</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_hp_armor_1_2_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_armor_1_2_bonus_armor"				"+$armor"
+//=================================================================================================================		
 //Craft2 //А тут - Топ шмотки ~EHOT
+//=================================================================================================================
 
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"
@@ -377,7 +405,9 @@
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_dmg_stat_hp_armor_1_2_bonus_hp"					"+$health"
+//=================================================================================================================
 //Auras buff debuff - ALL	//все ауры и баффы тут	
+//=================================================================================================================
 
 		"DOTA_Tooltip_modifier_item_str_resist_buff_1"										"Антимагия"
 		"DOTA_Tooltip_modifier_item_str_resist_buff_1_Description"							"Существо невосприимчиво к магии."
@@ -391,11 +421,18 @@
 		"DOTA_Tooltip_modifier_item_dmg_stat_aura_1"										"Аура Выжигания"
 		"DOTA_Tooltip_modifier_item_dmg_stat_aura_1_Description"							"Существо ежесекундно получает урон."   //"Существо получает 50 урона в секунду." - нужно писать обычные цифры ибо это : dmg_per_sec - дота не понимает...А так как у нас один и тот же модификатор на 50 и на 100...но лучше чем то что есть не придумал...или делать отдельный модификатор для каждого уровня предмета
 
-        "DOTA_Tooltip_modifier_item_hp_armor_aura_1"										"Аура Земедления"
+        "DOTA_Tooltip_modifier_item_hp_armor_aura_1"										"Аура Холода"
 		"DOTA_Tooltip_modifier_item_hp_armor_aura_1_Description"							"Существо сильно замедленно. \n Скорость передвижения и атаки существа сильно уменьшены."
 
 		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_1"								"Вечная Мерзлота"
 		"DOTA_Tooltip_modifier_item_dmg_stat_hp_armor_aura_1_Description"					"Существо ежесекундно получает урон. \n Скорость передвижения и атаки существа сильно уменьшены."
-	
+//=================================================================================================================
+//=================================================================================================================	
+//Units //Юниты, крипы и тд и тп
+//=================================================================================================================
+//=================================================================================================================
+		"npc_line_creep_1"																"Болотный тролль-налётчик"
+		"npc_line_creep_2"																"Болотный тролль"
+				
 	}
 }
