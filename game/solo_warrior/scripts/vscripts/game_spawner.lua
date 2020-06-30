@@ -8,12 +8,12 @@ GameSpawner.line_interval = {}
 GameSpawner.wave_index = 0
 
 GameSpawner.wave_list = {
-	[1]={reward_gold=250,reward_exp=500,
-			units={["npc_line_creep_1"]=4,["npc_line_creep_2"]=4}},
+	[1]={reward_gold=250,reward_exp=500,                                            --НАГРАДА ЗА закрытие (прохождение) комнаты первой комнаты. [1] - это номер комнаты
+			units={["npc_line_creep_1"]=5,["npc_line_creep_2"]=3}},                 --Юниты в комнате (какие в [этих скобках]) и их количество      --было по 4
 	[2]={reward_gold=500,reward_exp=1000,
-			units={["npc_line_creep_3"]=4,["npc_line_creep_4"]=4}},
+			units={["npc_line_creep_1"]=8,["npc_line_creep_3"]=5,["npc_line_creep_4"]=2}},                 --было по 4 , и не было creep_1
 	[3]={reward_gold=750,reward_exp=1500,
-			units={["npc_line_boss_1"]=1,["npc_line_creep_4"]=4}},
+			units={["npc_line_creep_1"]=10,["npc_line_creep_2"]=4,["npc_line_creep_3"]=5,["npc_line_boss_1"]=1,["npc_line_creep_4"]=2}},   --было по 1 и 4 и не было creep_1 и creep_2 и creep_3
 	[4]={reward_gold=1000,reward_exp=2000,
 			units={["npc_line_boss_1"]=8}},
 }

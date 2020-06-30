@@ -4,27 +4,27 @@
 	"Tokens"
 	{		
 
-		"addon_game_name"							"Solo Warrior"
-		"DOTA_GameMode_15"	                        "Solo Warrior"
-		"game_mode_15"				                "Solo Warrior"
-		"DOTA_GoodGuys"                             "Solo Warrior"
+		"addon_game_name"							    "Solo Warrior"
+		"DOTA_GameMode_15"	                            "Solo Warrior"
+		"game_mode_15"				                    "Solo Warrior"
+		"DOTA_GoodGuys"                                 "Solo Warrior"
 
-		"donate_list_name_heroes"		"Расходники"
-		"donate_list_name_artifacts"	"Артефакты"
-		"donate_button_text"			"Patreon"
+		"donate_list_name_heroes"		                "Расходники"
+		"donate_list_name_artifacts"	                "Артефакты"
+		"donate_button_text"			                "Patreon"
 
-		"DOTA_SUBSHOP_CONSUMABLES"			"Специальные"
-		"DOTA_SUBSHOP_ATTRIBUTES"			"Базовые"
-		"DOTA_SUBSHOP_WEAPONS_ARMOR"		"Улучшенные"
-		"DOTA_SUBSHOP_MISC"					"Финальные"
-		"DOTA_SUBSHOP_SECRETSHOP"			"555"
+		"DOTA_SUBSHOP_CONSUMABLES"			            "Специальные"
+		"DOTA_SUBSHOP_ATTRIBUTES"			            "Базовые"
+		"DOTA_SUBSHOP_WEAPONS_ARMOR"		            "Улучшенные"
+		"DOTA_SUBSHOP_MISC"					            "Финальные"
+		"DOTA_SUBSHOP_SECRETSHOP"			            "555"
 
-		"DOTA_SUBSHOP_RECIPE_BASICS"		"Аксессуары"
-		"DOTA_SUBSHOP_RECIPE_SUPPORT"		"Поддержка"
-		"DOTA_SUBSHOP_RECIPE_MAGICS"		"Магический"
-		"DOTA_SUBSHOP_RECIPE_DEFENSE"		"Броня"
-		"DOTA_SUBSHOP_RECIPE_WEAPONS"		"Оружие"
-		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		"Артефакты"
+		"DOTA_SUBSHOP_RECIPE_BASICS"		            "Аксессуары"
+		"DOTA_SUBSHOP_RECIPE_SUPPORT"		            "Поддержка"
+		"DOTA_SUBSHOP_RECIPE_MAGICS"		            "Магический"
+		"DOTA_SUBSHOP_RECIPE_DEFENSE"		            "Броня"
+		"DOTA_SUBSHOP_RECIPE_WEAPONS"		            "Оружие"
+		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		            "Артефакты"
 
 //Items
 
@@ -527,8 +527,12 @@
 //Units //Юниты, крипы и тд и тп
 //=================================================================================================================
 //=================================================================================================================
-		"npc_line_creep_1"																"Болотный тролль-налётчик"
-		"npc_line_creep_2"																"Болотный тролль"
+		"npc_line_creep_1"																    "Болотный тролль"
+		"npc_line_creep_2"																    "Болотный тролль-лекарь"
+        "npc_line_creep_3"																    "Болотный тролль-налётчик"
+        "npc_line_creep_4"																    "Болотный тролль-шаман"
+//       ---МИНИ БОССЫ---
+        "npc_line_boss_1"																    "Вождь Троллей"
 				
 	}
 }

@@ -5,11 +5,16 @@ end
 
 ItemDrop.item_drop = {
 --		{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
-		{items = {"item_belt_of_strength","item_boots_of_elves","item_robe"}, chance = 10, limit = 5, units = {"npc_dota_neutral_kobold","npc_dota_neutral_centaur_outrunner"}},--50% drop from list with limit
-		{items = {"item_flask"}, chance = 25, duration = 10},-- global drop 25%
-		{items = {"item_wraith_band"}, units ={"npc_neutral_boss_1"}},
+		{items = {"item_belt_of_strength","item_boots_of_elves","item_robe"}, chance = 10, limit = 5, units = {"npc_dota_neutral_kobold","npc_dota_neutral_centaur_outrunner"}},--50% drop from list with limit --limit -это скольк таких итемов может выпасть
+		--{items = {"item_flask"}, chance = 25, duration = 10},-- global drop 25%   --имхо вообще не рулит...залочивает слот. выкинь-подбери - нееее!!! так не пойдет!!!
+		{items = {"item_wraith_band"}, units ={"npc_neutral_boss_1"}},      -- если указан units - то итем может упасть тольк с этих юнитов
 		{items = {"item_quarterstaff"}, units ={"npc_neutral_boss_2"}},
 		{items = {"item_lifesteal"}, units ={"npc_neutral_boss_3"}},
+		--все что ниже нахимичил ЕНОТ. А енотов бить нельзя кста!!!=)
+		{items = {"item_clarity"}, chance = 10, duration = 10, units = {"npc_line_creep_2","npc_line_creep_4"}},-- chance = шанс дропа со всех -Х(стока-то)%, пропадает(уничтожается с карты) через duration = 10 сек если не поднять!
+		{items = {"item_faerie_fire"}, chance = 15, duration = 15},
+		{items = {"item_greater_faerie_fire"}, chance = 5, duration = 10},
+        {items = {"item_dmg_stat_1_1"}, limit = 1, units ={"npc_line_boss_1"}},
 }
 
 ItemDrop.secret_items = {

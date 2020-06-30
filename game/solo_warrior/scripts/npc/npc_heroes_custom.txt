@@ -1,71 +1,71 @@
 // Dota Heroes File
-// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding         --переделываем героя по шаблону существующего героя
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
-	"npc_dota_hero_axe"
+	"npc_dota_hero_axe"                                                     //сведения о герое
 	{
-		"override hero"				"npc_dota_hero_axe"
-		"ModelScale"				"1.2"
-		"HealthBarOffset"		"275"
+		"override hero"				"npc_dota_hero_axe"                     //название героя , модель героя?
+		"ModelScale"				"1.2"                                   //размер модели
+		"HealthBarOffset"		    "275"                                   // ХП-бар над головой героя
 
-		"Ability1"		"axe_culling_blade_custom"
+		"Ability1"		"axe_culling_blade_custom"                          //абилки героя 1-6
 		"Ability2"		"axe_anger_roar"
 		"Ability3"		"axe_counter_helix_custom"
 		"Ability4"		"axe_hot_blood"
 		"Ability5"		"axe_true_strength"		
-		"Ability6"		"axe_berserk_form"
-		"Ability7"					"generic_hidden"		
-		"Ability8"					"generic_hidden"		
-		"Ability10"		"special_bonus_exp_boost_20"
+		"Ability6"		"axe_berserk_form"                                  //абилки героя 1-6
+		"Ability7"					"generic_hidden"		                // 7-8 пустая или скрытая ячейка , может служить для замены. например тролль-герой ближник или дальник
+		"Ability8"					"generic_hidden"	                    // 7-8 	, куда 9 делась?)))
+		"Ability10"		"special_bonus_exp_boost_20"                        //10-17 это все таланты
 		"Ability11"		"special_bonus_gold_income_240"
 		"Ability12"		"special_bonus_armor_5"
 		"Ability13"		"special_bonus_magic_resistance_15"
-		"Ability14"		"special_bonus_all_stats_10"
+		"Ability14"		"special_bonus_all_stats_10"        
 		"Ability15"		"special_bonus_strength_25"
 		"Ability16"		"special_bonus_hp_regen_25"
-		"Ability17"		"special_bonus_strength_40"
+		"Ability17"		"special_bonus_strength_40"                        //10-17 это все таланты
 
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"			"10"										// Damage range min.
-		"AttackDamageMax"			"30"										// Damage range max.
-		"AttackRate"				"2.2"									// Speed of attack.
-		"ProjectileSpeed"			"1550"									// Speed of projectile.
-		"AttackAnimationPoint"		"0.55"
+		"AttackDamageMin"			"10"									// Damage range min.                    -- разброс урона от мин к макс. это минимальный
+		"AttackDamageMax"			"30"									// Damage range max.                    -- разброс урона - это максимальная
+		"AttackRate"				"2.2"									// Speed of attack.                     -- БАТ?
+		"ProjectileSpeed"			"1550"									// Speed of projectile.                 -- скорость полёта снаряда. для лучников или скиллов типа стрелы мираны и тп
+		"AttackAnimationPoint"		"0.55"                                  //--задержка перед атакой складывается с БАТ итого  2.2 + 0.55 = 2.75
 
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
-		"ArmorPhysical"				"0"									// Physical protection.
-		"MagicalResistance"			"50"									// Magical protection (percentage).
+		"ArmorPhysical"				"0"									    // Physical protection.                 --базовая физ. броня
+		"MagicalResistance"			"50"									// Magical protection (percentage).     --базовая маг. броня
 
 		
 		// Attributes
 		//-------------------------------------------------------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"25"										// Base strength
-		"AttributeStrengthGain"		"5"										// Strength bonus per level.
-		"AttributeBaseIntelligence"	"15"										// Base intelligence
-		"AttributeIntelligenceGain"	"3"										// Intelligence bonus per level.
-		"AttributeBaseAgility"		"20"										// Base agility
-		"AttributeAgilityGain"		"2"										// Agility bonus per level.
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"               //                                      -- главный атрибут сила
+		"AttributeBaseStrength"		"25"									// Base strength                        -- баз сила (при старте)
+		"AttributeStrengthGain"		"5"										// Strength bonus per level.            -- силы при лвлАпе
+		"AttributeBaseIntelligence"	"15"									// Base intelligence                    -- баз инта
+		"AttributeIntelligenceGain"	"3"										// Intelligence bonus per level.        -- инты при лвлАпе
+		"AttributeBaseAgility"		"20"									// Base agility                         -- баз ловк
+		"AttributeAgilityGain"		"2"										// Agility bonus per level.             -- лову при лвлАпе
 	
 		// Movement
 		//-------------------------------------------------------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"									// Speed.
-		"MovementTurnRate"			"0.5"									// Turning rate.
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"             //юнит ходячий                          -- не летает
+		"MovementSpeed"				"325"									// Speed.                               -- база скорость
+		"MovementTurnRate"			"0.5"									// Turning rate.                        -- скорость поворота 
 	
 		// Status
 		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"				"200"									// Base health.
-		"StatusHealthRegen"			"0.5"									// Health regeneration rate.
-		"StatusMana"				"100"											// Base mana.
-		"StatusManaRegen"			"1"									// Mana regeneration rate.
+		"StatusHealth"				"200"									// Base health.                         -- базовое ХП
+		"StatusHealthRegen"			"0.5"									// Health regeneration rate.            -- баз реген ХП
+		"StatusMana"				"100"									// Base mana.                           -- база манны
+		"StatusManaRegen"			"1"									    // Mana regeneration rate.              -- баз рег маны
 		
 
-		"VisionNighttimeRange"		"1000"
-		"VisionDaytimeRange"		"1500"
+		"VisionNighttimeRange"		"1000"                                  //                                      --дальность обзора ночь
+		"VisionDaytimeRange"		"1500"                                  //                                      --дальность обзора день
 	}
 }
