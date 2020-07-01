@@ -30,7 +30,8 @@ function modifier_creature_troll_aura:OnCreated( kv )
 --	ability.damage_aura = ability:GetSpecialValueFor( "damage_aura" )
 	ability.vampiric_aura = ability:GetSpecialValueFor( "vampiric_aura" )/100
 
-	local effect = "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration.vpcf"
+--	local effect = "particles/units/heroes/hero_witchdoctor/witchdoctor_voodoo_restoration.vpcf"        --так понимаю это визуал ауры, очень вырвиглазно, заменил на то что ниже -_-
+    local effect = "particles/econ/events/fall_major_2016/radiant_fountain_regen_fm06_leaves_d.vpcf" --листочки....красивааааа
 	local pfx = ParticleManager:CreateParticle(effect, PATTACH_POINT_FOLLOW, self:GetCaster())
 	ParticleManager:SetParticleControlEnt(pfx, 0, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_attack1", self:GetParent():GetAbsOrigin(), true)
 	ParticleManager:SetParticleControl(pfx, 1, Vector( ability.aura_radius, ability.aura_radius, ability.aura_radius ) )

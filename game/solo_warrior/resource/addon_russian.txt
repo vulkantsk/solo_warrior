@@ -25,6 +25,61 @@
 		"DOTA_SUBSHOP_RECIPE_DEFENSE"		            "Броня"
 		"DOTA_SUBSHOP_RECIPE_WEAPONS"		            "Оружие"
 		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		            "Артефакты"
+// --HERO   -- ГЕРОЙ
+//Axe       -- Наш Соло Вариор
+		"npc_dota_hero_axe"		"Воитель"
+
+		"DOTA_Tooltip_ability_axe_hot_blood"							        "Горячая Кровь"
+		"DOTA_Tooltip_ability_axe_hot_blood_Description"				        "При критическом состоянии здоровья - регенерация сильно усиливается!"
+        "DOTA_Tooltip_ability_axe_hot_blood_Lore"				                "Горячая кровь бурлит по венам...<br> Инстинкт Самосохранения способен на удивительные вещи!"
+		"DOTA_Tooltip_ability_axe_hot_blood_required_hp"				        "%Порог Здоровья:"
+		"DOTA_Tooltip_ability_axe_hot_blood_bonus_regen"				        "Регенерация:"
+		"DOTA_Tooltip_ability_axe_hot_blood_bonus_regen_pct"			        "%Регенерация от Максимального Здоровья:"
+
+		"DOTA_Tooltip_ability_axe_culling_blade_custom"							"Казнь"
+		"DOTA_Tooltip_ability_axe_culling_blade_custom_Description"				"Наносит урон по площади и добивает врагов у которых мало здоровья."
+        "DOTA_Tooltip_ability_axe_culling_blade_custom_Lore"                    "Добейте ваших врагов!"
+		"DOTA_Tooltip_ability_axe_culling_blade_custom_radius"				    "Радиус:"
+		"DOTA_Tooltip_ability_axe_culling_blade_custom_damage"				    "Урон:"
+		"DOTA_Tooltip_ability_axe_culling_blade_custom_bonus_damage"		    "Бонусный Урон:"
+		"DOTA_Tooltip_modifier_axe_culling_blade_custom"						"Бонусный Урон"
+		"DOTA_Tooltip_modifier_axe_culling_blade_custom_Description"			"Бонусный Урон за казнённых боссов!"
+        "DOTA_Tooltip_ability_axe_culling_blade_custom_Note0"                   "Мгновенно убивает - если здоровье цели меньше порога урона.\n<font color='#ff9966'><em> Казнив босса этой способностью - получаете бонус урона навсегда! </em> </font>"
+
+		"DOTA_Tooltip_ability_axe_anger_roar"						            "Боевой Клич"
+		"DOTA_Tooltip_ability_axe_anger_roar_Description"			            "Временно увеличивает броню и здоровье."
+        "DOTA_Tooltip_ability_axe_anger_roar_Lore"                              "Тактика запугивания врага громкими криками.<br> Боевой Клич, который придаёт герою сил и помогает выдержать натиск врага! "
+		"DOTA_Tooltip_ability_axe_anger_roar_duration"				            "Длительность:"
+		"DOTA_Tooltip_ability_axe_anger_roar_bonus_armor"			            "Бонусная Броня:"
+		"DOTA_Tooltip_ability_axe_anger_roar_bonus_health_pct"		            "%Бонус к Здоровью:"
+		"DOTA_Tooltip_modifier_axe_anger_roar"							        "Боевой Клич"
+		"DOTA_Tooltip_modifier_axe_anger_roar_Description"				        "Броня и Здоровье увеличены!"
+
+		"DOTA_Tooltip_ability_axe_counter_helix_custom"							"Контратака"
+		"DOTA_Tooltip_ability_axe_counter_helix_custom_Description"				"Воитель мгновенно отвечает на атаки врагов."
+        "DOTA_Tooltip_ability_axe_counter_helix_custom_Lore"                    "И один в Поле - воин!<br>  Больше врагов - больше наград!"
+		"DOTA_Tooltip_ability_axe_counter_helix_custom_radius"				    "Радиус:"
+		"DOTA_Tooltip_ability_axe_counter_helix_custom_trigger_chance"		    "%Шанс Срабатывания:"
+		"DOTA_Tooltip_ability_axe_counter_helix_custom_base_damage"			    "Урон:"
+		"DOTA_Tooltip_ability_axe_counter_helix_custom_attack_damage"			"%Дополнительный Урон:"
+        "DOTA_Tooltip_ability_axe_counter_helix_custom_Note0"                    "<em>Бонус к Урону способности прибавляется в процентах от силы Атаки( Урона наносимого героем при обычных атаках). </em>"
+
+		"DOTA_Tooltip_ability_axe_berserk_form"							        "Берсерк"
+		"DOTA_Tooltip_ability_axe_berserk_form_Description"				        "Сильно увеличивает Атакующие характеристики, но снижает броню."
+        "DOTA_Tooltip_ability_axe_berserk_form_Lore"                            "Полностью поглощенный битвой - выпусти на волю всю свою ярость!<br>  Герой яросто идёт в Атаку, позабыв о защите."
+		"DOTA_Tooltip_ability_axe_berserk_form_duration"				        "Длительность:"
+		"DOTA_Tooltip_ability_axe_berserk_form_decrease_armor"			        "Снижение Брони:"
+		"DOTA_Tooltip_ability_axe_berserk_form_bonus_dmg"				        "Бонусный Урон:"
+		"DOTA_Tooltip_ability_axe_berserk_form_bonus_ms"				        "Бонусная Скорость Бега:"
+		"DOTA_Tooltip_ability_axe_berserk_form_bonus_bat"				        "Базовое Время Атаки:"
+		"DOTA_Tooltip_ability_axe_berserk_form_cleave_damage_pct"		        "Прорубающий урон:"
+		"DOTA_Tooltip_ability_axe_berserk_form_aghanim_description"				"<font color='#d99900'>Воитель становится Берсерком навсегда!</font>"
+        "DOTA_Tooltip_ability_axe_berserk_form_Note0"                           "<em>Прорубающий урон или Сплэшь - нанося урон по цели, Воитель ранит и всех врагов перед собой в конусобразном радиусе.\n<font color='#ff9966'><em> (БВА)Базовое Время Атаки - Показатель сильно влияющий на (СА) Скорость Атаки, чем меньше БВА - тем Больше СА! </em> </font>  </em>"
+
+		"DOTA_Tooltip_ability_axe_true_strength"					            "Истинная Мощь"
+		"DOTA_Tooltip_ability_axe_true_strength_Description"		            "Даёт огромный прирост силы."
+        "DOTA_Tooltip_ability_axe_true_strength_Lore"                           "Настоящая Сила не знает границ..."
+		"DOTA_Tooltip_ability_axe_true_strength_bonus_str_pct"			        "%Бонус к Силе:"       
 
 //Items
 
@@ -455,7 +510,7 @@
 		"DOTA_Tooltip_ability_item_dmg_str_hp_stat_1_2_bonus_str"					"+$str"
 
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1"						"Руническое Кольцо"
-		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_Lore"					"Руны на этом древнем кольце источают сильнейшую магию!"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_Lore"					"Это кольцо настолько Древнее, что даже позабыто.<br>Поговривают - что оно принадлежало одному великому Чаролому.<br>Чароломы - это исчезнувший орден борьбы с магией. \n Или может быть - ВЫ новый Чаролом?!"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_Description"			"<h1>Дарует  Активные  Способности :</h1> <h1>Непоколебимость</h1> Даёт невосприимчивость к магии и <font color='#50c10e'>Регенерацию здоровья</font>.<br> Ежесекундно восстанавливается здоровья : %buff_regen% <br><br>Длительность действия : %buff_duration% "
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_stat"			"+$all"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_str"				"+$str"
@@ -463,7 +518,7 @@
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_1_bonus_resist"			"%+$spell_resist"
         
         "DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2"						"Руническое Кольцо"
-		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Lore"					"Руны на этом древнем кольце источают сильнейшую магию!"
+		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Lore"					"Это кольцо настолько Древнее, что даже позабыто.<br>Поговривают - что оно принадлежало одному великому Чаролому.<br>Чароломы - это исчезнувший орден борьбы с магией. \n Или может быть - ВЫ новый Чаролом?!"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_Description"			"<h1>Дарует  Активные  Способности :</h1> <h1>Непоколебимость</h1> Даёт невосприимчивость к магии и <font color='#50c10e'>Регенерацию здоровья</font>.<br> Ежесекундно восстанавливается здоровья : %buff_regen% <br><br>Длительность действия : %buff_duration% "
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_stat"			"+$all"
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_str"				"+$str"
@@ -471,7 +526,7 @@
 		"DOTA_Tooltip_ability_item_str_resist_stat_hpreg_1_2_bonus_resist"			"%+$spell_resist"
 
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1"						"Накидка из шкуры оборотня"
-		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Lore"					"Ощутите себя в волчьей шкуре!"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Lore"					"Шкура могущественного Оборотня, который доглие годы держал в страхе целые поселения!<br>Оборотни известны невероятной регенерацией и почти моментальным заживленим любых ран!<br> Эта шкура всё что осталось от монстра. \n Ощутите себя в волчьей шкуре!"
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_Description"			"<h1>Дарует  Пассивные  Способности :</h1> <h1>Сила Луны</h1> Снижает затраты манны на : %manacost_reduction% <br><br><h1><font color='#50c10e'>Сильная Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_stat"			"+$all"
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_str"				"+$str"
@@ -479,7 +534,7 @@
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_1_bonus_resist"			"%+$spell_resist"
 
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2"						"Накидка из шкуры оборотня"
-		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_Lore"					"Ощутите себя в волчьей шкуре!"
+		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_Lore"					"Шкура могущественного Оборотня, который доглие годы держал в страхе целые поселения!<br>Оборотни известны невероятной регенерацией и почти моментальным заживленим любых ран!<br> Эта шкура всё что осталось от монстра. \n Ощутите себя в волчьей шкуре!"
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_Description"			"<h1>Дарует  Пассивные  Способности :</h1> <h1>Сила Луны</h1> Снижает затраты манны на : %manacost_reduction% <br><br><h1><font color='#50c10e'>Сильная Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_stat"			"+$all"
 		"DOTA_Tooltip_ability_item_stat_resist_str_hpreg_1_2_bonus_str"				"+$str"

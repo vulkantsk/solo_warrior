@@ -35,38 +35,37 @@
 
 	"weapons_armor"
 	{
-		"item"		"item_base_chainmail_1"
-		"item"		"item_base_shield_1"
-		"item"		"item_base_crown_1"
-		"item"		"item_base_helm_1"
-		"item"		"item_base_sword_1"
-		"item"		"item_mail"
-		"item"		"item_quelling_blade"
-		"item"		"item_blight_stone"
-		"item"		"item_quarterstaff"
-		"item"		"item_helm_of_iron_will"
-		"item"		"item_broadsword"
-		"item"		"item_claymore"
-		"item"		"item_imba_javelin"
-		"item"		"item_mithril_hammer"
+		"item"		"item_str_armor_1_2"
+		"item"		"item_dmg_armor_1_2"
+
+		"item"		"item_hp_block_1_2"
+		"item"		"item_stat_block_1_2"
+
+		"item"		"item_stat_armor_1_2"
+		"item"		"item_hp_hpreg_1_2"
+
+		"item"		"item_dmg_str_1_2"
+		"item"		"item_hp_stat_1_2"
+
+		"item"		"item_str_resist_1_2"
+		"item"		"item_stat_hpreg_1_2"
+
+		"item"		"item_stat_resist_1_2"
+		"item"		"item_str_hpreg_1_2"
+
+		"item"		"item_dmg_stat_1_2"
+		"item"		"item_hp_armor_1_2"
 	}
 			
 	"misc"
 	{
-		"item"		"item_imba_magic_stick"
-		"item"		"item_wind_lace"
-		"item"		"item_sobi_mask"
-		"item"		"item_ring_of_regen"
-		"item"		"item_boots"
-		"item"		"item_gloves"
-		"item"		"item_cloak"
-		"item"		"item_ring_of_health"
-		"item"		"item_void_stone"
-		"item"		"item_lifesteal"
-		"item"		"item_shadow_amulet"
-		"item"		"item_ghost"
-		"item"		"item_imba_blink"				
-		"item"		"item_imba_shotgun"
+		"item"		"item_str_armor_dmg_armor_1_2"
+		"item"		"item_hp_block_stat_block_1_2"
+		"item"		"item_stat_armor_hp_hpreg_1_2"
+		"item"		"item_dmg_str_hp_stat_1_2"
+		"item"		"item_str_resist_stat_hpreg_1_2"
+		"item"		"item_stat_resist_str_hpreg_1_2"
+		"item"		"item_dmg_stat_hp_armor_1_2"
 	}
 	
 	// Level 1 - Green Recipes
