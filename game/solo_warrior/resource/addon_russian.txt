@@ -72,7 +72,7 @@
 		"DOTA_Tooltip_ability_axe_berserk_form_bonus_dmg"				        "Бонусный Урон:"
 		"DOTA_Tooltip_ability_axe_berserk_form_bonus_ms"				        "Бонусная Скорость Бега:"
 		"DOTA_Tooltip_ability_axe_berserk_form_bonus_bat"				        "Базовое Время Атаки:"
-		"DOTA_Tooltip_ability_axe_berserk_form_cleave_damage_pct"		        "Прорубающий урон:"
+		"DOTA_Tooltip_ability_axe_berserk_form_cleave_damage_pct"		        "%Прорубающий урон:"
 		"DOTA_Tooltip_ability_axe_berserk_form_aghanim_description"				"<font color='#d99900'>Воитель становится Берсерком навсегда!</font>"
         "DOTA_Tooltip_ability_axe_berserk_form_Note0"                           "<em>Прорубающий урон или Сплэшь - нанося урон по цели, Воитель ранит и всех врагов перед собой в конусобразном радиусе.\n<font color='#ff9966'><em> (БВА)Базовое Время Атаки - Показатель сильно влияющий на (СА) Скорость Атаки, чем меньше БВА - тем Больше СА! </em> </font>  </em>"
 
@@ -582,12 +582,19 @@
 //Units //Юниты, крипы и тд и тп
 //=================================================================================================================
 //=================================================================================================================
-		"npc_line_creep_1"																    "Болотный тролль"
-		"npc_line_creep_2"																    "Болотный тролль-лекарь"
-        "npc_line_creep_3"																    "Болотный тролль-налётчик"
-        "npc_line_creep_4"																    "Болотный тролль-шаман"
+//          --Кобольды--
+		"npc_kobold"																        "Кобольд"
+		"npc_gnoll_ranger"																    "Гнолл-стрелок"
+        "npc_kobold_tunneler"																"Кобольд-рудокоп"
+//          --Тролли--
+		"npc_melee_troll"																    "Болотный тролль"
+		"npc_troll_healer"																    "Болотный тролль-лекарь"
+        "npc_troll_dd"																        "Болотный тролль-налётчик"
+        "npc_troll_shaman"																    "Болотный тролль-шаман"
 //       ---МИНИ БОССЫ---
         "npc_line_boss_1"																    "Вождь Троллей"
+//       ---==БОССЫ==---
+        "npc_boss_kobold"                                                                   "Властелин Кобольдов"
 				
 	}
 }
