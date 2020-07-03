@@ -49,7 +49,7 @@
 		"AttributeBaseIntelligence"	"15"									// Base intelligence                    -- баз инта
 		"AttributeIntelligenceGain"	"3"										// Intelligence bonus per level.        -- инты при лвлАпе
 		"AttributeBaseAgility"		"20"									// Base agility                         -- баз ловк
-		"AttributeAgilityGain"		"2"										// Agility bonus per level.             -- лову при лвлАпе
+		"AttributeAgilityGain"		"2"										// Agility bonus per level.             -- ловк при лвлАпе
 	
 		// Movement
 		//-------------------------------------------------------------------------------------------------------------

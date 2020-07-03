@@ -254,20 +254,250 @@
 	}
 	//=================================================================================================================
 	// UNITS                                                                                                   -- наше мобьЁ
-	//=================================================================================================================    
-	"npc_line_creep_1"                                                                                      // -- моб. сейчас это "Болотный тролль"	
-	{
+	//=================================================================================================================  
+    //=================================================================================
+    //  ==================   К О Б О Л Ь Д Ы   НАЧАЛО   =============================
+    //=================================================================================
+    //кобольдик	
+	"npc_kobold"
+	{										
 		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.vmdl"	// Model.       --Моделька Юнита
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
-		"SoundSet"					"n_creep_Ranged"                                                                            // что-то со звуком?
+		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 				".90"
+		"ModelScale" 					".9"
+		//"IsNeutralUnitType"			"1"
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"10"		// Damage range min.
+		"AttackDamageMax"			"11"		// Damage range max.	
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"140"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"19"		// Experience earn.
+		"BountyGoldMin"				"6"			// Gold earned min.
+		"BountyGoldMax"				"8"			// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"270"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"240"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"100"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+    //=================================================================================
+    // Neutral: Kobold Guard                                          --Кобольд Рудокоп
+    //=================================================================================
+	"npc_kobold_tunneler"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"1"
+		"ModelScale" 					"1.1"
+		//"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"14"		// Damage range min.
+		"AttackDamageMax"			"15"		// Damage range max.	
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"180"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"19"		// Experience earn.
+		"BountyGoldMin"				"14"		// Gold earned min.
+		"BountyGoldMax"				"18"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"270"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"325"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+    //=================================================================================	
+    // Neutral: Gnoll Assassin    ---Это Гнолл, но сильно похож на кобольда издали. кароч гнолы и кобольды = друзья
+    //=================================================================================
+	"npc_gnoll_ranger"	
+	{
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"2"
+		"ModelScale" 					"1"
+		//"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"gnoll_assassin_envenomed_weapon"			// Ability 1
+		"Ability2"					"magnataur_shockwave"			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"30"		// Damage range min.
+		"AttackDamageMax"			"36"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"180"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"24"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"270"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"370"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"200"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}			
+
+    //=================================================================================
+    // К О Б О Л Ь Д Ы   ФИНАЛ
+    //=================================================================================
+    //  Т Р О Л Л И      НАЧАЛО
+    //=================================================================================	
+    // Тролль милишник      
+	"npc_melee_troll"                                                                                      // -- моб. сейчас это "Болотный тролль"	
+	{
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.vmdl"	// Model.       --Моделька Юнита
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Melee"                                                                            // что-то со звуком?
+		"Level"						"1"
+		"ModelScale" 				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
 		"Ability2"					""			// Ability 2
 		"Ability3"					""			// Ability 3
 		"Ability4"					""			// Ability 4
@@ -291,7 +521,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
-		"HealthBarOffset"			"160"
+		"HealthBarOffset"			"170"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -325,22 +555,23 @@
 	}	
 
 //=================================================================================	
-// Neutral: Forest Troll High Priest
+// Neutral: Forest Troll High Priest                                --ТРОЛЛЬ ЛЕКАРЬ
 //=================================================================================
-	"npc_line_creep_2"                                                                                      // -- моб. сейчас это "Болотный тролль-лекарь"	
+	"npc_troll_healer"                                                                                      // -- моб. сейчас это "Болотный тролль-лекарь"	
 	{
 		// General
+        "vscripts"					"ai/ai_neutral_autocast_healers"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"1"
-		"ModelScale" 				".90"
+		"ModelScale" 				"1"
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"creature_troll_aura"			// Ability 1
-		"Ability2"					""			                    // Ability 2
+		"Ability2"					"dazzle_shadow_wave"			// Ability 2
 		"Ability3"					""			                    // Ability 3
 		"Ability4"					""			                    // Ability 4
 
@@ -364,7 +595,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
-		"HealthBarOffset"			"170"
+		"HealthBarOffset"			"180"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -396,10 +627,14 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
-	
-	"npc_line_creep_3"                                                                                      // -- моб. сейчас это "Болотный тролль-налётчик"
+
+//=================================================================================	
+// Neutral: Forest Troll DD                                       --тролль-налётчик
+//=================================================================================	
+	"npc_troll_dd"                                                                                      // -- моб. сейчас это "Болотный тролль-налётчик"
 	{
 		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
@@ -409,10 +644,10 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability1"					"magnataur_shockwave"			// Ability 1
+		"Ability2"					"dark_troll_warlord_ensnare"	// Ability 2
+		"Ability3"					"troll_dd_fervor"			    // Ability 3
+		"Ability4"					""			                    // Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -450,8 +685,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"1000"		    // Base health.
 		"StatusHealthRegen"			"15.0"		    // Health regeneration rate.
-		"StatusMana"				"150"			// Base mana.
-		"StatusManaRegen"			"1.0"		    // Mana regeneration rate.		 
+		"StatusMana"				"350"			// Base mana.
+		"StatusManaRegen"			"3.5"		    // Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -467,22 +702,23 @@
 	}	
 
 //=================================================================================	
-// Neutral: Dark Troll Warlord
+// Neutral: Dark Troll Warlord                                       --тролль-шаман
 //=================================================================================
-	"npc_line_creep_4"                                                                                      // -- моб. сейчас это "Болотный тролль-шаман"	
+	"npc_troll_shaman"                                                                                      // -- моб. сейчас это "Болотный тролль-шаман"	
 	{
 		// General
+        "vscripts"					"ai/ai_neutral_autocast_healers"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"2"
-		"ModelScale" 				"1.1"
+		"ModelScale" 				"1.2"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"creature_troll_aura"			        // Ability 1
-		"Ability2"					"dark_troll_warlord_ensnare"			// Ability 2
+		"Ability1"					"dazzle_shadow_wave"			        // Ability 1
+		"Ability2"					""			// Ability 2
 		"Ability3"					""			                            // Ability 3
 		"Ability4"					""			                            // Ability 4
 
@@ -506,7 +742,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"60"
-		"HealthBarOffset"			"230"
+		"HealthBarOffset"			"250"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -541,13 +777,13 @@
 //=================================================================================	
 // UNITS: HALF-BOSS    -- ПолуБоссы
 //=================================================================================    	
-	"npc_line_boss_1"                                                               //параметры босса       --(сейчас это мини босс - тролль герой)
+	"npc_troll_mini_boss"                                                               //параметры босса       --(сейчас это мини босс - тролль герой)
 	{
 		"vscripts"				"ai/line_boss_1"
 		"BaseClass"				"npc_dota_creature"
 		"Model"					"models/heroes/troll_warlord/troll_warlord.vmdl"
 		"SoundSet"				"Hero_TrollWarlord"
-		"ModelScale"			"1.5"								// old 1.0                                      -- размер модели. было 1.1
+		"ModelScale"			"1.6"								// old 1.0                                      -- размер модели. было 1.1
 		"Level"					"1"
 		"MinimapIcon"					"minimap_death"
 		"MinimapIconSize"				"600"
@@ -593,7 +829,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 		"RingRadius"				"45"
-		"HealthBarOffset"			"220"                               //--хпбар над головой. было 150
+		"HealthBarOffset"			"240"                               //--хпбар над головой. было 150
 
 		// Movement
 		//----------------------------------------------------------------
@@ -603,7 +839,7 @@
 
 		// Status                                                                                                   -- статы? ХП и МП
 		//----------------------------------------------------------------
-		"StatusHealth"				"4000"		    // Base health.                                                 -- Хп . было 600
+		"StatusHealth"				"5000"		    // Base health.                                                 -- Хп . было 600
 		"StatusHealthRegen"			"125.0"		    // Health regeneration rate.                                    -- хп рег. было 30
 		"StatusMana"				"1000"			// Base mana.                                                   -- Мп. было 500
 		"StatusManaRegen"			"5.5"			// Mana regeneration rate.                                      -- рег Мп. было 5
@@ -632,7 +868,181 @@
 			}
 		}
 	}
+
+//====================================MEEPO mini BOSS =============================================
+	"npc_meepo_mini_boss"                                                               //параметры босса       --Мэпо
+	{
+		"vscripts"				"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		"BaseClass"				"npc_dota_creature"
+		"Model"					"models/heroes/meepo/meepo.vmdl"
+		"SoundSet"				"Hero_Meepo"
+		"ModelScale"			"1.3"								// old 1.0                                      -- размер модели. было 1.1
+		"Level"					"1"
+		"MinimapIcon"					"minimap_death"
+		"MinimapIconSize"				"600"
+        "particle_folder"		"particles/units/heroes/hero_meepo"         //возможно не нужно
+		
+		// Abilities                                                              -- способности ЮНИТА
+		//----------------------------------------------------------------        -- они типа тут есть а в кастомке нет...откуда тянутся значения? по идее от сюда - npc_abilities_custom
+		
+		"Ability1"					"meepo_earthbind"			                // сетка
+		"Ability2"					"meepo_poof"			                    // пуф-взрыв
+		"Ability3"					"meepo_geostrike"			                // лопатой 
+		"Ability4"					"generic_hidden"			                // Ability 4.
+		"Ability5"					"generic_hidden"			                // шэйканэмо бэйби
+		"Ability6"					"earthshaker_aftershock"			
+		"Ability7"					""			                                // Ability 7 - Extra.
+		"Ability8"					""			                                // Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"			// Physical protection.                                         --броня. было 5
+		"MagicalResistance"			"50"			// Magical protection.                                          --маг рез. было 0
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"100"		// Damage range min.                                                 -- разброс урона от мин к макс. это минимальный
+		"AttackDamageMax"			"300"		// Damage range max.                                                 -- разброс урона. максимальный
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"                                                    //-- тип урона от атак - физ
+		"AttackRate"				"1"			// Speed of attack.                                                  -- БАТ
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.                     -- задержка перед атакой
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.                            -- хм... радиус агра?
+		"AttackRange"				"150"       //                                                                   -- дальность атаки
+		//"ProjectileModel"		    "particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"      //-- тип (модель) снаряда
+		"ProjectileSpeed"		    "1200"                                                                          //-- скорость полёта снаряда
+
+
+		// Bounty                                                                                                   -- Награда за баунти руну? в голде и опыте...зачем это сдесь? или это награда за голову?
+		//----------------------------------------------------------------
+		"BountyXP"					"200"		// Experience earn.
+		"BountyGoldMin"				"50"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.
+
+		// Bounds                                                                                                   -- не совсем ясно. но походу это хп бар над головой... и кольцо под ногами для выделения юнита.
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
+		"RingRadius"				"45"
+		"HealthBarOffset"			"240"                               //--хпбар над головой. было 150
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air         -- юнит ходит. не летает
+		"MovementSpeed"				"325"		    // Speed
+		"MovementTurnRate"			"0.5"		    // Turning rate.
+
+		// Status                                                                                                   -- статы? ХП и МП
+		//----------------------------------------------------------------
+		"StatusHealth"				"5000"		    // Base health.                                                 -- Хп
+		"StatusHealthRegen"			"150.0"		    // Health regeneration rate.                                    -- хп рег
+		"StatusMana"				"1000"			// Base mana.                                                   -- Мп
+		"StatusManaRegen"			"5.5"			// Mana regeneration rate.                                      -- рег Мп
+
+		// Team                                                                                                     -- команда . ты не в ту сторону воюешь)
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			// Team name.                                       -- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision                                                                                                   -- обзор юнита. ночной и дневной
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1750"		// Range of vision during day light.
+		"VisionNighttimeRange"		"750"		// Range of vision at night time.
+		
+		//Inventory   --Я хз где этот вараблы на этот сэт взять - Kindred of the Cursed - нашел! Kainу отдельное спасибо за это=)
+		"Creature"
+		{
+			"AttachWearables"//Kindred of the Cursed                                               --тут типа можно "нарядить" Юнита (сейчас это тролль-герой) в надеваемые для визуала артефакты
+			{
+				"Wearable1" { "ItemDef" "13033" }
+	            "Wearable2" { "ItemDef" "13032" }
+	            "Wearable3" { "ItemDef" "13031" }
+	            "Wearable4" { "ItemDef" "13030" }
+	            "Wearable5" { "ItemDef" "13029" }
+	            "Wearable6" { "ItemDef" "13028" }
+			}
+		}
+	}
 //=================================================================================	
 // UNITS: BOSS    -- Боссы
-//=================================================================================    
+//=================================================================================
+//  ===========================-- Б О С С КОБОЛЬД --============================
+//=================================================================================
+	"npc_boss_kobold"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"2"
+		"ModelScale"                "2.3"                                                                            //"1"
+		//"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		  "centaur_hoof_stomp"			        // Ability 1
+		"Ability2"        "lina_laguna_blade"
+        "Ability3"        "necrolyte_heartstopper_aura"
+        "Ability4"        "huskar_berserkers_blood"
+        "Ability5"        "earthshaker_aftershock"                                    // Ability 5.
+        "Ability6"        "kobold_taskmaster_speed_aura"                               // Ability 6 - Extra.
+        "Ability7"                    ""                                    // Ability 7 - Extra.
+        "Ability8"                    ""                                    // Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1400"		// Damage range min.
+		"AttackDamageMax"			"1500"		// Damage range max.	
+		"AttackRate"				"1.05"		// Speed of attack.
+		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"250"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"380"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.
+        "MovementTurnRate"			"3.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"40000"		    // Base health.
+		"StatusHealthRegen"			"150"		    // Health regeneration rate.
+		"StatusMana"				"10000"			// Base mana.
+		"StatusManaRegen"			"50"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			                                // Team name.                                       -- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
 }

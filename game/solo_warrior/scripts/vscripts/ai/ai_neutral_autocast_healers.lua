@@ -77,11 +77,11 @@ function NeutralAutoCasterhealerThink()
 	end
 	
 	local ally = allies[1]	-- союзником выбирается первый близжайший
+	local health_pct = thisEntity:GetHealthPercent()  --    ТЕСТОВАЯ ФИЧА --давать бафф на союзников у которых менее 90%хп - РАБОТАЕТ!!!
 	
-	
-	if npc.agro then	-- если юнит находится под действием агра
+	if npc.agro and health_pct < 90 then	-- если юнит находится под действием агра --и and health_pct < 90 --и хп менее 90%
 		
-        --осторожно!!!пытаюсь научить мобов кастовать на друзей!!!
+        --осторожно!!!пытаюсь научить мобов кастовать на друзей!!! --научил=)
         local ally = allies[1]	-- союзником выбирается первый ближайший
 		
 		AttackMove(npc, ally)

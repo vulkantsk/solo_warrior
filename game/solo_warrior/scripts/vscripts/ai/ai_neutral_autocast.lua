@@ -51,12 +51,12 @@ function NeutralAutoCasterThink()
 		search_radius = npc.fMaxDist				-- становится обычным
 	end
 	
-	-- Как далеко юнит находится от своей точки спавна ?
-	local fDist = ( npc:GetOrigin() - npc.vInitialSpawnPos ):Length2D()
-	if fDist > search_radius then
-		RetreatHome()			-- если юнит слишком далеко, то идет на точку спавна
-		return 3
-	end
+	-- Как далеко юнит находится от своей точки спавна ?                            --////////////////////--возможно это пока не нужно ---
+	--local fDist = ( npc:GetOrigin() - npc.vInitialSpawnPos ):Length2D()
+	--if fDist > search_radius then
+	--	RetreatHome()			-- если юнит слишком далеко, то идет на точку спавна
+	--	return 3
+	--end
 	
 	local enemies = FindUnitsInRadius( 
 						npc:GetTeamNumber(),		--команда юнита
