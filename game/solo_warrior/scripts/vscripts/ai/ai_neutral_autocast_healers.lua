@@ -58,7 +58,7 @@ function NeutralAutoCasterhealerThink()
 		return 3
 	end
 	
-	local allies = FindUnitsInRadius( 
+	local friends = FindUnitsInRadius( 
 						npc:GetTeamNumber(),		--команда юнита
 						npc.vInitialSpawnPos,		--местоположение юнита
 						nil,	--айди юнита (необязательно)
@@ -69,50 +69,47 @@ function NeutralAutoCasterhealerThink()
 						FIND_CLOSEST,	--сортировка от ближнего к дальнему 
 						false )
 
-	if #allies == 0 then	-- если найденных юнитов нету
+	if #friends == 0 then	-- если найденных юнитов нету
 		if npc.agro then
 			RetreatHome()	-- если юнит под действием агра
 		end		
 		return 0.5
 	end
 	
-	local ally = allies[1]	-- союзником выбирается первый близжайший
-	local health_pct = thisEntity:GetHealthPercent()  --    ТЕСТОВАЯ ФИЧА --давать бафф на союзников у которых менее 90%хп - РАБОТАЕТ!!!
-	
-	if npc.agro and health_pct < 90 then	-- если юнит находится под действием агра --и and health_pct < 90 --и хп менее 90%
-		
-        --осторожно!!!пытаюсь научить мобов кастовать на друзей!!! --научил=)
-        local ally = allies[1]	-- союзником выбирается первый ближайший
-		
-		AttackMove(npc, ally)
+	local friend = friends[1]	-- союзником выбирается первый близжайший
 
-		TryCastAbility(npc.ability0, npc, ally)	-- попытка использовать способность
-		TryCastAbility(npc.ability1, npc, ally)	-- попытка использовать способность
-		TryCastAbility(npc.ability2, npc, ally)	-- попытка использовать способность
-		TryCastAbility(npc.ability3, npc, ally)	-- попытка использовать способность
-		TryCastAbility(npc.ability4, npc, ally)	-- попытка использовать способность
-		TryCastAbility(npc.ability5, npc, ally)	-- попытка использовать способность
-        --осторожно!!!пытаюсь научить мобов кастовать на друзей!!!
-	else
-		local allies = FindUnitsInRadius(	-- ищет всех союзных братков в радиусе --вроде бы это отвечает за союзников=)
-				npc:GetTeamNumber(), 
-				npc.vInitialSpawnPos, 
-				nil, 
-				npc.fMaxDist, 
-				DOTA_UNIT_TARGET_TEAM_FRIENDLY, 
-				DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
-				DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, 
-				FIND_CLOSEST, 
-				false )
-				
-		for i=1,#allies do	-- заставляет братков быть агрессивными и атаковать врага
-			local ally = allies[i]
-			ally.agro = true	-- накладывает действие агра
-			AttackMove(ally, enemy)	
-		end	
+	for _,friend in pairs(friends) do
+		if friend:GetHealthPercent() < 90 then
+			AttackMove(npc, friend)
+
+			TryCastAbility(npc.ability0, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability1, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability2, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability3, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability4, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability5, npc, friend)	-- попытка использовать способность
+			break
+		end
+	end
+	
+	local allies = FindUnitsInRadius(	-- ищет всех союзных братков в радиусе --вроде бы это отвечает за союзников=)
+			npc:GetTeamNumber(), 
+			npc.vInitialSpawnPos, 
+			nil, 
+			npc.fMaxDist, 
+			DOTA_UNIT_TARGET_TEAM_FRIENDLY, 
+			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
+			DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, 
+			FIND_CLOSEST, 
+			false )
+			
+	for i=1,#allies do	-- заставляет братков быть агрессивными и атаковать врага
+		local ally = allies[i]
+		ally.agro = true	-- накладывает действие агра
+		AttackMove(ally, enemy)	
 	end	
 	return 1
-	
+
 end
 
 function FindAbility(unit, index)

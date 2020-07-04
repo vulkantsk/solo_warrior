@@ -785,6 +785,7 @@
 		"SoundSet"				"Hero_TrollWarlord"
 		"ModelScale"			"1.6"								// old 1.0                                      -- размер модели. было 1.1
 		"Level"					"1"
+		"ConsideredHero"				"1"
 		"MinimapIcon"					"minimap_death"
 		"MinimapIconSize"				"600"
 		
@@ -878,6 +879,7 @@
 		"SoundSet"				"Hero_Meepo"
 		"ModelScale"			"1.5"								// old 1.0                                      -- размер модели. было 1.1
 		"Level"					"1"
+		"ConsideredHero"				"1"
 		"MinimapIcon"					"minimap_death"
 		"MinimapIconSize"				"600"
         "particle_folder"		"particles/units/heroes/hero_meepo"         //возможно не нужно
@@ -977,6 +979,7 @@
 		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
 		"SoundSet"					"n_creep_Melee"
+		"ConsideredHero"				"1"
 		"Level"						"2"
 		"ModelScale"                "2.3"                                                                            //"1"
 		//"IsNeutralUnitType"			"1"

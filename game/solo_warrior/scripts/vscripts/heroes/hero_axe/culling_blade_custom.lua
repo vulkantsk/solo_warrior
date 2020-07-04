@@ -23,37 +23,45 @@ function axe_culling_blade_custom:OnSpellStart()
 	local radius = self:GetSpecialValueFor("radius")
 	local damage = self:GetSpecialValueFor("damage")
 	local bonus_damage = self:GetSpecialValueFor("bonus_damage")
-	local sound = "Hero_Axe.Culling_Blade_Fail"
+	self.sound = "Hero_Axe.Culling_Blade_Fail"
 
 	FindClearSpaceForUnit(caster, point, true)
 	local enemies = caster:FindEnemyUnitsInRadius(point, radius, nil)
 
 	for _,enemy in pairs(enemies) do
-		if enemy:GetHealth() < damage and enemy:GetMaxHealth() >= damage then
-			enemy:Kill(self, caster)
-			local target_location = enemy:GetAbsOrigin()
-			sound = "Hero_Axe.Culling_Blade_Success"
-
-			local effect = "particles/units/heroes/hero_axe/axe_culling_blade_kill.vpcf"
-			local pfx = ParticleManager:CreateParticle(effect, PATTACH_CUSTOMORIGIN, caster)
-			ParticleManager:SetParticleControlEnt(pfx, 0, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
-			ParticleManager:SetParticleControlEnt(pfx, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
-			ParticleManager:SetParticleControlEnt(pfx, 2, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
-			ParticleManager:SetParticleControlEnt(pfx, 4, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
-			ParticleManager:SetParticleControlEnt(pfx, 8, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
-			ParticleManager:ReleaseParticleIndex(pfx)
-			if enemy.boss then
+		if enemy:GetHealth() < damage then
+			if enemy:IsConsideredHero() and enemy:GetMaxHealth() >= damage then
+				self:KillTarget(enemy)
 				local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
 				local current_stack = modifier:GetStackCount()
 				modifier:SetStackCount(current_stack + bonus_damage)
+			elseif enemy:IsConsideredHero() and enemy:GetMaxHealth() < damage then
+				DealDamage(caster, enemy, damage, DAMAGE_TYPE_MAGICAL, nil, ability)
+			else
+				self:KillTarget(enemy)
 			end
 		else
 			DealDamage(caster, enemy, damage, DAMAGE_TYPE_MAGICAL, nil, ability)
 		end
 	end
-	caster:EmitSound(sound)
+	caster:EmitSound(self.sound)
 end
 
+function axe_culling_blade_custom:KillTarget(enemy)
+	local caster = self:GetCaster()
+	enemy:Kill(self, caster)
+	local target_location = enemy:GetAbsOrigin()
+	self.sound = "Hero_Axe.Culling_Blade_Success"
+
+	local effect = "particles/units/heroes/hero_axe/axe_culling_blade_kill.vpcf"
+	local pfx = ParticleManager:CreateParticle(effect, PATTACH_CUSTOMORIGIN, caster)
+	ParticleManager:SetParticleControlEnt(pfx, 0, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
+	ParticleManager:SetParticleControlEnt(pfx, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
+	ParticleManager:SetParticleControlEnt(pfx, 2, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
+	ParticleManager:SetParticleControlEnt(pfx, 4, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
+	ParticleManager:SetParticleControlEnt(pfx, 8, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
+	ParticleManager:ReleaseParticleIndex(pfx)
+end
 --------------------------------------------------------------------------------
 
 modifier_axe_culling_blade_custom = class({
