@@ -876,7 +876,7 @@
 		"BaseClass"				"npc_dota_creature"
 		"Model"					"models/heroes/meepo/meepo.vmdl"
 		"SoundSet"				"Hero_Meepo"
-		"ModelScale"			"1.3"								// old 1.0                                      -- размер модели. было 1.1
+		"ModelScale"			"1.5"								// old 1.0                                      -- размер модели. было 1.1
 		"Level"					"1"
 		"MinimapIcon"					"minimap_death"
 		"MinimapIconSize"				"600"
@@ -888,16 +888,16 @@
 		"Ability1"					"meepo_earthbind"			                // сетка
 		"Ability2"					"meepo_poof"			                    // пуф-взрыв
 		"Ability3"					"meepo_geostrike"			                // лопатой 
-		"Ability4"					"generic_hidden"			                // Ability 4.
-		"Ability5"					"generic_hidden"			                // шэйканэмо бэйби
-		"Ability6"					"earthshaker_aftershock"			
-		"Ability7"					""			                                // Ability 7 - Extra.
+		"Ability4"					"phantom_lancer_phantom_edge"			    // Втопил с азотом!
+		"Ability5"					"generic_hidden"			                // 5
+		"Ability6"					"earthshaker_aftershock"			        // шэйканэмо бэйби
+		"Ability7"					"generic_hidden"			                // 7
 		"Ability8"					""			                                // Ability 8 - Extra.
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"30"			// Physical protection.                                         --броня. было 5
-		"MagicalResistance"			"50"			// Magical protection.                                          --маг рез. было 0
+		"ArmorPhysical"				"30"			// Physical protection.                                         --броня
+		"MagicalResistance"			"50"			// Magical protection.                                          --маг рез
 
 		// Attack
 		//----------------------------------------------------------------
@@ -913,17 +913,17 @@
 		"ProjectileSpeed"		    "1200"                                                                          //-- скорость полёта снаряда
 
 
-		// Bounty                                                                                                   -- Награда за баунти руну? в голде и опыте...зачем это сдесь? или это награда за голову?
+		// Bounty                                                                                                   --это награда за голову
 		//----------------------------------------------------------------
 		"BountyXP"					"200"		// Experience earn.
 		"BountyGoldMin"				"50"		// Gold earned min.
 		"BountyGoldMax"				"100"		// Gold earned max.
 
-		// Bounds                                                                                                   -- не совсем ясно. но походу это хп бар над головой... и кольцо под ногами для выделения юнита.
+		// Bounds                                                                                                   --хп бар над головой... и кольцо под ногами для выделения юнита.
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
 		"RingRadius"				"45"
-		"HealthBarOffset"			"240"                               //--хпбар над головой. было 150
+		"HealthBarOffset"			"250"                               //--хпбар над головой. было 150
 
 		// Movement
 		//----------------------------------------------------------------
@@ -953,7 +953,7 @@
 		//Inventory   --Я хз где этот вараблы на этот сэт взять - Kindred of the Cursed - нашел! Kainу отдельное спасибо за это=)
 		"Creature"
 		{
-			"AttachWearables"//Kindred of the Cursed                                               --тут типа можно "нарядить" Юнита (сейчас это тролль-герой) в надеваемые для визуала артефакты
+			"AttachWearables"//Kindred of the Cursed                                               --тут типа можно "нарядить" Юнита в надеваемые для визуала артефакты(сэты. иморталки и тп)
 			{
 				"Wearable1" { "ItemDef" "13033" }
 	            "Wearable2" { "ItemDef" "13032" }
@@ -983,13 +983,13 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		  "centaur_hoof_stomp"			        // Ability 1
-		"Ability2"        "lina_laguna_blade"
-        "Ability3"        "necrolyte_heartstopper_aura"
-        "Ability4"        "huskar_berserkers_blood"
-        "Ability5"        "earthshaker_aftershock"                                    // Ability 5.
-        "Ability6"        "kobold_taskmaster_speed_aura"                               // Ability 6 - Extra.
-        "Ability7"                    ""                                    // Ability 7 - Extra.
+		"Ability1"		  "centaur_hoof_stomp"			                                    // сТАН КЕНТА
+		"Ability2"        "lina_laguna_blade"                                               // ульта лины
+        "Ability3"        "phantom_lancer_phantom_edge"                                // Втопил с азотом
+        "Ability4"        "huskar_berserkers_blood"                                         // Aкровь хускара
+        "Ability5"        "earthshaker_aftershock"                                      // шэйканём потрусим пошатаем трубы
+        "Ability6"        "kobold_taskmaster_speed_aura"                               // кобольдище с плеткой
+        "Ability7"        "necrolyte_heartstopper_aura"                                     // разлагающая аура некра
         "Ability8"                    ""                                    // Ability 8 - Extra.
 
 		// Armor
@@ -1022,8 +1022,8 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"300"		// Speed.
-        "MovementTurnRate"			"3.5"		// Turning rate.                        -- скорость поворота
+		"MovementSpeed"				"200"		// Speed.
+        "MovementTurnRate"			"0.05"		// Turning rate.                        -- скорость поворота
 
 		// Status
 		//----------------------------------------------------------------

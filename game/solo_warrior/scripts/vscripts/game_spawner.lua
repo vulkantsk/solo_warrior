@@ -11,9 +11,9 @@ GameSpawner.wave_list = {
 	[1]={reward_gold=250,reward_exp=500,                                            --НАГРАДА ЗА закрытие (прохождение) комнаты первой комнаты. [1] - это номер комнаты
 			units={["npc_kobold"]=3,["npc_gnoll_ranger"]=2,["npc_kobold_tunneler"]=2}},                 --Юниты в комнате (какие в [этих скобках]) и их количество      --было по 4
 	[2]={reward_gold=500,reward_exp=1000,
-			units={["npc_melee_troll"]=5,["npc_troll_healer"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_troll_mini_boss"]=1}},                 --было по 4 , и не было creep_1
+			units={["npc_melee_troll"]=5,["npc_troll_healer"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_troll_mini_boss"]=1}},           
 	[3]={reward_gold=750,reward_exp=1500,
-			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},   --было по 1 и 4 и не было creep_1 и creep_2 и creep_3
+			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},
 	[4]={reward_gold=1000,reward_exp=2000,
 			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},
 }

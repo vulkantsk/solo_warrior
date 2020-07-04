@@ -931,7 +931,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"30"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -995,7 +995,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"400"
+		"AbilityManaCost"				"200"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1009,7 +1009,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"poof_damage"				"7000"
+				"poof_damage"				"5000"
 				"LinkedSpecialBonus"		"special_bonus_unique_meepo_2"
 			}
 		}
@@ -1045,7 +1045,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_steal"				"100"
+				"hp_steal"				"300"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -1078,6 +1078,62 @@
 				"var_type"				"FIELD_INTEGER"
 				"health_steal_creeps"	"20"
 			}			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Lancer's Phantom Rush / Phantom Edge                                            --АЗОТУ? НИТРО!!!
+	//=================================================================================================================
+	"phantom_lancer_phantom_edge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"5068"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"							// Changes dynamically with scepter
+		"AbilitySound"			        "Hero_PhantomLancer.PhantomEdge"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"HasScepterUpgrade"				"1"
+        "MaxLevel"						"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_distance"		"200"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_distance"				"1500"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_speed"		"700"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"		"150"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_duration"		"5"
+			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
