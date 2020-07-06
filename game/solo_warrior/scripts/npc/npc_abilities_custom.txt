@@ -166,12 +166,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"300"
+				"radius"			"700"                                       //изменил длятестов было : "300"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"150 200 250 300 400 500 600"
+				"damage"			"500 700 950 2200 3300 5000 6000"           //изменил длятестов было : "150 200 250 300 400 500 600"
 			}
 			"03"
 			{
@@ -694,22 +694,22 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"aura_radius"		"600"
+				"aura_radius"		"600"                           //аое радиус
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"armor_aura"		"2 4"
+				"armor_aura"		"2 4"                           //доп броня
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"health_regen_aura"	"5 10"
+				"health_regen_aura"	"5 10"                          //доп реген хп
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"vampiric_aura"		"10 20"
+				"vampiric_aura"		"10 20"                         //отжер. ровным числом? типа 1 тычка отжерает ровно 10 или 20? без учета урона ?
 			}
 		}
 	}
@@ -782,6 +782,287 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
+
+	//=================================================================================================================
+	// Dazzle: Shallow Grave
+	//=================================================================================================================
+	"dazzle_shallow_grave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5234"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"                 // | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Dazzle.Shallow_Grave"
+        "MaxLevel"						"1"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_SHALLOW_GRAVE"
+		//"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"		"5.0"
+			}
+		}
+	}
+	
+    //=================================================================================================================
+	// Abaddon: Death Coil (mist coil)
+	//=================================================================================================================
+	"abaddon_death_coil"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5585"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"                                //МОЖЕТ КАСТОВАТЬ НА врагов и друзей
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Abaddon.DeathCoil.Cast"
+        "MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.25"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"self_damage"			"250"
+				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"target_damage"			"400"
+				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_amount"			"500"
+				"LinkedSpecialBonus"	"special_bonus_unique_abaddon_2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"missile_speed"			"1000"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Abaddon: Aphotic Shield
+	//=================================================================================================================
+	"abaddon_aphotic_shield"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5586"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Abaddon.AphoticShield.Cast"
+        "MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1500"
+		"AbilityCastPoint"				"0.4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8.0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"15.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_absorb"			"1500"
+				"LinkedSpecialBonus"	"special_bonus_unique_abaddon"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"1000"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Abaddon: Frostmourne (Curse of Avernus)
+	//=================================================================================================================
+	"abaddon_frostmourne"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5587"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"slow_duration"				"5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"				"50"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hit_count"				"3"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"curse_duration"				"3.5"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"curse_slow"				"200"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"curse_attack_speed"			"200"
+				"LinkedSpecialBonus"			"special_bonus_unique_abaddon_3"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Abaddon: Borrowed Time
+	//=================================================================================================================
+	"abaddon_borrowed_time"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5588"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"       //DOTA_ABILITY_BEHAVIOR_NO_TARGET
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
+        "MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastGestureSlot"		"ABSOLUTE"
+
+		"HasScepterUpgrade"			"1"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_threshold"				"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"7.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration_scepter"			"10.0"
+				"RequiresScepter"	"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"ally_threshold_scepter"	"525"
+				"RequiresScepter"	"1"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"redirect_range_scepter"		"1600"
+				"RequiresScepter"	"1"
+			}
+		}
+	}
+
 	//=================================================================================================================
 	// Huskar: Berserker's Blood     --тест кобольд босс
 	//=================================================================================================================
@@ -1090,7 +1371,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		//"ID"					"5068"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"         //DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_TOGGLE 
         "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -1099,6 +1380,8 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"HasScepterUpgrade"				"1"
         "MaxLevel"						"1"
+
+        //"AbilityCastRange"				"1500"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -1111,7 +1394,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"min_distance"		"200"
+				"min_distance"		"50"
 			}
 			"02"
 			{
@@ -1127,7 +1410,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"		"150"
+				"bonus_damage"		"50"
 			}
 			"05"
 			{
@@ -1136,6 +1419,206 @@
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Assassin's Blur
+	//=================================================================================================================
+	"phantom_assassin_blur"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"5192"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"HasScepterUpgrade"			"1"
+        "MaxLevel"						"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"5"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"80"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"				"600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_duration"			"0.75"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_cooldown"			"12"
+				"RequiresScepter"		"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Ability: Phantom Coup de Grace
+	//=================================================================================================================
+	"phantom_assassin_coup_de_grace"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"5193"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
+        "MaxLevel"						"1"
+
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"25"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_bonus"				"500"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Slark: Essence Shift
+	//=================================================================================================================
+	"slark_essence_shift"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5496"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"agi_gain"				"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stat_loss"				"2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"40"
+				"LinkedSpecialBonus"	"special_bonus_unique_slark_4"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Slark Shadow Dance
+	//=================================================================================================================
+	"slark_shadow_dance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5497"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Slark.ShadowDance"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+        "MaxLevel"						"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5"
+				"LinkedSpecialBonus"	"special_bonus_unique_slark_3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"					"0.8"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"250"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_regen_pct"			"10"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"activation_delay"			"0.9"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"neutral_disable"			"2.0"
+			}
+		}
 	}
 
     ////////////////////тестовая борода номер 2 - ВАЩЕ ТАКАЯ БОРОДА Что ЕЩЕ хуже предыдущих!!!//////////////////////////////

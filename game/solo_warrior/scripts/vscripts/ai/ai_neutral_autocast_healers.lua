@@ -79,14 +79,24 @@ function NeutralAutoCasterhealerThink()
 	local friend = friends[1]	-- союзником выбирается первый близжайший
 
 	for _,friend in pairs(friends) do
-		if friend:GetHealthPercent() < 90 then
+		if friend:GetHealthPercent() < 90 then          --кастуем обычные хилы и тп
 			AttackMove(npc, friend)
 
-			TryCastAbility(npc.ability0, npc, friend)	-- попытка использовать способность
+			TryCastAbility(npc.ability0, npc, friend)	-- попытка использовать способность, что за 0 не понял?
 			TryCastAbility(npc.ability1, npc, friend)	-- попытка использовать способность
+            break
+        end
+
+        if friend:GetHealthPercent() <= 50 then         -- кастуем "тяжелые" хилы или щиты
+			AttackMove(npc, friend)
 			TryCastAbility(npc.ability2, npc, friend)	-- попытка использовать способность
 			TryCastAbility(npc.ability3, npc, friend)	-- попытка использовать способность
-			TryCastAbility(npc.ability4, npc, friend)	-- попытка использовать способность
+			break
+		end
+
+        if friend:GetHealthPercent() <= 30 then         -- кастуем сэйв абилки
+			AttackMove(npc, friend)
+			TryCastAbility(npc.ability4, npc, friend)	-- попытка использовать способность типа креста дазла
 			TryCastAbility(npc.ability5, npc, friend)	-- попытка использовать способность
 			break
 		end
@@ -174,7 +184,7 @@ function TryCastAbility(ability, caster, enemy)
 		Position = enemy:GetOrigin(),	 	-- положение врага
 		Queue = false,						-- ждать очереди ?
 	})
-	caster:SetContextThink( "NeutralAutoCasterThink", NeutralAutoCasterThink, 1 ) -- если способность использована, то поведение начинается заного
+	caster:SetContextThink( "NeutralAutoCasterhealerThink", NeutralAutoCasterhealerThink, 1 ) -- если способность использована, то поведение начинается заного
 	
 end
 

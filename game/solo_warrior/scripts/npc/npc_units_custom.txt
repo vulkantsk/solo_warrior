@@ -273,10 +273,10 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability1"					"phantom_lancer_phantom_edge"			// Ability 1
+		"Ability2"					"slark_shadow_dance"			// Ability 2
+		"Ability3"					"phantom_assassin_blur"			// Ability 3
+		"Ability4"					"phantom_assassin_coup_de_grace"			// Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -289,7 +289,7 @@
 		"AttackDamageMax"			"11"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.		   
@@ -319,8 +319,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
 		
 		// Team
 		//----------------------------------------------------------------
@@ -347,10 +347,10 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
+		"Ability1"					"phantom_lancer_phantom_edge"			// Ability 1
 		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability3"					"phantom_assassin_blur"			// Ability 3
+		"Ability4"					"phantom_assassin_coup_de_grace"			// Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -363,7 +363,7 @@
 		"AttackDamageMax"			"15"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
 		"AttackAnimationPoint"		"0.38"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			""			// Particle system model for projectile.
 		"ProjectileSpeed"			"0"			// Speed of projectile.		   
@@ -388,13 +388,13 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"325"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"150"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		"VisionDaytimeRange"		"1300"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
 
 		// Team
 		//----------------------------------------------------------------
@@ -423,8 +423,8 @@
 		//----------------------------------------------------------------
 		"Ability1"					"gnoll_assassin_envenomed_weapon"			// Ability 1
 		"Ability2"					"magnataur_shockwave"			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability3"					"phantom_assassin_blur"			// Ability 3
+		"Ability4"					"phantom_assassin_coup_de_grace"			// Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -435,17 +435,17 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"36"		// Damage range max.
-		"AttackRate"				"1.6"		// Speed of attack.
-		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"500"		// Range within a target can be attacked.
+		"AttackRate"				"0.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.2"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"40"
-		"HealthBarOffset"			"180"
+		"HealthBarOffset"			"190"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -456,19 +456,19 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.			
+		"MovementSpeed"				"470"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"370"		// Base health.
+		"StatusHealth"				"450"		// Base health.
 		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
 		"StatusMana"				"200"			// Base mana.
 		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"400"		// Range of vision during day light.
-		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1400"		// Range of vision at night time.
 
 		// Team
 		//----------------------------------------------------------------
@@ -498,9 +498,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"dark_troll_warlord_ensnare"			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
+		"Ability2"					"phantom_lancer_phantom_edge"			// Ability 2
+		"Ability3"					"phantom_assassin_blur"			// Ability 3
+		"Ability4"					"phantom_assassin_coup_de_grace"			// Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -572,8 +572,9 @@
 		//----------------------------------------------------------------
 		"Ability1"					"creature_troll_aura"			// Ability 1
 		"Ability2"					"dazzle_shadow_wave"			// Ability 2
-		"Ability3"					""			                    // Ability 3
-		"Ability4"					""			                    // Ability 4
+		"Ability3"					"abaddon_death_coil"			                    // Ability 3
+		"Ability4"					"dazzle_shallow_grave"			                            // Ability 4
+        "Ability4"					"abaddon_borrowed_time"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -612,8 +613,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5.0"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
-		"StatusManaRegen"			"5.0"		// Mana regeneration rate.		 
+		"StatusMana"				"1000"		// Base mana.
+		"StatusManaRegen"			"15.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -644,10 +645,10 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"magnataur_shockwave"			// Ability 1
-		"Ability2"					"dark_troll_warlord_ensnare"	// Ability 2
-		"Ability3"					"troll_dd_fervor"			    // Ability 3
-		"Ability4"					""			                    // Ability 4
+		"Ability1"					"phantom_assassin_coup_de_grace"			// Ability 1
+		"Ability2"					"abaddon_frostmourne"	// Ability 2
+		"Ability3"					"phantom_lancer_phantom_edge"			    // Ability 3
+		"Ability4"					"phantom_assassin_blur"			                    // Ability 4
 
 		// Armor
 		//----------------------------------------------------------------
@@ -718,9 +719,10 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"dazzle_shadow_wave"			        // Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			                            // Ability 3
-		"Ability4"					""			                            // Ability 4
+		"Ability2"					"abaddon_death_coil"			// Ability 2
+		"Ability3"					"abaddon_aphotic_shield"			                            // Ability 3
+		"Ability4"					"dazzle_shallow_grave"			                            // Ability 4
+        "Ability4"					"abaddon_borrowed_time"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -759,8 +761,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"1750"		// Base health.
 		"StatusHealthRegen"			"30.0"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
-		"StatusManaRegen"			"20.0"		// Mana regeneration rate.		 
+		"StatusMana"				"1500"		// Base mana.
+		"StatusManaRegen"			"50.0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -798,8 +800,8 @@
 		"Ability4"					"troll_boss_fervor"			                // Ability 4.
 		"Ability5"					"generic_hidden"			                // Ability 5.
 		"Ability6"					"troll_boss_battle_trance"			
-		"Ability7"					""			                                // Ability 7 - Extra.
-		"Ability8"					""			                                // Ability 8 - Extra.
+		"Ability7"					"phantom_assassin_blur"			                                // Ability 7 - Extra.
+		"Ability8"					"phantom_assassin_coup_de_grace"			                                // Ability 8 - Extra.
 
 		// Armor
 		//----------------------------------------------------------------
@@ -890,11 +892,11 @@
 		"Ability1"					"meepo_earthbind"			                // сетка
 		"Ability2"					"meepo_poof"			                    // пуф-взрыв
 		"Ability3"					"meepo_geostrike"			                // лопатой 
-		"Ability4"					"phantom_lancer_phantom_edge"			    // Втопил с азотом!
+		"Ability4"					"abaddon_borrowed_time"			    // Втопил с азотом!
 		"Ability5"					"generic_hidden"			                // 5
 		"Ability6"					"earthshaker_aftershock"			        // шэйканэмо бэйби
 		"Ability7"					"generic_hidden"			                // 7
-		"Ability8"					""			                                // Ability 8 - Extra.
+		"Ability8"					"phantom_assassin_blur"			                                // Ability 8 - Extra.
 
 		// Armor
 		//----------------------------------------------------------------
@@ -936,7 +938,7 @@
 		// Status                                                                                                   -- статы? ХП и МП
 		//----------------------------------------------------------------
 		"StatusHealth"				"5000"		    // Base health.                                                 -- Хп
-		"StatusHealthRegen"			"150.0"		    // Health regeneration rate.                                    -- хп рег
+		"StatusHealthRegen"			"10.0"		    // Health regeneration rate.                                    -- хп рег
 		"StatusMana"				"1000"			// Base mana.                                                   -- Мп
 		"StatusManaRegen"			"5.5"			// Mana regeneration rate.                                      -- рег Мп
 
@@ -988,7 +990,7 @@
 		//----------------------------------------------------------------
 		"Ability1"		  "centaur_hoof_stomp"			                                    // сТАН КЕНТА
 		"Ability2"        "lina_laguna_blade"                                               // ульта лины
-        "Ability3"        "phantom_lancer_phantom_edge"                                // Втопил с азотом
+        "Ability3"        "abaddon_borrowed_time"                                // Втопил с азотом
         "Ability4"        "huskar_berserkers_blood"                                         // Aкровь хускара
         "Ability5"        "earthshaker_aftershock"                                      // шэйканём потрусим пошатаем трубы
         "Ability6"        "kobold_taskmaster_speed_aura"                               // кобольдище с плеткой
@@ -1037,7 +1039,7 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
 
 		// Team
