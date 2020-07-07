@@ -8,14 +8,47 @@ GameSpawner.line_interval = {}
 GameSpawner.wave_index = 0
 
 GameSpawner.wave_list = {
-	[1]={reward_gold=250,reward_exp=500,                                            --НАГРАДА ЗА закрытие (прохождение) комнаты первой комнаты. [1] - это номер комнаты
-			units={["npc_kobold"]=3,["npc_gnoll_ranger"]=2,["npc_kobold_tunneler"]=2}},                 --Юниты в комнате (какие в [этих скобках]) и их количество      --было по 4
-	[2]={reward_gold=500,reward_exp=1000,
-			units={["npc_melee_troll"]=5,["npc_troll_healer"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_troll_mini_boss"]=1}},           
-	[3]={reward_gold=750,reward_exp=1500,
-			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},
-	[4]={reward_gold=1000,reward_exp=2000,
-			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},
+--	[1]={reward_gold=250,reward_exp=500,                                            --НАГРАДА ЗА закрытие (прохождение) комнаты первой комнаты. [1] - это номер комнаты
+--			units={["npc_kobold"]=3,["npc_gnoll_ranger"]=2,["npc_kobold_tunneler"]=2}},                 --Юниты в комнате (какие в [этих скобках]) и их количество      --было по 4
+--	[2]={reward_gold=500,reward_exp=1000,
+--			units={["npc_melee_troll"]=5,["npc_troll_healer"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_troll_mini_boss"]=1}},           
+--	[3]={reward_gold=750,reward_exp=1500,
+--			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},
+--	[4]={reward_gold=1000,reward_exp=2000,
+--			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},
+	[1]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[2]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[3]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[4]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[5]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[6]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[7]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[8]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[9]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[10]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[11]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[12]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[13]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[14]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[15]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[16]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+
 }
 
 function GameSpawner:InitGameSpawner()
@@ -93,6 +126,8 @@ function GameSpawner:OnNPCSpawned(keys)
 			local ability = npc:GetAbilityByIndex(3)
 			ability:SetLevel(1)
 		end)
+	elseif npc:IsRealHero() and npc.spawn_point then
+		npc:SetAbsOrigin(npc.spawn_point)
 	end
 end
 
@@ -142,8 +177,30 @@ function GameSpawner:OpenExitGate( index )
 	--		obstruction:RemoveSelf()
 			obstruction:SetEnabled(false, true)
 		end		
+		
+		local spawn_point = Entities:FindByName(nil, "hero_spawn_point_"..next_index)
+		if spawn_point then
+			print("All ok spawn_point_"..next_index)
+			for i=0,4 do
+				local hero = PlayerResource:GetSelectedHeroEntity(i)
+				if hero then
+					hero.spawn_point = spawn_point:GetAbsOrigin()
+--					hero:SetAbsOrigin(hero.spawn_point)
+				end
+			end
+		else
+			print("Failed spawn_point_"..next_index)
+		end
+		local filler = Entities:FindByName(nil, "filler_"..next_index)
+		if filler then
+			print("All ok filler_"..next_index)
+			local filler_ability = filler:FindAbilityByName("filler_ability")
+			filler_ability:EndCooldown()
+		else
+			print("Failed filler_"..next_index)
+		end
 	else
-		print("exit_gate_"..index.." don't exist !")
+		print("exit_gate_"..next_index.." don't exist !")
 	end
 end
 function GameSpawner:OpenEntryGate( unit )

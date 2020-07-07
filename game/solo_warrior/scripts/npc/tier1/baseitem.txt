@@ -9,7 +9,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/str_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"str"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -34,7 +34,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -78,7 +78,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -121,7 +121,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/agi_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"agi"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -146,7 +146,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -190,7 +190,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -233,7 +233,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/int_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"int"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -258,7 +258,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -302,7 +302,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -345,7 +345,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/stat_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"stat"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -370,7 +370,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -414,7 +414,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -457,7 +457,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/armor_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"armor"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -482,7 +482,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -526,7 +526,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -569,7 +569,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/as_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"as"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -594,7 +594,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -638,7 +638,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -681,7 +681,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/block_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"block"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -706,7 +706,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -750,7 +750,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -793,7 +793,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/dmg_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"dmg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -818,7 +818,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -862,7 +862,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -905,7 +905,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/hp_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"hp"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -930,7 +930,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -974,7 +974,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1017,7 +1017,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/hpreg_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"hpreg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -1042,7 +1042,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1086,7 +1086,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1129,7 +1129,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/mp_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"mp"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -1154,7 +1154,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1198,7 +1198,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1241,7 +1241,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/mpreg_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"mpreg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -1266,7 +1266,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1310,7 +1310,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1353,7 +1353,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/spell_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"spell"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -1378,7 +1378,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1422,7 +1422,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1465,7 +1465,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tier1/baseitem/resist_1_1"
 
-		"ItemCost"						"2"
+		"ItemCost"						"100"
 		"ItemAliases"    				"resist"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
@@ -1490,7 +1490,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4"
+		"ItemCost"						"200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1534,7 +1534,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8"
+		"ItemCost"						"300"
 		"ItemShopTags"					""
 
 		// Recipe

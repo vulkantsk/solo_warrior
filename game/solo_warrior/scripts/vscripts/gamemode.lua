@@ -6,6 +6,7 @@ function GameMode:InitGameMode()
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(self, 'OnGameRulesStateChange'), self)
 	ListenToGameEvent("npc_spawned",Dynamic_Wrap( self, 'OnNPCSpawned' ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(self, 'OnEntityKilled'), self)
+	ListenToGameEvent('dota_non_player_used_ability', Dynamic_Wrap(self, 'OnAbilityUsed'), self)
 
 end
 
@@ -77,6 +78,23 @@ function GameMode:OnNPCSpawned(keys)
 	
 end
 
+function GameMode:OnAbilityUsed(keys)
+	print('[BAREBONES] AbilityUsed')
+	DeepPrintTable(keys)
+
+--	local player = EntIndexToHScript(keys.PlayerID)
+	local ability_name = keys.abilityname
+	local caster = EntIndexToHScript(keys.caster_entindex)
+	
+	
+	if abilityname == "filler_ability"  then
+		local ability = caster:FindAbilityByName(ability_name)
+		if ability then
+			caster:RemoveAbility(ability_name)
+		end		
+	end
+
+end
 function GameMode:OnEntityKilled(keys)
 
 	local unit = EntIndexToHScript(keys.entindex_killed)
