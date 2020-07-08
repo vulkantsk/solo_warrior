@@ -673,11 +673,11 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"35"		// Damage range min.
 		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		// Speed of attack.
+		"AttackRate"				"2"		    // Speed of attack.
 		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
 		"AttackRange"				"650"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf" // снаряд - particles/base_attacks/ranged_tower_good_linear.vpcf
 		"ProjectileSpeed"			"900"		// Speed of projectile.		     
 
 		// Bounds
@@ -746,11 +746,11 @@
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"70"		    // Damage range min.
 		"AttackDamageMax"			"90"		    // Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.3"		    // Normalized time in animation cycle to attack.
+		"AttackRate"				"0.9"		    // Speed of attack.
+		"AttackAnimationPoint"		"0.1"		    // Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		    // Range within a target can be acquired.
 		"AttackRange"				"700"		    // Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileModel"			"particles/items_fx/desolator_projectile.vpcf" //  снаряд атаки фонатана: particles/base_attacks/fountain_attack.vpcf
 		"ProjectileSpeed"			"1200"		    // Speed of projectile.		     
 
 		// Bounds
@@ -825,8 +825,8 @@
 		"AttackAnimationPoint"		"0.3"		                                // Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		                                // Range within a target can be acquired.
 		"AttackRange"				"800"		                                // Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed"			"1200"		                                // Speed of projectile.		     
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf" // particles/base_attacks/ranged_badguy.vpcf
+		"ProjectileSpeed"			"800"		                                // Speed of projectile.		     
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -863,6 +863,123 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+//=================================================================================	
+// UNITS: HEROES    -- Секретные или не очень...но                           ГЕРОИ!!!
+//=================================================================================    	
+	"npc_dazzle_hero"                                                               //параметры
+	{
+		"vscripts"				"ai/ai_neutral_autocast"
+		"BaseClass"				"npc_dota_creature"
+		"Model"		            "models/heroes/dazzle/dazzle.vmdl"
+		//"IdleExpression"		"scenes/dazzle/dazzle_exp_idle_01.vcd"
+		"SoundSet"		        "Hero_Dazzle"
+		"ModelScale"			"1.3"								// old "0.790000"                                      -- размер модели.
+		"Level"					"1"
+		"ConsideredHero"				"1"
+		"MinimapIcon"					"minimap_death"
+		"MinimapIconSize"				"600"
+		
+		// Abilities                                                              -- способности ЮНИТА
+		//----------------------------------------------------------------        
+		
+		"Ability1"		"dazzle_poison_touch"
+		"Ability2"		"dazzle_shallow_grave"
+		"Ability3"		"dazzle_shadow_wave"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"dazzle_bad_juju"
+		//"Ability10"		"special_bonus_attack_damage_50"
+		//"Ability11"		"special_bonus_mp_regen_150"
+		//"Ability12"		"special_bonus_cast_range_150"
+		//"Ability13"		"special_bonus_unique_dazzle_2"
+		//"Ability14"		"special_bonus_movement_speed_30"
+		//"Ability15"		"special_bonus_unique_dazzle_3"
+		//"Ability16"		"special_bonus_unique_dazzle_1"
+		//"Ability17"		"special_bonus_unique_dazzle_4"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"			// Physical protection.                                         --броня.
+		"MagicalResistance"			"90"			// Magical protection.                                          --маг рез.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"100"		// Damage range min.                                                 -- разброс урона от мин к макс. это минимальный
+		"AttackDamageMax"			"200"		// Damage range max.                                                 -- разброс урона. максимальный
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"                                                    //-- тип урона от атак - физ
+		"AttackRate"				"1"			// Speed of attack.                                                  -- БАТ
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.                     -- задержка перед атакой
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.                            -- хм... радиус агра?
+		"AttackRange"				"800"       //                                                                   -- дальность атаки
+		"ProjectileModel"		    "particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"
+		"ProjectileSpeed"		    "1200"                                                                          //-- скорость полёта снаряда
+
+        "particle_folder"		    "particles/units/heroes/hero_dazzle"
+		"GameSoundsFile"		    "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+		"VoiceFile"		            "soundevents/voscripts/game_sounds_vo_dazzle.vsndevts"
+		//"RenderablePortrait"
+
+
+		// Bounty                                                                                                   -- это награда за голову?
+		//----------------------------------------------------------------
+		"BountyXP"					"200"		// Experience earn.
+		"BountyGoldMin"				"50"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.
+
+		// Bounds                                                                                                   -- но походу это хп бар над головой... и кольцо под ногами для выделения юнита.
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// "DOTA_HULL_SIZE_HERO"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"250"                               //--хпбар над головой. было 150
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air         -- юнит ходит. не летает
+		"MovementSpeed"				"325"		    // Speed
+		"MovementTurnRate"			"0.5"		    // Turning rate.
+
+		// Status                                                                                                   -- статы? ХП и МП
+		//----------------------------------------------------------------
+		"StatusHealth"				"5000"		    // Base health.                                                 -- Хп .
+		"StatusHealthRegen"			"125.0"		    // Health regeneration rate.                                    -- хп рег.
+		"StatusMana"				"1000"			// Base mana.                                                   -- Мп.
+		"StatusManaRegen"			"5.5"			// Mana regeneration rate.                                      -- рег Мп.
+
+		// Team                                                                                                     -- команда . ты не в ту сторону воюешь)
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			// Team name.                                       -- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision                                                                                                   -- обзор юнита. ночной и дневной
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"750"		// Range of vision during day light.
+		"VisionNighttimeRange"		"750"		// Range of vision at night time.
+		
+		//Inventory
+		"Creature"
+		{
+			"AttachWearables"                                                  //--тут типа можно "нарядить" Юнита в надеваемые для визуала артефакты
+			{
+				"Wearable1" { "ItemDef" "12925" }
+	            "Wearable2" { "ItemDef" "8016" }
+	            "Wearable3" { "ItemDef" "13467" }
+	            "Wearable4" { "ItemDef" "13019" }
+	            "Wearable5" { "ItemDef" "13468" }
+			}
+            "EquippedItems"                                                                     //а тут слоты рюкзака
+            {
+                "1"         {"Item"        "item_shivas_guard"}
+                "2"         {"Item"        "item_necronomicon_3"}
+                "3"         {"Item"        "item_orchid"}
+                "4"         {"Item"        "item_desolator"}
+            }
+		}
+	}
+
 //=================================================================================	
 // UNITS: HALF-BOSS    -- ПолуБоссы
 //=================================================================================    	
@@ -951,10 +1068,10 @@
 		{
 			"AttachWearables"//Imperious Command                                                --тут типа можно "нарядить" Юнита (сейчас это тролль-герой) в надеваемые для визуала артефакты
 			{
-				"Wearable1" {"ItemDef" "7875"}//head("Hair of the Imperious Command")           //"7875" айдишник артефакта надеваемого. визуального
-				"Wearable2" {"ItemDef" "7867"}//armor("Armor of the Imperious Command")
-				"Wearable3" {"ItemDef" "7873"}//("Twin Blades of the Imperious Command")
-				"Wearable4" {"ItemDef" "9677"}//shoulder("Shoulders of the Imperious Command")
+				"Wearable1" {"ItemDef" "7875"}  //head("Hair of the Imperious Command")           //"7875" айдишник артефакта надеваемого. визуального
+				"Wearable2" {"ItemDef" "7867"}  //armor("Armor of the Imperious Command")
+				"Wearable3" {"ItemDef" "7818"}  //--{"ItemDef" "7873"}("Twin Blades of the Imperious Command")
+				"Wearable4" {"ItemDef" "9677"}  //shoulder("Shoulders of the Imperious Command")
 			}
 		}
 	}

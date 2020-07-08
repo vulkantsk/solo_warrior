@@ -591,6 +591,8 @@
 		"npc_troll_healer"																    "Болотный тролль-лекарь"
         "npc_troll_dd"																        "Болотный тролль-налётчик"
         "npc_troll_shaman"																    "Болотный тролль-шаман"
+        //       ---ГЕРОИ---
+        "npc_dazzle_hero"                                                                   "ДАЗЛ"
 //       ---МИНИ БОССЫ---
         "npc_troll_mini_boss"																"Вождь Троллей"
         "npc_meepo_mini_boss"																"Любитель Сыра"
