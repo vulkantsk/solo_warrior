@@ -15,7 +15,7 @@ GameSpawner.wave_list = {
 --	[3]={reward_gold=750,reward_exp=1500,
 --			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},
 --	[4]={reward_gold=1000,reward_exp=2000,
---			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},
+--			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},  "npc_boss_golem_split"  "npc_boss_golem"
 	[1]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=10,["npc_kobold_tunneler"]=5,["npc_gnoll_ranger"]=3}},
 	[2]={reward_gold=100,reward_exp=200,
@@ -25,7 +25,7 @@ GameSpawner.wave_list = {
 	[4]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=12,["npc_kobold_tunneler"]=7,["npc_gnoll_ranger"]=5,["npc_dazzle_hero"]=1,["npc_boss_kobold"]=1}},
 	[5]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_boss_golem_split"]=1,["npc_boss_golem"]=1}},
 	[6]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[7]={reward_gold=100,reward_exp=200,

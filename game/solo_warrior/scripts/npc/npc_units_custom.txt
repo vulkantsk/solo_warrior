@@ -1175,7 +1175,7 @@
 //=================================================================================	
 // UNITS: BOSS    -- Боссы
 //=================================================================================
-//  ===========================-- Б О С С КОБОЛЬД --============================
+//  ===========================-- Б О С С 1 КОБОЛЬД --============================
 //=================================================================================
 	"npc_boss_kobold"
 	{										
@@ -1253,5 +1253,164 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+
+//  ===========================-- Б О С С 2 ГОЛЕМ --============================
+//=================================================================================
+	"npc_boss_golem"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"		// Model.
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"					"n_creep_Melee"
+		"ConsideredHero"				"1"
+		"Level"						"10"
+		"ModelScale"                "2.3"                                                                            //"1"
+		//"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		  "mud_golem_hurl_boulder"			            // 
+		"Ability2"		  "mud_golem_rock_destroy"			            // 
+        "Ability3"        "tiny_avalanche"                              // 
+        "Ability4"        "tiny_toss"                                   // 
+        "Ability5"        "earthshaker_aftershock"                      // шэйканём потрусим пошатаем трубы
+        "Ability6"        "tiny_craggy_exterior"                        // 
+        "Ability7"        "necrolyte_heartstopper_aura"                 // разлагающая аура некра
+        "Ability8"                    ""                                // 
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"40"			// Physical protection.
+        "MagicalResistance"			"95"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"2000"		// Damage range min.
+		"AttackDamageMax"			"3500"		// Damage range max.	
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"150"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"400"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"200"		// Speed.
+        "MovementTurnRate"			"0.05"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"50000"		    // Base health.
+		"StatusHealthRegen"			"150"		    // Health regeneration rate.
+		"StatusMana"				"10000"			// Base mana.
+		"StatusManaRegen"			"50"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			                                // Team name.                                       -- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+
+//=================================================================================
+// Neutral: Mud Golem Split
+//=================================================================================
+	"npc_boss_golem_split"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creep_neutral"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"10"
+		"ModelScale" 					"1.4"
+		"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"mud_golem_hurl_boulder"			// 
+		"Ability2"					"tiny_toss"			                // 
+        "Ability3"        "abaddon_borrowed_time"                       // 
+        "Ability4"        "tiny_avalanche"                              // 
+        "Ability5"        "earthshaker_aftershock"                      // шэйканём потрусим пошатаем трубы
+        "Ability6"        "tiny_craggy_exterior"                        // 
+        "Ability7"        ""                                            // 
+        "Ability8"                    ""                                // Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"			// Physical protection.
+        "MagicalResistance"			"95"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1000"		// Damage range min.
+		"AttackDamageMax"			"1750"		// Damage range max.	
+		"AttackRate"				"0.55"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"20"
+		"HealthBarOffset"			"300"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"500"		// Speed.
+        "MovementTurnRate"			"0.05"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"25000"		    // Base health.
+		"StatusHealthRegen"			"100"		    // Health regeneration rate.
+		"StatusMana"				"10000"			// Base mana.
+		"StatusManaRegen"			"50"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			                                // Team name.                                       -- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}	
 
 }

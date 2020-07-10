@@ -1513,6 +1513,304 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 
+	//====================================ГОЛЕМЫ=============================================================================
+	// Mud Golem: Rock Destroy
+	//=================================================================================================================
+	"mud_golem_rock_destroy"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5667"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"				"350"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"2"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed"				"-50"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_health_tooltip"				"240"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_damage_tooltip"				"9"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_duration_tooltip"				"60"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+
+	//=================================================================================================================
+	// Mud Golem: Hurl Boulder
+	//=================================================================================================================
+	"mud_golem_hurl_boulder"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5670"							// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"MaxLevel"						"1"
+
+		"AbilityCastRange"				"1000"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"7500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1.6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"						"800"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//==============================Големы ТИНИ======================================
+	//=================================================================================================================
+	// Tiny: Avalanche                                                                                      ЗАСЫПКА КАМНЯМИ
+	//=================================================================================================================
+	"tiny_avalanche"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"5106"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Ability.Avalanche"
+        "MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tick_interval"				"0.3"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"total_duration"			"1.8"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tick_count"			"6"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"0.2"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"projectile_duration"		"0.5"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"avalanche_damage"			"1000"
+				"LinkedSpecialBonus"		"special_bonus_unique_tiny"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
+	// Tiny: Toss                                                                                   КАК ФАНЕРА НА ПАРИЖЕМ
+	//=================================================================================================================
+	"tiny_toss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"5107"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_RUNE_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+        "MaxLevel"						"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.25"	// generally used for damage only
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"1.1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"grab_radius"			"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"300"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage_pct"		"30"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"toss_damage"				"3000"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"AbilityCharges"		""
+				"LinkedSpecialBonus"	"special_bonus_unique_tiny_2"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+
+	//=================================================================================================================
+	// Tiny: Craggy Exterior                                            СТАРАЯ ПАСИВА ТИНИ - КОГДА ЕГО БЬЮТ - ТО АТАКУЮЩИЕ САМИ СТАНЯТСЯ
+	//=================================================================================================================
+	"tiny_craggy_exterior"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"					"296"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilitySound"					"Hero_Tiny.CraggyExterior.Stun"
+        "MaxLevel"						"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"35"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"stun_chance"				"25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"0.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"10"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"1000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300"
+			}
+		}
+	}
+
+
 	//=================================================================================================================
 	// Ability: Phantom Lancer's Phantom Rush / Phantom Edge                                            --АЗОТУ? НИТРО!!!
 	//=================================================================================================================

@@ -598,6 +598,8 @@
         "npc_meepo_mini_boss"																"Любитель Сыра"
 //       ---==БОССЫ==---
         "npc_boss_kobold"                                                                   "Властелин Кобольдов"
+        "npc_boss_golem"                                                                    "Древний Голем"
+        "npc_boss_golem_split"                                                              "Разломный Голем"
 				
 	}
 }
