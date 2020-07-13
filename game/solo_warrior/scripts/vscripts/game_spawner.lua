@@ -15,7 +15,11 @@ GameSpawner.wave_list = {
 --	[3]={reward_gold=750,reward_exp=1500,
 --			units={["npc_gnoll_ranger"]=3,["npc_kobold_tunneler"]=3,["npc_troll_dd"]=3,["npc_troll_shaman"]=2,["npc_meepo_mini_boss"]=5}},
 --	[4]={reward_gold=1000,reward_exp=2000,
---			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},  "npc_boss_golem_split"  "npc_boss_golem"
+--			units={["npc_troll_mini_boss"]=2,["npc_meepo_mini_boss"]=5,["npc_boss_kobold"]=1}},  "npc_boss_golem_split"  "npc_boss_golem"  "npc_granite_golem" ["npc_boss_golem_split"]=0,
+--["npc_bone_golem"]=3,["npc_granite_golem"]=5,["npc_boss_golem"]=1
+--["npc_stone_golem"]=5,["npc_granite_golem"]=4,["npc_ice_golem"]=3,["npc_lava_golem"]=2,["npc_tiny_mini_boss"]=1
+--["npc_ogre"]=3,["npc_ogre_smasher"]=5,["npc_ogre_ambal"]=2,["npc_ogremagi_mini_boss"]=1
+--["npc_wolf"]=7,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=4
 	[1]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=10,["npc_kobold_tunneler"]=5,["npc_gnoll_ranger"]=3}},
 	[2]={reward_gold=100,reward_exp=200,
@@ -25,13 +29,13 @@ GameSpawner.wave_list = {
 	[4]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=12,["npc_kobold_tunneler"]=7,["npc_gnoll_ranger"]=5,["npc_dazzle_hero"]=1,["npc_boss_kobold"]=1}},
 	[5]={reward_gold=100,reward_exp=200,
-			units={["npc_boss_golem_split"]=1,["npc_boss_golem"]=1}},
+			units={["npc_wolf"]=9,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=5}},
 	[6]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_ogre"]=3,["npc_ogre_smasher"]=5,["npc_ogre_ambal"]=2,["npc_ogremagi_mini_boss"]=1}},
 	[7]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_stone_golem"]=5,["npc_granite_golem"]=4,["npc_ice_golem"]=3,["npc_lava_golem"]=2,["npc_tiny_mini_boss"]=1}},
 	[8]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_bone_golem"]=3,["npc_granite_golem"]=5,["npc_boss_golem"]=1}},
 	[9]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[10]={reward_gold=100,reward_exp=200,
