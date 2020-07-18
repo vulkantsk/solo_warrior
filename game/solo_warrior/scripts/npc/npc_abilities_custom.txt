@@ -1615,79 +1615,7 @@
 
 	//==============================Големы ТИНИ======================================
 	//=================================================================================================================
-	// Tiny: Avalanche                                                                                      ЗАСЫПКА КАМНЯМИ
-	//=================================================================================================================
-	"tiny_avalanche"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		//"ID"					"5106"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Ability.Avalanche"
-        "MaxLevel"						"1"
 
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"0.0"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12"
-
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"500"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"tick_interval"				"0.3"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"total_duration"			"1.8"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"tick_count"			"6"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"0.2"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"projectile_duration"		"0.5"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"avalanche_damage"			"1000"
-				"LinkedSpecialBonus"		"special_bonus_unique_tiny"
-			}
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
-	}
-	
 	//=================================================================================================================
 	// Tiny: Toss                                                                                   КАК ФАНЕРА НА ПАРИЖЕМ
 	//=================================================================================================================
