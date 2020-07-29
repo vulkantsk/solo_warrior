@@ -1482,7 +1482,7 @@
 		"SoundSet"		"Hero_Tiny"
 		"ConsideredHero"				"0"
 		"Level"						"4"
-		"ModelScale"                "0.95"                          //original
+		"ModelScale"                "1.15"
         "HasInventory"				"1"
 		"GibType"		"stone"                                         // хз чо это -_-
 
@@ -1563,13 +1563,14 @@
         //}           
 	}
 
-//=================================================================================ГРАНИТ  
+//=================================================================================Железо 
 	"npc_iron_golem"
 	{										
 		// General
         "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
 		"Model"		                "models/items/warlock/golem/ti9_cache_warlock_tribal_warlock_golem/ti9_cache_warlock_tribal_golem_alt.vmdl"
+        //"Model"		                "models/creeps/darkreef/gaoler/darkreef_gaoler.vmdl"
 		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
 		"SoundSet"		            "Hero_Tiny"
 		"ConsideredHero"				"0"
@@ -1761,7 +1762,7 @@
 		"Level"						"5"
 		"ModelScale"                "1.1"                          //original
         "HasInventory"				"1"
-		"GibType"		            "stone"                                         // хз чо это -_-
+		//"GibType"		            "stone"                                         // хз чо это -_-
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2353,7 +2354,504 @@
 		//Inventory
 		//"Creature"           
 	}
-        
+
+//=================================================================================	
+// UNITS: SKELETON & ZOMBIE    --                                                  СКЕЛЕТЫ И ЗОМБИ
+//================================================================================= 
+//=================================================================================Скелет  
+	"npc_skeleton"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        "Model"		                "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"tusk_walrus_kick"
+		"Ability2"		"skeleton_king_hellfire_blast"
+		"Ability3"		""
+		"Ability4"		""
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"			// Physical protection.
+        "MagicalResistance"			"55"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.	
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+    
+//=================================================================================Скелет-Великан  
+	"npc_skeleton_big"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        //"Model"		                "models/items/wraith_king/arcana/wraith_king_arcana.vmdl"
+        "Model"		                "models/items/wraith_king/arcana/wk_arcana_skeleton.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.6"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"tusk_walrus_punch"
+		"Ability2"		"bristleback_warpath"
+		"Ability3"		"huskar_life_break"
+		"Ability4"		"enchantress_untouchable"
+		"Ability5"		"omniknight_degen_aura"
+		"Ability6"		""
+		"Ability7"		"skeleton_king_vampiric_aura"
+        "Ability8"      "skeleton_king_mortal_strike"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"			// Physical protection.
+        "MagicalResistance"			"55"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.	
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"200"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+    
+//=================================================================================СКЕЛЕТ-ЛУЧНИК
+	"npc_skeleton_archer"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        "Model"						"models/heroes/clinkz/clinkz_archer.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Ranged"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.7"                          //original
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"clinkz_strafe"
+		"Ability2"		"clinkz_searing_arrows"
+		"Ability3"		"death_prophet_silence"
+		"Ability4"		"omniknight_repel"
+		"Ability5"		"clinkz_burning_army"
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"			// Physical protection.
+        "MagicalResistance"			"85"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.	
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"350"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+
+//=================================================================================СКЕЛЕТ-КОЛДУН
+	"npc_skeleton_mage"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        "Model"						"models/heroes/pugna/pugna.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Ranged"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.7"                          //original
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"zuus_arc_lightning"
+		"Ability2"		"pugna_nether_blast"
+		"Ability3"		"phantom_assassin_stifling_dagger"
+		"Ability4"		"pugna_life_drain"
+		"Ability5"		"pugna_nether_ward"
+		"Ability6"		"death_prophet_spirit_siphon"
+		"Ability7"		""
+        "Ability8"      ""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"			// Physical protection.
+        "MagicalResistance"			"85"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.	
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"350"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+
+//=================================================================================ZOMBIES
+//=================================================================================ЗОМБИ ПОЛЗУН
+	"npc_creeping_zombie"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        "Model"		                "models/creeps/lane_creeps/creep_bad_ranged_diretide/creep_bad_ranged_diretide.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"15"
+		"ModelScale"                "1.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"bristleback_bristleback"
+		"Ability2"		"undying_soul_rip"
+		"Ability3"		"undying_tombstone_zombie_deathstrike"
+		"Ability4"		"bristleback_viscous_nasal_goo"
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"			// Physical protection.
+        "MagicalResistance"			"55"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.	
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+  
+//=================================================================================ЗОМБИ
+	"npc_zombie"
+	{										
+		// General
+        "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+        "Model"		                "models/creeps/lane_creeps/creep_bad_melee_diretide/creep_bad_melee_diretide.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"16"
+		"ModelScale"                "1.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"bristleback_bristleback"
+		"Ability2"		"undying_soul_rip"
+		"Ability3"		"undying_tombstone_zombie_deathstrike"
+		"Ability4"		"bristleback_viscous_nasal_goo"
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"			// Physical protection.
+        "MagicalResistance"			"55"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.	
+		"AttackRate"				"1.6"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1200"		// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"550"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"31"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+        "MovementTurnRate"			"0.5"		// Turning rate.                        -- скорость поворота
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"10000"		    // Base health.
+		"StatusHealthRegen"			"50"		    // Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"10"		    // Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"			                                //-- юнит наш враг
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		//Inventory
+		//"Creature"           
+	}
+         
 //=================================================================================	
 // UNITS: HEROES    -- Секретные или не очень...но                           ГЕРОИ!!!
 //=================================================================================    	
@@ -2998,7 +3496,8 @@
 		// General
         "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
+		//"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
+        "Model"						"models/props_structures/midas_throne/kobold_overboss.vmdl"
 		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
 		"SoundSet"					"n_creep_Melee"
 		"ConsideredHero"				"1"

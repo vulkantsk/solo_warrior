@@ -21,6 +21,7 @@ GameSpawner.wave_list = {
 --["npc_ogre"]=3,["npc_ogre_smasher"]=5,["npc_ogre_ambal"]=2,["npc_tower_golem"]=1,["npc_ogremagi_mini_boss"]=1
 --["npc_wolf"]=7,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=4
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
+--"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=10,["npc_kobold_tunneler"]=5,["npc_gnoll_ranger"]=3}},
 	[2]={reward_gold=125,reward_exp=250,
@@ -38,9 +39,9 @@ GameSpawner.wave_list = {
 	[8]={reward_gold=275,reward_exp=550,
 			units={["npc_bone_golem"]=3,["npc_iron_golem"]=2,["npc_granite_golem"]=5,["npc_boss_golem"]=1}},
 	[9]={reward_gold=300,reward_exp=600,
-			units={["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1}},
+			units={["npc_gorgule"]=7,["npc_gorgule_prime"]=3,["npc_harpy"]=5,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1}},
 	[10]={reward_gold=350,reward_exp=700,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_skeleton"]=10,["npc_skeleton_archer"]=5,["npc_skeleton_mage"]=3,["npc_skeleton_big"]=2,["npc_zombie"]=8,["npc_creeping_zombie"]=4}},
 	[11]={reward_gold=400,reward_exp=800,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[12]={reward_gold=500,reward_exp=1000,
