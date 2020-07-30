@@ -1314,19 +1314,25 @@
 		// General
         "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl"
+		//"Model"						"models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl"
+        "Model"						"models/creeps/ogre_1/boss_ogre.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"10"
-		"ModelScale" 					"1.5"
+		"ModelScale" 					"1.9"
 		//"IsNeutralUnitType"			"1"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"				"ogre_magi_fireblast"
-		"Ability2"				"ogre_magi_ignite"
-		"Ability3"				"disruptor_thunder_strike"			// Ability 3
-		"Ability4"				"nyx_assassin_impale"			// Ability 4
+		"Ability1"				"magnataur_reverse_polarity"
+		"Ability2"				"magnataur_skewer"
+		"Ability3"				"centaur_hoof_stomp"
+		"Ability4"				"nyx_assassin_impale"
+        "Ability5"				"shredder_reactive_armor"
+		"Ability6"				"magnataur_empower"
+		"Ability7"				""
+		"Ability8"				""
+        
 
 		// Armor
 		//----------------------------------------------------------------
@@ -1359,13 +1365,13 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.			
+		"MovementSpeed"				"250"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5850"		// Base health.
+		"StatusHealth"				"10000"		// Base health.
 		"StatusHealthRegen"			"50.0"		// Health regeneration rate.
-		"StatusMana"				"500"			// Base mana.
+		"StatusMana"				"2000"			// Base mana.
 		"StatusManaRegen"			"10.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3496,8 +3502,8 @@
 		// General
         "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
-		//"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
-        "Model"						"models/props_structures/midas_throne/kobold_overboss.vmdl"
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
+        //"Model"						"models/props_structures/midas_throne/kobold_overboss.vmdl"
 		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
 		"SoundSet"					"n_creep_Melee"
 		"ConsideredHero"				"1"
