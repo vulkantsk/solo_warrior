@@ -43,6 +43,14 @@ function modifier_axe_counter_helix_custom:OnAttackLanded( params )
 			local attack_damage =ability:GetSpecialValueFor("attack_damage")/100
 			local damage = base_damage + caster:GetAverageTrueAttackDamage(caster)*attack_damage
 			local point = caster:GetAbsOrigin()
+			
+			if caster:HasTalent("special_bonus_custom_axe_1") then
+				trigger_chance = trigger_chance + caster:GetSpecialValueForTalent("special_bonus_custom_axe_1")
+			end
+			
+			if caster:HasTalent("special_bonus_custom_axe_2") then
+				base_damage = base_damage + caster:GetSpecialValueForTalent("special_bonus_custom_axe_2")
+			end
 
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then
 				local data = {iFlag = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES}

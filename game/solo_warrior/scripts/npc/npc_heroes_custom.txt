@@ -17,8 +17,8 @@
 		"Ability6"		"axe_berserk_form"                                  //абилки героя 1-6
 		"Ability7"					"generic_hidden"		                // 7-8 пустая или скрытая ячейка , может служить для замены. например тролль-герой ближник или дальник
 		"Ability8"					"generic_hidden"	                    // 7-8 	, куда 9 делась?)))
-		"Ability10"		"special_bonus_exp_boost_20"                        //10-17 это все таланты
-		"Ability11"		"special_bonus_gold_income_240"
+		"Ability10"		"special_bonus_custom_axe_1"                        //10-17 это все таланты
+		"Ability11"		"special_bonus_custom_axe_2"
 		"Ability12"		"special_bonus_armor_5"
 		"Ability13"		"special_bonus_magic_resistance_15"
 		"Ability14"		"special_bonus_all_stats_10"        
