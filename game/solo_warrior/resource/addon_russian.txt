@@ -86,6 +86,13 @@
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"
 		"DOTA_Tooltip_ability__"				""
+		"DOTA_Tooltip_modifier_"							"Name"
+		"DOTA_Tooltip_modifier__Description"				"Desc"
+
+		"DOTA_Tooltip_ability_item_extra_life"							"Extra life"
+		"DOTA_Tooltip_ability_item_extra_life_Description"				"Даёт дополнительную жизнь."
+		"DOTA_Tooltip_modifier_extra_life"							"Lifes"
+		"DOTA_Tooltip_modifier_extra_life_Description"				"Количество ваших жизней"
 
 //Baseitems
 //str

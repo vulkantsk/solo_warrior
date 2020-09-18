@@ -1,6 +1,7 @@
 if GameSpawner == nil then
 	_G.GameSpawner = class({})
 end
+HERO_START_LIFES = 3
 
 GameSpawner.exit_gate =nil
 GameSpawner.current_units = {}
@@ -131,6 +132,9 @@ function GameSpawner:OnNPCSpawned(keys)
 
 			local ability = npc:GetAbilityByIndex(3)
 			ability:SetLevel(1)
+
+			local life_modifier = npc:AddNewModifier(npc, nil, "modifier_extra_life", nil)
+			life_modifier:SetStackCount(HERO_START_LIFES)
 		end)
 	elseif npc:IsRealHero() and npc.spawn_point then
 		npc:SetAbsOrigin(npc.spawn_point)
@@ -143,6 +147,10 @@ function GameSpawner:OnEntityKilled(keys)
 	local unit_name = unit:GetUnitName()
 	
 	if unit_name == "npc_goodguys_fort" then
+		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
+	end
+	
+	if unit:IsRealHero() and not unit:IsReincarnating() then
 		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
 	end
 

@@ -9,7 +9,7 @@ modifier_extra_life =class({
 })
 
 function modifier_extra_life:GetTexture()
-    return "item_aegis"
+    return "item_extra_life"--"item_aegis"
 end
 
 function modifier_extra_life:DeclareFunctions()
@@ -23,10 +23,8 @@ function modifier_extra_life:DeclareFunctions()
 end
 
 function modifier_extra_life:OnCreated()    
-        self.caster = self:GetCaster()
-        self.ability = self:GetAbility()    
-        -- Ability specials
-        self.reincarnate_delay = self.ability:GetSpecialValueFor("duration")
+    self.caster = self:GetCaster()
+    self.reincarnate_delay = 6
 
 --	self.reincarnate_delay = self:GetAbility:GetSpecialValueFor("duration")
     if IsServer() then
@@ -40,7 +38,7 @@ end
 
 function modifier_extra_life:OnIntervalThink()
     -- If caster has sufficent mana and the ability is ready, apply
-    if (self.caster:GetMana() >= self.ability:GetManaCost(-1)) and (self.ability:IsCooldownReady()) and (not self.caster:HasModifier("modifier_item_imba_aegis")) then
+    if not self.caster:HasModifier("modifier_item_imba_aegis") then
         self.can_die = false
     else
         self.can_die = true
@@ -93,9 +91,7 @@ function modifier_extra_life:Reincarnate()
 	if not self:GetCaster():HasModifier("modifier_item_imba_aegis") then
 
 		local caster = self:GetCaster()
-		local ability = self:GetAbility()
 		local manaHave = caster:GetMana()
-		local manaCost = ability:GetManaCost(-1)
 		local stack_count = self:GetStackCount()
         
         if stack_count <= 1 then
