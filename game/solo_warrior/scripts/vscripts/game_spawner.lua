@@ -89,6 +89,7 @@ function GameSpawner:SpawnUnits(index)
 
 	for key, value in pairs (units) do
 		local unit_name
+		local unit_count
 		if type(key) == "string" then
 			unit_count = value
 			unit_name = key
@@ -184,6 +185,7 @@ function GameSpawner:OpenExitGate( index )
 	local next_index = index+1
 	local exit_gate = Entities:FindByName(nil, "exit_gate_"..next_index)
 	if exit_gate then
+		self.exit_gate = {exit_gate:GetAbsOrigin(), exit_gate:GetAnglesAsVector()}
 		exit_gate:ForceKill(false)
 		local exit_obstructions = Entities:FindAllByName( "exit_gate_obstruction_"..next_index)
 
@@ -225,7 +227,7 @@ function GameSpawner:OpenEntryGate( unit )
 	print("gate index = "..gateIndex)
 
 --	local exit_gate = Entities:FindByName( nil, "exit_gate_"..gateIndex ) or 
-	local exit_gate = self.exit_gate
+	-- local exit_gate = self.exit_gate
 	local entry_obstructions = Entities:FindAllByName( "entry_gate_obstruction_"..gateIndex)
 	local exit_obstructions = Entities:FindAllByName( "exit_gate_obstruction_"..gateIndex)
 
@@ -238,9 +240,9 @@ function GameSpawner:OpenEntryGate( unit )
 	end
 --	EmitGlobalSound("gate_break")
 
-	if exit_gate then
-		local hAnimGate = CreateUnitByName( "npc_gate_blocked", exit_gate:GetAbsOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS )
-		local vGateAngles = exit_gate:GetAnglesAsVector()
+	if self.exit_gate then
+		local hAnimGate = CreateUnitByName( "npc_gate_blocked", self.exit_gate[1], false, nil, nil, DOTA_TEAM_BADGUYS )
+		local vGateAngles = self.exit_gate[2]
 		hAnimGate:SetAngles( vGateAngles.x, vGateAngles.y+90, vGateAngles.z )
 		
 		local nFXIndex = ParticleManager:CreateParticle( "particles/dev/library/base_dust_hit.vpcf", PATTACH_CUSTOMORIGIN, nil )
@@ -248,6 +250,7 @@ function GameSpawner:OpenEntryGate( unit )
 		ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 300, 300, 300 ) )
 		ParticleManager:ReleaseParticleIndex( nFXIndex )
 	
+		self.exit_gate = nil
 	end
 	GameSpawner:SpawnUnits(gateIndex)
 --	thisEntity:SetModel("")
