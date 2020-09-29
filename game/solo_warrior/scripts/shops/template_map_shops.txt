@@ -17,20 +17,19 @@
 	"attributes"
 	{
 		"item"		"item_str_1_3"
-		"item"		"item_agi_1_3"
-		"item"		"item_int_1_3"
+//		"item"		"item_agi_1_3"
+//		"item"		"item_int_1_3"
 		"item"		"item_stat_1_3"
 		"item"		"item_dmg_1_3"
-		"item"		"item_as_1_3"
+//		"item"		"item_as_1_3"
 		"item"		"item_hp_1_3"
 		"item"		"item_hpreg_1_3"
-		"item"		"item_mp_1_3"
-		"item"		"item_mpreg_1_3"
+//		"item"		"item_mp_1_3"
+//		"item"		"item_mpreg_1_3"
 		"item"		"item_armor_1_3"
 		"item"		"item_block_1_3"
 		"item"		"item_resist_1_3"
-		"item"		"item_spell_1_3"
-		
+//		"item"		"item_spell_1_3"		
 	}
 
 	"weapons_armor"

@@ -80,6 +80,27 @@
 		"DOTA_Tooltip_ability_axe_true_strength_Description"		            "Даёт огромный прирост силы."
         "DOTA_Tooltip_ability_axe_true_strength_Lore"                           "Настоящая Сила не знает границ..."
 		"DOTA_Tooltip_ability_axe_true_strength_bonus_str_pct"			        "%Бонус к Силе:"       
+//Abilities
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+		"DOTA_Tooltip_modifier_"							"Name"
+		"DOTA_Tooltip_modifier__Description"				"Desc"
+
+		"DOTA_Tooltip_ability_friend"							"Friend"
+		"DOTA_Tooltip_ability_friend_Description"				"Спаси меня, иначе мне конец !"
+		"DOTA_Tooltip_modifier_friend"							"Friend"
+		"DOTA_Tooltip_modifier_friend_Description"				"Сасай !!!"
+
+		"DOTA_Tooltip_ability_troll_healer_regeneration"							"Regeneration"
+		"DOTA_Tooltip_ability_troll_healer_regeneration_Description"				"Восстанавливает здоровье в течение времени."
+		"DOTA_Tooltip_ability_troll_healer_regeneration_duration"			"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_troll_healer_regeneration_regen"				"РЕГЕНЕРАЦИЯ:"
+		"DOTA_Tooltip_ability_troll_healer_regeneration_regen_pct"			"%РЕГЕНЕРАЦИЯ:"
+		"DOTA_Tooltip_modifier_troll_healer_regeneration"							"Regeneration"
+		"DOTA_Tooltip_modifier_troll_healer_regeneration_Description"				"Регенерирует"
+		"npc_troll_healer_friend"							"Troll healer"
 
 //Items
 

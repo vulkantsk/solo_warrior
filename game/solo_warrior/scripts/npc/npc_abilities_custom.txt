@@ -364,7 +364,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"200 300 400 600 800"
+		"AbilityManaCost"				"200 300 400"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -378,22 +378,22 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"decrease_armor"		"5 10 15 20 25"
+				"decrease_armor"		"5 10 15"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"				"100 150 200 300 400"
+				"bonus_dmg"				"100 200 400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_ms"				"50 75 100 150 200"
+				"bonus_ms"				"50 75 100"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_bat"				"1.5 1.3 1.1 1 0.9"
+				"bonus_bat"				"1.1"
 			}
 			"06"
 			{
@@ -2524,5 +2524,80 @@
 			}
 		}
 	}	
+	"troll_healer_regeneration"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"regeneration"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"600"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"		"10"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"regen"		"35"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"regen_pct"		"3"
+			}
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_troll_healer_regeneration"
+				"Target" 		"TARGET"
+				"Duration"		"%duration"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_troll_healer_regeneration"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+		
+				"EffectName"		"particles/items_fx/healing_flask.vpcf"
+				"EffectAttachType"	"follow_origin"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%regen" 
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%regen_pct" 
+				}
+			}
+		}
+	}
+	"friend"                     //Яростный Вопль
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/friend"
+		"AbilityTextureName"			"friend"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"search_radius"			"1500"
+			}
+		}
+	}
 	//================Хоба!!!	
 }

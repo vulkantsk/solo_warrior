@@ -45,11 +45,11 @@ function modifier_axe_counter_helix_custom:OnAttackLanded( params )
 			local point = caster:GetAbsOrigin()
 			
 			if caster:HasTalent("special_bonus_custom_axe_1") then
-				trigger_chance = trigger_chance + caster:GetSpecialValueForTalent("special_bonus_custom_axe_1")
+				trigger_chance = trigger_chance + caster:FindTalentValue("special_bonus_custom_axe_1")
 			end
 			
 			if caster:HasTalent("special_bonus_custom_axe_2") then
-				base_damage = base_damage + caster:GetSpecialValueForTalent("special_bonus_custom_axe_2")
+				damage = damage*(100 + caster:FindTalentValue("special_bonus_custom_axe_2"))/100
 			end
 
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then

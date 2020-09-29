@@ -713,6 +713,75 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
+	"npc_troll_healer_friend"                                                                                      // -- моб. сейчас это "Болотный тролль-лекарь"	
+	{
+		// General
+        "vscripts"					"ai/ai_neutral_autocast_healers"                                    //посылает на аи за поведением
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"1"
+		"ModelScale" 				"1.25"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"friend"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					"troll_healer_regeneration"			                    // Ability 3
+		"Ability4"					"dazzle_shallow_grave"
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			                                // Physical protection.
+        "MagicalResistance"			"25"			                            // Magical protection.       --маг рез. было 0
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"AttackRange"				"650"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf" // снаряд - particles/base_attacks/ranged_tower_good_linear.vpcf
+		"ProjectileSpeed"			"900"		// Speed of projectile.		     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"180"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"29"		// Experience earn.
+		"BountyGoldMin"				"20"		// Gold earned min.
+		"BountyGoldMax"				"30"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"		// Base health.
+		"StatusHealthRegen"			"5.0"		// Health regeneration rate.
+		"StatusMana"				"1000"		// Base mana.
+		"StatusManaRegen"			"15.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
 
 //=================================================================================	
 // Neutral: Forest Troll DD                                       --тролль-налётчик

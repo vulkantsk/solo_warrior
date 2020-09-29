@@ -50,17 +50,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"90 150"
+				"bonus_str"				"90 150"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"60 80"
+				"bonus_armor"			"72 108"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"180 270"
+				"bonus_dmg"				"180 270"
 			}
 			"05"
 			{
@@ -119,7 +119,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"60 80"
+				"bonus_armor"			"72 108"
 			}
 			"03"
 			{
@@ -178,22 +178,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"			"3600 5400"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"8 16"
+				"bonus_block"			"360 540"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			//"04"
 			//{
 			//	"var_type"				"FIELD_INTEGER"
-			//	"bonus_block"			"8 16"
+			//	"bonus_block"			"180 270"
 			//}
 			"05"
 			{
@@ -247,22 +247,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"				"3600 5400"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"8 16"
+				"bonus_block"			"360 540"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			//"04"
 			//{
 			//	"var_type"				"FIELD_INTEGER"
-			//	"bonus_block"			"8 16"
+			//	"bonus_block"			"180 270"
 			//}
 			"05"
 			{
@@ -317,22 +317,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8 16"
+				"bonus_armor"			"36 54"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"				"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -386,22 +386,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8 16"
+				"bonus_armor"			"36 54"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"				"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -455,27 +455,27 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"8 16"
+				"bonus_dmg"				"180 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"				"90 135"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"				"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"			"10 20"
+				"spell_lifesteal_pct"	"10 20"
 			}
 			"06"
 			{
@@ -544,22 +544,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"8 16"
+				"bonus_dmg"				"180 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"				"90 135"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"				"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"05"
 			{
@@ -633,22 +633,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"				"90 135"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"8 16"
+				"bonus_resist"			"60 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -702,22 +702,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"			"90 135"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"8 16"
+				"bonus_resist"			"60 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -771,22 +771,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"8 16"
+				"bonus_resist"			"60 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"			"90 135"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -840,22 +840,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"8 16"
+				"bonus_resist"			"60 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"8 16"
+				"bonus_str"			"90 135"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"8 16"
+				"bonus_hpreg"			"45 70"
 			}
 			"05"
 			{
@@ -909,22 +909,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"8 16"
+				"bonus_dmg"			"180 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"			"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8 16"
+				"bonus_armor"			"36 54"
 			}
 			"05"
 			{
@@ -988,22 +988,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"8 16"
+				"bonus_dmg"			"180 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"8 16"
+				"bonus_stat"			"30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"8 16"
+				"bonus_hp"			"3600 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"8 16"
+				"bonus_armor"			"36 54"
 			}
 			"05"
 			{

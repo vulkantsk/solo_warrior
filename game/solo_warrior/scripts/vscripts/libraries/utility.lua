@@ -2256,6 +2256,13 @@ function GiveExperiencePlayers( experience )
 	end
 end
 
+function CDOTA_BaseNPC:FindTalentValue(talentName)
+    if self:HasAbility(talentName) then
+        return self:FindAbilityByName(talentName):GetSpecialValueFor("value")
+    end
+    return nil
+end
+
 function AttackMove ( unit, point )
 --	print("that shit work !!!")
 	Timers:CreateTimer(0.1, function()

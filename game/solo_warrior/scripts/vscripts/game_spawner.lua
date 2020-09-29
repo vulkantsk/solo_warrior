@@ -24,25 +24,26 @@ GameSpawner.wave_list = {
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=10,["npc_kobold_tunneler"]=5,["npc_gnoll_ranger"]=3,["npc_ogre_ambal"]=1}},
-	[2]={reward_gold=125,reward_exp=250,
-			units={["npc_melee_troll"]=5,["npc_troll_shaman"]=1,["npc_troll_healer"]=2,["npc_troll_dd"]=3,["npc_troll_mini_boss"]=1}},
-	[3]={reward_gold=150,reward_exp=300,
-			units={["npc_kobold"]=7,["npc_kobold_tunneler"]=5,["npc_troll_shaman"]=2,["npc_troll_dd"]=4,["npc_meepo_mini_boss"]=5}},
-	[4]={reward_gold=175,reward_exp=350,
-			units={["npc_kobold"]=12,["npc_kobold_tunneler"]=7,["npc_gnoll_ranger"]=5,["npc_dazzle_hero"]=1,["npc_boss_kobold"]=1}},
-	[5]={reward_gold=200,reward_exp=400,
-			units={["npc_wolf"]=9,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=5}},
-	[6]={reward_gold=225,reward_exp=450,
-			units={["npc_ogre"]=3,["npc_ogre_smasher"]=5,["npc_ogre_ambal"]=2,["npc_ogremagi_mini_boss"]=1}},
-	[7]={reward_gold=250,reward_exp=500,
-			units={["npc_stone_golem"]=5,["npc_granite_golem"]=4,["npc_ice_golem"]=3,["npc_lava_golem"]=2,["npc_tower_golem"]=1,["npc_tiny_mini_boss"]=1}},
-	[8]={reward_gold=275,reward_exp=550,
-			units={["npc_bone_golem"]=3,["npc_iron_golem"]=2,["npc_granite_golem"]=5,["npc_boss_golem"]=1}},
-	[9]={reward_gold=300,reward_exp=600,
-			units={["npc_gorgule"]=7,["npc_gorgule_prime"]=3,["npc_harpy"]=5,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1}},
-	[10]={reward_gold=350,reward_exp=700,
-			units={["npc_skeleton"]=10,["npc_skeleton_archer"]=5,["npc_skeleton_mage"]=3,["npc_skeleton_big"]=2,["npc_zombie"]=8,["npc_creeping_zombie"]=4}},
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1},
+			bonus_units={"npc_troll_healer_friend"}},
+	[2]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[3]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[4]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[5]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[6]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[7]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[8]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[9]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	[10]={reward_gold=100,reward_exp=200,
+			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[11]={reward_gold=400,reward_exp=800,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[12]={reward_gold=500,reward_exp=1000,
@@ -55,6 +56,37 @@ GameSpawner.wave_list = {
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[16]={reward_gold=3000,reward_exp=3000,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+--[[	[2]={reward_gold=125,reward_exp=250,
+				units={["npc_melee_troll"]=5,["npc_troll_shaman"]=1,["npc_troll_healer"]=2,["npc_troll_dd"]=3,["npc_troll_mini_boss"]=1}},
+		[3]={reward_gold=150,reward_exp=300,
+				units={["npc_kobold"]=7,["npc_kobold_tunneler"]=5,["npc_troll_shaman"]=2,["npc_troll_dd"]=4,["npc_meepo_mini_boss"]=5}},
+		[4]={reward_gold=175,reward_exp=350,
+				units={["npc_kobold"]=12,["npc_kobold_tunneler"]=7,["npc_gnoll_ranger"]=5,["npc_dazzle_hero"]=1,["npc_boss_kobold"]=1}},
+		[5]={reward_gold=200,reward_exp=400,
+				units={["npc_wolf"]=9,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=5}},
+		[6]={reward_gold=225,reward_exp=450,
+				units={["npc_ogre"]=3,["npc_ogre_smasher"]=5,["npc_ogre_ambal"]=2,["npc_ogremagi_mini_boss"]=1}},
+		[7]={reward_gold=250,reward_exp=500,
+				units={["npc_stone_golem"]=5,["npc_granite_golem"]=4,["npc_ice_golem"]=3,["npc_lava_golem"]=2,["npc_tower_golem"]=1,["npc_tiny_mini_boss"]=1}},
+		[8]={reward_gold=275,reward_exp=550,
+				units={["npc_bone_golem"]=3,["npc_iron_golem"]=2,["npc_granite_golem"]=5,["npc_boss_golem"]=1}},
+		[9]={reward_gold=300,reward_exp=600,
+				units={["npc_gorgule"]=7,["npc_gorgule_prime"]=3,["npc_harpy"]=5,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1}},
+		[10]={reward_gold=350,reward_exp=700,
+				units={["npc_skeleton"]=10,["npc_skeleton_archer"]=5,["npc_skeleton_mage"]=3,["npc_skeleton_big"]=2,["npc_zombie"]=8,["npc_creeping_zombie"]=4}},
+		[11]={reward_gold=400,reward_exp=800,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+		[12]={reward_gold=500,reward_exp=1000,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+		[13]={reward_gold=700,reward_exp=1200,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+		[14]={reward_gold=1000,reward_exp=1500,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+		[15]={reward_gold=1500,reward_exp=2000,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+		[16]={reward_gold=3000,reward_exp=3000,
+				units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+	]]	
 
 }
 
@@ -84,6 +116,7 @@ function GameSpawner:SpawnUnits(index)
 
 	local points = Entities:FindAllByName("spawner_point_"..index)
 	local units = current_wave.units
+	local bonus_units = current_wave.bonus_units
 
 --	GameRules:SendCustomMessage("#Game_notification_boss_spawn_"..boss_name,0,0)
 
@@ -100,11 +133,25 @@ function GameSpawner:SpawnUnits(index)
 		for i=1, unit_count do			
 			local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
 			local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
-			unit:SetInitialGoalEntity( waypoint )
 			unit.reward = true
 			local ent_index = unit:entindex()
 --			table.insert(self.current_units, ent_index, unit)
 			self.current_units[ent_index]= unit
+		end
+	end 
+	for key, value in pairs (bonus_units) do
+		local unit_name
+		if type(key) == "string" then
+			unit_count = value
+			unit_name = key
+		else
+			unit_count =1
+			unit_name = value
+		end
+
+		for i=1, unit_count do			
+			local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
+			local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
 		end
 	end 
 end
