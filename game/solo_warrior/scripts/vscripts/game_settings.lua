@@ -38,7 +38,7 @@ CUSTOM_BUYBACK_COOLDOWN_ENABLED = false  -- Should we use a custom buyback time?
 CUSTOM_BUYBACK_COOLDOWN = 900  -- Should we use a custom buyback time?
 BUYBACK_ENABLED = true                 -- Should we allow people to buyback when they die?
 
-DISABLE_FOG_OF_WAR_ENTIRELY = false     -- Should we disable fog of war entirely for both teams?
+DISABLE_FOG_OF_WAR_ENTIRELY = GetMapName() == "testroom"     -- Should we disable fog of war entirely for both teams?
 USE_UNSEEN_FOG_OF_WAR = true           -- Should we make unseen and fogged areas of the map completely black until uncovered by each team? 
                                             -- Note: DISABLE_FOG_OF_WAR_ENTIRELY must be false for USE_UNSEEN_FOG_OF_WAR to work
 USE_STANDARD_DOTA_BOT_THINKING = false  -- Should we have bots act like they would in Dota? (This requires 3 lanes, normal items, etc)
@@ -495,12 +495,12 @@ function GameSettings:OnPlayerLevelUp(keys)
 	DeepPrintTable(keys)
 
 --	local player = EntIndexToHScript(keys.player)
---	local hero = EntIndexToHScript(keys.hero_entindex)
-	local hero = PlayerResource:GetSelectedHeroEntity(keys.player_id)
+	local hero = EntIndexToHScript(keys.hero_entindex)
+	-- local hero = PlayerResource:GetSelectedHeroEntity(keys.player_id)
 	local level = keys.level
-	local ability_point = hero:GetAbilityPoints()
-	print(level)
 	if hero and level then
+		print(level)
+		local ability_point = hero:GetAbilityPoints()
 		local no_points_levels = {
 		[17] = 1,
 		[19] = 1,
@@ -594,7 +594,7 @@ function GameSettings:OnNPCSpawned(keys)
 			FirstSpawned = {}
 		end
 		
-		if not FirstSpawned[playerID] then
+		if not FirstSpawned[playerID] or _G.testmode then
 
 			FirstSpawned[playerID] = true
 			while npc:GetLevel() < HERO_START_LEVEL do
