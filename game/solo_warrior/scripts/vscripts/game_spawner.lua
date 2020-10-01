@@ -126,8 +126,19 @@ function GameSpawner:SetHero(room)
 	end
 	
 	local id = Convars:GetCommandClient():GetPlayerID()
-	
+	local hero = PlayerResource:GetSelectedHeroEntity(id)
+	hero:SetAbilityPoints(0)
+
 	PlayerResource:ReplaceHeroWith(id, "npc_dota_hero_axe", gold, exp)
+	hero = PlayerResource:GetSelectedHeroEntity(id)
+
+	for i=0, hero:GetAbilityCount()-1 do
+		local abil = hero:GetAbilityByIndex(i)
+		if abil then
+			abil:SetLevel(0)
+		end
+	end
+	hero:SetAbilityPoints(hero:GetAbilityPoints()+3)
 end
 
 function GameSpawner:StartTestRoom(room)
