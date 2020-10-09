@@ -95,6 +95,9 @@ function GameSpawner:InitGameSpawner()
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(self, 'OnGameRulesStateChange'), self)
 	ListenToGameEvent("npc_spawned",Dynamic_Wrap( self, 'OnNPCSpawned' ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(self, 'OnEntityKilled'), self)
+	
+	CustomGameEventManager:RegisterListener("TestRoom_SetRoom", Dynamic_Wrap(GameSpawner, 'TestRoom_SetRoom'))
+	CustomGameEventManager:RegisterListener("TestRoom_SetHero", Dynamic_Wrap(GameSpawner, 'TestRoom_SetHero'))
 
 	_G.testmode = GetMapName() == "testroom"
 	
@@ -108,6 +111,14 @@ function GameSpawner:OnGameRulesStateChange()
 	if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 
 	end
+end
+
+function GameSpawner:TestRoom_SetRoom(event)
+	GameSpawner:StartTestRoom(event.room)
+end
+
+function GameSpawner:TestRoom_SetHero(event)
+	GameSpawner:SetHero(event.room)
 end
 
 function GameSpawner:SetHero(room)

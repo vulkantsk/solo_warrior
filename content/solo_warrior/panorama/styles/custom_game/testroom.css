@@ -1,0 +1,55 @@
+.TestRoomPanel{
+  width: 150px;
+  height: 30%;
+  flow-children: down;
+  vertical-align: center;
+}
+
+#TestRoomButtons{
+  width: 100%;
+  height: 200px;
+  background-color:#00000066;
+  flow-children: down;
+  vertical-align: center;
+}
+
+#MyEntry
+{
+  width: 100px;
+  height: 25px;
+  background-color:#00000033;
+  margin-top:15px;
+  horizontal-align:center;
+  border:1px solid #FFFFFF66;
+  font-size:18px;
+  color:#FFFFFF;
+}
+
+#MyEntry Label
+{
+  vertical-align: center;
+}
+
+.TestRoomButton
+{
+  margin-top:10px;
+  width: 100px;
+  height: 25px;
+  background-color:#00000033;
+  border:1px solid #FFFFFF66;
+  horizontal-align:center;
+}
+
+.TestRoomButton:hover
+{
+  background-color:#00000088;
+  border:1px solid #FFFFFFAA;
+}
+
+.TestRoomButton Label
+{
+  horizontal-align:center;
+  vertical-align: center;
+  font-size:18px;
+  color:#FFFFFF;
+}

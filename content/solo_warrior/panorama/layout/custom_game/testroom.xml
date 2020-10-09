@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/testroom.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/testroom.js" />
+	</scripts>
+    
+	<Panel hittest="false" class="TestRoomPanel">
+        <Panel hittest="false" id="TestRoomButtons">
+            <TextEntry id="MyEntry" maxchars="3" />
+            <Button class="TestRoomButton" onactivate='SetRoom()'>
+	            <Label text="SetRoom" />
+            </Button>
+            <Button class="TestRoomButton" onactivate='SetHero()'>
+	            <Label text="SetHero" />
+            </Button>
+	    </Panel>
+	</Panel>
+</root>
