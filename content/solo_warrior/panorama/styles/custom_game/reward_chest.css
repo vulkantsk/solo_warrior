@@ -1,0 +1,66 @@
+.RewardChestPanel
+{
+  width: 100%;
+  height: 100%;
+}
+
+#RewardChest
+{
+  width: 650px;
+  height: 300px;
+  vertical-align: center;
+  horizontal-align:center;
+  background-color:#00000066;
+  border:1px solid #FFFFFF66;
+}
+
+#RewardChestButtons
+{
+  width: 100%;
+  height: 100%;
+}
+
+.Buttons
+{
+  width: 100px;
+  height: 25px;
+  background-color:#00000033;
+  border:1px solid #FFFFFF66;
+  horizontal-align:center;
+  vertical-align: center;
+}
+
+#RewardChestButtonGold
+{
+  margin-right:200px;
+}
+
+#RewardChestButtonItem
+{
+  margin-left:200px;
+}
+
+.Buttons:hover
+{
+  background-color:#00000088;
+  border:1px solid #FFFFFFAA;
+}
+
+.ButtonLabel
+{
+  horizontal-align:center;
+  vertical-align: center;
+  font-size:18px;
+  color:#FFFFFF;
+}
+
+#RewardChestItems
+{
+  flow-children: right;
+}
+
+.ItemImage
+{
+  margin-top:150px;
+  margin-left:10px;
+}

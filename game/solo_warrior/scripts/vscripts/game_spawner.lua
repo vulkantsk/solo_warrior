@@ -8,6 +8,10 @@ GameSpawner.current_units = {}
 GameSpawner.line_interval = {}
 GameSpawner.wave_index = 0
 
+GameSpawner.reward_tier = {
+	[1] = {"item_str_1_3", "item_agi_1_3", "item_int_1_3", "item_stat_1_3", "item_armor_1_3", "item_as_1_3"}
+}
+
 GameSpawner.wave_list = {
 --	[1]={reward_gold=250,reward_exp=500,                                            --НАГРАДА ЗА закрытие (прохождение) комнаты первой комнаты. [1] - это номер комнаты
 --			units={["npc_kobold"]=3,["npc_gnoll_ranger"]=2,["npc_kobold_tunneler"]=2}},                 --Юниты в комнате (какие в [этих скобках]) и их количество      --было по 4
@@ -25,7 +29,8 @@ GameSpawner.wave_list = {
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1},
-			bonus_units={"npc_troll_healer_friend"}},
+			bonus_units={"npc_troll_healer_friend"},
+			reward_chest={gold=1000,tier=1}},
 	[2]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[3]={reward_gold=100,reward_exp=200,
@@ -98,6 +103,7 @@ function GameSpawner:InitGameSpawner()
 	
 	CustomGameEventManager:RegisterListener("TestRoom_SetRoom", Dynamic_Wrap(GameSpawner, 'TestRoom_SetRoom'))
 	CustomGameEventManager:RegisterListener("TestRoom_SetHero", Dynamic_Wrap(GameSpawner, 'TestRoom_SetHero'))
+	CustomGameEventManager:RegisterListener("RewardChest_SelectReward", Dynamic_Wrap(GameSpawner, 'RewardChest_SelectReward'))
 
 	_G.testmode = GetMapName() == "testroom"
 	
@@ -110,6 +116,24 @@ function GameSpawner:OnGameRulesStateChange()
 
 	if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 
+	end
+end
+
+function GameSpawner:RewardChest_SelectReward(event)
+	if GameSpawner.rewards then 
+		if not GameSpawner.rewards[event.PlayerID] then
+			GameSpawner.rewards[event.PlayerID] = event.reward
+			if event.reward == "gold" then
+				local player = PlayerResource:GetPlayer(event.PlayerID)
+				local hero = PlayerResource:GetSelectedHeroEntity(event.PlayerID)
+				hero:ModifyGold(GameSpawner.rewards["reward_chest"].gold, false, 0)
+				SendOverheadEventMessage( player, OVERHEAD_ALERT_GOLD, hero, GameSpawner.rewards["reward_chest"].gold, nil )
+			end
+		elseif GameSpawner.rewards[event.PlayerID] == "item" then
+			GameSpawner.rewards[event.PlayerID] = event.reward
+			local hero = PlayerResource:GetSelectedHeroEntity(event.PlayerID)
+			hero:AddItemByName(GameSpawner.reward_tier[GameSpawner.rewards["reward_chest"].tier][tonumber(event.reward)])
+		end
 	end
 end
 
@@ -306,6 +330,7 @@ function GameSpawner:OpenExitGate( index )
 	local current_wave = self.wave_list[index]
 	local reward_gold = current_wave.reward_gold
 	local reward_exp = current_wave.reward_exp
+	local reward_chest = current_wave.reward_chest
 
 	GiveGoldPlayers( reward_gold )
 	GiveExperiencePlayers( reward_exp )
@@ -345,6 +370,28 @@ function GameSpawner:OpenExitGate( index )
 		end
 	else
 		print("exit_gate_"..next_index.." don't exist !")
+	end
+
+	if reward_chest then
+		self.rewards = {}
+		self.rewards["reward_chest"] = reward_chest
+		CustomGameEventManager:Send_ServerToAllClients("RewardChest", {gold = reward_chest.gold, items = GameSpawner.reward_tier[reward_chest.tier]})
+		
+		Timers:CreateTimer(10,function()
+			CustomGameEventManager:Send_ServerToAllClients("EndRewardChest", {})
+			for i=0, PlayerResource:GetPlayerCount()-1 do
+				if self.rewards[i] == nil then
+					local player = PlayerResource:GetPlayer(i)
+					local hero = PlayerResource:GetSelectedHeroEntity(i)
+					hero:ModifyGold(reward_chest.gold, false, 0)
+					SendOverheadEventMessage( player, OVERHEAD_ALERT_GOLD, hero, reward_chest.gold, nil )
+				elseif self.rewards[i] == "item" then
+					local hero = PlayerResource:GetSelectedHeroEntity(i)
+					hero:AddItemByName(GameSpawner.reward_tier[reward_chest.tier][RandomInt(1,#GameSpawner.reward_tier[reward_chest.tier])])
+				end
+			end
+			self.rewards = nil
+		end)
 	end
 end
 function GameSpawner:OpenEntryGate( unit )

@@ -1,0 +1,29 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/reward_chest.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/reward_chest.js" />
+	</scripts>
+    
+	<Panel hittest="false" class="RewardChestPanel">
+		<Panel hittest="false" id="RewardChest">
+			<Panel hittest="false" id="RewardChestButtons">
+				<Button id="RewardChestButtonGold" class="Buttons" onactivate='SelectGold()'>
+					<Label class="ButtonLabel" text="Gold" />
+				</Button>
+				<Button id="RewardChestButtonItem" class="Buttons" onactivate='SelectItems()'>
+					<Label class="ButtonLabel" text="Item" />
+				</Button>
+			</Panel>
+			<Panel hittest="false" id="RewardChestItems">
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(1)' />
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(2)' />
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(3)' />
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(4)' />
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(5)' />
+				<DOTAItemImage class="ItemImage" itemname="" onactivate='SelectItem(6)' />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>
