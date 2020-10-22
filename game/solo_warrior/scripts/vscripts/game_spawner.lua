@@ -373,11 +373,17 @@ function GameSpawner:OpenExitGate( index )
 	end
 
 	if reward_chest then
+		local select_duration = 10
 		self.rewards = {}
 		self.rewards["reward_chest"] = reward_chest
-		CustomGameEventManager:Send_ServerToAllClients("RewardChest", {gold = reward_chest.gold, items = GameSpawner.reward_tier[reward_chest.tier]})
+		CustomGameEventManager:Send_ServerToAllClients("RewardChest", {
+			gold = reward_chest.gold,
+			items = GameSpawner.reward_tier[reward_chest.tier],
+			duration = select_duration,
+			start_time = GameRules:GetGameTime()
+		})
 		
-		Timers:CreateTimer(10,function()
+		Timers:CreateTimer(select_duration,function()
 			CustomGameEventManager:Send_ServerToAllClients("EndRewardChest", {})
 			for i=0, PlayerResource:GetPlayerCount()-1 do
 				if self.rewards[i] == nil then

@@ -1,56 +1,59 @@
 .RewardChestPanel
 {
-  width: 100%;
-  height: 100%;
+  vertical-align: center;
+  horizontal-align:center;
+  width: 650px;
+  height: 300px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  background-color: gradient( linear, 100% 0%, 100% 100%, from( #192229 ), to( #001017 ) );
+}
+
+.RewardChestPanel.Visible {
+  opacity: 1;
 }
 
 #RewardChest
 {
-  width: 650px;
-  height: 300px;
   vertical-align: center;
   horizontal-align:center;
-  background-color:#00000066;
-  border:1px solid #FFFFFF66;
+  flow-children: down;
+}
+
+#Row {
+  margin-top: 20px;
+  horizontal-align: center;
+  flow-children: right;
 }
 
 #RewardChestButtons
 {
-  width: 100%;
-  height: 100%;
+    flow-children: right;
 }
 
 .Buttons
 {
-  width: 100px;
-  height: 25px;
-  background-color:#00000033;
-  border:1px solid #FFFFFF66;
+  width: 170px;
+  height: 40px;
+  background-color: gradient( linear, 0% 0%, 0% 100%, from( #4c5561 ), to( #6c7d88 ) );
+  wash-color: #74EAFE66;
   horizontal-align:center;
   vertical-align: center;
-}
-
-#RewardChestButtonGold
-{
-  margin-right:200px;
-}
-
-#RewardChestButtonItem
-{
-  margin-left:200px;
+  margin: 6px;
 }
 
 .Buttons:hover
 {
-  background-color:#00000088;
-  border:1px solid #FFFFFFAA;
+  wash-color: #ffffff;
 }
 
 .ButtonLabel
 {
   horizontal-align:center;
   vertical-align: center;
-  font-size:18px;
+  font-size:22px;
+  font-family: Radiance;
   color:#FFFFFF;
 }
 
@@ -61,6 +64,24 @@
 
 .ItemImage
 {
-  margin-top:150px;
-  margin-left:10px;
+  width: 66px;
+  height: 49px;
+  margin: 4px;
+  border-radius: 4px;
+  box-shadow: black 0px 0px 5px 0px;
+}
+
+#TimeRemainingContainer {
+  margin-top: 30px;
+  horizontal-align: center;
+  width: 200px;
+  height: 30px;
+  border: 2px solid rgb( 77, 77, 77 );
+  background-color: rgb( 22, 22, 22 );
+  border-radius: 1px;
+}
+
+#TimeRemaining {
+  height: 100%;
+  background-color: rgb( 244, 255, 41 );
 }
