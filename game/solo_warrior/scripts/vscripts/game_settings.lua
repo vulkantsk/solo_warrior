@@ -7,12 +7,12 @@ PLAYER_COUNT_CUSTOM_1 = 0
 PLAYER_COUNT_CUSTOM_2 = 0
 
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
-HERO_RESPAWN_TIME = 15					--
-STARTING_GOLD = 500						-- What starting gold player have ?
-HERO_START_LEVEL = 3
+HERO_RESPAWN_TIME = 5					--
+STARTING_GOLD = 0						-- What starting gold player have ?
+HERO_START_LEVEL = 2
 
 ALLOW_SAME_HERO_SELECTION = false        -- Should we let people select the same hero as each other
-FREE_COURIER_ENABLED = true
+FREE_COURIER_ENABLED = false
 
 HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
 HERO_STRATEGY_TIME = 0					-- How long players being in stage after select hero?
@@ -59,12 +59,9 @@ USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to lev
 -- Fill this table up with the required XP per level if you want to change it
 XP_PER_LEVEL_TABLE = {}
 XP_PER_LEVEL_TABLE[0] = 0
-for i=1,14 do
-  XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+i * 50
-end
 
-for i=15,29 do
-  XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+i * 100
+for i=1,29 do
+  XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+100
 end
 
 
@@ -331,8 +328,10 @@ function GameSettings:OnGameInProgress()
     local allBuildings = Entities:FindAllByClassname('npc_dota_building')
     for i = 1, #allBuildings, 1 do
         local building = allBuildings[i]
-        building:RemoveModifierByName('modifier_invulnerable')
-		building:RemoveModifierByName("modifier_tower_truesight_aura")
+        if building:GetUnitName() ~= "npc_dota_goodguys_healers" then
+	        building:RemoveModifierByName('modifier_invulnerable')
+			building:RemoveModifierByName("modifier_tower_truesight_aura")
+		end
 
     end
 

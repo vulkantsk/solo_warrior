@@ -9,7 +9,10 @@ GameSpawner.line_interval = {}
 GameSpawner.wave_index = 0
 
 GameSpawner.reward_tier = {
-	[1] = {"item_str_1_3", "item_agi_1_3", "item_int_1_3", "item_stat_1_3", "item_armor_1_3", "item_as_1_3"}
+	[1] = {"item_str_1_3","item_stat_1_3","item_dmg_1_3","item_hp_1_3","item_hpreg_1_3","item_str_1_3",},
+	[2] = {"item_str_1_3","item_stat_1_3","item_dmg_1_3","item_hp_1_3","item_hpreg_1_3","item_str_1_3",},
+	[3] = {"item_str_1_3","item_stat_1_3","item_dmg_1_3","item_hp_1_3","item_hpreg_1_3","item_str_1_3",},
+	[4] = {"item_str_1_3","item_stat_1_3","item_dmg_1_3","item_hp_1_3","item_hpreg_1_3","item_str_1_3",},
 }
 
 GameSpawner.wave_list = {
@@ -28,15 +31,16 @@ GameSpawner.wave_list = {
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1},
-			bonus_units={"npc_troll_healer_friend"},
-			reward_chest={gold=1000,tier=1}},
-	[2]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
-	[3]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
-	[4]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
+			units={["npc_kobold"]=10,["npc_kobold_spearman"]=4},
+		reward_chest={gold=1000,tier=1}},
+	[2]={reward_gold=200,reward_exp=200,
+			units={["npc_gnoll_ranger"]=5,["npc_kobold_spearman"]=10},
+			bonus_units={"npc_troll_healer_friend"}},
+	[3]={reward_gold=600,reward_exp=200,
+			units={["npc_troll"]=10,["npc_troll_warrior"]=2,["npc_troll_healer"]=2,}},
+	[4]={reward_gold=900,reward_exp=200,
+			units={["npc_kobold_boss"]=1,["npc_kobold_elite_spearman"]=10,["npc_kobold_elite_ranger"]=6},
+		reward_chest={gold=1000,tier=1}},
 	[5]={reward_gold=100,reward_exp=200,
 			units={["npc_kobold"]=1,["npc_kobold_tunneler"]=1}},
 	[6]={reward_gold=100,reward_exp=200,
@@ -173,7 +177,7 @@ function GameSpawner:SetHero(room)
 			abil:SetLevel(0)
 		end
 	end
-	hero:SetAbilityPoints(hero:GetAbilityPoints()+3)
+	hero:SetAbilityPoints(hero:GetAbilityPoints()+2)
 end
 
 function GameSpawner:StartTestRoom(room)
@@ -183,6 +187,7 @@ function GameSpawner:StartTestRoom(room)
 	local current_wave = GameSpawner.wave_list[tonumber(room)]
 	local points = Entities:FindAllByName("test_spawner_points")
 	local units = current_wave.units
+	local bonus_units = current_wave.bonus_units
 
 	for key, value in pairs(units) do
 		local unit_name
@@ -202,6 +207,25 @@ function GameSpawner:StartTestRoom(room)
 			unit.reward = true
 			local ent_index = unit:entindex()
 		end
+
+	end
+
+	if bonus_units then
+		for key, value in pairs (bonus_units) do
+			local unit_name
+			if type(key) == "string" then
+				unit_count = value
+				unit_name = key
+			else
+				unit_count =1
+				unit_name = value
+			end
+
+			for i=1, unit_count do			
+				local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
+				local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+			end
+		end 
 	end
 
 	local filler = Entities:FindByName(nil, "test_filler")
@@ -221,6 +245,7 @@ function GameSpawner:SpawnUnits(index)
 	local points = Entities:FindAllByName("spawner_point_"..index)
 	local units = current_wave.units
 	local bonus_units = current_wave.bonus_units
+	local reward_chest = current_wave.reward_chest
 
 --	GameRules:SendCustomMessage("#Game_notification_boss_spawn_"..boss_name,0,0)
 
@@ -244,21 +269,27 @@ function GameSpawner:SpawnUnits(index)
 			self.current_units[ent_index]= unit
 		end
 	end 
-	for key, value in pairs (bonus_units) do
-		local unit_name
-		if type(key) == "string" then
-			unit_count = value
-			unit_name = key
-		else
-			unit_count =1
-			unit_name = value
-		end
+	if bonus_units then
+		for key, value in pairs (bonus_units) do
+			local unit_name
+			if type(key) == "string" then
+				unit_count = value
+				unit_name = key
+			else
+				unit_count =1
+				unit_name = value
+			end
 
-		for i=1, unit_count do			
-			local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
-			local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
-		end
-	end 
+			for i=1, unit_count do			
+				local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
+				local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+			end
+		end 
+	end
+	if reward_chest then
+--		self.reward_chest.gold = reward_chest.gold
+--		self.reward_chest.tier = reward_chest.tier
+	end
 end
 
 function GameSpawner:OnNPCSpawned(keys)
@@ -282,8 +313,16 @@ function GameSpawner:OnNPCSpawned(keys)
 			end
 			item:RemoveSelf()
 
+			local ability = npc:GetAbilityByIndex(0)
+			ability:SetLevel(1)
+			local ability = npc:GetAbilityByIndex(1)
+			ability:SetLevel(1)
+			local ability = npc:GetAbilityByIndex(2)
+			ability:SetLevel(1)
 			local ability = npc:GetAbilityByIndex(3)
 			ability:SetLevel(1)
+			local ability_point = hero:GetAbilityPoints()
+			hero:SetAbilityPoints(ability_point + 1)
 
 			local life_modifier = npc:AddNewModifier(npc, nil, "modifier_extra_life", nil)
 			life_modifier:SetStackCount(HERO_START_LIFES)
