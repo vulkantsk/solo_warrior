@@ -1,7 +1,16 @@
+enabled = false
+duration = -1
+startTime = -1
+
 function SelectGold()
 {
 	GameEvents.SendCustomGameEventToServer( "RewardChest_SelectReward", { reward: "gold"} );
-    $("#RewardChest").visible = false;
+    SetEnabled( false )
+}
+
+function SetEnabled( bool ) {
+    enabled = bool
+    $.GetContextPanel().SetHasClass( "Visible", bool )
 }
 
 function SelectItems()
@@ -14,15 +23,18 @@ function SelectItems()
 function SelectItem(item)
 {
 	GameEvents.SendCustomGameEventToServer( "RewardChest_SelectReward", { reward: item} );
-    $("#RewardChest").visible = false;
+    SetEnabled( false )
 }
 
 function RewardChest( data )
 {
-    $("#RewardChest").visible = true;
+    SetEnabled( true )
     $("#RewardChestButtons").visible = true;
     $("#RewardChestItems").visible = false;
     $("#RewardChestButtonGold").GetChild(0).text = data.gold + " gold";
+
+    startTime = data.start_time
+    duration = data.duration
     
     for (var i = 1; i <= 6;i++)
     {
@@ -32,12 +44,27 @@ function RewardChest( data )
 
 function EndRewardChest( data )
 {
-    $("#RewardChest").visible = false;
+    SetEnabled( false )
+}
+
+function Update() {
+    $.Schedule( 0, Update )
+
+    if ( !enabled ) {
+        return
+    }
+
+    let now = Game.GetGameTime()
+    let remaining = now - startTime
+    let width = remaining / duration
+
+    $( "#TimeRemaining" ).style.width = ( 200 - 200 * width ) + "px"
 }
 
 (function()
 {
-    $("#RewardChest").visible = false;
     GameEvents.Subscribe( "RewardChest", RewardChest)
     GameEvents.Subscribe( "EndRewardChest", EndRewardChest)
 })();
+
+Update()
