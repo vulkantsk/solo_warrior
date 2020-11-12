@@ -15,12 +15,11 @@
         }
 
         function OnTalentClick() {
-            context.Data().OnTalentClick(id);
+            context.Data().OnTalentClick(id, context.BHasClass("disabled"));
         }
     </script>
     <Panel class="TalentContainer disabled" hittest="true" onactivate="OnTalentClick()" onmouseover="ShowTalentTooltip()" onmouseout="HideTalentTooltip()">
         <Image id="TalentImage" src="raw://resource/flash3/images/spellicons/axe/anger_roar.png"/>
         <Label id="TalentLevel" text="-1 / -1"/>
     </Panel>
-
 </root>

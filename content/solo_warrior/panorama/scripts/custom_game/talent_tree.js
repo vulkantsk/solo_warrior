@@ -102,9 +102,9 @@ function HideTalentTooltip() {
     $.DispatchEvent("DOTAHideTitleImageTextTooltip", $.GetContextPanel());
 }
 
-function OnTalentClick(talentId) {
+function OnTalentClick(talentId, disabled) {
     var context = $.GetContextPanel();
-    if(!context.BHasClass("disabled")) {
+    if(disabled == false) {
         GameEvents.SendCustomGameEventToServer( "talent_tree_level_up_talent", {"id": talentId});
         Game.EmitSound("General.SelectAction");
     }
@@ -112,6 +112,7 @@ function OnTalentClick(talentId) {
 
 function OnResetTalentsButtonClick() {
     GameEvents.SendCustomGameEventToServer( "talent_tree_reset_talents", {});
+    Game.EmitSound("General.SelectAction");
 }
 
 (function() {

@@ -242,17 +242,17 @@ function TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId)
     local column = TalentTree:GetTalentColumn(talentId)
     local totalRequiredPoints = 0
     for _, requirementsData in pairs(TalentTree.talentsRequirements) do
-        if (requirementsData.Column == column and requirementsData.Row < row) then
-            totalRequiredPoints = totalRequiredPoints + requirementsData.RequiredPoints
+        if (requirementsData.Column == column and requirementsData.Row == row) then
+            totalRequiredPoints = requirementsData.RequiredPoints
+            break
         end
     end
     local pointsSpendedInColumn = 0
     for i = 1, TalentTree:GetLatestTalentID() do
         if (TalentTree:GetTalentColumn(i) == column and TalentTree:GetTalentRow(i) < row) then
-            pointsSpendedInColumn = TalentTree:GetHeroTalentLevel(hero, i)
+            pointsSpendedInColumn = pointsSpendedInColumn + TalentTree:GetHeroTalentLevel(hero, i)
         end
     end
-    print(talentId, pointsSpendedInColumn, totalRequiredPoints)
     if (pointsSpendedInColumn >= totalRequiredPoints) then
         return true
     end
@@ -280,6 +280,7 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     end
     return canLevelUp
 end
+
 function TalentTree:OnTalentTreeResetRequest(event)
     if(not IsServer()) then
         return
