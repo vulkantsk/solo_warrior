@@ -11,13 +11,14 @@ function OnTalentsData(event) {
 }
 
 function OnTalentsState(event) {
+
 }
 
 function BuildTalentTree(parsedTalents) {
     for (var key in parsedTalents) {
         var talentColumn = parsedTalents[key].data["Column"];
         var talentRow = parsedTalents[key].data["Row"];
-        CreateTalentPanel(talentRow, talentColumn, parsedTalents[key].id)
+        CreateTalentPanel(talentRow, talentColumn, parsedTalents[key].id);
     }
 }
 

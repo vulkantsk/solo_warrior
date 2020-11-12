@@ -33,7 +33,7 @@ function TalentTree:Init()
     end
     for key, requirementsData in pairs(data.Requirements) do
         if (TalentTree:IsValidRequirement(key, requirementsData) == true) then
-            self.talentsData[key] = requirementsData
+            self.talentsRequirements[key] = requirementsData
         end
     end
     TalentTree:InitPanaromaEvents()
@@ -129,7 +129,14 @@ function TalentTree:OnTalentTreeTalentsRequest(event)
 end
 
 function TalentTree:GetLatestTalentID()
-    return #TalentTree.talentsData
+    local id = -1
+    for talentId, _ in pairs(TalentTree.talentsData) do
+        local convertedId = tonumber(talentId)
+        if(convertedId > id) then
+            id = convertedId
+        end
+    end
+    return id
 end
 
 function TalentTree:SetupForHero(hero)
