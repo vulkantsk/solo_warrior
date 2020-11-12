@@ -1,4 +1,4 @@
-var TALENTS_CONTAINER;
+var TALENTS_CONTAINER, TALENTS_WINDOW;
 var TALENTS_LAYOUT = {
     "lastColumn": -1
 };
@@ -95,15 +95,14 @@ function ShowTalentTooltip(talentId) {
     var talentName = $.Localize("#talent_tree_talent_" + talentId);
     var talentIcon = talentsData[talentId].Icon;
     var talentDescription = $.Localize("#talent_tree_talent_" + talentId + "_Description");
-	$.DispatchEvent("DOTAShowTitleImageTextTooltip", $.GetContextPanel(), talentName, talentIcon, talentDescription);
+	$.DispatchEvent("DOTAShowTitleImageTextTooltip", $("#HeroTalent" + talentId), talentName, talentIcon, talentDescription);
 }
 
-function HideTalentTooltip() {
-    $.DispatchEvent("DOTAHideTitleImageTextTooltip", $.GetContextPanel());
+function HideTalentTooltip(talentId) {
+    $.DispatchEvent("DOTAHideTitleImageTextTooltip", $("#HeroTalent" + talentId));
 }
 
 function OnTalentClick(talentId, disabled) {
-    var context = $.GetContextPanel();
     if(disabled == false) {
         GameEvents.SendCustomGameEventToServer( "talent_tree_level_up_talent", {"id": talentId});
         Game.EmitSound("General.SelectAction");
@@ -115,7 +114,20 @@ function OnResetTalentsButtonClick() {
     Game.EmitSound("General.SelectAction");
 }
 
+var isWindowOpened = false;
+
+function OnTalentTreeWindowButtonClick() {
+    if(isWindowOpened == true) {
+        TALENTS_WINDOW.style.visibility = "collapse";
+    } else {
+        TALENTS_WINDOW.style.visibility = "visible";
+    }
+    isWindowOpened = !isWindowOpened;
+    Game.EmitSound("General.SelectAction");
+}
+
 (function() {
+    TALENTS_WINDOW = $("#TalentsWindowContainer")
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
     TALENTS_LAYOUT["TalentPointsLabel"] = $("#CurrentTalentPoints");
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
