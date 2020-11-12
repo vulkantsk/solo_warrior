@@ -1,0 +1,35 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/talent_tree.css"/>
+    </styles>
+    <script>
+        function GetTalentId(context) {
+            return parseInt(context.id.replace("HeroTalent", ""));
+        }
+
+        function ShowTalentTooltip() {
+            var context = $.GetContextPanel();
+            var id = GetTalentId(context);
+            context.Data().ShowTalentTooltip(id);
+        }
+
+        function HideTalentTooltip() {
+            var context = $.GetContextPanel();
+            var id = GetTalentId(context);
+            context.Data().HideTalentTooltip(id);
+        }
+
+        function OnTalentClick() {
+            var context = $.GetContextPanel();
+            if(!context.BHasClass("disabled") && context.BHasClass("lvlup")) {
+                var id = GetTalentId(context);
+                context.Data().OnTalentClick(id);
+                Game.EmitSound("General.SelectAction");
+            }
+        }
+    </script>
+    <Panel class="TalentContainer" hittest="true" onactivate="OnTalentClick()" onmouseover="ShowTalentTooltip()" onmouseout="HideTalentTooltip()">
+        <Image id="TalentImage" src="raw://resource/flash3/images/spellicons/axe/anger_roar.png"/>
+        <Label id="TalentLevel" text="1 / 3"/>
+    </Panel>
+</root>

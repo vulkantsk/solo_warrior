@@ -3,6 +3,7 @@ require_list = {
 	"libraries/utility",
 	"libraries/timers",
 	"libraries/sounds",
+	"libraries/json"
 }
 
 for key, value in pairs(require_list) do
