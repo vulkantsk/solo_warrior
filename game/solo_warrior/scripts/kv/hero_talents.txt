@@ -1,16 +1,15 @@
 "TalentTree"
 {
-    "Talents" {
+    "Talents"
+    {
         "1"
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
             "Modifier"  "modifier_talent_1"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "1"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
+            "AdditionalRequirements" {
                 "Gold"  "0"
             }
         }
@@ -18,69 +17,104 @@
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
             "Modifier"  "modifier_talent_2"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "1"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
-                "Gold"  "0"
-            }
         }
         "3"
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
             "Modifier"  "modifier_talent_3"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "1"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
-                "Gold"  "0"
-            }
         }
         "4"
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
             "Modifier"  "modifier_talent_4"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "2"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
-                "Gold"  "0"
-            }
         }
         "5"
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
             "Modifier"  "modifier_talent_5"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "2"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
-                "Gold"  "0"
-            }
         }
         "6"
         {
             "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
             "Modifier"  "modifier_talent_6"
-            "RequiredPoints"    "1"
             "MaxLevel"  "3"
             "Row"   "2"
             "Column"    "1"
-            "Requirements" {
-                "HeroLevel" "1"
-                "Gold"  "0"
-            }
+        }
+        "7"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_7"
+            "MaxLevel"  "3"
+            "Row"   "1"
+            "Column"    "2"
+        }
+        "8"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_8"
+            "MaxLevel"  "3"
+            "Row"   "2"
+            "Column"    "2"
+        }
+        "9"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_9"
+            "MaxLevel"  "3"
+            "Row"   "2"
+            "Column"    "2"
+        }
+        "10"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_10"
+            "MaxLevel"  "3"
+            "Row"   "1"
+            "Column"    "2"
         }
     }
-    "TalentRequirements" {
-
+    "Requirements"
+    {
+        "1"
+        {
+            "Row"   "1"
+            "Column"    "1"
+            "HeroLevel" "1"
+            "RequiredPoints"    "0"
+        }
+        "2"
+        {
+            "Row"   "2"
+            "Column"    "1"
+            "HeroLevel" "5"
+            "RequiredPoints"    "3"
+        }
+        "3"
+        {
+            "Row"   "1"
+            "Column"    "2"
+            "HeroLevel" "1"
+            "RequiredPoints"    "0"
+        }
+        "3"
+        {
+            "Row"   "2"
+            "Column"    "2"
+            "HeroLevel" "5"
+            "RequiredPoints"    "3"
+        }
     }
 }

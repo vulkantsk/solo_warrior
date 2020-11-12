@@ -10,8 +10,10 @@ function OnTalentsData(event) {
     BuildTalentTree(parsedTalents);
 }
 
-function BuildTalentTree(parsedTalents) {
+function OnTalentsState(event) {
+}
 
+function BuildTalentTree(parsedTalents) {
     for (var key in parsedTalents) {
         var talentColumn = parsedTalents[key].data["Column"];
         var talentRow = parsedTalents[key].data["Row"];
@@ -47,7 +49,6 @@ function CreateTalentPanel(row, column, talentId) {
         var titleLabel = $.CreatePanel("Label", titleRow, "");
         titleLabel.SetHasClass("TitleLabel", true);
         titleLabel.text = $.Localize("#talent_tree_column_" + column + "_title");
-        TALENTS_LAYOUT[column]["titleRow"] = titleRow;
         titleRow.hittest = false;
         titleRow.hittestchildren = true;
         CreateTalentPanel(row, column, talentId);
@@ -87,6 +88,8 @@ function OnTalentClick(talentId) {
 (function() {
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
+    GameEvents.Subscribe("talent_tree_state_from_server", OnTalentsState);
 	GameEvents.SendCustomGameEventToServer( "talent_tree_get_talents", {});
+
 })();
 
