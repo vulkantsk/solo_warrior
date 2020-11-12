@@ -22,4 +22,5 @@
         <Image id="TalentImage" src="raw://resource/flash3/images/spellicons/axe/anger_roar.png"/>
         <Label id="TalentLevel" text="-1 / -1"/>
     </Panel>
+
 </root>

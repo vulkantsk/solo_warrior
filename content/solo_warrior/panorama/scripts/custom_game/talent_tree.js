@@ -45,8 +45,8 @@ function CreateTalentPanel(row, column, talentId) {
         if (TALENTS_LAYOUT[column][row]) {
             var talentPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column][row], "HeroTalent" + talentId);
             talentPanel.BLoadLayout("file://{resources}/layout/custom_game/talent_tree/talent.xml", false, false);
-            talentPanel.hittest = false;
-            talentPanel.hittestchildren = true;
+            talentPanel.hittest = true;
+            talentPanel.hittestchildren = false;
 			talentPanel.Data().ShowTalentTooltip = ShowTalentTooltip;
 			talentPanel.Data().HideTalentTooltip = HideTalentTooltip;
 			talentPanel.Data().OnTalentClick = OnTalentClick;
@@ -61,6 +61,7 @@ function CreateTalentPanel(row, column, talentId) {
 			talentsData[talentId].panel.levelLabel = talentPanel.FindChildTraverse("TalentLevel");
         } else {
             TALENTS_LAYOUT[column][row] = CreateTalentRow(row, column);
+            TALENTS_LAYOUT[column].MoveChildAfter(TALENTS_LAYOUT[column][row], TALENTS_LAYOUT[column].GetChild(0));
             CreateTalentPanel(row, column, talentId);
         }
     } else {
@@ -104,9 +105,13 @@ function HideTalentTooltip() {
 function OnTalentClick(talentId) {
     var context = $.GetContextPanel();
     if(!context.BHasClass("disabled")) {
-        GameEvents.SendCustomGameEventToServer( "talent_tree_level_up_talent", {"id": id});
+        GameEvents.SendCustomGameEventToServer( "talent_tree_level_up_talent", {"id": talentId});
         Game.EmitSound("General.SelectAction");
     }
+}
+
+function OnResetTalentsButtonClick() {
+    $.Msg("Reset talents");
 }
 
 (function() {
