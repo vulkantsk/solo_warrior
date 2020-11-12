@@ -1,6 +1,7 @@
 <root>
-	<Panel>
-        <CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/testroom.xml" />
-        <CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/reward_chest.xml" />
-	</Panel>
+    <Panel>
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/testroom.xml"/>
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/reward_chest.xml"/>
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/talent_tree.xml"/>
+    </Panel>
 </root>

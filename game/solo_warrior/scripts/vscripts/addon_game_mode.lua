@@ -1,6 +1,7 @@
 require("game_settings")
 require("game_spawner")
 require("item_drop")
+require("talent_tree")
 require("libraries")
 require("gamemode")
 

@@ -1,0 +1,64 @@
+.TalentTreeRoot
+{
+    vertical-align: center;
+    horizontal-align:center;
+    width: fit-children;
+    height: fit-children;
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #192229 ), to( #001017 ) );
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
+
+.TalentTreeRoot.show
+{
+	opacity: 1;
+}
+
+.TalentTreeColumnsContainer
+{
+    width: fit-children;
+    height: fit-children;
+    flow-children: right;
+}
+
+.TalentTreeColumn
+{
+    width: fit-children;
+    height: fit-children;
+    background-color: white;
+    border: 1px solid red;
+}
+
+.TalentTreeRow
+{
+    flow-children: right;
+}
+
+.TalentContainer {
+    width: 64px;
+    height: 64px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid dimgray;
+}
+
+.TalentContainer:hover {
+    opacity: 0.99;
+}
+
+.TalentContainer .TalentImage {
+    width: fill-parent-flow(1.0);
+    height: fill-parent-flow(1.0);
+}
+
+.TalentContainer .TalentLevel {
+    width: fill-parent-flow(1.0);
+    font-size: 16px;
+    color: white;
+    background-color: #000000F0;
+    text-align: center;
+    text-overflow: shrink;
+    vertical-align: bottom;
+}

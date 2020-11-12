@@ -1,0 +1,86 @@
+"TalentTree"
+{
+    "Talents" {
+        "1"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
+            "Modifier"  "modifier_talent_1"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "1"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+        "2"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_2"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "1"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+        "3"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_3"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "1"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+        "4"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
+            "Modifier"  "modifier_talent_4"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "2"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+        "5"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_5"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "2"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+        "6"
+        {
+            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
+            "Modifier"  "modifier_talent_6"
+            "RequiredPoints"    "1"
+            "MaxLevel"  "3"
+            "Row"   "2"
+            "Column"    "1"
+            "Requirements" {
+                "HeroLevel" "1"
+                "Gold"  "0"
+            }
+        }
+    }
+    "TalentRequirements" {
+
+    }
+}

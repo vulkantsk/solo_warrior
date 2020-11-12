@@ -1,0 +1,6 @@
+{
+  custom_net_tables =
+  [
+    "talent_tree"
+  ]
+}
