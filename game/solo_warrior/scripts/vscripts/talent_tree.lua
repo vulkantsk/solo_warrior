@@ -180,6 +180,10 @@ function TalentTree:AddTalentPointsToHero(hero, points)
         return false
     end
     hero.talents.currentPoints = hero.talents.currentPoints + points
+    local event = {
+        PlayerID = hero:GetPlayerOwnerID()
+    }
+    TalentTree:OnTalentTreeStateRequest(event)
 end
 
 ListenToGameEvent("npc_spawned", function(keys)
@@ -224,7 +228,7 @@ function TalentTree:GetTalentMaxLevel(talentId)
 end
 
 function TalentTree:GetHeroTalentLevel(hero, talentId)
-    if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId > 0) then
+    if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId and talentId > 0) then
         return hero.talents.level[talentId]
     end
     return 0
@@ -247,6 +251,10 @@ function TalentTree:SetHeroTalentLevel(hero, talentId, level)
                 hero.talents.modifiers[talentId]:SetStackCount(level)
             end
         end
+        local event = {
+            PlayerID = hero:GetPlayerOwnerID()
+        }
+        TalentTree:OnTalentTreeStateRequest(event)
     end
 end
 
@@ -327,10 +335,6 @@ function TalentTree:OnTalentTreeResetRequest(event)
         TalentTree:SetHeroTalentLevel(hero, i, 0)
     end
     TalentTree:AddTalentPointsToHero(hero, pointsToReturn)
-    local event = {
-        PlayerID = event.PlayerID
-    }
-    TalentTree:OnTalentTreeStateRequest(event)
 end
 
 function TalentTree:OnTalentTreeLevelUpRequest(event)
@@ -359,10 +363,6 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
         local talentLvl = TalentTree:GetHeroTalentLevel(hero, talentId)
         TalentTree:AddTalentPointsToHero(hero, -1)
         TalentTree:SetHeroTalentLevel(hero, talentId, talentLvl + 1)
-        local event = {
-            PlayerID = event.PlayerID
-        }
-        TalentTree:OnTalentTreeStateRequest(event)
     end
 end
 
