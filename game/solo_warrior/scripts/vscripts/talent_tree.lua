@@ -162,7 +162,6 @@ function TalentTree:SetupForHero(hero)
         hero.talents.level[i] = 0
     end
     hero.talents.currentPoints = 0
-    TalentTree:AddTalentPointsToHero(hero, 90)
 end
 
 function TalentTree:GetHeroCurrentTalentPoints(hero)
