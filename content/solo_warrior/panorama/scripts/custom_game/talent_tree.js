@@ -1,7 +1,9 @@
 var TALENTS_CONTAINER;
-var TALENTS_LAYOUT = {};
+var TALENTS_LAYOUT = {
+    "lastColumn": -1
+};
 var talentsData = {
-    "talentsCount": 0
+    "talentsCount": 0,
 };
 
 function OnTalentsData(event) {
@@ -13,14 +15,26 @@ function OnTalentsData(event) {
     talentsData.talentsCount += parsedTalents.length;
     if(talentsData.talentsCount >= event.count) {
 	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
+	    TALENTS_LAYOUT[TALENTS_LAYOUT["lastColumn"]].SetHasClass("last", true);
     }
 }
 
 function OnTalentsState(event) {
-    $.Msg(event);
-    for(var i=0; i < event.length; i++) {
-
+    var talentPoints = event.points;
+    var parsedStateData = JSON.parse(event.talents);
+    for(var i=0; i < parsedStateData.length; i++) {
+        var talentId = parsedStateData[i].id;
+        var talentColumn = talentsData[talentId].Column;
+        var talentRow = talentsData[talentId].Row;
+        TALENTS_LAYOUT[talentColumn][talentRow].SetHasClass("disabled", parsedStateData[i].disabled);
+        var talentLevelLabel = TALENTS_LAYOUT[talentColumn][talentRow].FindChildTraverse("TalentLevel");
+        if(talentLevelLabel) {
+            talentLevelLabel.text = parsedStateData[i].level + " / " + parsedStateData[i].maxlevel;
+        }
     }
+    TALENTS_LAYOUT["TalentPointsLabel"].text = $.Localize("talent_tree_current_talent_points").replace("%POINTS%", talentPoints);
+
+
 }
 
 function BuildTalentTree(parsedTalents) {
@@ -44,6 +58,9 @@ function CreateTalentPanel(row, column, talentId) {
 			var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
 			if(talentImagePanel) {
 			    talentImagePanel.SetImage(talentsData[talentId].Icon);
+			}
+			if(column > TALENTS_LAYOUT["lastColumn"]) {
+			    TALENTS_LAYOUT["lastColumn"] = column;
 			}
         } else {
             TALENTS_LAYOUT[column][row] = CreateTalentRow(row, column);
@@ -97,6 +114,7 @@ function OnTalentClick(talentId) {
 
 (function() {
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
+    TALENTS_LAYOUT["TalentPointsLabel"] = $("#CurrentTalentPoints");
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
     GameEvents.Subscribe("talent_tree_get_state_from_server", OnTalentsState);
 	GameEvents.SendCustomGameEventToServer( "talent_tree_get_talents", {});

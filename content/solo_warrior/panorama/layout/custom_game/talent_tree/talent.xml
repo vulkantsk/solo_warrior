@@ -3,25 +3,18 @@
         <include src="file://{resources}/styles/custom_game/talent_tree.css"/>
     </styles>
     <script>
-        function GetTalentId(context) {
-            return parseInt(context.id.replace("HeroTalent", ""));
-        }
+        var context = $.GetContextPanel();
+        var id = parseInt(context.id.replace("HeroTalent", ""));
 
         function ShowTalentTooltip() {
-            var context = $.GetContextPanel();
-            var id = GetTalentId(context);
             context.Data().ShowTalentTooltip(id);
         }
 
         function HideTalentTooltip() {
-            var context = $.GetContextPanel();
-            var id = GetTalentId(context);
             context.Data().HideTalentTooltip(id);
         }
 
         function OnTalentClick() {
-            var context = $.GetContextPanel();
-            var id = GetTalentId(context);
             context.Data().OnTalentClick(id);
         }
     </script>

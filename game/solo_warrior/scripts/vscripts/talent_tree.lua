@@ -28,11 +28,12 @@ function TalentTree:Init()
         self.maxTalentsPerRequest = tonumber(data.Settings.MaxTalentsPerRequest) or 10
     end
     for talentId, talentData in pairs(data.Talents) do
-        if (tonumber(talentId) < 1) then
+        local convertedId = tonumber(talentId)
+        if (convertedId < 1) then
             print("[TalentTree] Talent id must be greater than 0. Skipped.")
         else
-            if (TalentTree:IsValidTalent(talentId, talentData) == true) then
-                self.talentsData[talentId] = talentData
+            if (TalentTree:IsValidTalent(convertedId, talentData) == true) then
+                self.talentsData[convertedId] = talentData
             end
         end
     end
@@ -244,7 +245,7 @@ function TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId)
         end
     end
     local pointsSpendedInColumn = 0
-    for i = 1, Talent:GetLatestTalentID() do
+    for i = 1, TalentTree:GetLatestTalentID() do
         if (TalentTree:GetTalentColumn(i) == column and TalentTree:GetTalentRow(i) < row) then
             pointsSpendedInColumn = TalentTree:GetHeroTalentLevel(hero, i)
         end
@@ -278,6 +279,9 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
 end
 
 function TalentTree:OnTalentTreeLevelUpRequest(event)
+    if(not IsServer()) then
+        return
+    end
     if (event == nil or not event.PlayerID) then
         return
     end
@@ -307,6 +311,9 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
 end
 
 function TalentTree:OnTalentTreeStateRequest(event)
+    if(not IsServer()) then
+        return
+    end
     if (not event or not event.PlayerID) then
         return
     end
@@ -328,8 +335,7 @@ function TalentTree:OnTalentTreeStateRequest(event)
                     local talentLvl = TalentTree:GetHeroTalentLevel(hero, i)
                     local talentMaxLvl = TalentTree:GetTalentMaxLevel(i)
                     local isDisabled = not TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, i)
-                    local IsTalentMissLevels = TalentTree:IsHeroCanLevelUpTalent(hero, i)
-                    table.insert(resultTable, { id = i, disabled = isDisabled, lvlup = IsTalentMissLevels, level = talentLvl, maxlevel = talentMaxLvl })
+                    table.insert(resultTable, { id = i, disabled = isDisabled, level = talentLvl, maxlevel = talentMaxLvl })
                 end
                 if (TalentTree:GetHeroCurrentTalentPoints(hero) == 0) then
                     for _, talent in pairs(resultTable) do

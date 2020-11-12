@@ -21,6 +21,12 @@
     width: fit-children;
     height: fit-children;
     flow-children: down;
+    margin-right: 20px;
+}
+
+.TalentTreeColumn.last
+{
+    margin-right: 0px;
 }
 
 .TalentTreeRow
