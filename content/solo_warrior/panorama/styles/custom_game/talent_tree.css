@@ -49,6 +49,10 @@
     border: 1px solid white;
 }
 
+.TalentContainer.disabled {
+    wash-color: gray;
+}
+
 .TalentContainer #TalentImage {
     width: fill-parent-flow(1.0);
     height: fill-parent-flow(1.0);

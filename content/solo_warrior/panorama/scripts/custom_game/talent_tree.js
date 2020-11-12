@@ -65,16 +65,23 @@ function CreateTalentRow(row, column, isTitleRow) {
     }
 }
 
-function ShowTalentTooltip(id) {
-    $.Msg("Show"+ id);
+function ShowTalentTooltip(talentId) {
+    var talentName = $.Localize("#talent_tree_talent_" + talentId);
+    var talentIcon = talentsData[talentId].Icon;
+    var talentDescription = $.Localize("#talent_tree_talent_" + talentId + "_Description");
+	$.DispatchEvent("DOTAShowTitleImageTextTooltip", $.GetContextPanel(), talentName, talentIcon, talentDescription);
 }
 
 function HideTalentTooltip() {
-    $.Msg("Hide");
+    $.DispatchEvent("DOTAHideTitleImageTextTooltip", $.GetContextPanel());
 }
 
-function OnTalentClick(id) {
-    $.Msg("click" + id);
+function OnTalentClick(talentId) {
+    var context = $.GetContextPanel();
+    if(!context.BHasClass("disabled")) {
+        GameEvents.SendCustomGameEventToServer( "talent_tree_level_up_talent", {"id": id});
+        Game.EmitSound("General.SelectAction");
+    }
 }
 
 (function() {
