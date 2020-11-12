@@ -17,3 +17,11 @@ modifier_list = {
 for key, value in pairs(modifier_list) do
 	LinkLuaModifier(value, "modifiers/"..value, 1)
 end
+
+talents_modifier_list = {
+	"modifier_talent_1"
+}
+
+for key, value in pairs(talents_modifier_list) do
+	LinkLuaModifier(value, "talents/"..value, LUA_MODIFIER_MOTION_NONE)
+end

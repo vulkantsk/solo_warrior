@@ -50,18 +50,22 @@ function TalentTree:IsValidRequirement(id, requirementsData)
     if (not requirementsData) then
         return false
     end
+    requirementsData.Row = tonumber(requirementsData.Row)
     if (not requirementsData.Row) then
         print("[TalentTree] Can't find row for requirement", id ". Skipped.")
         return false
     end
+    requirementsData.Column = tonumber(requirementsData.Column)
     if (not requirementsData.Column) then
         print("[TalentTree] Can't find column for requirement", id ". Skipped.")
         return false
     end
+    requirementsData.HeroLevel = tonumber(requirementsData.HeroLevel)
     if (not requirementsData.HeroLevel) then
         print("[TalentTree] Can't find hero level for requirement", id ". Skipped.")
         return false
     end
+    requirementsData.RequiredPoints = tonumber(requirementsData.RequiredPoints)
     if (not requirementsData.RequiredPoints) then
         print("[TalentTree] Can't find required points for requirement", id ". Skipped.")
         return false
@@ -229,8 +233,21 @@ end
 
 function TalentTree:SetHeroTalentLevel(hero, talentId, level)
     level = tonumber(level)
-    if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId > 0 and level) then
+    if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId > 0 and level and level > -1) then
         hero.talents.level[talentId] = level
+        if (level == 0) then
+            if (hero.talents.modifiers[talentId]) then
+                hero.talents.modifiers[talentId]:Destroy()
+                hero.talents.modifiers[talentId] = nil
+            end
+        else
+            if (not hero.talents.modifiers[talentId]) then
+                hero.talents.modifiers[talentId] = hero:AddNewModifier(hero, nil, TalentTree.talentsData[talentId].Modifier, { duration = -1 })
+            end
+            if(hero.talents.modifiers[talentId]) then
+                hero.talents.modifiers[talentId]:SetStackCount(level)
+            end
+        end
     end
 end
 
@@ -271,6 +288,12 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     end
     local row = TalentTree:GetTalentRow(talentId)
     local column = TalentTree:GetTalentColumn(talentId)
+    local heroLevel = hero:GetLevel()
+    for _, requirementsData in pairs(TalentTree.talentsRequirements) do
+        if (requirementsData.Column == column and requirementsData.Row == row and heroLevel < requirementsData.HeroLevel) then
+            return false
+        end
+    end
     local canLevelUp = true
     for i = 1, TalentTree:GetLatestTalentID() do
         if (TalentTree:GetTalentColumn(i) == column and TalentTree:GetTalentRow(i) == row and TalentTree:GetHeroTalentLevel(hero, i) > 0 and i ~= talentId) then
@@ -369,7 +392,7 @@ function TalentTree:OnTalentTreeStateRequest(event)
                     local talentLvl = TalentTree:GetHeroTalentLevel(hero, i)
                     local talentMaxLvl = TalentTree:GetTalentMaxLevel(i)
                     local isDisabled = (TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, i) == false) or TalentTree:IsHeroCanLevelUpTalent(hero, i) == false
-                    if(talentLvl == talentMaxLvl) then
+                    if (talentLvl == talentMaxLvl) then
                         isDisabled = false
                     end
                     table.insert(resultTable, { id = i, disabled = isDisabled, level = talentLvl, maxlevel = talentMaxLvl })

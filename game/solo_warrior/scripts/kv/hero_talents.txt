@@ -9,9 +9,6 @@
             "MaxLevel"  "3"
             "Row"   "1"
             "Column"    "1"
-            "AdditionalRequirements" {
-                "Gold"  "0"
-            }
         }
         "2"
         {
