@@ -1,6 +1,8 @@
 var TALENTS_CONTAINER;
 var TALENTS_LAYOUT = {};
-var talentsData = {};
+var talentsData = {
+    "talentsCount": 0
+};
 
 function OnTalentsData(event) {
     var parsedTalents = JSON.parse(event.talents);
@@ -8,10 +10,17 @@ function OnTalentsData(event) {
         talentsData[parsedTalents[i].id] = parsedTalents[i].data
     }
     BuildTalentTree(parsedTalents);
+    talentsData.talentsCount += parsedTalents.length;
+    if(talentsData.talentsCount >= event.count) {
+	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
+    }
 }
 
 function OnTalentsState(event) {
+    $.Msg(event);
+    for(var i=0; i < event.length; i++) {
 
+    }
 }
 
 function BuildTalentTree(parsedTalents) {
@@ -89,8 +98,7 @@ function OnTalentClick(talentId) {
 (function() {
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
-    GameEvents.Subscribe("talent_tree_state_from_server", OnTalentsState);
+    GameEvents.Subscribe("talent_tree_get_state_from_server", OnTalentsState);
 	GameEvents.SendCustomGameEventToServer( "talent_tree_get_talents", {});
-
 })();
 

@@ -9,7 +9,6 @@ function TalentTree:Init()
     local data = LoadKeyValues("scripts/kv/hero_talents.txt")
     self.talentsData = {}
     self.talentsRequirements = {}
-    self.maxTalentsPerRequest = 5
     if (not data) then
         print("[TalentTree] Error loading scripts/kv/hero_talents.txt.")
         return
@@ -21,6 +20,12 @@ function TalentTree:Init()
     if (not data.Requirements) then
         print("[TalentTree] Can't find talents requirements data.")
         return
+    end
+    if (not data.Settings) then
+        print("[TalentTree] Can't load settings. Using default values.")
+        self.maxTalentsPerRequest = 10
+    else
+        self.maxTalentsPerRequest = tonumber(data.Settings.MaxTalentsPerRequest) or 10
     end
     for talentId, talentData in pairs(data.Talents) do
         if (tonumber(talentId) < 1) then
@@ -113,10 +118,10 @@ function TalentTree:OnTalentTreeTalentsRequest(event)
     end
     local currentTalent = 0
     local talentsData = {}
-    print("TOTAL TALENTS", GetTableLength(TalentTree.talentsData))
+    local talentsCount = GetTableLength(TalentTree.talentsData)
     for talentId, talentData in pairs(TalentTree.talentsData) do
         if (currentTalent > TalentTree.maxTalentsPerRequest) then
-            CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_talents_from_server", { talents = json.encode(talentsData) })
+            CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_talents_from_server", { talents = json.encode(talentsData), count = talentsCount })
             talentsData = {}
             currentTalent = 0
         end
@@ -124,7 +129,7 @@ function TalentTree:OnTalentTreeTalentsRequest(event)
         currentTalent = currentTalent + 1
     end
     if (#talentsData > 0) then
-        CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_talents_from_server", { talents = json.encode(talentsData) })
+        CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_talents_from_server", { talents = json.encode(talentsData), count = talentsCount })
     end
 end
 
@@ -132,7 +137,7 @@ function TalentTree:GetLatestTalentID()
     local id = -1
     for talentId, _ in pairs(TalentTree.talentsData) do
         local convertedId = tonumber(talentId)
-        if(convertedId > id) then
+        if (convertedId > id) then
             id = convertedId
         end
     end
@@ -149,6 +154,26 @@ function TalentTree:SetupForHero(hero)
     for i = 1, TalentTree:GetLatestTalentID() do
         hero.talents.level[i] = 0
     end
+    hero.talents.currentPoints = 0
+    TalentTree:AddTalentPointsToHero(hero, 90)
+end
+
+function TalentTree:GetHeroCurrentTalentPoints(hero)
+    if (not hero or not hero.talents) then
+        return 0
+    end
+    return hero.talents.currentPoints
+end
+
+function TalentTree:AddTalentPointsToHero(hero, points)
+    if (not hero or not hero.talents) then
+        return false
+    end
+    points = tonumber(points)
+    if (not points) then
+        return false
+    end
+    hero.talents.currentPoints = hero.talents.currentPoints + points
 end
 
 ListenToGameEvent("npc_spawned", function(keys)
@@ -234,6 +259,12 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     if (not TalentTree.talentsData[talentId]) then
         return false
     end
+    if (TalentTree:GetHeroTalentLevel(hero, talentId) >= TalentTree:GetTalentMaxLevel(talentId)) then
+        return false
+    end
+    if (Talent:GetHeroCurrentTalentPoints(hero) == 0) then
+        return false
+    end
     local row = TalentTree:GetTalentRow(talentId)
     local column = TalentTree:GetTalentColumn(talentId)
     local canLevelUp = true
@@ -242,9 +273,6 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
             canLevelUp = false
             break
         end
-    end
-    if (TalentTree:GetHeroTalentLevel(hero, talentId) >= TalentTree:GetTalentMaxLevel(talentId)) then
-        return false
     end
     return canLevelUp
 end
@@ -311,7 +339,7 @@ function TalentTree:OnTalentTreeStateRequest(event)
                         end
                     end
                 end
-                CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_state_from_server", { data = json.encode(resultTable) })
+                CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_state_from_server", { talents = json.encode(resultTable), points = TalentTree:GetHeroCurrentTalentPoints(hero) })
             end)
 end
 

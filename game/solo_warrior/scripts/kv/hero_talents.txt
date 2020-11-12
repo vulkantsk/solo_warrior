@@ -117,4 +117,8 @@
             "RequiredPoints"    "3"
         }
     }
+    "Settings"
+    {
+        "MaxTalentsPerRequest"  "10"
+    }
 }
