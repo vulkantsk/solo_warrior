@@ -3,7 +3,7 @@ if (not _G.TalentTree) then
 end
 
 function TalentTree:Init()
-    if (not IsServer()) then
+    if (not IsServer() or TalentTree.initialized) then
         return
     end
     local data = LoadKeyValues("scripts/kv/hero_talents.txt")
@@ -43,6 +43,7 @@ function TalentTree:Init()
         end
     end
     TalentTree:InitPanaromaEvents()
+    TalentTree.initialized = true
 end
 
 function TalentTree:IsValidRequirement(id, requirementsData)
@@ -107,6 +108,7 @@ function TalentTree:InitPanaromaEvents()
     CustomGameEventManager:RegisterListener("talent_tree_get_talents", Dynamic_Wrap(TalentTree, 'OnTalentTreeTalentsRequest'))
     CustomGameEventManager:RegisterListener("talent_tree_level_up_talent", Dynamic_Wrap(TalentTree, 'OnTalentTreeLevelUpRequest'))
     CustomGameEventManager:RegisterListener("talent_tree_get_state", Dynamic_Wrap(TalentTree, 'OnTalentTreeStateRequest'))
+    CustomGameEventManager:RegisterListener("talent_tree_reset_talents", Dynamic_Wrap(TalentTree, 'OnTalentTreeResetRequest'))
 end
 
 function TalentTree:OnTalentTreeTalentsRequest(event)
@@ -264,19 +266,48 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     if (TalentTree:GetHeroTalentLevel(hero, talentId) >= TalentTree:GetTalentMaxLevel(talentId)) then
         return false
     end
-    if (Talent:GetHeroCurrentTalentPoints(hero) == 0) then
+    if (TalentTree:GetHeroCurrentTalentPoints(hero) == 0) then
         return false
     end
     local row = TalentTree:GetTalentRow(talentId)
     local column = TalentTree:GetTalentColumn(talentId)
     local canLevelUp = true
-    for i = 1, Talent:GetLatestTalentID() do
+    for i = 1, TalentTree:GetLatestTalentID() do
         if (TalentTree:GetTalentColumn(i) == column and TalentTree:GetTalentRow(i) ~= row and TalentTree:GetHeroTalentLevel(hero, i) > 0) then
             canLevelUp = false
             break
         end
     end
     return canLevelUp
+end
+function TalentTree:OnTalentTreeResetRequest(event)
+    if(not IsServer()) then
+        return
+    end
+    if (event == nil or not event.PlayerID) then
+        return
+    end
+    local player = PlayerResource:GetPlayer(event.PlayerID)
+    if (not player) then
+        return
+    end
+    local hero = player:GetAssignedHero()
+    if (not hero) then
+        return
+    end
+    if (TalentTree:IsHeroHaveTalentTree(hero) == false) then
+        return
+    end
+    local pointsToReturn = 0
+    for i = 1, TalentTree:GetLatestTalentID() do
+        pointsToReturn = pointsToReturn + TalentTree:GetHeroTalentLevel(hero, i)
+        TalentTree:SetHeroTalentLevel(hero, i, 0)
+    end
+    TalentTree:AddTalentPointsToHero(hero, pointsToReturn)
+    local event = {
+        PlayerID = event.PlayerID
+    }
+    TalentTree:OnTalentTreeStateRequest(event)
 end
 
 function TalentTree:OnTalentTreeLevelUpRequest(event)
@@ -303,6 +334,7 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
     end
     if (TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId) and TalentTree:IsHeroCanLevelUpTalent(hero, talentId)) then
         local talentLvl = TalentTree:GetHeroTalentLevel(hero, talentId)
+        TalentTree:AddTalentPointsToHero(hero, -1)
         TalentTree:SetHeroTalentLevel(hero, talentId, talentLvl + 1)
         local event = {
             PlayerID = event.PlayerID

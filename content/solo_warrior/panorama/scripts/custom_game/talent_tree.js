@@ -111,7 +111,7 @@ function OnTalentClick(talentId) {
 }
 
 function OnResetTalentsButtonClick() {
-    $.Msg("Reset talents");
+    GameEvents.SendCustomGameEventToServer( "talent_tree_reset_talents", {});
 }
 
 (function() {
