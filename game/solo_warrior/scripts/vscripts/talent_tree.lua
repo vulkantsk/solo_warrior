@@ -250,6 +250,7 @@ function TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId)
             pointsSpendedInColumn = TalentTree:GetHeroTalentLevel(hero, i)
         end
     end
+    print(talentId, pointsSpendedInColumn, totalRequiredPoints)
     if (pointsSpendedInColumn >= totalRequiredPoints) then
         return true
     end
