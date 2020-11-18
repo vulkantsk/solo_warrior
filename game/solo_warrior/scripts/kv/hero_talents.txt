@@ -4,81 +4,61 @@
     {
         "1"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
-            "Modifier"  "modifier_talent_1"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_1"
             "Row"   "1"
             "Column"    "1"
         }
         "2"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_2"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_2"
             "Row"   "1"
             "Column"    "1"
         }
         "3"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_3"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_3"
             "Row"   "1"
             "Column"    "1"
         }
         "4"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/culling_blade.png"
-            "Modifier"  "modifier_talent_4"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_4"
             "Row"   "2"
             "Column"    "1"
         }
         "5"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_5"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_5"
             "Row"   "2"
             "Column"    "1"
         }
         "6"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_6"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_6"
             "Row"   "2"
             "Column"    "1"
         }
         "7"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_7"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_7"
             "Row"   "1"
             "Column"    "2"
         }
         "8"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_8"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_8"
             "Row"   "2"
             "Column"    "2"
         }
         "9"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_9"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_9"
             "Row"   "2"
             "Column"    "2"
         }
         "10"
         {
-            "Icon"      "raw://resource/flash3/images/spellicons/axe/anger_roar.png"
-            "Modifier"  "modifier_talent_10"
-            "MaxLevel"  "3"
+            "Ability"   "ability_talent_10"
             "Row"   "1"
             "Column"    "2"
         }

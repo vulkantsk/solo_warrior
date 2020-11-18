@@ -52,7 +52,7 @@ function CreateTalentPanel(row, column, talentId) {
 			talentPanel.Data().OnTalentClick = OnTalentClick;
 			var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
 			if(talentImagePanel) {
-			    talentImagePanel.SetImage(talentsData[talentId].Icon);
+			    talentImagePanel.abilityname = talentsData[talentId].Ability;
 			}
 			if(column > TALENTS_LAYOUT["lastColumn"]) {
 			    TALENTS_LAYOUT["lastColumn"] = column;
@@ -92,14 +92,15 @@ function CreateTalentRow(row, column, isTitleRow) {
 }
 
 function ShowTalentTooltip(talentId) {
-    var talentName = $.Localize("#talent_tree_talent_" + talentId);
-    var talentIcon = talentsData[talentId].Icon;
-    var talentDescription = $.Localize("#talent_tree_talent_" + talentId + "_Description");
-	$.DispatchEvent("DOTAShowTitleImageTextTooltip", $("#HeroTalent" + talentId), talentName, talentIcon, talentDescription);
+    var locID = Players.GetLocalPlayer();
+    var hero = Players.GetPlayerHeroEntityIndex(locID);
+    var ability = Entities.GetAbilityByName( hero, talentsData[talentId].Ability );
+    var lvl = Abilities.GetLevel(ability) || 0;
+	$.DispatchEvent("DOTAShowAbilityTooltipForLevel", $("#HeroTalent" + talentId), talentsData[talentId].Ability, lvl );
 }
 
 function HideTalentTooltip(talentId) {
-    $.DispatchEvent("DOTAHideTitleImageTextTooltip", $("#HeroTalent" + talentId));
+    $.DispatchEvent("DOTAHideAbilityTooltip", $("#HeroTalent" + talentId));
 }
 
 function OnTalentClick(talentId, disabled) {

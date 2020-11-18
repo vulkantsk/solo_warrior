@@ -3,9 +3,54 @@
 {
 	"Version"		"1"
 
-	//=================================================================================================================
-	// Templar Assassin: Refraction Holdout
-	//=================================================================================================================
+	//Talents
+
+		"ability_talent_1"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"1 2 3"
+				}
+			}
+		}
+
+		"ability_talent_2"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"90"
+				}
+			}
+		}
+
+	//End Talents
+
 	"destructible_gate"
 	{
 		"BaseClass"						"ability_lua"
@@ -20,8 +65,8 @@
 				"attacks_required"		"2"
 			}
 		}
-
 	}
+
 	"undestructible_gate"
 	{
 		"BaseClass"						"ability_lua"
@@ -36,15 +81,15 @@
 				"attacks_required"		"5"
 			}
 		}
-
 	}
+
 	"destructible_gate_anim"
 	{
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"abilities/gate/destructible_gate_anim"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
-
 	}
+	
 	"filler_ability"
 	{
 		// General
@@ -165,38 +210,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	}
 
-	"axe_hot_blood"                     //Горячая кровь
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/hot_blood"
-		"AbilityTextureName"			"axe/hot_blood"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"MaxLevel"						"1"
+//Hero Abilities
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"required_hp"		"35"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_regen"		"10"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_regen_pct"	"1"
-			}
-
-		}
-	}
 	"axe_culling_blade_custom"                     //Разрубание / Казнь
 	{
 		// General
@@ -246,6 +261,7 @@
 
 		}
 	}
+
 	"axe_anger_roar"                     //Яростный Вопль
 	{
 		// General
@@ -296,6 +312,7 @@
 
 		}
 	}
+
 	"axe_counter_helix_custom"                     //Крутилка / Контратака
 	{
 		// General
@@ -342,6 +359,64 @@
 			}
 		}
 	}
+
+	"axe_true_strength"                     //Истинная Мощь
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/true_strength"
+		"AbilityTextureName"			"axe/true_strength"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"30"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str_pct"			"75"
+			}
+		}
+	}
+
+	"axe_hot_blood"                     //Горячая кровь
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/hot_blood"
+		"AbilityTextureName"			"axe/hot_blood"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"required_hp"		"35"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_regen"		"10"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_regen_pct"	"1"
+			}
+
+		}
+	}
+
 	"axe_berserk_form"                     //Берсерк
 	{
 		// General
@@ -408,29 +483,9 @@
 
 		}
 	}
-	"axe_true_strength"                     //Истинная Мощь
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/true_strength"
-		"AbilityTextureName"			"axe/true_strength"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"FightRecapLevel"				"1"
-		"MaxLevel"						"1"
-		"RequiredLevel"					"30"
-	
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_str_pct"			"75"
-			}
-		}
-	}
+
+//End Hero Abilities
+
 // ТЕСТОВАЯ БОРОДА из ВИталиного Гайда=) --так что всё что ниже этой строки - DANGER!!!
 // ТрАлль босс начало
     "troll_boss_berserkers_rage"

@@ -6,6 +6,7 @@ function TalentTree:Init()
     if (not IsServer() or TalentTree.initialized) then
         return
     end
+    self.abilitiesData = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
     local data = LoadKeyValues("scripts/kv/hero_talents.txt")
     self.talentsData = {}
     self.talentsRequirements = {}
@@ -33,6 +34,7 @@ function TalentTree:Init()
             print("[TalentTree] Talent id must be greater than 0. Skipped.")
         else
             if (TalentTree:IsValidTalent(convertedId, talentData) == true) then
+                print(talentData.MaxLevel)
                 self.talentsData[convertedId] = talentData
             end
         end
@@ -52,22 +54,22 @@ function TalentTree:IsValidRequirement(id, requirementsData)
     end
     requirementsData.Row = tonumber(requirementsData.Row)
     if (not requirementsData.Row) then
-        print("[TalentTree] Can't find row for requirement", id ". Skipped.")
+        print("[TalentTree] Can't find row for requirement " .. id .. ". Skipped.")
         return false
     end
     requirementsData.Column = tonumber(requirementsData.Column)
     if (not requirementsData.Column) then
-        print("[TalentTree] Can't find column for requirement", id ". Skipped.")
+        print("[TalentTree] Can't find column for requirement " .. id .. ". Skipped.")
         return false
     end
     requirementsData.HeroLevel = tonumber(requirementsData.HeroLevel)
     if (not requirementsData.HeroLevel) then
-        print("[TalentTree] Can't find hero level for requirement", id ". Skipped.")
+        print("[TalentTree] Can't find hero level for requirement " .. id .. ". Skipped.")
         return false
     end
     requirementsData.RequiredPoints = tonumber(requirementsData.RequiredPoints)
     if (not requirementsData.RequiredPoints) then
-        print("[TalentTree] Can't find required points for requirement", id ". Skipped.")
+        print("[TalentTree] Can't find required points for requirement " .. id .. ". Skipped.")
         return false
     end
     return true
@@ -77,32 +79,32 @@ function TalentTree:IsValidTalent(talentId, talentData)
     if (not talentData) then
         return false
     end
-    if (not talentData.Icon) then
-        print("[TalentTree] Can't find icon for talent", talentId ". Skipped.")
-        return false
-    end
-    if (not talentData.Modifier) then
-        print("[TalentTree] Can't find modifier for talent", talentId, ". Skipped.")
+    if (not talentData.Ability) then
+        print("[TalentTree] Can't find ability for talent " .. talentId .. ". Skipped.")
         return false
     end
     if (not talentData.MaxLevel) then
-        print("[TalentTree] Can't find max level for talent", talentId, ". Skipped.")
-        return false
+        if self.abilitiesData[talentData.Ability] then
+            talentData.MaxLevel = self.abilitiesData[talentData.Ability]["MaxLevel"] or 4
+        else
+            print("[TalentTree] Can't find ability " .. talentId .. " in abilitiesData. Skipped.")
+            return false
+        end
     end
     if (not talentData.Row) then
-        print("[TalentTree] Can't find row for talent", talentId, ". Skipped.")
+        print("[TalentTree] Can't find row for talent " .. talentId .. ". Skipped.")
         return false
     end
     if (talentData.Row < 1) then
-        print("[TalentTree] Row for talent ", talentId, " must be greater than 0. Skipped.")
+        print("[TalentTree] Row for talent " .. talentId .. " must be greater than 0. Skipped.")
         return false
     end
     if (not talentData.Column) then
-        print("[TalentTree] Can't find column for talent", talentId, ". Skipped.")
+        print("[TalentTree] Can't find column for talent " .. talentId .. ". Skipped.")
         return false
     end
     if (talentData.Column < 1) then
-        print("[TalentTree] Column for talent ", talentId, " must be greater than 0. Skipped.")
+        print("[TalentTree] Column for talent " .. talentId .. " must be greater than 0. Skipped.")
         return false
     end
     return true
@@ -157,11 +159,11 @@ function TalentTree:SetupForHero(hero)
     end
     hero.talents = {}
     hero.talents.level = {}
-    hero.talents.modifiers = {}
+    hero.talents.abilities = {}
     for i = 1, TalentTree:GetLatestTalentID() do
         hero.talents.level[i] = 0
     end
-    hero.talents.currentPoints = 0
+    hero.talents.currentPoints = 10
 end
 
 function TalentTree:GetHeroCurrentTalentPoints(hero)
@@ -239,16 +241,16 @@ function TalentTree:SetHeroTalentLevel(hero, talentId, level)
     if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId > 0 and level and level > -1) then
         hero.talents.level[talentId] = level
         if (level == 0) then
-            if (hero.talents.modifiers[talentId]) then
-                hero.talents.modifiers[talentId]:Destroy()
-                hero.talents.modifiers[talentId] = nil
+            if (hero.talents.abilities[talentId]) then
+                hero.talents.abilities[talentId]:GetCaster():RemoveAbilityByHandle(hero.talents.abilities[talentId])
+                hero.talents.abilities[talentId] = nil
             end
         else
-            if (not hero.talents.modifiers[talentId]) then
-                hero.talents.modifiers[talentId] = hero:AddNewModifier(hero, nil, TalentTree.talentsData[talentId].Modifier, { duration = -1 })
+            if (not hero.talents.abilities[talentId]) then
+                hero.talents.abilities[talentId] = hero:AddAbility(TalentTree.talentsData[talentId].Ability)
             end
-            if(hero.talents.modifiers[talentId]) then
-                hero.talents.modifiers[talentId]:SetStackCount(level)
+            if(hero.talents.abilities[talentId]) then
+                hero.talents.abilities[talentId]:SetLevel(level)
             end
         end
         local event = {
