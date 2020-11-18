@@ -5,7 +5,7 @@
     <scripts>
         <include src="file://{resources}/scripts/custom_game/talent_tree.js"/>
     </scripts>
-    <Panel class="TalentTreeRoot">
+    <Panel hittest="false" class="TalentTreeRoot">
         <Panel id="TalentsWindowContainer">
             <Panel id="TalentTreeColumnsContainer"/>
             <Label id="CurrentTalentPoints" text="#talent_tree_current_talent_points"/>
