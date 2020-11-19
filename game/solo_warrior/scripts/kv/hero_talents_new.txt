@@ -1,0 +1,42 @@
+"TalentTree"
+{
+    "Talents"
+    {
+        "0"		//уровень необходимый для прокачки
+        {
+            "1"   "ability_talent_warrior_1" 	//таланты берсерка и война находятся в одной строчке, но разделяются взяв инфу из самого таланта. Мы показываем только очерёдность в которой идут таланты
+            "2"   "ability_talent_warrior_2"
+            "3"   "ability_talent_berserk_1"
+        }
+        "3"
+        {
+            "1"   "ability_talent_1"
+            "2"   "ability_talent_2"
+            "3"   "ability_talent_3"
+        }
+        "5"
+        {
+            "1"   "ability_talent_1"
+            "2"   "ability_talent_2"
+            "3"   "ability_talent_3"
+        }
+        "8"
+        {
+            "1"   "ability_talent_1"
+            "2"   "ability_talent_2"
+            "3"   "ability_talent_3"
+        }
+        "10"
+        {
+            "1"   "ability_talent_1"
+            "2"   "ability_talent_2"
+            "3"   "ability_talent_3"
+        }
+ 
+    }
+
+    "Settings"
+    {
+        "MaxTalentsPerRequest"  "10"
+    }
+}

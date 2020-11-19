@@ -1,55 +1,8 @@
-// Dota Heroes File
+#base "npc_hero_talents"
+
 "DOTAAbilities"
 {
 	"Version"		"1"
-
-	//Talents
-
-		"ability_talent_1"
-		{
-			// General
-			//-------------------------------------------------------------------------------------------------------------
-			"BaseClass"						"ability_datadriven"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_culling_blade"
-			"MaxLevel"						"3"
-			"IsOnCastBar"					"0"
-
-			// Special
-			//-------------------------------------------------------------------------------------------------------------
-			"AbilitySpecial"
-			{
-				"01"
-				{
-					"var_type"				"FIELD_INTEGER"
-					"hp_heal"				"1 2 3"
-				}
-			}
-		}
-
-		"ability_talent_2"
-		{
-			// General
-			//-------------------------------------------------------------------------------------------------------------
-			"BaseClass"						"ability_datadriven"
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_culling_blade"
-			"MaxLevel"						"3"
-			"IsOnCastBar"					"0"
-
-			// Special
-			//-------------------------------------------------------------------------------------------------------------
-			"AbilitySpecial"
-			{
-				"01"
-				{
-					"var_type"				"FIELD_INTEGER"
-					"hp_heal"				"90"
-				}
-			}
-		}
-
-	//End Talents
 
 	"destructible_gate"
 	{

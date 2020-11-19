@@ -1,0 +1,97 @@
+""
+{
+		//Talents
+
+		"ability_talent_1"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			"MainAbility"					"axe_berserkers_call"	//основная абилка, для подгрузки картинки и ветки(воин/ берсерк)
+
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"1 2 3"
+				}
+			}
+		}
+
+		"ability_talent_2"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"90"
+				}
+			}
+		}
+
+		"ability_talent_3"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_berserkers_call"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"1 2 3"
+				}
+			}
+		}
+
+		"ability_talent_4"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"hp_heal"				"1 2 3"
+				}
+			}
+		}
+
+	//End Talents
+}

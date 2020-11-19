@@ -12,7 +12,7 @@
         {
             "Ability"   "ability_talent_2"
             "Row"   "1"
-            "Column"    "1"
+            "Column"    "2"
         }
         "3"
         {
@@ -24,7 +24,7 @@
         {
             "Ability"   "ability_talent_4"
             "Row"   "2"
-            "Column"    "1"
+            "Column"    "2"
         }
         "5"
         {

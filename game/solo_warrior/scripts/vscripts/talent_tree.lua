@@ -6,7 +6,7 @@ function TalentTree:Init()
     if (not IsServer() or TalentTree.initialized) then
         return
     end
-    self.abilitiesData = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
+    self.abilitiesData = LoadKeyValues("scripts/npc/npc_hero_talents.txt")
     local data = LoadKeyValues("scripts/kv/hero_talents.txt")
     self.talentsData = {}
     self.talentsRequirements = {}
