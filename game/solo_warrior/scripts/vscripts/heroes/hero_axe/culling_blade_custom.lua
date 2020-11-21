@@ -8,12 +8,12 @@ function axe_culling_blade_custom:GetAOERadius()
 end
 
 function axe_culling_blade_custom:GetAbilityTextureName()
-	local caster = self:GetCaster()
-	if caster:HasModifier("modifier_axe_berserk_form")  then
-		return "axe/culling_blade_berserk"
-	else
+	-- local caster = self:GetCaster()
+	-- if caster:HasModifier("modifier_axe_berserk_form")  then
+	-- 	return "axe/culling_blade_berserk"
+	-- else
 		return "axe/culling_blade"
-	end
+	-- end
 end
 
 function axe_culling_blade_custom:OnSpellStart()
@@ -22,6 +22,7 @@ function axe_culling_blade_custom:OnSpellStart()
 	local point = target:GetAbsOrigin()
 	local radius = self:GetSpecialValueFor("radius")
 	local damage = self:GetSpecialValueFor("damage")
+	local kill_threshold = self:GetSpecialValueFor("kill_threshold")
 	local bonus_damage = self:GetSpecialValueFor("bonus_damage")
 	self.sound = "Hero_Axe.Culling_Blade_Fail"
 
@@ -29,19 +30,13 @@ function axe_culling_blade_custom:OnSpellStart()
 	local enemies = caster:FindEnemyUnitsInRadius(point, radius, nil)
 
 	for _,enemy in pairs(enemies) do
-		if enemy:GetHealth() < damage then
-			if enemy:IsConsideredHero() and enemy:GetMaxHealth() >= damage then
-				self:KillTarget(enemy)
-				local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
-				local current_stack = modifier:GetStackCount()
-				modifier:SetStackCount(current_stack + bonus_damage)
-			elseif enemy:IsConsideredHero() and enemy:GetMaxHealth() < damage then
-				DealDamage(caster, enemy, damage, DAMAGE_TYPE_MAGICAL, nil, ability)
-			else
-				self:KillTarget(enemy)
-			end
+		if enemy:GetHealth() < kill_threshold then
+			self:KillTarget(enemy)
+			-- local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
+			-- local current_stack = modifier:GetStackCount()
+			-- modifier:SetStackCount(current_stack + bonus_damage)
 		else
-			DealDamage(caster, enemy, damage, DAMAGE_TYPE_MAGICAL, nil, ability)
+			DealDamage(caster, enemy, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
 		end
 	end
 	caster:EmitSound(self.sound)

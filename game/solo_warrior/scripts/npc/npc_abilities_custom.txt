@@ -165,56 +165,7 @@
 
 //Hero Abilities
 
-	"axe_culling_blade_custom"                     //Разрубание / Казнь
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/culling_blade_custom"
-		"AbilityTextureName"			"axe/culling_blade"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"FightRecapLevel"				"1"
-		"MaxLevel"						"8"
-		"RequiredLevel"					"1"
-		"LevelsBetweenUpgrades"			"3"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.2"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		"AbilityCastRange"				"400"
-
-
-		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"125 150 175 200 250 300 350"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"300"                                       //изменил длятестов было : "300"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"200 350 500 650 800 950 1100 1300"           //изменил длятестов было : "150 200 250 300 400 500 600"
-			}
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"10 20 30 40 60 80 100"
-			}
-
-		}
-	}
-
+	//old
 	"axe_anger_roar"                     //Яростный Вопль
 	{
 		// General
@@ -263,53 +214,6 @@
 				"bonus_scale"		"30"
 			}
 
-		}
-	}
-
-	"axe_counter_helix_custom"                     //Крутилка / Контратака
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/counter_helix_custom"
-		"AbilityTextureName"			"axe/counter_helix"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-		"MaxLevel"						"8"
-		"RequiredLevel"					"1"
-		"LevelsBetweenUpgrades"			"3"
-
-		"AbilityCooldown"				"0.1"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"250"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"trigger_chance"		"25"
-				"LinkedSpecialBonus"			"special_bonus_custom_axe_1"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"base_damage"			"50 75 100 125 160 195 230 300"
-				"LinkedSpecialBonus"		"special_bonus_custom_axe_2"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"attack_damage"			"50"
-				"LinkedSpecialBonus"		"special_bonus_custom_axe_2"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
-			}
 		}
 	}
 
@@ -370,18 +274,251 @@
 		}
 	}
 
-	"axe_berserk_form"                     //Берсерк
+	//Warrior form
+	"axe_warrior_wave"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			""
+		"MaxLevel"						"5"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"				"600"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"damage"			"200 300 500 1000 1500"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"projectile_speed"	"1000"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"150"
+			}
+		}
+		
+		// Data driven
+		//-------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			// "FireSound"
+			// {
+			// 	"EffectName"		""
+			// 	"Target"			"CASTER"
+			// }
+			
+			"LinearProjectile"
+			{
+				"Target"			"POINT"
+				"EffectName"		"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
+				"MoveSpeed"			"%projectile_speed"
+				"StartRadius"   	"%radius"
+				"StartPosition" 	"attach_origin"
+				"EndRadius"     	"%radius"
+				"FixedDistance" 	"%range"
+				"TargetTeams"   	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"TargetTypes"   	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				"TargetFlags"   	"DOTA_UNIT_TARGET_FLAG_NONE"
+			}
+		}
+		
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"		"0"
+			"Damage"
+			{
+				"Target"	"TARGET"
+				"Type"		"DAMAGE_TYPE_MAGICAL"
+				"Damage"	"%damage"
+			}
+		}
+	}
+
+	"axe_super_vitality"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/berserk_form"
-		"AbilityTextureName"			"axe/berserk_form"
+		"ScriptFile"					"heroes/hero_axe/super_vitality"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			""
+		"MaxLevel"						"5"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"3 5 7 10"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"status_res"		"15 20 25 30 35"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"regen"				"10 20 30 40 50"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc_health_for_bonus"	"10"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bonus_status_res"	"5"
+			}
+			"06"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"bonus_regen"		"10"
+			}
+		}
+	}
+
+	"axe_warrior_counter_helix"                     //Крутилка / Контратака
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/warrior_counter_helix"
+		"AbilityTextureName"			"axe/counter_helix"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"5"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		"AbilityCooldown"				"0.3"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"300"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"trigger_chance"		"10 12 15 17 20"
+				//"LinkedSpecialBonus"			"special_bonus_custom_axe_1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"base_damage"			"50 100 200 300 500"
+				//"LinkedSpecialBonus"		"special_bonus_custom_axe_2"
+				//"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"attack_damage"			"50"
+				//"LinkedSpecialBonus"		"special_bonus_custom_axe_2"
+				//"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+			}
+		}
+	}
+
+	"axe_warrior_form"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/warrior_form"
+		"AbilityTextureName"			""
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"health"			"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor"					"5"
+			}
+		}
+	}
+
+	"axe_power_of_pain"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/power_of_pain"
+		"AbilityTextureName"			""
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"MaxLevel"						"3"
 		"RequiredLevel"					"8"
 		"LevelsBetweenUpgrades"			"8"
-		"HasScepterUpgrade"				"1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -392,7 +529,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"200 300 400"
+		"AbilityManaCost"				"300"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -401,39 +538,346 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"15"
+				"duration"			"5 7 10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"decrease_armor"		"5 10 15"
+				"bonus_str"				"1 2 3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"				"100 200 400"
+				"damage_per_str"		"5 7 10"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_ms"				"50 75 100"
+				"radius"				"500"
 			}
-			"05"
+		}
+	}
+
+	"axe_blood_bath"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/blood_bath"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName"			""
+		"MaxLevel"						"1"
+		"RequiredLevel"					"8"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"multiplier"		"12"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"hp_remain"			"10"
+			}
+		}
+	}
+
+	//Berserk form
+	"axe_culling_blade_custom"                     //Разрубание / Казнь
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/culling_blade_custom"
+		"AbilityTextureName"			"axe/culling_blade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"5"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastRange"				"400"
+
+
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"300"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"75 150 400 750 2000"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"kill_threshold"	"100 200 500 1000 2500"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"		"50"
+			}
+		}
+	}
+
+	"axe_berserk_blood"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/berserk_blood"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			""
+		"MaxLevel"						"5"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"3 5 7 10"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"attack_speed"		"50"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"move_speed"		"50"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"prc_health_for_bonus"	"10"
+			}
+		}
+	}
+
+	"axe_berserk_counter_helix"                     //Крутилка / Контратака
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/berserk_counter_helix"
+		"AbilityTextureName"			"axe/counter_helix"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"5"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
+
+		"AbilityCooldown"				"0.3"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"200"
+			}
+			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_bat"				"1.1"
+				"trigger_chance"		"8 10 12 14 15"
+				// "LinkedSpecialBonus"			"special_bonus_custom_axe_1"
 			}
-			"06"
+			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_pct"		"50"
+				"var_type"				"FIELD_FLOAT"
+				"base_damage"			"35 50 100 200 500"
+				// "LinkedSpecialBonus"		"special_bonus_custom_axe_2"
+				// "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
-			"07"
+			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_radius"			"350"
+				"var_type"				"FIELD_FLOAT"
+				"attack_damage"			"75"
+				// "LinkedSpecialBonus"		"special_bonus_custom_axe_2"
+				// "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
+		}
+	}
 
+	"axe_berserk_form"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/berserk_form"
+		"AbilityTextureName"			"axe/berserk_form"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bat"				"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_speed"			"125"
+			}
+		}
+	}
+
+	"axe_true_punch"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/true_punch"
+		"AbilityTextureName"			""
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"3"
+		"RequiredLevel"					"8"
+		"LevelsBetweenUpgrades"			"8"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"
+		"AbilityCastRange"				"200"
+
+		"AbilityCooldown"				"60"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit"				"300 500 1000"
+			}
+		}
+	}
+
+	"axe_last_chance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/last_chance"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			""
+		"MaxLevel"						"1"
+		"RequiredLevel"					"8"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"			"4 7 10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"30 70 150"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"300"
+			}
 		}
 	}
 

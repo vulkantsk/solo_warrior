@@ -1,25 +1,25 @@
-LinkLuaModifier( "modifier_axe_counter_helix_custom", "heroes/hero_axe/counter_helix_custom", LUA_MODIFIER_MOTION_NONE ) 
+LinkLuaModifier( "modifier_axe_warrior_counter_helix", "heroes/hero_axe/warrior_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
 
-axe_counter_helix_custom = class({})
+axe_warrior_counter_helix = class({})
 
-function axe_counter_helix_custom:GetAbilityTextureName()
-	local caster = self:GetCaster()
-	if caster:HasModifier("modifier_axe_berserk_form")  then
-		return "axe/counter_helix_berserk"
-	else
+function axe_warrior_counter_helix:GetAbilityTextureName()
+	-- local caster = self:GetCaster()
+	-- if caster:HasModifier("modifier_axe_berserk_form")  then
+	-- 	return "axe/counter_helix_berserk"
+	-- else
 		return "axe/counter_helix"
-	end
+	-- end
 end
 
-function axe_counter_helix_custom:GetCastRange()
+function axe_warrior_counter_helix:GetCastRange()
 	return self:GetSpecialValueFor("trigger_chance")
 end
 
-function axe_counter_helix_custom:GetIntrinsicModifierName()
-	return "modifier_axe_counter_helix_custom"
+function axe_warrior_counter_helix:GetIntrinsicModifierName()
+	return "modifier_axe_warrior_counter_helix"
 end
 
-modifier_axe_counter_helix_custom = class({
+modifier_axe_warrior_counter_helix = class({
     IsHidden                = function(self) return true end,
     IsPurgable              = function(self) return false end,
     IsDebuff                = function(self) return false end,
@@ -31,7 +31,7 @@ modifier_axe_counter_helix_custom = class({
         } end,
 })
 
-function modifier_axe_counter_helix_custom:OnAttackLanded( params )
+function modifier_axe_warrior_counter_helix:OnAttackLanded( params )
     if IsServer() then
     	local caster = self:GetCaster()
 
@@ -39,18 +39,18 @@ function modifier_axe_counter_helix_custom:OnAttackLanded( params )
 			local ability = self:GetAbility()
 			local trigger_chance = ability:GetSpecialValueFor("trigger_chance")
 			local radius = ability:GetSpecialValueFor("radius")
-			local base_damage =ability:GetSpecialValueFor("base_damage")
-			local attack_damage =ability:GetSpecialValueFor("attack_damage")/100
+			local base_damage = ability:GetSpecialValueFor("base_damage")
+			local attack_damage = ability:GetSpecialValueFor("attack_damage")/100
 			local damage = base_damage + caster:GetAverageTrueAttackDamage(caster)*attack_damage
 			local point = caster:GetAbsOrigin()
 			
-			if caster:HasTalent("special_bonus_custom_axe_1") then
-				trigger_chance = trigger_chance + caster:FindTalentValue("special_bonus_custom_axe_1")
-			end
+			-- if caster:HasTalent("special_bonus_custom_axe_1") then
+			-- 	trigger_chance = trigger_chance + caster:FindTalentValue("special_bonus_custom_axe_1")
+			-- end
 			
-			if caster:HasTalent("special_bonus_custom_axe_2") then
-				damage = damage*(100 + caster:FindTalentValue("special_bonus_custom_axe_2"))/100
-			end
+			-- if caster:HasTalent("special_bonus_custom_axe_2") then
+			-- 	damage = damage*(100 + caster:FindTalentValue("special_bonus_custom_axe_2"))/100
+			-- end
 
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then
 				local data = {iFlag = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES}
@@ -78,5 +78,3 @@ function modifier_axe_counter_helix_custom:OnAttackLanded( params )
     end
     return 0
 end
-
-
