@@ -4,16 +4,7 @@ LinkLuaModifier( "modifier_axe_culling_blade_custom", "heroes/hero_axe/culling_b
 axe_culling_blade_custom = class({})
 
 function axe_culling_blade_custom:GetAOERadius()
-	return self:GetSpecialValueFor("radius")
-end
-
-function axe_culling_blade_custom:GetAbilityTextureName()
-	-- local caster = self:GetCaster()
-	-- if caster:HasModifier("modifier_axe_berserk_form")  then
-	-- 	return "axe/culling_blade_berserk"
-	-- else
-		return "axe/culling_blade"
-	-- end
+--	return self:GetSpecialValueFor("radius")
 end
 
 function axe_culling_blade_custom:OnSpellStart()
@@ -27,18 +18,25 @@ function axe_culling_blade_custom:OnSpellStart()
 	self.sound = "Hero_Axe.Culling_Blade_Fail"
 
 	FindClearSpaceForUnit(caster, point, true)
-	local enemies = caster:FindEnemyUnitsInRadius(point, radius, nil)
-
-	for _,enemy in pairs(enemies) do
-		if enemy:GetHealth() < kill_threshold then
-			self:KillTarget(enemy)
-			-- local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
-			-- local current_stack = modifier:GetStackCount()
-			-- modifier:SetStackCount(current_stack + bonus_damage)
-		else
-			DealDamage(caster, enemy, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
-		end
+	if target:GetHealth() < kill_threshold then
+		self:KillTarget(target)
+	else
+		DealDamage(caster, target, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
 	end
+--[[
+		local enemies = caster:FindEnemyUnitsInRadius(point, radius, nil)
+	
+		for _,enemy in pairs(enemies) do
+			if enemy:GetHealth() < kill_threshold then
+				self:KillTarget(enemy)
+				-- local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
+				-- local current_stack = modifier:GetStackCount()
+				-- modifier:SetStackCount(current_stack + bonus_damage)
+			else
+				DealDamage(caster, enemy, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
+			end
+		end
+	]]	
 	caster:EmitSound(self.sound)
 end
 

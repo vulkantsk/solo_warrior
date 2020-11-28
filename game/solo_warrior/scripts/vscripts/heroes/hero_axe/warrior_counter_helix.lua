@@ -2,15 +2,6 @@ LinkLuaModifier( "modifier_axe_warrior_counter_helix", "heroes/hero_axe/warrior_
 
 axe_warrior_counter_helix = class({})
 
-function axe_warrior_counter_helix:GetAbilityTextureName()
-	-- local caster = self:GetCaster()
-	-- if caster:HasModifier("modifier_axe_berserk_form")  then
-	-- 	return "axe/counter_helix_berserk"
-	-- else
-		return "axe/counter_helix"
-	-- end
-end
-
 function axe_warrior_counter_helix:GetCastRange()
 	return self:GetSpecialValueFor("trigger_chance")
 end

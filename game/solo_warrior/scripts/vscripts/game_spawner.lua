@@ -324,6 +324,9 @@ function GameSpawner:OnNPCSpawned(keys)
 			local ability_point = npc:GetAbilityPoints()
 			npc:SetAbilityPoints(ability_point + 1)
 
+	        local warrior_form = caster:FindAbilityByName("axe_warrior_form")
+	        caster:AddNewModifier(caster, warrior_form, "modifier_axe_warrior_form", nil)
+
 			local life_modifier = npc:AddNewModifier(npc, nil, "modifier_extra_life", nil)
 			life_modifier:SetStackCount(HERO_START_LIFES)
 		end)

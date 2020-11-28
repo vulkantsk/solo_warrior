@@ -23,11 +23,11 @@ function axe_warrior_form:OnSpellStart()
 			new_abil:SetLevel(level)
 			new_abil:StartCooldown(cooldown)
         end
+        caster:RemoveModifierByName("modifier_axe_warrior_form")
+		caster:AddNewModifier(caster, nil, "modifier_axe_berserkers_call_armor", nil)
+        caster:CalculateStatBonus()
+        caster:EmitSound("axe_jung_axe_spawn_0"..RandomInt(1, 9))
 	end
-end
-
-function axe_warrior_form:GetIntrinsicModifierName()
-	return "modifier_axe_warrior_form"
 end
 
 --------------------------------------------------------------------------------

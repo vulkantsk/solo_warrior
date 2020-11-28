@@ -23,6 +23,11 @@ function axe_berserk_form:OnSpellStart()
 			new_abil:SetLevel(level)
 			new_abil:StartCooldown(cooldown)
         end
+        caster:RemoveModifierByName("modifier_axe_berserkers_call_armor")
+        local warrior_form = caster:FindAbilityByName("axe_warrior_form")
+        caster:AddNewModifier(caster, warrior_form, "modifier_axe_warrior_form", nil)
+        caster:CalculateStatBonus()
+        caster:EmitSound("axe_axe_spawn_0"..RandomInt(1, 9))
 	end
 end
 
@@ -41,6 +46,8 @@ modifier_axe_berserk_form = class({
 		{
 			MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT,
 			MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
+			MODIFIER_PROPERTY_MODEL_CHANGE,
+			MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND,
 		} end,
 })
 
@@ -56,4 +63,12 @@ end
 
 function modifier_axe_berserk_form:GetModifierMoveSpeedBonus_Constant()
 	return self.move_speed
+end
+
+function modifier_axe_berserk_form:GetModifierModelChange()
+	return "models/items/axe/ti9_jungle_axe/axe_bare.vmdl"
+end
+
+function modifier_axe_berserk_form:GetAttackSound()
+	return "Hero_Axe.Attack.Jungle"
 end
