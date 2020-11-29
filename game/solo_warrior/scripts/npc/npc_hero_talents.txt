@@ -2,18 +2,15 @@
 {
 		//Talents
 
-		"ability_talent_1"
+		"ability_talent_warrior_1"
 		{
 			// General
 			//-------------------------------------------------------------------------------------------------------------
 			"BaseClass"						"ability_datadriven"
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_culling_blade"
+			"AbilityTextureName"			"axe/warrior_counter_helix"
 			"MaxLevel"						"3"
 			"IsOnCastBar"					"0"
-
-			"MainAbility"					"axe_berserkers_call"	//основная абилка, для подгрузки картинки и ветки(воин/ берсерк)
-
 
 			// Special
 			//-------------------------------------------------------------------------------------------------------------
@@ -22,18 +19,29 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"hp_heal"				"1 2 3"
+					"bonus_chance"			"1 2 3"
 				}
 			}
 		}
 
-		"ability_talent_2"
+		"ability_talent_warrior_2"
 		{
 			// General
 			//-------------------------------------------------------------------------------------------------------------
 			"BaseClass"						"ability_datadriven"
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_culling_blade"
+			"AbilityTextureName"			"axe/warrior_super_vitality"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_warrior_3"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_wave"
 			"MaxLevel"						"3"
 			"IsOnCastBar"					"0"
 
@@ -44,18 +52,204 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"hp_heal"				"90"
+					"chance"				"1 2 3"
 				}
 			}
 		}
 
-		"ability_talent_3"
+		"ability_talent_warrior_4"
 		{
 			// General
 			//-------------------------------------------------------------------------------------------------------------
 			"BaseClass"						"ability_datadriven"
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_berserkers_call"
+			"AbilityTextureName"			"axe/warrior_counter_helix"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_warrior_5"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_counter_helix"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"interval"				"2"
+				}
+			}
+		}
+
+		"ability_talent_warrior_6"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_counter_helix"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			"Modifiers"
+			{
+				"modifier_ability_talent_warrior_6"
+				{
+					"Passive"	"1"
+					"IsHidden"		"1"
+					"IsPurgable"	"0"
+				}
+			}
+		}
+
+		"ability_talent_warrior_7"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_super_vitality"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"prc_hp"				"2"
+				}
+			}
+		}
+
+		"ability_talent_warrior_8"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_power_of_pain"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"part"					"20"
+				}
+			}
+		}
+
+		"ability_talent_warrior_9"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_wave"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"part"					"20"
+				}
+			}
+		}
+
+		"ability_talent_warrior_10"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_super_vitality"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_prc"				"100"
+				}
+			}
+		}
+
+		"ability_talent_warrior_11"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_super_vitality"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_warrior_12"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_wave"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_warrior_13"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_power_of_pain"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_str_per_attack"	"1"
+				}
+			}
+		}
+
+		"ability_talent_warrior_14"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/warrior_counter_helix"
 			"MaxLevel"						"3"
 			"IsOnCastBar"					"0"
 
@@ -66,7 +260,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"hp_heal"				"1 2 3"
+					"cd_per_kill"			"1 2 3"
 				}
 			}
 		}
@@ -89,6 +283,28 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"hp_heal"				"1 2 3"
+				}
+			}
+		}
+
+		"ability_talent_berserk_1"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_chance"			"1 2 3"
 				}
 			}
 		}

@@ -279,7 +279,8 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"				"ability_datadriven"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/warrior_wave"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -326,42 +327,6 @@
 			}
 		}
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		
-		// Data driven
-		//-------------------------------------------------------------------------------------------------------------
-		"OnSpellStart"
-		{
-			// "FireSound"
-			// {
-			// 	"EffectName"		""
-			// 	"Target"			"CASTER"
-			// }
-			
-			"LinearProjectile"
-			{
-				"Target"			"POINT"
-				"EffectName"		"particles/econ/items/magnataur/shock_of_the_anvil/magnataur_shockanvil.vpcf"
-				"MoveSpeed"			"%projectile_speed"
-				"StartRadius"   	"%radius"
-				"StartPosition" 	"attach_origin"
-				"EndRadius"     	"%radius"
-				"FixedDistance" 	"%range"
-				"TargetTeams"   	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"TargetTypes"   	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
-				"TargetFlags"   	"DOTA_UNIT_TARGET_FLAG_NONE"
-			}
-		}
-		
-		"OnProjectileHitUnit"
-		{
-			"DeleteOnHit"		"0"
-			"Damage"
-			{
-				"Target"	"TARGET"
-				"Type"		"DAMAGE_TYPE_MAGICAL"
-				"Damage"	"%damage"
-			}
-		}
 	}
 
 	"axe_super_vitality"
@@ -431,7 +396,6 @@
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"heroes/hero_axe/warrior_counter_helix"
 		"AbilityTextureName"			"axe/warrior_counter_helix"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"MaxLevel"						"5"
 		"RequiredLevel"					"1"

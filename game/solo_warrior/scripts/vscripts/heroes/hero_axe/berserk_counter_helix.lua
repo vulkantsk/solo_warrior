@@ -35,9 +35,9 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 			local damage = base_damage + caster:GetAverageTrueAttackDamage(caster)*attack_damage
 			local point = caster:GetAbsOrigin()
 			
-			-- if caster:HasTalent("special_bonus_custom_axe_1") then
-			-- 	trigger_chance = trigger_chance + caster:FindTalentValue("special_bonus_custom_axe_1")
-			-- end
+			if caster:HasTalent("ability_talent_berserk_1") then
+				trigger_chance = trigger_chance + caster:FindTalentValue("ability_talent_berserk_1", "bonus_chance")
+			end
 			
 			-- if caster:HasTalent("special_bonus_custom_axe_2") then
 			-- 	damage = damage*(100 + caster:FindTalentValue("special_bonus_custom_axe_2"))/100
