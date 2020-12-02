@@ -1,5 +1,6 @@
 
 LinkLuaModifier( "modifier_axe_culling_blade_custom", "heroes/hero_axe/culling_blade_custom", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_axe_culling_blade_debuff", "heroes/hero_axe/culling_blade_custom", LUA_MODIFIER_MOTION_NONE )
 
 axe_culling_blade_custom = class({})
 
@@ -16,6 +17,10 @@ function axe_culling_blade_custom:OnSpellStart()
 	local kill_threshold = self:GetSpecialValueFor("kill_threshold")
 	local bonus_damage = self:GetSpecialValueFor("bonus_damage")
 	self.sound = "Hero_Axe.Culling_Blade_Fail"
+
+	if caster:HasTalent("ability_talent_berserk_2") then
+		damage = damage + caster:GetAverageTrueAttackDamage(caster)
+	end
 
 	FindClearSpaceForUnit(caster, point, true)
 	if target:GetHealth() < kill_threshold then
@@ -54,7 +59,18 @@ function axe_culling_blade_custom:KillTarget(enemy)
 	ParticleManager:SetParticleControlEnt(pfx, 4, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
 	ParticleManager:SetParticleControlEnt(pfx, 8, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
 	ParticleManager:ReleaseParticleIndex(pfx)
+
+	if caster:HasTalent("ability_talent_berserk_9") then
+		local point = caster:GetAbsOrigin()
+		local enemies = caster:FindEnemyUnitsInRadius(point, caster:FindTalentValue("ability_talent_berserk_9", "radius"), nil)
+		
+		for _,enemy in pairs(enemies) do
+			local modifier = enemy:AddNewModifier(caster, self, "modifier_axe_culling_blade_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_9", "duration")})
+			modifier:SetStackCount(caster:FindTalentValue("ability_talent_berserk_9", "min_armor"))
+		end
+	end
 end
+
 --------------------------------------------------------------------------------
 
 modifier_axe_culling_blade_custom = class({
@@ -72,4 +88,21 @@ modifier_axe_culling_blade_custom = class({
 
 function modifier_axe_culling_blade_custom:GetModifierPreAttack_BonusDamage()
 	return self:GetStackCount()
+end
+
+--------------------------------------------------------------------------------
+
+modifier_axe_culling_blade_debuff = class({
+	IsHidden 				= function(self) return false end,
+	IsPurgable 				= function(self) return false end,
+	IsDebuff 				= function(self) return true end,
+	DeclareFunctions		= function(self) return 
+		{
+			MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+		} end,
+})
+
+
+function modifier_axe_culling_blade_debuff:GetModifierPhysicalArmorBonus()
+	return -self:GetStackCount()
 end

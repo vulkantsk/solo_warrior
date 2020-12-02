@@ -293,7 +293,7 @@
 			//-------------------------------------------------------------------------------------------------------------
 			"BaseClass"						"ability_datadriven"
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"AbilityTextureName"			"axe_culling_blade"
+			"AbilityTextureName"			"axe/berserk_counter_helix"
 			"MaxLevel"						"3"
 			"IsOnCastBar"					"0"
 
@@ -305,6 +305,213 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"bonus_chance"			"1 2 3"
+				}
+			}
+		}
+
+		"ability_talent_berserk_2"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_culling_blade"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_3"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_4"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_counter_helix"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"chance"				"5 10 15"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration"				"1"
+				}
+			}
+		}
+
+		"ability_talent_berserk_5"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_6"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_7"//dont work
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_culling_blade"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_8"//dont work
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_true_punch"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_9"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_culling_blade"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"radius"				"500"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"min_armor"				"2 4 6"
+				}
+				"03"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration"				"4"
+				}
+			}
+		}
+
+		"ability_talent_berserk_10"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"prc"					"10 20 30"
+				}
+			}
+		}
+
+		"ability_talent_berserk_11"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+		}
+
+		"ability_talent_berserk_12"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_true_punch"
+			"MaxLevel"						"3"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"attacks"				"6 5 4"
+				}
+			}
+		}
+
+		"ability_talent_berserk_13"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			"axe/berserk_blood"
+			"MaxLevel"						"1"
+			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"min_armor"				"1"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration"				"3"
 				}
 			}
 		}

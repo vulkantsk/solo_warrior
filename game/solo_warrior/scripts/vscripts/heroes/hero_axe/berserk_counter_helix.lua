@@ -1,4 +1,5 @@
 LinkLuaModifier( "modifier_axe_berserk_counter_helix", "heroes/hero_axe/berserk_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
+LinkLuaModifier( "modifier_axe_berserk_counter_helix_debuff", "heroes/hero_axe/berserk_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
 
 axe_berserk_counter_helix = class({})
 
@@ -46,7 +47,11 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then
 				local data = {iFlag = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES}
 				local enemies = caster:FindEnemyUnitsInRadius(point, radius, data)
-				ability:UseResources(true, true, true)
+				local needcooldown = true
+				if caster:HasTalent("ability_talent_berserk_5") and caster:FindModifierByName("modifier_axe_berserk_blood") then
+					needcooldown = false
+				end
+				ability:UseResources(true, true, needcooldown)
 				caster:StartGestureWithPlaybackRate(ACT_DOTA_CAST_ABILITY_3, 1)
 				caster:EmitSound("hero_axe.counterhelix")
 
@@ -62,10 +67,40 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 				ParticleManager:ReleaseParticleIndex( effect_cast2 )
 
 				for _, enemy in pairs(enemies) do
+					if caster:HasTalent("ability_talent_berserk_4") and RollPercentage(caster:FindTalentValue("ability_talent_berserk_4", "chance")) then
+						enemy:AddNewModifier(caster, ability, "modifier_stun", {duration = caster:FindTalentValue("ability_talent_berserk_4", "duration")})
+					end
+					if caster:HasTalent("ability_talent_berserk_13") then
+						local mod = enemy:FindModifierByName("modifier_axe_berserk_counter_helix_debuff")
+						if mod then
+							mod:SetStackCount(mod:GetStackCount()+caster:FindTalentValue("ability_talent_berserk_13", "min_armor"))
+							mod:SetDuration(caster:FindTalentValue("ability_talent_berserk_13", "duration"), true)
+						else
+							mod = enemy:AddNewModifier(caster, ability, "modifier_axe_berserk_counter_helix_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_13", "duration")})
+							mod:SetStackCount(caster:FindTalentValue("ability_talent_berserk_13", "min_armor"))
+						end
+					end
 					DealDamage(caster, enemy, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
 				end
 			end
 		end
     end
     return 0
+end
+
+--------------------------------------------------------------------------------
+
+modifier_axe_berserk_counter_helix_debuff = class({
+	IsHidden 				= function(self) return false end,
+	IsPurgable 				= function(self) return false end,
+	IsDebuff 				= function(self) return true end,
+	DeclareFunctions		= function(self) return 
+		{
+			MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+		} end,
+})
+
+
+function modifier_axe_berserk_counter_helix_debuff:GetModifierPhysicalArmorBonus()
+	return -self:GetStackCount()
 end
