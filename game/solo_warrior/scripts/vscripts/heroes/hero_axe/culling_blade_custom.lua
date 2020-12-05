@@ -1,12 +1,13 @@
 
 LinkLuaModifier( "modifier_axe_culling_blade_custom", "heroes/hero_axe/culling_blade_custom", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_axe_culling_blade_debuff", "heroes/hero_axe/culling_blade_custom", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_axe_culling_blade_duel", "heroes/hero_axe/culling_blade_custom", LUA_MODIFIER_MOTION_NONE )
 
 axe_culling_blade_custom = class({})
 
-function axe_culling_blade_custom:GetAOERadius()
+-- function axe_culling_blade_custom:GetAOERadius()
 --	return self:GetSpecialValueFor("radius")
-end
+-- end
 
 function axe_culling_blade_custom:OnSpellStart()
 	local caster = self:GetCaster()
@@ -27,6 +28,11 @@ function axe_culling_blade_custom:OnSpellStart()
 		self:KillTarget(target)
 	else
 		DealDamage(caster, target, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
+		if caster:HasTalent("ability_talent_berserk_7") then
+			self.duel_target = target
+			caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_duel", {duration = caster:FindTalentValue("ability_talent_berserk_7", "duration")})
+            target:MoveToTargetToAttack(caster)
+		end
 	end
 --[[
 		local enemies = caster:FindEnemyUnitsInRadius(point, radius, nil)
@@ -105,4 +111,49 @@ modifier_axe_culling_blade_debuff = class({
 
 function modifier_axe_culling_blade_debuff:GetModifierPhysicalArmorBonus()
 	return -self:GetStackCount()
+end
+
+--------------------------------------------------------------------------------
+
+modifier_axe_culling_blade_duel = class({
+	IsHidden 				= function(self) return false end,
+	IsDebuff 				= function(self) return false end,
+	IsBuff                  = function(self) return true end,
+})
+
+function modifier_axe_culling_blade_duel:CheckState()
+	return {
+		[MODIFIER_STATE_SILENCED] = true,
+        [MODIFIER_STATE_MUTED] = true,
+        [MODIFIER_STATE_COMMAND_RESTRICTED] = true,
+	}
+end
+
+function modifier_axe_culling_blade_duel:OnCreated(kv)
+	local ability = self:GetAbility()
+	self.kill_threshold = ability:GetSpecialValueFor("kill_threshold")
+
+	if IsServer() then
+		if ability.duel_target and ability.duel_target:IsAlive() then
+			self.duel_target = ability.duel_target
+			self:GetParent():MoveToTargetToAttack(self.duel_target)
+			self:StartIntervalThink(0.1)
+		else
+			self:Destroy()
+		end
+    end
+end
+
+function modifier_axe_culling_blade_duel:OnIntervalThink()
+	if IsServer() then
+		if self.duel_target and self.duel_target:IsAlive() then
+			if self.duel_target:GetHealth() < self.kill_threshold then
+				self:GetAbility():KillTarget(self.duel_target)
+				self:Destroy()
+			end
+		else
+			self:Destroy()
+		end
+        return 0.1
+    end
 end

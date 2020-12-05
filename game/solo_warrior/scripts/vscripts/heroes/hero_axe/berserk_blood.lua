@@ -13,18 +13,24 @@ modifier_axe_berserk_blood = class({
 	IsHidden 				= function(self) return false end,
 	IsDebuff 				= function(self) return false end,
 	IsBuff                  = function(self) return true end,
-	DeclareFunctions		= function(self) return self.DF end,
 })
 
-function modifier_axe_berserk_blood:OnCreated()
-	local ability = self:GetAbility()
-	self.attack_speed = ability:GetSpecialValueFor("attack_speed")/100
-    self.move_speed = ability:GetSpecialValueFor("move_speed")/100
-	self.DF = {
+function modifier_axe_berserk_blood:DeclareFunctions()
+	local DFtable = {
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
         MODIFIER_EVENT_ON_TAKEDAMAGE,
 	}
+    if IsServer() and self.talent_bonus then
+		table.insert(DFtable, MODIFIER_PROPERTY_MIN_HEALTH)
+	end
+	return DFtable
+end
+
+function modifier_axe_berserk_blood:OnCreated()
+	local ability = self:GetAbility()
+	self.attack_speed = ability:GetSpecialValueFor("attack_speed")
+    self.move_speed = ability:GetSpecialValueFor("move_speed")
     if IsServer() then
 		local caster = self:GetCaster()
 		local health_prc = caster:GetHealth()/caster:GetMaxHealth()*100
@@ -39,17 +45,17 @@ function modifier_axe_berserk_blood:OnCreated()
 		end
 		self:SetStackCount(stackCount)
 		if caster:HasTalent("ability_talent_berserk_6") and health_prc < 25 then
-			table.insert(self.DF, MODIFIER_PROPERTY_MIN_HEALTH)
+			self.talent_bonus = true
 		end
     end
 end
 
 function modifier_axe_berserk_blood:GetModifierAttackSpeedBonus_Constant()
-	return self.attack_speed * self:GetStackCount()
+	return self.attack_speed * self:GetStackCount()/100
 end
 
 function modifier_axe_berserk_blood:GetModifierMoveSpeedBonus_Constant()
-	return self.move_speed * self:GetStackCount()
+	return self.move_speed * self:GetStackCount()/100
 end
 
 function modifier_axe_berserk_blood:OnTakeDamage( params )

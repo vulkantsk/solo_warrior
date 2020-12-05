@@ -1,4 +1,5 @@
 LinkLuaModifier( "modifier_axe_true_punch", "heroes/hero_axe/true_punch", LUA_MODIFIER_MOTION_NONE ) 
+LinkLuaModifier( "modifier_axe_true_punch_debuff", "heroes/hero_axe/true_punch", LUA_MODIFIER_MOTION_NONE ) 
 
 axe_true_punch = class({})
 
@@ -12,6 +13,11 @@ end
 function axe_true_punch:Punch(hTarget)
     if IsServer() then
         local caster = self:GetCaster()
+        
+        if caster:HasTalent("ability_talent_berserk_8") then
+            local mod = hTarget:AddNewModifier(caster, self, "modifier_axe_true_punch_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_8", "duration")})
+            mod:SetStackCount(caster:FindTalentValue("ability_talent_berserk_8", "min_armor_prc"))
+        end
 
         local damageInfo = 
         {
@@ -27,7 +33,7 @@ end
 
 function axe_true_punch:GetIntrinsicModifierName()
     if IsServer() then
-        if caster:HasTalent("ability_talent_berserk_12") then
+        if self:GetCaster():HasTalent("ability_talent_berserk_12") then
             return "modifier_axe_true_punch"
         end
     end
@@ -61,4 +67,25 @@ function modifier_axe_true_punch:OnAttackLanded( params )
         end
     end
     return 0
+end
+
+--------------------------------------------------------------------------------
+
+modifier_axe_true_punch_debuff = class({
+	IsHidden 				= function(self) return false end,
+	IsPurgable 				= function(self) return false end,
+	IsDebuff 				= function(self) return true end,
+	DeclareFunctions		= function(self) return 
+		{
+			MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+		} end,
+})
+
+function modifier_axe_true_punch_debuff:OnCreated( kv )
+	self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue() / 100
+end
+
+
+function modifier_axe_true_punch_debuff:GetModifierPhysicalArmorBonus()
+	return -self:GetStackCount() * self.nArmorReductionPerStack
 end

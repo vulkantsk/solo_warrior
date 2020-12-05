@@ -389,9 +389,20 @@
 			"AbilityTextureName"			"axe/berserk_culling_blade"
 			"MaxLevel"						"1"
 			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration"				"5"
+				}
+			}
 		}
 
-		"ability_talent_berserk_8"//dont work
+		"ability_talent_berserk_8"
 		{
 			// General
 			//-------------------------------------------------------------------------------------------------------------
@@ -400,6 +411,22 @@
 			"AbilityTextureName"			"axe/berserk_true_punch"
 			"MaxLevel"						"1"
 			"IsOnCastBar"					"0"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"min_armor_prc"			"10"
+				}
+				"02"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"duration"				"5"
+				}
+			}
 		}
 
 		"ability_talent_berserk_9"

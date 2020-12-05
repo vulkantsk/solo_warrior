@@ -24,7 +24,7 @@ function modifier_axe_last_chance:OnTakeDamage( params )
 	if IsServer() then
         if params.unit == self:GetParent() then
             local ability = self:GetAbility()
-            if params.unit:GetHealth() < 1 and ability:IsCooldownReady() then
+            if ability:GetLevel() > 0 and params.unit:GetHealth() < 1 and ability:IsCooldownReady() then
                 params.unit:SetHealth(1)
                 params.unit:AddNewModifier(params.unit, ability, "modifier_axe_last_chance_buff", {duration = ability:GetSpecialValueFor("duration")})
 				ability:UseResources(true, true, true)
