@@ -1,101 +1,128 @@
 "TalentTree"
 {
-    "Talents"
-    {
-        "1"
-        {
-            "Ability"   "ability_talent_1"
-            "Row"   "1"
-            "Column"    "1"
-        }
-        "2"
-        {
-            "Ability"   "ability_talent_2"
-            "Row"   "1"
-            "Column"    "2"
-        }
-        "3"
-        {
-            "Ability"   "ability_talent_3"
-            "Row"   "1"
-            "Column"    "1"
-        }
-        "4"
-        {
-            "Ability"   "ability_talent_4"
-            "Row"   "2"
-            "Column"    "2"
-        }
-        "5"
-        {
-            "Ability"   "ability_talent_5"
-            "Row"   "2"
-            "Column"    "1"
-        }
-        "6"
-        {
-            "Ability"   "ability_talent_6"
-            "Row"   "2"
-            "Column"    "1"
-        }
-        "7"
-        {
-            "Ability"   "ability_talent_7"
-            "Row"   "1"
-            "Column"    "2"
-        }
-        "8"
-        {
-            "Ability"   "ability_talent_8"
-            "Row"   "2"
-            "Column"    "2"
-        }
-        "9"
-        {
-            "Ability"   "ability_talent_9"
-            "Row"   "2"
-            "Column"    "2"
-        }
-        "10"
-        {
-            "Ability"   "ability_talent_10"
-            "Row"   "1"
-            "Column"    "2"
-        }
-    }
-    "Requirements"
-    {
-        "1"
-        {
-            "Row"   "1"
-            "Column"    "1"
-            "HeroLevel" "1"
-            "RequiredPoints"    "0"
-        }
-        "2"
-        {
-            "Row"   "2"
-            "Column"    "1"
-            "HeroLevel" "5"
-            "RequiredPoints"    "3"
-        }
-        "3"
-        {
-            "Row"   "1"
-            "Column"    "2"
-            "HeroLevel" "1"
-            "RequiredPoints"    "0"
-        }
-        "3"
-        {
-            "Row"   "2"
-            "Column"    "2"
-            "HeroLevel" "5"
-            "RequiredPoints"    "3"
-        }
-    }
-    "Settings"
-    {
-        "MaxTalentsPerRequest"  "10"
-    }
+	"npc_dota_hero_axe"
+	{
+		"Warrior"
+		{
+			"0"		//уровень необходимый для прокачки
+			{
+				"1"   "ability_talent_warrior_1"
+			}
+			"3"
+			{
+				"1"   "ability_talent_warrior_2"
+			}
+			"5"
+			{
+				"1"   "ability_talent_warrior_3"
+				"2"   "ability_talent_warrior_4"
+			}
+			"8"
+			{
+				"1"   "ability_talent_warrior_5"
+			}
+			"10"
+			{
+				"1"   "ability_talent_warrior_6"
+				"2"   "ability_talent_warrior_7"
+			}
+			"13"
+			{
+				"1"   "ability_talent_warrior_8"
+			}
+			"15"
+			{
+				"1"   "ability_talent_warrior_9"
+				"2"   "ability_talent_warrior_10"
+			}
+			"18"
+			{
+				"1"   "ability_talent_warrior_11"
+				"2"   "ability_talent_warrior_12"
+			}
+			"20"
+			{
+				"1"   "ability_talent_warrior_13"
+			}
+			"23"
+			{
+				"1"   "ability_talent_warrior_14"
+			}
+			// "25"
+			// {
+			// 	"1"   "ability_talent_warrior_15"
+			// }
+		}
+		"Berserk"
+		{
+			"0"		//уровень необходимый для прокачки
+			{
+				"1"   "ability_talent_berserk_1"
+			}
+			"3"
+			{
+				"1"   "ability_talent_berserk_2"
+				"2"   "ability_talent_berserk_3"
+			}
+			"5"
+			{
+				"1"   "ability_talent_berserk_4"
+			}
+			"8"
+			{
+				"1"   "ability_talent_berserk_5"
+				"2"   "ability_talent_berserk_6"
+			}
+			"10"
+			{
+				"1"   "ability_talent_berserk_7"
+			}
+			"13"
+			{
+				"1"   "ability_talent_berserk_8"
+			}
+			"15"
+			{
+				"1"   "ability_talent_berserk_9"
+				"2"   "ability_talent_berserk_10"
+			}
+			"18"
+			{
+				"1"   "ability_talent_berserk_11"
+			}
+			"20"
+			{
+				"1"   "ability_talent_berserk_12"
+			}
+			"23"
+			{
+				"1"   "ability_talent_berserk_13"
+			}
+			// "25"
+			// {
+			// 	"1"   "ability_talent_berserk_14"
+			// }
+		}
+		// "Util"
+		// {
+		// 	"0"		//уровень необходимый для прокачки
+		// 	{
+		// 		"1"   "ability_talent_warrior_1" 	
+		// 		"2"   "ability_talent_warrior_2"
+		// 		"3"   "ability_talent_berserk_1"
+		// 	}
+		// 	"3"
+		// 	{
+		// 		"1"   "ability_talent_1"
+		// 		"2"   "ability_talent_2"
+		// 		"3"   "ability_talent_3"
+		// 	}
+		// 	"5"
+		// 	{
+		// 		"1"   "ability_talent_1"
+		// 		"2"   "ability_talent_2"
+		// 		"3"   "ability_talent_3"
+		// 	}
+		// }
+	}
 }

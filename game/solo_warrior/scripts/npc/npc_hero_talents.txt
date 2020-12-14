@@ -1,6 +1,6 @@
 ""
 {
-		//Talents
+	//Talents
 
 		"ability_talent_warrior_1"
 		{
@@ -380,7 +380,7 @@
 			"IsOnCastBar"					"0"
 		}
 
-		"ability_talent_berserk_7"//dont work
+		"ability_talent_berserk_7"
 		{
 			// General
 			//-------------------------------------------------------------------------------------------------------------

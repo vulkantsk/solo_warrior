@@ -7,16 +7,18 @@ var talentsData = {
 };
 
 function OnTalentsData(event) {
-    var parsedTalents = JSON.parse(event.talents);
-    for(var i=0; i < parsedTalents.length; i++) {
-        talentsData[parsedTalents[i].id] = parsedTalents[i].data
-    }
-    BuildTalentTree(parsedTalents);
-    talentsData.talentsCount += parsedTalents.length;
-    if(talentsData.talentsCount >= event.count) {
+    // $.Msg(event);
+    // $.Msg(Object.keys(event.talents).length);
+    // var parsedTalents = JSON.parse(event.talents);
+    // for(var i=1; i <= Object.keys(event.talents).length; i++) {
+        talentsData = event.talents
+    // }
+    BuildTalentTree(event);
+    talentsData.talentsCount = Object.keys(event.talents).length;
+    // if(talentsData.talentsCount >= event.count) {
 	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
 	    TALENTS_LAYOUT[TALENTS_LAYOUT["lastColumn"]].SetHasClass("last", true);
-    }
+    // }
 }
 
 function OnTalentsState(event) {
@@ -24,19 +26,17 @@ function OnTalentsState(event) {
     var parsedStateData = JSON.parse(event.talents);
     for(var i=0; i < parsedStateData.length; i++) {
         var talentId = parsedStateData[i].id;
-        var talentColumn = talentsData[talentId].Column;
-        var talentRow = talentsData[talentId].Row;
         talentsData[talentId].panel.SetHasClass("disabled", parsedStateData[i].disabled);
         talentsData[talentId].panel.levelLabel.text = parsedStateData[i].level + " / " + parsedStateData[i].maxlevel;
     }
     TALENTS_LAYOUT["TalentPointsLabel"].text = $.Localize("talent_tree_current_talent_points").replace("%POINTS%", talentPoints);
 }
 
-function BuildTalentTree(parsedTalents) {
-    for (var key in parsedTalents) {
-        var talentColumn = parsedTalents[key].data["Column"];
-        var talentRow = parsedTalents[key].data["Row"];
-        CreateTalentPanel(talentRow, talentColumn, parsedTalents[key].id);
+function BuildTalentTree(data) {
+    for (var key in data.talents) {
+        var talentColumn = data.talents[key].Tab;
+        var talentRow = data.rows[data.talents[key].NeedLevel];
+        CreateTalentPanel(talentRow, talentColumn, key);
     }
 }
 
@@ -53,6 +53,7 @@ function CreateTalentPanel(row, column, talentId) {
 			var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
 			if(talentImagePanel) {
 			    talentImagePanel.abilityname = talentsData[talentId].Ability;
+                $.Msg(talentsData[talentId].Ability);
 			}
 			if(column > TALENTS_LAYOUT["lastColumn"]) {
 			    TALENTS_LAYOUT["lastColumn"] = column;
