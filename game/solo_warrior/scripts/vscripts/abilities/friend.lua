@@ -1,4 +1,5 @@
 LinkLuaModifier("modifier_friend", "abilities/friend", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_friend_buff", "abilities/friend", LUA_MODIFIER_MOTION_NONE)
 
 friend = class({})
 
@@ -11,22 +12,42 @@ function friend:GetIntrinsicModifierName()
 end
 
 modifier_friend = class({
-	IsHidden 		= function(self) return false end,
+	IsHidden 		= function() return true end,
 })
 
 function modifier_friend:OnCreated( kv )
+	local caster = self:GetCaster()
+	local ability = self:GetAbility()
+
+	caster:AddNewModifier(caster, ability, "modifier_friend_buff", hModifierTable)
+end
+
+modifier_friend_buff = class({
+	IsHidden 		= function(self) return false end,
+	IsPurgable 		= function(self) return false end,
+})
+
+function modifier_friend_buff:OnCreated( kv )
 	local ability = self:GetAbility()
 
 	self.search_radius = ability:GetSpecialValueFor( "search_radius" )
 	self.search = true
 
-	local effect = "particles/generic_gameplay/generic_has_quest.vpcf"
-	self.pfx = ParticleManager:CreateParticle(effect, PATTACH_OVERHEAD_FOLLOW, self:GetCaster())
+--	local effect = "particles/generic_gameplay/generic_has_quest.vpcf"
+--	self.pfx = ParticleManager:CreateParticle(effect, PATTACH_OVERHEAD_FOLLOW, self:GetCaster())
 
 	self:StartIntervalThink(1)
 end
 
-function modifier_friend:OnIntervalThink()
+function modifier_friend_buff:GetEffectName()
+	return "particles/generic_gameplay/generic_has_quest.vpcf"
+end
+
+function modifier_friend_buff:GetEffectAttachType()
+	return PATTACH_OVERHEAD_FOLLOW
+end
+
+function modifier_friend_buff:OnIntervalThink()
 	if self.search then
 		local caster = self:GetCaster()
 		local point = caster:GetAbsOrigin()
@@ -45,14 +66,14 @@ function modifier_friend:OnIntervalThink()
 			if enemy:IsRealHero() then
 				local player_id = enemy:GetPlayerID()
 				local player_team = enemy:GetTeam()
-
-				self.search = false
-				ParticleManager:DestroyParticle(self.pfx, true)
---				ParticleManager:ReleaseParticleIndex(self.pfx)
-
 				caster:SetControllableByPlayer(player_id, false)
 				caster:SetTeam(player_team)
 				caster:SetOwner(enemy)
+
+				self:Destroy()
+--				self.search = false
+--				ParticleManager:DestroyParticle(self.pfx, true)
+--				ParticleManager:ReleaseParticleIndex(self.pfx)
 			end
 		end
 	end
