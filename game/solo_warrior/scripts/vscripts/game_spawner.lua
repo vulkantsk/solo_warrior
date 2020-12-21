@@ -31,7 +31,7 @@ GameSpawner.wave_list = {
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
-			units={["npc_kobold"]=10,["npc_kobold_spearman"]=4},
+			units={["npc_kobold"]=10},
 		reward_chest={gold=1000,tier=1}},
 	[2]={reward_gold=200,reward_exp=200,
 			units={["npc_gnoll_ranger"]=5,["npc_kobold_spearman"]=10},
@@ -326,7 +326,7 @@ function GameSpawner:OnNPCSpawned(keys)
 
 	        local warrior_form = npc:FindAbilityByName("axe_warrior_form")
 	        npc:AddNewModifier(npc, warrior_form, "modifier_axe_warrior_form", nil)
-			npc:CalculateStatBonus()
+			npc:CalculateStatBonus(true)
 
 			local life_modifier = npc:AddNewModifier(npc, nil, "modifier_extra_life", nil)
 			life_modifier:SetStackCount(HERO_START_LIFES)

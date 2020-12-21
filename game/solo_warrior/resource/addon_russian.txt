@@ -685,6 +685,19 @@
         "npc_gate_destructible_tier1"                                                        "Закрытые Ворота"
         "npc_gate_undestructible_tier1"                                                      "Запертые Ворота"
         "npc_dota_goodguys_healers"                                                          "Целительный Колодец"       
+//Items
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+		"DOTA_Tooltip_modifier_"							"Name"
+		"DOTA_Tooltip_modifier__Description"				"Desc"
+
+		"DOTA_Tooltip_ability_item_test"							"Тестовый предмет"
+		"DOTA_Tooltip_ability_item_test_Description"				"Название тестового предмета"
+		"DOTA_Tooltip_ability_item_test_bonus_stats"				"+$all"
+		"DOTA_Tooltip_modifier_item_test"							"Баф предмета"
+		"DOTA_Tooltip_modifier_item_test_Description"				""
 				
 	}
 }

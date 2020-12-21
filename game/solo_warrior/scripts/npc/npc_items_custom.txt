@@ -40,4 +40,28 @@
 		"ItemKillable"					"0"
 		"ItemCastOnPickup"				"0"
 	}
+	
+	"item_test"
+	{
+		"BaseClass"             		"item_lua"
+		"ScriptFile"					"items/item_test"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"item_extra_life"
+		"Model"							"models/props_gameplay/heart001.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_stats"			"100"
+			}
+
+		}
+	}
 }

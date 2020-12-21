@@ -26,7 +26,7 @@ function axe_berserk_form:OnSpellStart()
         caster:RemoveModifierByName("modifier_axe_berserkers_call_armor")
         local warrior_form = caster:FindAbilityByName("axe_warrior_form")
         caster:AddNewModifier(caster, warrior_form, "modifier_axe_warrior_form", nil)
-        caster:CalculateStatBonus()
+        caster:CalculateStatBonus(true)
         caster:EmitSound("axe_axe_spawn_0"..RandomInt(1, 9))
 	end
 end

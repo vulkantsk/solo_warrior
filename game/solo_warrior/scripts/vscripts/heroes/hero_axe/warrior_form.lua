@@ -25,7 +25,7 @@ function axe_warrior_form:OnSpellStart()
         end
         caster:RemoveModifierByName("modifier_axe_warrior_form")
 		caster:AddNewModifier(caster, nil, "modifier_axe_berserkers_call_armor", nil)
-        caster:CalculateStatBonus()
+        caster:CalculateStatBonus(true)
         caster:EmitSound("axe_jung_axe_spawn_0"..RandomInt(1, 9))
 	end
 end

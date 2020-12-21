@@ -116,7 +116,7 @@ function FindAbility(unit, index)
 	local ability = unit:GetAbilityByIndex(index)
 	
 	if ability then
-		local ability_behavior = ability:GetBehavior()
+		local ability_behavior = ability:GetBehaviorInt()
 		
 		if bit.band( ability_behavior, DOTA_ABILITY_BEHAVIOR_PASSIVE ) == DOTA_ABILITY_BEHAVIOR_PASSIVE then
 			ability.behavior = "passive"	-- способность пассивна
