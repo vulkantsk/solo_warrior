@@ -4,6 +4,30 @@
 
 	"npc_common_ghost"
 	{
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRange"				"650"		// Range within a target can be attacked.	
+		"AttackRate"				"2"		    // Speed of attack.
+		"MovementSpeed"				"325"		// Speed.			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"ghost_frost_attack"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""			
+
 		// General
         "vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
@@ -13,27 +37,13 @@
 		"Level"						"1"
 		"ModelScale" 				"1"
 
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"ghost_frost_attack"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""			
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
+		
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
-		"AttackRange"				"650"		// Range within a target can be attacked.
+		
 		"ProjectileModel"			"particles/neutral_fx/ghost_base_attack.vpcf"
 		"ProjectileSpeed"			"900"		// Speed of projectile.		     
 
@@ -51,14 +61,6 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -75,6 +77,31 @@
 
 	"npc_unique_ghost"
 	{
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"1110"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------	
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
+		"AttackRange"				"650"		// Range within a target can be attacked.
+		"MovementSpeed"				"325"		// Speed.			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"death_prophet_spirit_siphon"
+		"Ability2"					""
+		"Ability3"					"necrolyte_sadist"
+		"Ability4"					""			
+
+
 		// General
         "vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
@@ -84,27 +111,17 @@
 		"Level"						"1"
 		"ModelScale" 				"0.8"
 
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"death_prophet_spirit_siphon"
-		"Ability2"					""
-		"Ability3"					"necrolyte_sadist"
-		"Ability4"					""			
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		
+		
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
+		
+		
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
-		"AttackRange"				"650"		// Range within a target can be attacked.
+		
 		"ProjectileModel"			"particles/neutral_fx/black_dragon_attack.vpcf"
 		"ProjectileSpeed"			"900"		// Speed of projectile.		     
 
@@ -122,14 +139,8 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1110"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
+		
+		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -146,6 +157,29 @@
 
 	"npc_rare_ghost"
 	{
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"1110"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
+		"AttackRange"				"650"		// Range within a target can be attacked.
+		"MovementSpeed"				"325"		// Speed.			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"nevermore_dark_lord"
+		"Ability2"					"visage_grave_chill"
+		"Ability3"					"phantom_assassin_blur"
+		"Ability4"					""			
 		// General
         "vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
@@ -155,30 +189,13 @@
 		"Level"						"1"
 		"ModelScale" 				"1"
 
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"nevermore_dark_lord"
-		"Ability2"					"visage_grave_chill"
-		"Ability3"					"phantom_assassin_blur"
-		"Ability4"					""			
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"		
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
-		"AttackRange"				"650"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf"
 		"ProjectileSpeed"			"900"		// Speed of projectile.		     
-
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
@@ -193,15 +210,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1110"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
-		
+	
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.

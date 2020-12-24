@@ -3,43 +3,35 @@
 {
 	"npc_common_skeleton"  //skeleton
 	{	
-		//melee unit template 
-
-		// Armor
-		//----------------------------------------------------------------
-
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-        // Attack
-		//----------------------------------------------------------------
-
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackRange"				"125"		// Range within a target can be attacked.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
-		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"1.5"		    // Speed of attack.	
+		"AttackRange"				"125"		// Range within a target can be attacked.
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
+
 			 
 		
-		
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.	
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"	// Model.
 		// Team
 		//----------------------------------------------------------------
@@ -47,7 +39,7 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
@@ -79,35 +71,23 @@
 
 	"npc_rare_skeleton"	//clinkz
 	{
-		// ranged unit template
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-
-        // Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
-		"AttackRange"				"650"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf"
-		"ProjectileSpeed"			"900"		// Speed of projectile.		     
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.	
-
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------	
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
+		"AttackRange"				"650"		// Range within a target can be attacked		
+		"MovementSpeed"				"325"		// Speed.	
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -124,7 +104,14 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
+		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf"
+		"ProjectileSpeed"			"900"		// Speed of projectile.		     
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
@@ -152,34 +139,25 @@
 
 	"npc_unique_skeleton"
 	{	
-		//melee unit template 
-
-		// Armor
-		//----------------------------------------------------------------
-
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-        // Attack
-		//----------------------------------------------------------------
-
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackRange"				"125"		// Range within a target can be attacked.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
-		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"1.5"		    // Speed of attack.		
+		"AttackRange"				"125"		// Range within a target can be attacked.
+
+		"MovementSpeed"				"325"		// Speed.			
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
@@ -196,12 +174,14 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"

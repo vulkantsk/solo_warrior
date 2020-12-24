@@ -3,9 +3,13 @@
 //========================================================================== fishes ======================
 
 	"npc_common_fish" //slark
-	{	
-		//melee unit template 
-
+	{	 
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"	// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
 
@@ -13,25 +17,12 @@
         	"MagicalResistance"			"25"
         	// Attack
 		//----------------------------------------------------------------
-
 		"AttackDamageMin"			"35"		// Damage range min.
 		"AttackDamageMax"			"50"		// Damage range max.
 		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackRange"				"125"		// Range within a target can be attacked.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.	
-		
+		"MovementSpeed"				"325"		// Speed.
+	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
@@ -43,13 +34,14 @@
 		
 		"Model"						"models/heroes/slark/slark.vmdl"	// Model.
 		"ModelScale" 				"1"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
+				"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
@@ -80,40 +72,37 @@
 
 	"npc_rare_fish" //slardar
 	{	
-		//melee unit template 
-
-		// Armor
-		//----------------------------------------------------------------
-
-		"ArmorPhysical"				"1"
-        	"MagicalResistance"			"25"
-        	// Attack
-		//----------------------------------------------------------------
-
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackRange"				"125"		// Range within a target can be attacked.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
-		
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"1.5"		    // Speed of attack.
+		"AttackRange"				"125"		// Range within a target can be attacked.
+		"MovementSpeed"				"325"		// Speed.	
+
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		
+		
 			 
 		
 		
@@ -125,7 +114,7 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
@@ -155,11 +144,14 @@
 
 	"npc_unique_fish" // naga siren
 	{	
-		//melee unit template 
-
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"	// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-
 		"ArmorPhysical"				"1"
         	"MagicalResistance"			"25"
         	// Attack
@@ -167,31 +159,20 @@
 
 		"AttackDamageMin"			"35"		// Damage range min.
 		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
+		"AttackRate"				"1.5"		    // Speed of attack.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.	
-		
+		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
-			 
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"	 
 		
-		
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"Model"						"models/heroes/siren/siren.vmdl"	// Model.
 		"ModelScale" 				"1.2"
 		// Team

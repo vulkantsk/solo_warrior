@@ -2,6 +2,8 @@
 #base "team/matvei/abilities.txt"
 #base "npc_hero_talents.txt"
 
+#base "rooms/room2_4/npc_abilities2_4.txt"
+
 "DOTAAbilities"
 {
 	"Version"		"1"
