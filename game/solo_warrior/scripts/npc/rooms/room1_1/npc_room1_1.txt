@@ -12,11 +12,11 @@
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 	// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"
+		"ArmorPhysical"				"1"
         "MagicalResistance"			"0"
     //	Attack
-        "AttackDamageMin"			"25"		// Damage range min.
-		"AttackDamageMax"			"30"		// Damage range max.
+        "AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"40"		// Damage range max.
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"AttackRate"				"1.1"		    // Speed of attack.
 		"MovementSpeed"				"325"		// Speed.		
@@ -85,17 +85,19 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 
+
+//==================================================================================
 	"npc_rare_dog"
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"450"	// Base health.
+		"StatusHealth"				"400"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1000"		// Base mana.
 		"StatusManaRegen"			"1000"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"5"
         "MagicalResistance"			"10"
         // Attack
         "AttackDamageMin"			"35"		// Damage range min.
@@ -159,18 +161,19 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 
+//==================================================================================
 	"npc_unique_dog"
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"	// Base health.
+		"StatusHealth"				"500"	// Base health.
 		"StatusHealthRegen"			"7"		// Health regeneration rate.
 		"StatusMana"				"1000"		// Base mana.
 		"StatusManaRegen"			"1000"		// Mana regeneration rate.	
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
+		"ArmorPhysical"				"7"
         "MagicalResistance"			"25"
         // Attack 
         "AttackDamageMin"			"55"		// Damage range min.

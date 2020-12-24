@@ -6,21 +6,21 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
+		"StatusHealth"				"1500"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"5"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-        "AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+        "AttackDamageMin"			"85"		// Damage range min.
+		"AttackDamageMax"			"90"		// Damage range max.
 		"AttackRange"				"650"		// Range within a target can be attacked.
 		"AttackRate"				"2"		    // Speed of attack.
-		"MovementSpeed"				"325"		// Speed.		
+		"MovementSpeed"				"350"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"satyr_common_shockwave"
@@ -80,18 +80,18 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
+		"StatusHealth"				"1800"	// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusMana"				"250"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"9"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackDamageMin"			"95"		// Damage range min.
+		"AttackDamageMax"			"100"		// Damage range max.
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"AttackRate"				"1.5"		    // Speed of attack.
 		"MovementSpeed"				"325"		// Speed.		
@@ -154,18 +154,18 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
+		"StatusHealth"				"2100"	// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		"StatusMana"				"500"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"15"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-        "AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+        "AttackDamageMin"			"100"		// Damage range min.
+		"AttackDamageMax"			"110"		// Damage range max.
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"AttackRate"				"1.5"		// Speed of attack.
 		"MovementSpeed"				"325"		// Speed.		

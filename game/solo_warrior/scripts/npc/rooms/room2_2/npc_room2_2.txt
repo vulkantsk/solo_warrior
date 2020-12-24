@@ -5,21 +5,21 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"1900"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
+		"StatusMana"				"500"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"10"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackDamageMin"			"110"		// Damage range min.
+		"AttackDamageMax"			"115"		// Damage range max.
 		"AttackRange"				"125"		// Range within a target can be attacked.	
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"MovementSpeed"				"325"		// Speed.		
+		"AttackRate"				"1.1"		    // Speed of attack.
+		"MovementSpeed"				"400"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"lone_druid_spirit_bear_entangle"
@@ -79,21 +79,21 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"2700"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1000"		// Base mana.
+		"StatusMana"				"750"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"15"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.	
+		"AttackDamageMin"			"150"		// Damage range min.
+		"AttackDamageMax"			"165"		// Damage range max.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"MovementSpeed"				"325"		// Speed.		
+		"AttackRate"				"1.7"		    // Speed of attack.
+		"MovementSpeed"				"400"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"centaur_rare_stomp"
@@ -153,21 +153,21 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		    // Base health.
+		"StatusHealth"				"3500"		    // Base health.
 		"StatusHealthRegen"			"15"		    // Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"5"		    // Mana regeneration rate.	
+		"StatusMana"				"700"			// Base mana.
+		"StatusManaRegen"			"0"		    // Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"			// Physical protection.
+		"ArmorPhysical"				"15"			// Physical protection.
 		"MagicalResistance"			"25"
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"140"		// Damage range min.
-		"AttackDamageMax"			"150"		// Damage range max.	
+		"AttackDamageMin"			"170"		// Damage range min.
+		"AttackDamageMax"			"180"		// Damage range max.	
 		"AttackRange"				"250"		// Range within a target can be attacked.	
-		"AttackRate"				"1.05"		// Speed of attack.
-		"MovementSpeed"				"200"		// Speed.
+		"AttackRate"				"1.9"		// Speed of attack.
+		"MovementSpeed"				"400"		// Speed.
 		// Abilities
 		"Ability1"                          "vengefulspirit_wave_of_terror"
         "Ability2"                        "enraged_wildkin_toughness_aura"
