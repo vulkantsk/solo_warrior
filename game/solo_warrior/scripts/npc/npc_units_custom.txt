@@ -2209,7 +2209,100 @@
 		//Inventory
 		//"Creature"           
 	}
+	"npc_pudge_1"
+	{										
+        "Model"		                 "models/heroes/pudge/pudge.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"ModelScale"                "2.2"
+        "HasInventory"				"1"
 
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"creature_splitter_pudge"
+		"Ability2"		""
+		"Ability3"		""
+		"Ability4"		""
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""       
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+ 	}
+	"npc_pudge_2"
+	{										
+        "Model"		                "models/heroes/pudge/pudge.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		""
+		"Ability2"		""
+		"Ability3"		""
+		"Ability4"		""
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""       
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+ 	}
+	"npc_golem_1"
+	{										
+        "Model"		                "models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"ModelScale"                "2.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"creature_splitter_golem"
+		"Ability2"		""
+		"Ability3"		""
+		"Ability4"		""
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""       
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+ 	}
+	"npc_golem_2"
+	{										
+        "Model"		               "models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"
+		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
+		"SoundSet"		            "n_creep_Melee"
+		"ConsideredHero"				"0"
+		"Level"						"14"
+		"ModelScale"                "1.2"
+        "HasInventory"				"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		""
+		"Ability2"		""
+		"Ability3"		""
+		"Ability4"		""
+		"Ability5"		""
+		"Ability6"		""
+		"Ability7"		""
+        "Ability8"      ""       
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"850"		// Speed.
+ 	}
 //=================================================================================	
 // UNITS: SKELETON & ZOMBIE    --                                                  СКЕЛЕТЫ И ЗОМБИ
 //================================================================================= 

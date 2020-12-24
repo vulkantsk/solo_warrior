@@ -1,0 +1,38 @@
+"DOTAAbilities"
+{
+	"golem_split_large"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"dark_seer_wall_of_replica"
+
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/creature_split.lua"
+				"Function"		"SplitterInit"
+				"split_name"	"npc_rare_golem"//название юнита
+				"split_count"	"4"//количество юнитов
+			}
+		}
+	}
+
+	"golem_split_medium"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"dark_seer_wall_of_replica"
+
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/creature_split.lua"
+				"Function"		"SplitterInit"
+				"split_name"	"npc_common_golem"//название юнита
+				"split_count"	"4"//количество юнитов
+			}
+		}
+	}
+}

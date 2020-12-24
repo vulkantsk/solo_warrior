@@ -1,0 +1,33 @@
+
+"DOTAAbilities"
+{
+	"test_ability"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/test_ability"
+		"AbilityTextureName"			"regeneration"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_bonus"		"10 20 30"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5 6 7"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"health_regen"		"50 100 150"
+			}
+		}
+	}
+
+		
+} //================Хоба!!!

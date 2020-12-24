@@ -2,6 +2,40 @@
 //============================================================================ bugs
 	"npc_common_bug"
 	{
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"555"	// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"
+        "MagicalResistance"			"25"
+        // Attack
+		//----------------------------------------------------------------		
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
+		"AttackRange"				"650"		// Range within a target can be attacked.
+		"MovementSpeed"				"325"		// Speed.			
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"weaver_geminate_attack"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+
+		//Inventory
+        "Creature"
+		{
+			"EquippedItems"                                                                     //а тут слоты рюкзака
+            {
+                "1"         {"Item"        "item_desolator"}
+                
+            }
+        }
+
 		// General
         "vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
@@ -12,30 +46,13 @@
 		"ModelScale" 				"1"
 		"HasInventory"				"1" 
 
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					"weaver_geminate_attack"
-		"Ability2"					""
-		"Ability3"					""
-		"Ability4"					""
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
-
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
-		"AttackRange"				"650"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.	
 		"ProjectileModel"			"particles/units/heroes/hero_weaver/weaver_base_attack.vpcf"
 		"ProjectileSpeed"			"900"		// Speed of projectile.		       
-
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
@@ -50,14 +67,6 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -71,16 +80,7 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
-
-		//Inventory
-        "Creature"
-		{
-			"EquippedItems"                                                                     //а тут слоты рюкзака
-            {
-                "1"         {"Item"        "item_desolator"}
-                
-            }
-        }
+		
 
 	}
 
