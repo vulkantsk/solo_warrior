@@ -337,19 +337,23 @@ end
 function GameSpawner:OnEntityKilled(keys)
 	if _G.testmode then return end
 
-	local unit = EntIndexToHScript(keys.entindex_killed)
-	local unit_name = unit:GetUnitName()
+	local npc = EntIndexToHScript(keys.entindex_killed)
+	local unit_name = npc:GetUnitName()
 	
 	if unit_name == "npc_goodguys_fort" then
 		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
 	end
 	
-	if unit:IsRealHero() and not unit:IsReincarnating() then
+	if npc:IsRealHero() and not npc:IsReincarnating() then
 		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
 	end
 
-	if unit.reward then
-		local ent_index = unit:entindex()
+	if npc.split_name then
+		self:SplitterDeath(npc)
+	end
+
+	if npc.reward then
+		local ent_index = npc:entindex()
 		
 		self.current_units[ent_index] = nil
 		local units = 0
@@ -364,7 +368,7 @@ function GameSpawner:OnEntityKilled(keys)
 	end
 	
 	if unit_name == "npc_gate_destructible_tier1" then
-		self:OpenEntryGate(unit)
+		self:OpenEntryGate(npc)
 	end	
 end
 function GameSpawner:OpenExitGate( index )
@@ -480,5 +484,32 @@ function GameSpawner:OpenEntryGate( unit )
 
 end
 
+function GameSpawner:SplitterDeath(npc)
+	local split_name = npc.split_name
+	local split_count = npc.split_count
+	local point = npc:GetAbsOrigin()
+
+	for i=1, split_count do
+		local unit = CreateUnitByName( split_name, point+RandomVector(10), false, nil, nil, npc:GetTeam() )
+
+		if npc.reward then
+			local ent_index = unit:entindex()
+			self.current_units[ent_index]= unit
+			unit.reward = true
+		end
+
+		local kv = {
+		should_stun = 1,
+		knockback_duration = 0.75,
+		duration = 0.75,
+		knockback_distance = 100,
+		knockback_height = 150,
+		center_x = point.x,
+		center_y = point.y,
+		center_z = point.z
+		}
+		unit:AddNewModifier( npc, nil, "modifier_knockback", kv )
+	end
+end
 
 GameSpawner:InitGameSpawner()
