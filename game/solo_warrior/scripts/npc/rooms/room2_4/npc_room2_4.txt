@@ -179,7 +179,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"golem_split_large"
-		"Ability2"					"creature_splitter_golem"
+		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 

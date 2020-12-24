@@ -46,7 +46,7 @@ GameSpawner.wave_list = {
 	[7]={reward_gold=100,reward_exp=200,
 			units={["npc_common_ogre"]=15,["npc_rare_ogre"]=8 ,["npc_unique_ogre"]=8}},
 	[8]={reward_gold=100,reward_exp=200,
-			units={["npc_common_golem"]=15,["npc_rare_golem"]=7 ,["npc_unique_golem"]=3}},
+			units={["npc_unique_golem"]=1}},
 	[9]={reward_gold=100,reward_exp=200,
 			units={["npc_common_ghost"]=1,["npc_rare_ghost"]=1,["npc_unique_ghost"]=1}},
 	[10]={reward_gold=100,reward_exp=200,
@@ -335,41 +335,41 @@ function GameSpawner:OnNPCSpawned(keys)
 end
 
 function GameSpawner:OnEntityKilled(keys)
-	if _G.testmode then return end
+    local npc = EntIndexToHScript(keys.entindex_killed)
+    local unit_name = npc:GetUnitName()
 
-	local npc = EntIndexToHScript(keys.entindex_killed)
-	local unit_name = npc:GetUnitName()
-	
-	if unit_name == "npc_goodguys_fort" then
-		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
-	end
-	
-	if npc:IsRealHero() and not npc:IsReincarnating() then
-		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
-	end
+    if npc.split_name then
+        self:SplitterDeath(npc)
+    end
 
-	if npc.split_name then
-		self:SplitterDeath(npc)
-	end
+    if _G.testmode then return end
 
-	if npc.reward then
-		local ent_index = npc:entindex()
-		
-		self.current_units[ent_index] = nil
-		local units = 0
-		for key,value in pairs(self.current_units) do
-			units = units + 1
-		end
+    if unit_name == "npc_goodguys_fort" then
+        GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
+    end
 
-		if units == 0 then
-			self.wave_index = self.wave_index + 1
-			GameSpawner:OpenExitGate( self.wave_index )
-		end
-	end
-	
-	if unit_name == "npc_gate_destructible_tier1" then
-		self:OpenEntryGate(npc)
-	end	
+    if npc:IsRealHero() and not npc:IsReincarnating() then
+        GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
+    end
+
+    if npc.reward then
+        local ent_index = npc:entindex()
+
+        self.current_units[ent_index] = nil
+        local units = 0
+        for key,value in pairs(self.current_units) do
+            units = units + 1
+        end
+
+        if units == 0 then
+            self.wave_index = self.wave_index + 1
+            GameSpawner:OpenExitGate( self.wave_index )
+        end
+    end
+
+    if unit_name == "npc_gate_destructible_tier1" then
+        self:OpenEntryGate(npc)
+    end
 end
 function GameSpawner:OpenExitGate( index )
 	local current_wave = self.wave_list[index]

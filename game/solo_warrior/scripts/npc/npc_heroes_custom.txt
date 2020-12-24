@@ -1,4 +1,4 @@
-// Dota Heroes File
+﻿// Dota Heroes File
 // NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding         --переделываем героя по шаблону существующего героя
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
@@ -15,7 +15,7 @@
 		"Ability4"		"axe_warrior_form"
 		"Ability5"		"axe_blood_bath"                                  //абилки героя 1-6
 		"Ability6"		"axe_power_of_pain"		
-		"Ability7"		"test_ability"		                // 7-8 пустая или скрытая ячейка , может служить для замены. например тролль-герой ближник или дальник
+		"Ability7"		""		                // 7-8 пустая или скрытая ячейка , может служить для замены. например тролль-герой ближник или дальник
 		"Ability8"					"generic_hidden"	                    // 7-8 	, куда 9 делась?)))
 		"Ability10"		"special_bonus_custom_axe_1"                        //10-17 это все таланты
 		"Ability11"		"special_bonus_custom_axe_2"
