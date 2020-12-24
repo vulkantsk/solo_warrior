@@ -1,4 +1,3 @@
-
 LinkLuaModifier( "modifier_axe_berserk_form", "heroes/hero_axe/berserk_form", LUA_MODIFIER_MOTION_NONE )
 
 axe_berserk_form = class({})
@@ -23,16 +22,15 @@ function axe_berserk_form:OnSpellStart()
 			new_abil:SetLevel(level)
 			new_abil:StartCooldown(cooldown)
         end
+        caster:RemoveModifierByName("modifier_axe_berserk_form")
         caster:RemoveModifierByName("modifier_axe_berserkers_call_armor")
+        caster:EmitSound("axe_axe_spawn_0"..RandomInt(1, 9))
+        caster:StartGesture(ACT_DOTA_OVERRIDE_ABILITY_2)
+
         local warrior_form = caster:FindAbilityByName("axe_warrior_form")
         caster:AddNewModifier(caster, warrior_form, "modifier_axe_warrior_form", nil)
         caster:CalculateStatBonus(true)
-        caster:EmitSound("axe_axe_spawn_0"..RandomInt(1, 9))
 	end
-end
-
-function axe_berserk_form:GetIntrinsicModifierName()
-	return "modifier_axe_berserk_form"
 end
 
 --------------------------------------------------------------------------------

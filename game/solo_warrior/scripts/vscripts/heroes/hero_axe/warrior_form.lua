@@ -1,7 +1,14 @@
-
 LinkLuaModifier( "modifier_axe_warrior_form", "heroes/hero_axe/warrior_form", LUA_MODIFIER_MOTION_NONE )
 
 axe_warrior_form = class({})
+
+function axe_warrior_form:Spawn()
+	Timers:CreateTimer(0, function()
+        local caster = self:GetCaster()
+        caster:AddNewModifier(caster, self, "modifier_axe_warrior_form", nil)
+		caster:CalculateStatBonus(true)
+	end)
+end
 
 function axe_warrior_form:OnSpellStart()	
     if IsServer() then
@@ -24,9 +31,13 @@ function axe_warrior_form:OnSpellStart()
 			new_abil:StartCooldown(cooldown)
         end
         caster:RemoveModifierByName("modifier_axe_warrior_form")
+        caster:EmitSound("axe_jung_axe_spawn_0"..RandomInt(1, 9))
+        caster:StartGesture(ACT_DOTA_OVERRIDE_ABILITY_2)
+
+        local berserk_form = caster:FindAbilityByName("axe_berserk_form")
+        caster:AddNewModifier(caster, berserk_form, "modifier_axe_berserk_form", nil)
 		caster:AddNewModifier(caster, nil, "modifier_axe_berserkers_call_armor", nil)
         caster:CalculateStatBonus(true)
-        caster:EmitSound("axe_jung_axe_spawn_0"..RandomInt(1, 9))
 	end
 end
 

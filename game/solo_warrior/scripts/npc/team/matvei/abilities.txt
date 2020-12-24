@@ -1,0 +1,67 @@
+
+"DOTAAbilities"
+{
+	"test_ability"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/test_ability"
+		"AbilityTextureName"			"regeneration"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_bonus"		"10 20 30"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5 6 7"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"health_regen"		"50 100 150"
+			}
+		}
+	}
+	"creature_splitter_golem"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"dark_seer_wall_of_replica"
+
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/creature_split.lua"
+				"Function"		"SplitterInit"
+				"split_name"	"npc_golem_2"//название юнита
+				"split_count"	"3"//количество юнитов
+			}
+		}
+	}
+	"creature_splitter_pudge"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"dark_seer_wall_of_replica"
+
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/creature_split.lua"
+				"Function"		"SplitterInit"
+				"split_name"	"npc_pudge_2"//название юнита
+				"split_count"	"2"//количество юнитов
+			}
+		}
+	}
+
+		
+} //================Хоба!!!

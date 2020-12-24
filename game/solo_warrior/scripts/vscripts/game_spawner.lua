@@ -31,7 +31,7 @@ GameSpawner.wave_list = {
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=100,reward_exp=200,
-			units={["npc_common_dog"]=8,["npc_rare_dog"]=2,["npc_unique_dog"]=1},
+			units={["npc_common_dog"]=8,["npc_rare_dog"]=2,["npc_unique_dog"]=1,"npc_pudge_1","npc_golem_1"},
 		reward_chest={gold=1000,tier=1}},
 	[2]={reward_gold=200,reward_exp=200,
 			units={["npc_common_troll"]=6,["npc_rare_troll"]=2,["npc_unique_troll"]=1}},
@@ -323,10 +323,6 @@ function GameSpawner:OnNPCSpawned(keys)
 			local ability_point = npc:GetAbilityPoints()
 			npc:SetAbilityPoints(ability_point + 1)
 
-	        local warrior_form = npc:FindAbilityByName("axe_warrior_form")
-	        npc:AddNewModifier(npc, warrior_form, "modifier_axe_warrior_form", nil)
-			npc:CalculateStatBonus(true)
-
 			local life_modifier = npc:AddNewModifier(npc, nil, "modifier_extra_life", nil)
 			life_modifier:SetStackCount(HERO_START_LIFES)
 		end)
@@ -347,6 +343,10 @@ function GameSpawner:OnEntityKilled(keys)
 	
 	if unit:IsRealHero() and not unit:IsReincarnating() then
 		GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)		
+	end
+
+	if unit.split_name then
+		self:SplitterDeath(unit)
 	end
 
 	if unit.reward then
@@ -481,5 +481,32 @@ function GameSpawner:OpenEntryGate( unit )
 
 end
 
+function GameSpawner:SplitterDeath(npc)
+	local split_name = npc.split_name
+	local split_count = npc.split_count
+	local point = npc:GetAbsOrigin()
+
+	for i=1, split_count do
+		local unit = CreateUnitByName( split_name, point+RandomVector(10), false, nil, nil, npc:GetTeam() )
+
+		if npc.reward then
+			local ent_index = unit:entindex()
+			self.current_units[ent_index]= unit
+			unit.reward = true
+		end
+
+		local kv = {
+		should_stun = 1,
+		knockback_duration = 0.75,
+		duration = 0.75,
+		knockback_distance = 100,
+		knockback_height = 150,
+		center_x = point.x,
+		center_y = point.y,
+		center_z = point.z
+		}
+		unit:AddNewModifier( npc, nil, "modifier_knockback", kv )
+	end
+end
 
 GameSpawner:InitGameSpawner()
