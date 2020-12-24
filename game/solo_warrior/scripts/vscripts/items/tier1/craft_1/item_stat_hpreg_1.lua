@@ -16,6 +16,7 @@ end
 
 item_stat_hpreg_1_1 = class(item_stat_hpreg_1)
 item_stat_hpreg_1_2 = class(item_stat_hpreg_1)
+item_stat_hpreg_1_3 = class(item_stat_hpreg_1)
 
 modifier_item_stat_hpreg_1 = class({
 	IsHidden 		= function(self) return true end,
@@ -51,6 +52,10 @@ modifier_item_stat_hpreg_buff_1 = class({
 	}end,
 })
 
+function modifier_item_stat_hpreg_buff_1:OnCreated()
+	self.buff_regen = self:GetAbility():GetSpecialValueFor("buff_regen")
+end
+
 function modifier_item_stat_hpreg_buff_1:GetModifierConstantHealthRegen()
-	return self:GetAbility():GetSpecialValueFor("buff_regen")
+	return self.buff_regen
 end

@@ -8,6 +8,7 @@ end
 
 item_str_hpreg_1_1 = class(item_str_hpreg_1)
 item_str_hpreg_1_2 = class(item_str_hpreg_1)
+item_str_hpreg_1_3 = class(item_str_hpreg_1)
 
 modifier_item_str_hpreg_1 = class({
 	IsHidden 		= function(self) return true end,

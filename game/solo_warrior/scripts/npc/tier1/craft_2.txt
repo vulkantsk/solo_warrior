@@ -28,7 +28,7 @@
 		"ItemResult"					"item_str_armor_dmg_armor_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_str_armor_1_2;item_dmg_armor_1_2"
+			"01"						"item_str_armor_1_3;item_dmg_armor_1_3"
 		}
 	}
 	"item_str_armor_dmg_armor_1_1" //БМ
@@ -156,7 +156,7 @@
 		"ItemResult"					"item_hp_block_stat_block_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_hp_block_1_2;item_stat_block_1_2"
+			"01"						"item_hp_block_1_3;item_stat_block_1_3"
 		}
 	}
 	"item_hp_block_stat_block_1_1"
@@ -295,7 +295,7 @@
 		"ItemResult"					"item_stat_armor_hp_hpreg_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_stat_armor_1_2;item_hp_hpreg_1_2"
+			"01"						"item_stat_armor_1_3;item_hp_hpreg_1_3"
 		}
 	}
 	"item_stat_armor_hp_hpreg_1_1"
@@ -433,7 +433,7 @@
 		"ItemResult"					"item_dmg_str_hp_stat_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_dmg_str_1_2;item_hp_stat_1_2"
+			"01"						"item_dmg_str_1_3;item_hp_stat_1_3"
 		}
 	}
 	"item_dmg_str_hp_stat_1_1"
@@ -611,7 +611,7 @@
 		"ItemResult"					"item_str_resist_stat_hpreg_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_str_resist_1_2;item_stat_hpreg_1_2"
+			"01"						"item_str_resist_1_3;item_stat_hpreg_1_3"
 		}
 	}
 	"item_str_resist_stat_hpreg_1_1"
@@ -749,7 +749,7 @@
 		"ItemResult"					"item_stat_resist_str_hpreg_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_stat_resist_1_2;item_str_hpreg_1_2"
+			"01"						"item_stat_resist_1_3;item_str_hpreg_1_3"
 		}
 	}
 	"item_stat_resist_str_hpreg_1_1"
@@ -887,7 +887,7 @@
 		"ItemResult"					"item_dmg_stat_hp_armor_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_dmg_stat_1_2;item_hp_armor_1_2"
+			"01"						"item_dmg_stat_1_3;item_hp_armor_1_3"
 		}
 	}
 	"item_dmg_stat_hp_armor_1_1"

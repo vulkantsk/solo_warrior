@@ -13,6 +13,7 @@ end
 
 item_hp_armor_1_1 = class(item_hp_armor_1)
 item_hp_armor_1_2 = class(item_hp_armor_1)
+item_hp_armor_1_3 = class(item_hp_armor_1)
 
 modifier_item_hp_armor_1 = class({
 	IsHidden 		= function(self) return true end,

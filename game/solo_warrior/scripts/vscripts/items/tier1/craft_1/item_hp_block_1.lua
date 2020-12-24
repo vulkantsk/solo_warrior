@@ -8,6 +8,7 @@ end
 
 item_hp_block_1_1 = class(item_hp_block_1)
 item_hp_block_1_2 = class(item_hp_block_1)
+item_hp_block_1_3 = class(item_hp_block_1)
 
 modifier_item_hp_block_1 = class({
 	IsHidden 		= function(self) return true end,

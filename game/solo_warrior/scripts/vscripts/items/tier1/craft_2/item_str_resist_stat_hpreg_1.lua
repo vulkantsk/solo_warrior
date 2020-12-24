@@ -60,9 +60,14 @@ modifier_item_str_resist_stat_hpreg_buff_1 = class({
 	}end,
 })
 
+function modifier_item_str_resist_stat_hpreg_buff_1:OnCreated()
+	self.buff_regen = self:GetAbility():GetSpecialValueFor("buff_regen")
+end
+
 function modifier_item_str_resist_stat_hpreg_buff_1:GetEffectName()
 	return "particles/items_fx/black_king_bar_avatar.vpcf"
 end
+
 function modifier_item_str_resist_stat_hpreg_buff_1:GetModifierConstantHealthRegen()
-	return self:GetAbility():GetSpecialValueFor("buff_regen")
+	return self.buff_regen
 end

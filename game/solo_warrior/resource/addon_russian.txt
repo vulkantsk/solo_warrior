@@ -308,6 +308,12 @@
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_str"					"+$str"
 		"DOTA_Tooltip_ability_item_str_armor_1_2_bonus_armor"				"+$armor"
 
+		"DOTA_Tooltip_ability_item_str_armor_1_3"							"Крепкая броня"
+		"DOTA_Tooltip_ability_item_str_armor_1_3_Lore"						"Прочный нагрудник - который делает героя гораздо живучее"
+		"DOTA_Tooltip_ability_item_str_armor_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Ходячая Крепость</h1> Снижение входящего урона : %dmg_resist_pct%% "
+		"DOTA_Tooltip_ability_item_str_armor_1_3_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_str_armor_1_3_bonus_armor"				"+$armor"
+
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1"							"Шипованая кольчуга"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_Lore"						"Острые шипы на кольчуге - обращают атаки врагов против них самих"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона : %dmg_return_pct%% "
@@ -319,6 +325,12 @@
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона : %dmg_return_pct%% "
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_armor_1_2_bonus_armor"				"+$armor"
+
+		"DOTA_Tooltip_ability_item_dmg_armor_1_3"							"Шипованая кольчуга"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_3_Lore"						"Острые шипы на кольчуге - обращают атаки врагов против них самих"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#960202'>Острые Шипы</font></h1>Возвращение входящего урона : %dmg_return_pct%% "
+		"DOTA_Tooltip_ability_item_dmg_armor_1_3_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_armor_1_3_bonus_armor"				"+$armor"
 
 		"DOTA_Tooltip_ability_item_stat_block_1_1"							"Рунный Щит"
         "DOTA_Tooltip_ability_item_stat_block_1_1_Lore"				    	"Круглый деревянный щит укрепленный мифрилом.<br> Руны выгравированные по всему щиту - имеют сильные защитные свойства.<br><br>Такой щит способен отразить почти любой урон!"
@@ -334,6 +346,13 @@
 		"DOTA_Tooltip_ability_item_stat_block_1_2_bonus_block"				"+к блокировке урона"
         "DOTA_Tooltip_ability_item_stat_block_1_2_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
 
+		"DOTA_Tooltip_ability_item_stat_block_1_3"							"Рунный Щит"
+        "DOTA_Tooltip_ability_item_stat_block_1_3_Lore"				    	"Круглый деревянный щит укрепленный мифрилом.<br> Руны выгравированные по всему щиту - имеют сильные защитные свойства.<br><br>Такой щит способен отразить почти любой урон!"
+		"DOTA_Tooltip_ability_item_stat_block_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#8b4900'>Защитные Руны</font></h1> Абсолюттый блок - после учета всех резистов, блокирует урона : %abs_block%"
+        "DOTA_Tooltip_ability_item_stat_block_1_3_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_block_1_3_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_stat_block_1_3_Note0"             		"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
+
 		"DOTA_Tooltip_ability_item_hp_block_1_1"							"Ловец Боли"
         "DOTA_Tooltip_ability_item_hp_block_1_1_Lore"				    	"Ловец Боли - это большой крепкий щит, способный отразить самые яростные атаки врагов.<br> Но это всего лишь с виду, истинная сила этого предмета в другом.<br><br>Щит зачарован друидами - и способен обращать боль вспять.<br> Раны полученные от ударов врагов моментально затягиваются!"
 		"DOTA_Tooltip_ability_item_hp_block_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Обновление</font></h1> Лечение при получении урона : %heal_per_attack% "
@@ -348,6 +367,13 @@
 		"DOTA_Tooltip_ability_item_hp_block_1_2_bonus_block"				"+к блокировке урона"
         "DOTA_Tooltip_ability_item_hp_block_1_2_Note0"             			"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
 
+		"DOTA_Tooltip_ability_item_hp_block_1_3"							"Ловец Боли"
+        "DOTA_Tooltip_ability_item_hp_block_1_3_Lore"				    	"Ловец Боли - это большой крепкий щит, способный отразить самые яростные атаки врагов.<br> Но это всего лишь с виду, истинная сила этого предмета в другом.<br><br>Щит зачарован друидами - и способен обращать боль вспять.<br> Раны полученные от ударов врагов моментально затягиваются!"
+		"DOTA_Tooltip_ability_item_hp_block_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Обновление</font></h1> Лечение при получении урона : %heal_per_attack% "
+		"DOTA_Tooltip_ability_item_hp_block_1_3_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_block_1_3_bonus_block"				"+к блокировке урона"
+        "DOTA_Tooltip_ability_item_hp_block_1_3_Note0"             			"<em>Гарантированно блокирует : %bonus_block% \n урона от атак</em>"
+
         "DOTA_Tooltip_ability_item_hp_hpreg_1_1"							"Перстень с рубином"
 		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Lore"						"Золотой перстень инкрустирован огромным волшебным рубином.<br><br>Такие рубины можно добыть только в одной волшебной шахте.<br> Эти самоцветы сильно ускоряют врожденную регенерацию и укрепляют здоровье."
 		"DOTA_Tooltip_ability_item_hp_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Укрепление</font></h1> Здоровье увеличивается на : %bonus_health_pct%% "
@@ -359,6 +385,12 @@
 		"DOTA_Tooltip_ability_item_hp_hpreg_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Укрепление</font></h1> Здоровье увеличивается на : %bonus_health_pct%% "
 		"DOTA_Tooltip_ability_item_hp_hpreg_1_2_bonus_hp"					"+$health"
 		"DOTA_Tooltip_ability_item_hp_hpreg_1_2_bonus_hpreg"				"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_3"							"Перстень с рубином"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_3_Lore"						"Золотой перстень инкрустирован огромным волшебным рубином.<br><br>Такие рубины можно добыть только в одной волшебной шахте.<br> Эти самоцветы сильно ускоряют врожденную регенерацию и укрепляют здоровье."
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Укрепление</font></h1> Здоровье увеличивается на : %bonus_health_pct%% "
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_3_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_hpreg_1_3_bonus_hpreg"				"+$hp_regen"
 
 		"DOTA_Tooltip_ability_item_hp_armor_1_1"							"Кушак Великана"
 		"DOTA_Tooltip_ability_item_hp_armor_1_1_Lore"						"Такие кольца носят ледяные великаны.<br>Да, да : что для великана колечко - то для вас - отличный пояс!<br>Поэтому и прозвали этот кушак Великанским.<br><br>Великаны черпают энергию для своей ледяной магии именно из таких колец.<br>От артефакта исходит сильный холод, который оледеняет все вокруг, кроме самого владельца!"
@@ -372,6 +404,12 @@
 		"DOTA_Tooltip_ability_item_hp_armor_1_2_bonus_hp"					"+$health"
 		"DOTA_Tooltip_ability_item_hp_armor_1_2_bonus_armor"				"+$armor"
 
+		"DOTA_Tooltip_ability_item_hp_armor_1_3"							"Кушак Великана"
+		"DOTA_Tooltip_ability_item_hp_armor_1_3_Lore"						"Такие кольца носят ледяные великаны.<br>Да, да : что для великана колечко - то для вас - отличный пояс!<br>Поэтому и прозвали этот кушак Великанским.<br><br>Великаны черпают энергию для своей ледяной магии именно из таких колец.<br>От артефакта исходит сильный холод, который оледеняет все вокруг, кроме самого владельца!"
+		"DOTA_Tooltip_ability_item_hp_armor_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#60dcff'>Аура Холода</font></h1> Враги рядом с героем сильно замедленны.<br> Скорость передвижения врагов снижена на : %aura_ms_decrease% <br><br> Скорость атаки противников снижена на : %aura_as_decrease% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_hp_armor_1_3_bonus_hp"					"+$health"
+		"DOTA_Tooltip_ability_item_hp_armor_1_3_bonus_armor"				"+$armor"
+
 		"DOTA_Tooltip_ability_item_stat_armor_1_1"							"Золотой Нагрудник"
 		"DOTA_Tooltip_ability_item_stat_armor_1_1_Lore"					    "Такие доспехи носят только палладины.<br>Чтобы стать палладином - рыцарь должен пройти посвящение.<br>В оредене палладинов, эти доспехи передаются из поколения в поколение, ибо чертежи и знания о такой ковке давно утрачены.<br><br> Палладины славятся способностью выдерживать сокрушающие удары противников!"
 		"DOTA_Tooltip_ability_item_stat_armor_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Железная Воля</h1> Вероятность полностью поглотить весь полученный урон : %chance_block_pct%%% "
@@ -383,6 +421,12 @@
 		"DOTA_Tooltip_ability_item_stat_armor_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Железная Воля</h1> Вероятность полностью поглотить весь полученный урон : %chance_block_pct%%% "
 		"DOTA_Tooltip_ability_item_stat_armor_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_stat_armor_1_2_bonus_armor"				"+$armor"
+
+		"DOTA_Tooltip_ability_item_stat_armor_1_3"							"Золотой Нагрудник"
+		"DOTA_Tooltip_ability_item_stat_armor_1_3_Lore"					    "Такие доспехи носят только палладины.<br>Чтобы стать палладином - рыцарь должен пройти посвящение.<br>В оредене палладинов, эти доспехи передаются из поколения в поколение, ибо чертежи и знания о такой ковке давно утрачены.<br><br> Палладины славятся способностью выдерживать сокрушающие удары противников!"
+		"DOTA_Tooltip_ability_item_stat_armor_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Железная Воля</h1> Вероятность полностью поглотить весь полученный урон : %chance_block_pct%%% "
+		"DOTA_Tooltip_ability_item_stat_armor_1_3_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_armor_1_3_bonus_armor"				"+$armor"
 
 		"DOTA_Tooltip_ability_item_str_resist_1_1"							"Посох Тёмного Короля"
 		"DOTA_Tooltip_ability_item_str_resist_1_1_Lore"						"Такие посохи, но скорее дубины, излюбленное оружие огров-шаманов!"
@@ -396,6 +440,12 @@
 		"DOTA_Tooltip_ability_item_str_resist_1_2_bonus_str"				"+$str"
 		"DOTA_Tooltip_ability_item_str_resist_1_2_bonus_resist"				"%+$spell_resist"
 
+		"DOTA_Tooltip_ability_item_str_resist_1_3"							"Посох Тёмного Короля"
+		"DOTA_Tooltip_ability_item_str_resist_1_3_Lore"						"Такие посохи, но скорее дубины, излюбленное оружие огров-шаманов!"
+		"DOTA_Tooltip_ability_item_str_resist_1_3_Description"				"<h1>Дарует  Активные  Способности :</h1> <h1>Антимагия</h1> Даёт невосприимчивость к магии.<br><br>Длительность действия : %buff_duration% "
+		"DOTA_Tooltip_ability_item_str_resist_1_3_bonus_str"				"+$str"
+		"DOTA_Tooltip_ability_item_str_resist_1_3_bonus_resist"				"%+$spell_resist"
+
 		"DOTA_Tooltip_ability_item_dmg_stat_1_1"							"Клинок Света"
 		"DOTA_Tooltip_ability_item_dmg_stat_1_1_Lore"						"Поговаривают, что такие мечи куют Асы в самой Вальхалле.<br><br> С подобным оружием в руках - валькирии сражаются с Тьмой!<br> Клинок весь покрыт рунами и пылает ярким светом - общигающим противников!"
 		"DOTA_Tooltip_ability_item_dmg_stat_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Аура Выжигания</h1> Несёт погибель злобным существам!.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br>Радиус воздействия: %aura_radius% "
@@ -407,6 +457,12 @@
 		"DOTA_Tooltip_ability_item_dmg_stat_1_2_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Аура Выжигания</h1> Несёт погибель злобным существам!.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br>Радиус воздействия: %aura_radius% "
 		"DOTA_Tooltip_ability_item_dmg_stat_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_stat_1_2_bonus_stat"					"+$all"
+
+		"DOTA_Tooltip_ability_item_dmg_stat_1_3"							"Клинок Света"
+		"DOTA_Tooltip_ability_item_dmg_stat_1_3_Lore"						"Поговаривают, что такие мечи куют Асы в самой Вальхалле.<br><br> С подобным оружием в руках - валькирии сражаются с Тьмой!<br> Клинок весь покрыт рунами и пылает ярким светом - общигающим противников!"
+		"DOTA_Tooltip_ability_item_dmg_stat_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Аура Выжигания</h1> Несёт погибель злобным существам!.<br> Наносимый ежесекундно урон : %dmg_per_sec% <br><br>Радиус воздействия: %aura_radius% "
+		"DOTA_Tooltip_ability_item_dmg_stat_1_3_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_stat_1_3_bonus_stat"					"+$all"
 
 		"DOTA_Tooltip_ability_item_hp_stat_1_1"								"Рунная Сфера"
 		"DOTA_Tooltip_ability_item_hp_stat_1_1_Lore"						"Красная, сияющая сфера покрытая рунами.<br>Повышает жизненную силу своего владельца.<br><br>Способна конфертировть наносимый магический урон в здоровье."
@@ -420,6 +476,12 @@
 		"DOTA_Tooltip_ability_item_hp_stat_1_2_bonus_stat"					"+$all"
 		"DOTA_Tooltip_ability_item_hp_stat_1_2_bonus_hp"					"+$health"
 
+		"DOTA_Tooltip_ability_item_hp_stat_1_3"								"Рунная Сфера"
+		"DOTA_Tooltip_ability_item_hp_stat_1_3_Lore"						"Красная, сияющая сфера покрытая рунами.<br>Повышает жизненную силу своего владельца.<br><br>Способна конфертировть наносимый магический урон в здоровье."
+		"DOTA_Tooltip_ability_item_hp_stat_1_3_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магический Вампиризм</h1> Восполняет здоровья от урона способностей героя и предметов : %spell_lifesteal_pct%%% "
+		"DOTA_Tooltip_ability_item_hp_stat_1_3_bonus_stat"					"+$all"
+		"DOTA_Tooltip_ability_item_hp_stat_1_3_bonus_hp"					"+$health"
+
 		"DOTA_Tooltip_ability_item_dmg_str_1_1"								"Секира Тора"
 		"DOTA_Tooltip_ability_item_dmg_str_1_1_Lore"						"Огромная секира, переполненная энергией, некогда принадлежавшая Тору.<br> Однако была украдена тысячи лет назад.<br> И с тех пор - она бесчетное количество раз побывала на полях сражений, принося победу тому, кто держал её в руках."
 		"DOTA_Tooltip_ability_item_dmg_str_1_1_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#009aff'>Дар Тора</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
@@ -431,6 +493,12 @@
 		"DOTA_Tooltip_ability_item_dmg_str_1_2_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#009aff'>Дар Тора</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
 		"DOTA_Tooltip_ability_item_dmg_str_1_2_bonus_dmg"					"+$damage"
 		"DOTA_Tooltip_ability_item_dmg_str_1_2_bonus_str"					"+$str"
+
+		"DOTA_Tooltip_ability_item_dmg_str_1_3"								"Секира Тора"
+		"DOTA_Tooltip_ability_item_dmg_str_1_3_Lore"						"Огромная секира, переполненная энергией, некогда принадлежавшая Тору.<br> Однако была украдена тысячи лет назад.<br> И с тех пор - она бесчетное количество раз побывала на полях сражений, принося победу тому, кто держал её в руках."
+		"DOTA_Tooltip_ability_item_dmg_str_1_3_Description"					"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#009aff'>Дар Тора</font></h1> Атакующих героя врагов может ударить цепной молнией с шансом в : %trigger_chance%%% <br> Урон от удара молнией : %bounce_damage% <br> Скачков молнии по цепи : %bounce_count% <br>Дальность удара и скачков молнии : %bounce_radius% <br>Интервал срабатывания : %bounce_interval% "
+		"DOTA_Tooltip_ability_item_dmg_str_1_3_bonus_dmg"					"+$damage"
+		"DOTA_Tooltip_ability_item_dmg_str_1_3_bonus_str"					"+$str"
 
 		"DOTA_Tooltip_ability_item_stat_resist_1_1"							"Рунный Плащ"
 		"DOTA_Tooltip_ability_item_stat_resist_1_1_Lore"					"Такие плащи носят рунные чародеи.<br> Чтоб стать рунными чародеями - архимаги постигают суть магии долгие-придолгие годы!"
@@ -444,6 +512,12 @@
 		"DOTA_Tooltip_ability_item_stat_resist_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_stat_resist_1_2_bonus_resist"			"%+$spell_resist"
 
+		"DOTA_Tooltip_ability_item_stat_resist_1_3"							"Рунный Плащ"
+		"DOTA_Tooltip_ability_item_stat_resist_1_3_Lore"					"Такие плащи носят рунные чародеи.<br> Чтоб стать рунными чародеями - архимаги постигают суть магии долгие-придолгие годы!"
+		"DOTA_Tooltip_ability_item_stat_resist_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1>Магия Рун</h1> Снижает затраты манны на : %manacost_reduction% "
+		"DOTA_Tooltip_ability_item_stat_resist_1_3_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_resist_1_3_bonus_resist"			"%+$spell_resist"
+
 		"DOTA_Tooltip_ability_item_str_hpreg_1_1"							"Кольцо Берсерка"
 		"DOTA_Tooltip_ability_item_str_hpreg_1_1_Lore"						"Древний артефакт викингов, придающий огромную силу своему владельцу.<br> Такие кольца на бой одевают викинги-берсерки - беспощадные и яростные воины.<br><br> Напрочь забывая о защите, они несутся крушить врагов, не чувствуя ни усталости, ни боли.<br> Ибо их защита - кольцо наделяющее ускоренным заживлением ран!"
 		"DOTA_Tooltip_ability_item_str_hpreg_1_1_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
@@ -456,6 +530,12 @@
 		"DOTA_Tooltip_ability_item_str_hpreg_1_2_bonus_str"					"+$str"
 		"DOTA_Tooltip_ability_item_str_hpreg_1_2_bonus_hpreg"				"+$hp_regen"
 
+		"DOTA_Tooltip_ability_item_str_hpreg_1_3"							"Кольцо Берсерка"
+		"DOTA_Tooltip_ability_item_str_hpreg_1_3_Lore"						"Древний артефакт викингов, придающий огромную силу своему владельцу.<br> Такие кольца на бой одевают викинги-берсерки - беспощадные и яростные воины.<br><br> Напрочь забывая о защите, они несутся крушить врагов, не чувствуя ни усталости, ни боли.<br> Ибо их защита - кольцо наделяющее ускоренным заживлением ран!"
+		"DOTA_Tooltip_ability_item_str_hpreg_1_3_Description"				"<h1>Дарует  Пассивные  Способности :</h1> <h1><font color='#50c10e'>Регенерация</font></h1> Восстановление от максимального здоровья в секунду : %hp_regen_pct%% "
+		"DOTA_Tooltip_ability_item_str_hpreg_1_3_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_str_hpreg_1_3_bonus_hpreg"				"+$hp_regen"
+
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_1"							"Исцеление"
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_1_Lore"						"Хрупкое колечко с выгравированнвыми рунами.<br> Подобные кольца используют лекари.<br><br> Обладает сильными регенаритавными свойствами!"
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_1_Description"				"<h1>Дарует  Активные  Способности :</h1> <h1><font color='#50c10e'>Исцеление</font></h1> Ежесекундно восстанавливается здоровья : %buff_regen% <br><br>Длительность действия : %buff_duration% "
@@ -467,6 +547,12 @@
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_2_Description"				"<h1>Дарует  Активные  Способности :</h1> <h1><font color='#50c10e'>Исцеление</font></h1> Ежесекундно восстанавливается здоровья : %buff_regen% <br><br>Длительность действия : %buff_duration% "
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_2_bonus_stat"				"+$all"
 		"DOTA_Tooltip_ability_item_stat_hpreg_1_2_bonus_hpreg"				"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_stat_hpreg_1_3"							"Исцеление"
+		"DOTA_Tooltip_ability_item_stat_hpreg_1_3_Lore"						"Хрупкое колечко с выгравированнвыми рунами.<br> Подобные кольца используют лекари.<br><br> Обладает сильными регенаритавными свойствами!"
+		"DOTA_Tooltip_ability_item_stat_hpreg_1_3_Description"				"<h1>Дарует  Активные  Способности :</h1> <h1><font color='#50c10e'>Исцеление</font></h1> Ежесекундно восстанавливается здоровья : %buff_regen% <br><br>Длительность действия : %buff_duration% "
+		"DOTA_Tooltip_ability_item_stat_hpreg_1_3_bonus_stat"				"+$all"
+		"DOTA_Tooltip_ability_item_stat_hpreg_1_3_bonus_hpreg"				"+$hp_regen"
 //=================================================================================================================		
 //Craft2 //А тут - Топ шмотки ~EHOT
 //=================================================================================================================

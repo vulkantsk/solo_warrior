@@ -27,7 +27,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -48,7 +48,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -58,17 +58,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_resist_pct"			"50 100"
+				"dmg_resist_pct"			"25 50 100"
 			}
 		}
 	}
@@ -81,7 +81,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -102,7 +102,7 @@
 		"AbilityTextureName"			"tier1/craft_1/str_armor_1_2"		//icon
 
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -112,17 +112,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_resist_pct"			"50 100"
+				"dmg_resist_pct"			"25 50 100"
+			}
+		}
+	}
+	"item_recipe_str_armor_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_armor_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_str_armor_1_2"
+		}
+	}
+
+	"item_str_armor_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_armor_1_3"		//icon
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"30 60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 24 36"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_resist_pct"			"25 50 100"
 			}
 		}
 	}
@@ -135,7 +189,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -156,7 +210,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -166,17 +220,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_return_pct"			"100 200"
+				"dmg_return_pct"			"50 100 200"
 			}
 		}
 	}
@@ -189,7 +243,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -210,7 +264,7 @@
 		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_2"		//icon
 
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -220,17 +274,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_return_pct"			"100 200"
+				"dmg_return_pct"			"50 100 200"
+			}
+		}
+	}
+	"item_recipe_dmg_armor_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_armor_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_armor_1_2"
+		}
+	}
+
+	"item_dmg_armor_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_3"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"60 120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 24 36"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"50 100 200"
 			}
 		}
 	}
@@ -243,7 +351,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -264,7 +372,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -274,17 +382,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"120 180"
+				"bonus_block"			"60 120 180"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_per_attack"			"25 50"
+				"heal_per_attack"			"12 25 50"
 			}
 		}
 	}
@@ -297,7 +405,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -318,7 +426,7 @@
 		"AbilityTextureName"			"tier1/craft_1/hp_block_1_2"		//icon
 
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -328,17 +436,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"120 180"
+				"bonus_block"			"60 120 180"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_per_attack"			"25 50"
+				"heal_per_attack"			"12 25 50"
+			}
+		}
+	}
+	"item_recipe_hp_block_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_block_1_2"
+		}
+	}
+
+	"item_hp_block_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_block_1_3"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1200 2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"60 120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_per_attack"			"12 25 50"
 			}
 		}
 	}
@@ -351,7 +513,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -372,7 +534,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -382,17 +544,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"120 180"
+				"bonus_block"			"60 120 180"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"abs_block"			"25 50"
+				"abs_block"			"12 25 50"
 			}
 		}
 	}
@@ -405,7 +567,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -426,7 +588,7 @@
 		"AbilityTextureName"			"tier1/craft_1/stat_block_1_2"		//icon
 
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -436,17 +598,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"120 180"
+				"bonus_block"			"60 120 180"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"abs_block"			"25 50"
+				"abs_block"			"12 25 50"
+			}
+		}
+	}
+	"item_recipe_stat_block_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_block_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_block_1_2"
+		}
+	}
+
+	"item_stat_block_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_3"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"60 120 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"			"12 25 50"
 			}
 		}
 	}
@@ -459,7 +675,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -480,7 +696,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -490,17 +706,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_block_pct"			"50 100"
+				"chance_block_pct"			"25 50 100"
 			}
 		}
 	}
@@ -513,7 +729,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -534,7 +750,7 @@
 		"AbilityTextureName"			"tier1/craft_1/stat_armor_1_2"		//icon
 
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -544,17 +760,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_block_pct"			"50 100"
+				"chance_block_pct"			"25 50 100"
+			}
+		}
+	}
+	"item_recipe_stat_armor_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_armor_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_armor_1_2"
+		}
+	}
+
+	"item_stat_armor_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_armor_1_3"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 24 36"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_block_pct"			"25 50 100"
 			}
 		}
 	}
@@ -567,7 +837,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -588,7 +858,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -598,17 +868,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"50 100"
+				"bonus_health_pct"			"25 50 100"
 			}
 		}
 	}
@@ -621,7 +891,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -642,7 +912,7 @@
 		"AbilityTextureName"			"tier1/craft_1/hp_hpreg_1_2"		//icon
 
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -652,17 +922,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"50 100"
+				"bonus_health_pct"			"25 50 100"
+			}
+		}
+	}
+	"item_recipe_hp_hpreg_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_hpreg_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_hpreg_1_2"
+		}
+	}
+
+	"item_hp_hpreg_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_hpreg_1_3"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1200 2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"15 30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_pct"			"25 50 100"
 			}
 		}
 	}
@@ -675,7 +999,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -696,7 +1020,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -706,12 +1030,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"03"
 			{
@@ -721,7 +1045,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_damage"			"50 100"
+				"bounce_damage"			"25 50 100"
 			}
 			"05"
 			{
@@ -749,7 +1073,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -770,7 +1094,7 @@
 		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_2"		//icon
 
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -780,12 +1104,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"03"
 			{
@@ -795,7 +1119,81 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_damage"			"50 100"
+				"bounce_damage"			"25 50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"0.2"
+			}
+		}
+	}
+	"item_recipe_dmg_str_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_str_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_str_1_2"
+		}
+	}
+
+	"item_dmg_str_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_3"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"60 120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"30 60 90"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"			"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"25 50 100"
 			}
 			"05"
 			{
@@ -823,7 +1221,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -844,7 +1242,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -854,17 +1252,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"			"4 8"
+				"spell_lifesteal_pct"			"2 4 8"
 			}
 		}
 	}
@@ -877,7 +1275,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -898,7 +1296,7 @@
 		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_2"		//icon
 
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -908,17 +1306,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"			"4 8"
+				"spell_lifesteal_pct"			"2 4 8"
+			}
+		}
+	}
+	"item_recipe_hp_stat_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_stat_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_stat_1_2"
+		}
+	}
+
+	"item_hp_stat_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_3"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1200 2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"			"2 4 8"
 			}
 		}
 	}
@@ -931,7 +1383,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -952,7 +1404,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -962,17 +1414,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"40 60"
+				"bonus_resist"			"20 40 60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_duration"			"4 8"
+				"buff_duration"			"2 4 8"
 			}
 		}
 	}
@@ -985,7 +1437,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1006,7 +1458,7 @@
 		"AbilityTextureName"			"tier1/craft_1/str_resist_1_2"		//icon
 
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1016,17 +1468,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"40 60"
+				"bonus_resist"			"20 40 60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_duration"			"4 8"
+				"buff_duration"			"2 4 8"
+			}
+		}
+	}
+	"item_recipe_str_resist_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_resist_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_str_resist_1_2"
+		}
+	}
+
+	"item_str_resist_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/str_resist_1_3"		//icon
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"30 60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"20 40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"2 4 8"
 			}
 		}
 	}
@@ -1039,7 +1545,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1060,7 +1566,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -1070,22 +1576,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_duration"			"4 8"
+				"buff_duration"			"2 4 8"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_regen"			"100 200"
+				"buff_regen"			"50 100 200"
 			}
 		}
 	}
@@ -1098,7 +1604,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1119,7 +1625,7 @@
 		"AbilityTextureName"			"tier1/craft_1/stat_hpreg_1_2"		//icon
 
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1129,22 +1635,81 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_duration"			"4 8"
+				"buff_duration"			"2 4 8"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"buff_regen"			"100 200"
+				"buff_regen"			"50 100 200"
+			}
+		}
+	}
+	"item_recipe_stat_hpreg_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_hpreg_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_hpreg_1_2"
+		}
+	}
+
+	"item_stat_hpreg_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_1/stat_hpreg_1_3"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"15 30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"2 4 8"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_regen"			"50 100 200"
 			}
 		}
 	}
@@ -1157,7 +1722,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1178,7 +1743,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -1188,12 +1753,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"40 60"
+				"bonus_resist"			"20 40 60"
 			}
 			"03"
 			{
@@ -1211,7 +1776,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1232,7 +1797,7 @@
 		"AbilityTextureName"			"tier1/craft_1/stat_resist_1_2"		//icon
 
 		"ItemAliases"    				"stat"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1242,12 +1807,66 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"40 60"
+				"bonus_resist"			"20 40 60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"50 75"
+			}
+		}
+	}
+	"item_recipe_stat_resist_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_resist_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_resist_1_2"
+		}
+	}
+
+	"item_stat_resist_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_resist_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_resist_1_3"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"20 40 60"
 			}
 			"03"
 			{
@@ -1265,7 +1884,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1286,7 +1905,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -1296,17 +1915,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_regen_pct"			"4 8"
+				"hp_regen_pct"			"2 4 8"
 			}
 		}
 	}
@@ -1319,7 +1938,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1340,7 +1959,7 @@
 		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_2"		//icon
 
 		"ItemAliases"    				"str"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1350,17 +1969,71 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"4 8"
+				"hp_regen_pct"			"2 4 8"
+			}
+		}
+	}
+	"item_recipe_str_hpreg_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_hpreg_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_str_hpreg_1_2"
+		}
+	}
+
+	"item_str_hpreg_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_3"		//icon
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"30 60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"15 30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"2 4 8"
 			}
 		}
 	}
@@ -1373,7 +2046,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1394,7 +2067,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -1404,12 +2077,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
@@ -1419,7 +2092,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"1 2" //"50 100"  для тестов аур
+				"dmg_per_sec"			"1 2 3" //"25 50 100"  для тестов аур
 			}
 		}
 	}
@@ -1432,7 +2105,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1453,7 +2126,7 @@
 		"AbilityTextureName"			"tier1/craft_1/dmg_stat_1_2"		//icon
 
 		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1463,12 +2136,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"120 180"
+				"bonus_dmg"			"60 120 180"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
@@ -1478,7 +2151,66 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"1 2" //"50 100"  для тестов аур
+				"dmg_per_sec"			"1 2 3" //"25 50 100"  для тестов аур
+			}
+		}
+	}
+	"item_recipe_dmg_stat_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_stat_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_stat_1_2"
+		}
+	}
+
+	"item_dmg_stat_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_stat_1_3"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"60 120 180"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 20 30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_per_sec"			"1 2 3" //"25 50 100"  для тестов аур
 			}
 		}
 	}
@@ -1491,7 +2223,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1512,7 +2244,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -1522,12 +2254,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
@@ -1537,12 +2269,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_as_decrease"			"50 100"
+				"aura_as_decrease"			"25 50 100"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_ms_decrease"			"50 100"
+				"aura_ms_decrease"			"25 50 100"
 			}
 		}
 	}
@@ -1555,7 +2287,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1576,7 +2308,7 @@
 		"AbilityTextureName"			"tier1/craft_1/hp_armor_1_2"		//icon
 
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"2"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"2"
  
 		// Special
@@ -1586,12 +2318,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
@@ -1601,12 +2333,76 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_as_decrease"			"50 100"
+				"aura_as_decrease"			"25 50 100"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_ms_decrease"			"50 100"
+				"aura_ms_decrease"			"25 50 100"
+			}
+		}
+	}
+	"item_recipe_hp_armor_1_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_armor_1_3"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_armor_1_2"
+		}
+	}
+
+	"item_hp_armor_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_armor_1_3"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1200 2400 3600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 24 36"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"500"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_decrease"			"25 50 100"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_ms_decrease"			"25 50 100"
 			}
 		}
 	}

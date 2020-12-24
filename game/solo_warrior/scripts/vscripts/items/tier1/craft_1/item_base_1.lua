@@ -8,6 +8,7 @@ end
 
 item_base_1_1 = class(item_base_1)
 item_base_1_2 = class(item_base_1)
+item_base_1_3 = class(item_base_1)
 
 modifier_item_base_1 = class({
 	IsHidden 		= function(self) return true end,
