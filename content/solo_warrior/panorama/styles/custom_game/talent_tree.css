@@ -27,7 +27,7 @@
 {
     width: fit-children;
     height: fit-children;
-    flow-children: down;
+    flow-children: up;
     margin-right: 20px;
 }
 

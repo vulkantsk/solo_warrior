@@ -20,6 +20,8 @@ modifier_axe_berserk_counter_helix = class({
     DeclareFunctions        = function(self) return 
         {           
             MODIFIER_EVENT_ON_ATTACK_LANDED,
+			MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL,
+			MODIFIER_PROPERTY_OVERRIDE_ABILITY_SPECIAL_VALUE
         } end,
 })
 
@@ -36,9 +38,9 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 			local damage = base_damage + caster:GetAverageTrueAttackDamage(caster)*attack_damage
 			local point = caster:GetAbsOrigin()
 			
-			if caster:HasTalent("ability_talent_berserk_1") then
-				trigger_chance = trigger_chance + caster:FindTalentValue("ability_talent_berserk_1", "bonus_chance")
-			end
+			-- if caster:HasTalent("ability_talent_berserk_1") then
+			-- 	trigger_chance = trigger_chance + caster:FindTalentValue("ability_talent_berserk_1", "bonus_chance")
+			-- end
 			
 			-- if caster:HasTalent("special_bonus_custom_axe_2") then
 			-- 	damage = damage*(100 + caster:FindTalentValue("special_bonus_custom_axe_2"))/100
@@ -86,6 +88,39 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 		end
     end
     return 0
+end
+
+function modifier_axe_berserk_counter_helix:GetModifierOverrideAbilitySpecial( params )
+	if self:GetParent() == nil or params.ability == nil then
+		return 0
+	end
+
+	local szAbilityName = params.ability:GetAbilityName()
+	if szAbilityName ~= "axe_berserk_counter_helix" then
+		return 0
+	end
+	
+	local szSpecialValueName = params.ability_special_value
+
+	if szSpecialValueName == "trigger_chance" and self:GetParent():HasModifier("modifier_ability_talent_berserk_1") then
+		return 1
+	end
+
+	return 0
+end
+
+function modifier_axe_berserk_counter_helix:GetModifierOverrideAbilitySpecialValue( params )
+	local szAbilityName = params.ability:GetAbilityName()
+	local szSpecialValueName = params.ability_special_value
+	if szAbilityName == "axe_berserk_counter_helix" then
+		if szSpecialValueName == "trigger_chance" then
+			local nSpecialLevel = params.ability_special_level
+			local flBaseValue = params.ability:GetLevelSpecialValueNoOverride( szSpecialValueName, nSpecialLevel )
+			return flBaseValue + self:GetParent():GetModifierStackCount("modifier_ability_talent_berserk_1", self:GetParent())
+		end
+	end
+
+	return 0
 end
 
 --------------------------------------------------------------------------------

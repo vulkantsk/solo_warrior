@@ -222,14 +222,12 @@ function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     if heroLevel < TalentTree.talentsData[talentId].NeedLevel then
         return false
     end
-    -- local canLevelUp = true
-    -- for i = 1, TalentTree:GetLatestTalentID() do
-    --     if (TalentTree:GetTalentColumn(i) == column and TalentTree:GetTalentRow(i) == row and TalentTree:GetHeroTalentLevel(hero, i) > 0 and i ~= talentId) then
-    --         canLevelUp = false
-    --         break
-    --     end
-    -- end
-    return true--canLevelUp
+    for i = 1, TalentTree:GetLatestTalentID() do
+        if (i ~= talentId and TalentTree.talentsData[i].NeedLevel == TalentTree.talentsData[talentId].NeedLevel and TalentTree:GetHeroTalentLevel(hero, i) > 0) then
+            return false
+        end
+    end
+    return true
 end
 
 function TalentTree:OnTalentTreeResetRequest(event)

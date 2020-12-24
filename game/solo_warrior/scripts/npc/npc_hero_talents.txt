@@ -22,6 +22,36 @@
 					"bonus_chance"			"1 2 3"
 				}
 			}
+
+			"Modifiers"
+			{
+				"modifier_ability_talent_warrior_1"
+				{
+					"Passive"		"1"
+					"IsHidden"		"1"
+					"ThinkInterval"		"1"
+					"OnIntervalThink"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"talents/dd_utils"
+							"Function"			"SetModStackCount"
+							"Modifier"			"modifier_ability_talent_warrior_1"
+							"Stacks"			"%bonus_chance"
+						}
+					}
+					"OnCreated"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"talents/dd_utils"
+							"Function"			"SetModStackCount"
+							"Modifier"			"modifier_ability_talent_warrior_1"
+							"Stacks"			"%bonus_chance"
+						}
+					}
+				}
+			}
 		}
 
 		"ability_talent_warrior_2"
@@ -305,6 +335,36 @@
 				{
 					"var_type"				"FIELD_INTEGER"
 					"bonus_chance"			"1 2 3"
+				}
+			}
+
+			"Modifiers"
+			{
+				"modifier_ability_talent_berserk_1"
+				{
+					"Passive"		"1"
+					"IsHidden"		"1"
+					"ThinkInterval"		"1"
+					"OnIntervalThink"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"talents/dd_utils"
+							"Function"			"SetModStackCount"
+							"Modifier"			"modifier_ability_talent_berserk_1"
+							"Stacks"			"%bonus_chance"
+						}
+					}
+					"OnCreated"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"talents/dd_utils"
+							"Function"			"SetModStackCount"
+							"Modifier"			"modifier_ability_talent_berserk_1"
+							"Stacks"			"%bonus_chance"
+						}
+					}
 				}
 			}
 		}
