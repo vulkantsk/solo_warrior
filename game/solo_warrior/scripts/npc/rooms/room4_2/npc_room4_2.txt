@@ -7,7 +7,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -24,7 +24,7 @@
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"skeleton_berserkers_blood"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -75,7 +75,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
@@ -91,7 +91,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"skeleton_strafe"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""			
@@ -143,7 +143,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -160,9 +160,9 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"skeleton_reincarnation"
+		"Ability2"					"skeleton_mortal_strike"
+		"Ability3"					"skeleton_searing_chains"
 		"Ability4"					""
 			 
 		

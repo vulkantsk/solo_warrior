@@ -8,7 +8,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"2000"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"12312312"		// Base mana.
+		"StatusMana"				"12312"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
@@ -23,7 +23,7 @@
 		"MovementSpeed"				"400"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"sven_storm_bolt"
+		"Ability1"					"boss_kobold_storm_bolt"
 		"Ability2"					"nevermore_dark_lord"
 		"Ability3"					""
 		"Ability4"					""
@@ -106,8 +106,8 @@
 		"MovementSpeed"				"400"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"legion_commander_moment_of_courage"
-		"Ability2"					"slardar_bash"
+		"Ability1"					"boss_kobold_courage"
+		"Ability2"					"boss_kobold_bash"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -180,8 +180,8 @@
 		"MovementSpeed"				"400"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"tinker_laser"
-		"Ability2"					"venomancer_poison_sting"
+		"Ability1"					"boss_kobold_laser"
+		"Ability2"					"boss_kobold_poison_sting"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -227,7 +227,7 @@
 		"ConsideredHero"				"1"
 		// Team
 		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_BADGUYS"			                                // Team name.                                       -- юнит наш враг
+		"TeamName"					"DOTA_TEAM_BADGUYS"			                                // Team name.                                      
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"

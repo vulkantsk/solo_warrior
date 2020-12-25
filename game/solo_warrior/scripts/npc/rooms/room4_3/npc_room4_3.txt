@@ -6,7 +6,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -21,8 +21,8 @@
 		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"lizard_chilling_touch"
+		"Ability2"					"lizard_ice_path"
 		"Ability3"					""
 		"Ability4"					""			
 		
@@ -76,7 +76,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -91,8 +91,8 @@
 		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"lizards_ignite"
+		"Ability2"					"lizards_dragon_slave"
 		"Ability3"					""
 		"Ability4"					""			
 		
@@ -144,7 +144,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -159,9 +159,9 @@
 		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"lizards_blast"
+		"Ability2"					"lizards_chaos_meteor"
+		"Ability3"					"lizards_dual_breath"
 		"Ability4"					""			
 		
 		//----------------------------------------------------------------

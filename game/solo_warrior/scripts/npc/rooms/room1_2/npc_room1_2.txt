@@ -14,16 +14,16 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"7"
-        "MagicalResistance"			"25"
-        // Attack
-        "AttackDamageMin"			"55"		// Damage range min.
+        	"MagicalResistance"			"25"
+        	// Attack
+        	"AttackDamageMin"			"55"		// Damage range min.
 		"AttackDamageMax"			"60"		// Damage range max.
 		"AttackRange"				"125"		// Range within a target can be attacked.	
 		"AttackRate"				"1.1"		    // Speed of attack.
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"gnoll_assassin_envenomed_weapon"
+		"Ability1"					"trolls_common_passive"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -99,7 +99,7 @@
 		"MovementSpeed"				"375"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"chen_penitence"
+		"Ability1"					"trolls_rare_penitence"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -181,7 +181,7 @@
 		"MovementSpeed"				"325"		// Speed.		
 
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        	"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
@@ -191,11 +191,10 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"meepo_earthbind"
-		"Ability2"					"satyr_hellcaller_unholy_aura"
-		"Ability3"					"chen_hand_of_god"
+		"Ability1"					"trolls_unique_earthbind"
+		"Ability2"					"trolls_unique_aura"
+		"Ability3"					"trolls_unique_heal"
 		"Ability4"					""
-
 		
 
 		// Attack
@@ -222,9 +221,6 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-			
-
-		 
 		
 		// Vision
 		//----------------------------------------------------------------

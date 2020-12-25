@@ -23,7 +23,7 @@
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"ghost_frost_attack"
+		"Ability1"					"ghost_attack"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""			
@@ -96,9 +96,9 @@
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"death_prophet_spirit_siphon"
+		"Ability1"					"ghost_spirit_siphon"
 		"Ability2"					""
-		"Ability3"					"necrolyte_sadist"
+		"Ability3"					"ghost_sadist"
 		"Ability4"					""			
 
 
@@ -176,9 +176,9 @@
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"nevermore_dark_lord"
-		"Ability2"					"visage_grave_chill"
-		"Ability3"					"phantom_assassin_blur"
+		"Ability1"					"ghost_dark_lord"
+		"Ability2"					"ghost_grave_chill"
+		"Ability3"					"ghost_blur"
 		"Ability4"					""			
 		// General
         "vscripts"					"ai/ai_neutral_autocast"

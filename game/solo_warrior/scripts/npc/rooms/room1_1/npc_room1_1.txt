@@ -108,14 +108,14 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"alpha_wolf_command_aura"
-		"Ability2"					"lycan_howl"
+		"Ability1"					"dogs_rare_aura"
+		"Ability2"					"dogs_rare_howl"
 		"Ability3"					""
 		"Ability4"					""	
 
 
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        	"vscripts"					"ai/ai_neutral_autocast_healers"
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
@@ -184,10 +184,10 @@
 		// Abilities
 		//----------------------------------------------------------------
 
-		"Ability1"					"lycan_shapeshift"
+		"Ability1"					"dogs_unique_ulty"
 		"Ability2"					"" //"lycan_feral_impulse"
-		"Ability3"					"centaur_khan_endurance_aura"
-		"Ability4"					"lycan_summon_wolves_critical_strike"
+		"Ability3"					"dogs_unique_aura"
+		"Ability4"					"dogs_unique_maim"
 
 		// General
         "vscripts"					"ai/ai_neutral_autocast"

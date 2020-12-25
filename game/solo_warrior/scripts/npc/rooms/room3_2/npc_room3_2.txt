@@ -21,7 +21,7 @@
 		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"weaver_geminate_attack"
+		"Ability1"					"bug_geminate_attack"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -98,8 +98,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"nyx_assassin_impale"
-		"Ability2"					"brewmaster_drunken_brawler"
+		"Ability1"					"bug_impale"
+		"Ability2"					"bug_drunken_brawler"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -172,9 +172,9 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"crystal_maiden_frostbite"
-		"Ability2"					"broodmother_incapacitating_bite"
-		"Ability3"					"broodmother_insatiable_hunger"
+		"Ability1"					"bug_frostbite"
+		"Ability2"					"bug_incapacitating_bite"
+		"Ability3"					"bug_hunger"
 		"Ability4"					""
 
 		// Armor

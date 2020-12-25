@@ -8,7 +8,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -25,9 +25,9 @@
 	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"fish_rip_tide"
+		"Ability2"					"fish_fervor"
+		"Ability3"					"fish_essence_shift"
 		"Ability4"					""
 			 
 		
@@ -76,7 +76,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -92,8 +92,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"fish_bush"
+		"Ability2"					"fish_battery_assault"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -148,7 +148,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -164,8 +164,8 @@
 		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"fish_waveform"
+		"Ability2"					"fish_torrent"
 		"Ability3"					""
 		"Ability4"					""
 		// Movement

@@ -7,7 +7,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
@@ -23,7 +23,7 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"dragon_breathe_fire"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""			
@@ -77,7 +77,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
@@ -94,8 +94,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"dragon_burning_spear"
+		"Ability2"					"dragon_light_strike_array"
 		"Ability3"					""
 		"Ability4"					""			
 		
@@ -147,7 +147,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"0"		// Base mana.
+		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -165,8 +165,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
-		"Ability2"					""
+		"Ability1"					"dragon_macropyre"
+		"Ability2"					"dragon_scorched_earth"
 		"Ability3"					""
 		"Ability4"					""			
 		

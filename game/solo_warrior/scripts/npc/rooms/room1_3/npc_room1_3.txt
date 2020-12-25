@@ -22,7 +22,7 @@
 		"MovementSpeed"				"400"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"beastmaster_boar_poison"
+		"Ability1"					"vultures_common_poison"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""	
@@ -183,8 +183,8 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"enraged_wildkin_toughness_aura"
-		"Ability2"					"disruptor_thunder_strike"
+		"Ability1"					"vultures_unique_aura"
+		"Ability2"					"vultures_thunder_strike"
 		"Ability3"					""
 		"Ability4"					""
 

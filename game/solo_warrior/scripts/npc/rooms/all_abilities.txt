@@ -1,0 +1,19 @@
+#base "room1_1/npc_abilities1_1.txt"
+#base "room1_2/npc_abilities1_2.txt"
+#base "room1_3/npc_abilities1_3.txt"
+#base "room1_4/npc_abilities1_4.txt"
+
+#base "room2_1/npc_abilities2_1.txt"
+#base "room2_2/npc_abilities2_2.txt"
+#base "room2_3/npc_abilities2_3.txt"
+#base "room2_4/npc_abilities2_4.txt"
+
+#base "room3_1/npc_abilities3_1.txt"
+#base "room3_2/npc_abilities3_2.txt"
+#base "room3_3/npc_abilities3_3.txt"
+#base "room3_4/npc_abilities3_4.txt"
+
+#base "room4_1/npc_abilities4_1.txt"
+#base "room4_2/npc_abilities4_2.txt"
+#base "room4_3/npc_abilities4_3.txt"
+#base "room4_4/npc_abilities4_4.txt"

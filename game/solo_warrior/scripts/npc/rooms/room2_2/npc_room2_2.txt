@@ -22,7 +22,7 @@
 		"MovementSpeed"				"400"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"lone_druid_spirit_bear_entangle"
+		"Ability1"					"centaur_entangle"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -169,8 +169,8 @@
 		"AttackRate"				"1.9"		// Speed of attack.
 		"MovementSpeed"				"400"		// Speed.
 		// Abilities
-		"Ability1"                          "vengefulspirit_wave_of_terror"
-        "Ability2"                        "enraged_wildkin_toughness_aura"
+		"Ability1"                        "centaur_wave_of_terror"
+        "Ability2"                        "centaur_aura"
 
 		//Inventory
         "Creature"
