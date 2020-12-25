@@ -46,7 +46,7 @@ GameSpawner.wave_list = {
 	[7]={reward_gold=100,reward_exp=200,
 			units={["npc_common_ogre"]=15,["npc_rare_ogre"]=8 ,["npc_unique_ogre"]=8}},
 	[8]={reward_gold=100,reward_exp=200,
-			units={["npc_unique_golem"]=1}},
+			units={["npc_unique_golem"]=2}},
 	[9]={reward_gold=100,reward_exp=200,
 			units={["npc_common_ghost"]=1,["npc_rare_ghost"]=1,["npc_unique_ghost"]=1}},
 	[10]={reward_gold=100,reward_exp=200,

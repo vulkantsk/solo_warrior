@@ -6,19 +6,19 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"3000"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"5"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-        "AttackRate"				"1.5"		    // Speed of attack.
+		"AttackDamageMin"			"260"		// Damage range min.
+		"AttackDamageMax"			"280"		// Damage range max.
+        "AttackRate"				"1.1"		    // Speed of attack.
         "AttackRange"				"125"		// Range within a target can be attacked.
         "MovementSpeed"				"325"		// Speed.		
         // Abilities
@@ -36,7 +36,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 				"0.7"
+		"ModelScale" 				"0.5"
 
 		
 
@@ -88,18 +88,18 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"4000"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"10"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackDamageMin"			"360"		// Damage range min.
+		"AttackDamageMax"			"380"		// Damage range max.
 		"AttackRate"				"1.5"		    // Speed of attack.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"MovementSpeed"				"325"		// Speed.			
@@ -161,21 +161,21 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"5500"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
-		"StatusManaRegen"			"0"		// Mana regeneration rate.	
+		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"15"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
+		"AttackDamageMin"			"560"		// Damage range min.
+		"AttackDamageMax"			"580"		// Damage range max.
+		"AttackRate"				"1.9"		    // Speed of attack.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.		
+		"MovementSpeed"				"325"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"golem_split_large"
@@ -190,11 +190,11 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 				"1.3"
+		"ModelScale" 				"2"
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"	
 		
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
@@ -216,7 +216,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-			
+		
 		// Vision
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
