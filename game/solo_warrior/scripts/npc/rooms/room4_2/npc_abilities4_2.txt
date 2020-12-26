@@ -149,25 +149,14 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"Baseclass"					"skeleton_king_mortal_strike"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilitySound"					"Hero_SkeletonKing.CriticalStrike"
 
-			
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.1"
-
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"30 45 60 75"
-
-
+		"AbilityCooldown"				"4"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -176,33 +165,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_mult"					"300"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"crit_chance"				"15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"skeleton_duration"			"90"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"max_skeleton_charges"		"0"
-				"LinkedSpecialBonus"	"special_bonus_unique_wraith_king_5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"spawn_interval"			"0.25"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"reincarnate_time"			"3"
+				"crit_mult"					"140 180 220 260"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"

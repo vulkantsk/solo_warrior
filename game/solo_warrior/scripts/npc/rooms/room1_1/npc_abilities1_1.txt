@@ -32,19 +32,20 @@
 		"Baseclass"					"lycan_howl"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilitySound"					"Hero_Lycan.Howl"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.3"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50"
-		"AbilityDuration"				"9"
+		"AbilityCooldown"				"18"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"25"
+		"AbilityManaCost"				"35 40 45 50"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -57,25 +58,26 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"howl_duration"		"9.0"		
+				"howl_duration"		"5 6 7 8"		
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"attack_speed"		"20"
+				"attack_damage_reduction"		"25 30 35 40"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor"				"3"
+				"armor"			"5 6 7 8"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen"			"4"
+				"radius"			"2000"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastGestureSlot"	"DEFAULT" 
 	}
 	"dogs_unique_ulty"
 	{

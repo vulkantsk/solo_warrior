@@ -159,8 +159,8 @@
 		"MovementSpeed"				"325"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"lizards_blast"
-		"Ability2"					"lizards_chaos_meteor"
+		"Ability1"					"lizards_laguna_blade"
+		"Ability2"					"lizards_static_storm"
 		"Ability3"					"lizards_dual_breath"
 		"Ability4"					""			
 		
