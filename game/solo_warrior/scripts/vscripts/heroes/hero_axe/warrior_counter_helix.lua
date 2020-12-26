@@ -17,7 +17,7 @@ function axe_warrior_counter_helix:OnSpellStart()
 end
 
 function axe_warrior_counter_helix:GetCastRange()
-	return self:GetSpecialValueFor("trigger_chance")
+	return self:GetSpecialValueFor("radius")
 end
 
 function axe_warrior_counter_helix:GetIntrinsicModifierName()

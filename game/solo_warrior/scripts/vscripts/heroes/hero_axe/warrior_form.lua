@@ -4,7 +4,7 @@ axe_warrior_form = class({})
 
 function axe_warrior_form:Spawn()
     if IsServer() then
-		Timers:CreateTimer(0, function()
+		Timers:CreateTimer(0.1, function()
 			local caster = self:GetCaster()
 			caster:AddNewModifier(caster, self, "modifier_axe_warrior_form", nil)
 			caster:CalculateStatBonus(true)

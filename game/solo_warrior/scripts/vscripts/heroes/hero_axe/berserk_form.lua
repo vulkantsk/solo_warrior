@@ -74,7 +74,7 @@ function modifier_axe_berserk_form:OnIntervalThink()
 end
 
 function modifier_axe_berserk_form:GetModifierBaseAttackTimeConstant()
-	return self.bat + self.bat_ptp * self:GetStackCount()
+	return self.bat - self.bat_ptp * self:GetStackCount()
 end
 
 function modifier_axe_berserk_form:GetModifierMoveSpeedBonus_Constant()
