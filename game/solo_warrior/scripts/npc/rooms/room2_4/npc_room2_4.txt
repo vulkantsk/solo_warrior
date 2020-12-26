@@ -106,7 +106,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"golem_split_medium"
-		"Ability2"					""
+		"Ability2"					"golem_avalanche"
 		"Ability3"					""
 		"Ability4"					""
 
@@ -179,8 +179,8 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"golem_split_large"
-		"Ability2"					""
-		"Ability3"					""
+		"Ability2"					"golem_craggy_exterior"
+		"Ability3"					"golem_bash"
 		"Ability4"					""
 
 		// General
