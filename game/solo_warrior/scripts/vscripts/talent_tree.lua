@@ -22,7 +22,7 @@ function TalentTree:Init()
     for tabName, tabData in pairs(data["npc_dota_hero_axe"]) do
         table.insert(self.tabs, tabName)
         for nlvl, talents in pairs(tabData) do
-            table.insert(self.rows, nlvl)
+            table.insert(self.rows, tonumber(nlvl))
             for _, talent in pairs(talents) do
                 local talentData = {
                     Ability = talent,
@@ -68,6 +68,18 @@ function TalentTree:OnTalentTreeTalentsRequest(event)
         return
     end
     CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_talents_from_server", {talents = TalentTree.talentsData, tabs = TalentTree.tabs, rows = TalentTree.rows})
+end
+
+function TalentTree:GetColumnTalentPoints(hero, tab)
+    local points = 0
+    if hero and hero.talents then
+        for talentId, lvl in pairs(hero.talents.level) do
+            if TalentTree.talentsData[talentId].Tab == tab then
+                points = points + lvl
+            end
+        end
+    end
+    return points
 end
 
 function TalentTree:GetLatestTalentID()

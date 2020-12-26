@@ -53,14 +53,32 @@ function modifier_axe_berserk_form:OnCreated()
 	local ability = self:GetAbility()
 	self.bat = ability:GetSpecialValueFor("bat")
 	self.move_speed = ability:GetSpecialValueFor("move_speed")
+	self.bat_ptp = ability:GetSpecialValueFor("bat_per_tp")
+	self.move_speed_ptp = ability:GetSpecialValueFor("move_speed_per_tp")
+
+	if IsServer() then
+		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 2))
+		self:StartIntervalThink(1)
+	end
+end
+
+function modifier_axe_berserk_form:OnIntervalThink()
+	if IsServer() then
+		local old_stack_count = self:GetStackCount()
+		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 2))
+		if old_stack_count ~= self:GetStackCount() then
+			self:GetCaster():CalculateStatBonus(true)
+		end
+		return 1
+	end
 end
 
 function modifier_axe_berserk_form:GetModifierBaseAttackTimeConstant()
-	return self.bat
+	return self.bat + self.bat_ptp * self:GetStackCount()
 end
 
 function modifier_axe_berserk_form:GetModifierMoveSpeedBonus_Constant()
-	return self.move_speed
+	return self.move_speed + self.move_speed_ptp * self:GetStackCount()
 end
 
 function modifier_axe_berserk_form:GetModifierModelChange()

@@ -1,4 +1,4 @@
-var TALENTS_CONTAINER, TALENTS_WINDOW;
+var TALENTS_CONTAINER, TALENTS_WINDOW, ROWS_DATA;
 var TALENTS_LAYOUT = {
     "lastColumn": -1
 };
@@ -11,6 +11,7 @@ function OnTalentsData(event) {
     // $.Msg(Object.keys(event.talents).length);
     // var parsedTalents = JSON.parse(event.talents);
     // for(var i=1; i <= Object.keys(event.talents).length; i++) {
+        ROWS_DATA = event.rows
         talentsData = event.talents
     // }
     BuildTalentTree(event);
@@ -36,6 +37,10 @@ function BuildTalentTree(data) {
     for (var key in data.talents) {
         var talentColumn = data.talents[key].Tab;
         var talentRow = data.rows[data.talents[key].NeedLevel];
+        if (talentColumn == 1)
+        {
+            CreateTalentPanel(talentRow, 0, data.talents[key].NeedLevel);
+        }
         CreateTalentPanel(talentRow, talentColumn, key);
     }
 }
@@ -43,52 +48,70 @@ function BuildTalentTree(data) {
 function CreateTalentPanel(row, column, talentId) {
     if (TALENTS_LAYOUT[column]) {
         if (TALENTS_LAYOUT[column][row]) {
-            var talentPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column][row], "HeroTalent" + talentId);
-            talentPanel.BLoadLayout("file://{resources}/layout/custom_game/talent_tree/talent.xml", false, false);
-            talentPanel.hittest = true;
-            talentPanel.hittestchildren = false;
-			talentPanel.Data().ShowTalentTooltip = ShowTalentTooltip;
-			talentPanel.Data().HideTalentTooltip = HideTalentTooltip;
-			talentPanel.Data().OnTalentClick = OnTalentClick;
-			var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
-			if(talentImagePanel) {
-			    talentImagePanel.abilityname = talentsData[talentId].Ability;
-                $.Msg(talentsData[talentId].Ability);
-			}
-			if(column > TALENTS_LAYOUT["lastColumn"]) {
-			    TALENTS_LAYOUT["lastColumn"] = column;
-			}
-			talentsData[talentId].panel = talentPanel;
-			talentsData[talentId].panel.levelLabel = talentPanel.FindChildTraverse("TalentLevel");
-        } else {
-            TALENTS_LAYOUT[column][row] = CreateTalentRow(row, column);
-            TALENTS_LAYOUT[column].MoveChildAfter(TALENTS_LAYOUT[column][row], TALENTS_LAYOUT[column].GetChild(0));
-            CreateTalentPanel(row, column, talentId);
+            if (column != 0 || TALENTS_LAYOUT[column][row].GetChildCount() < 1) {
+                if (column == 0)
+                {
+                    var talentPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column][row], "LevelTalent" + talentId);
+                    talentPanel.BLoadLayout("file://{resources}/layout/custom_game/talent_tree/talent.xml", false, false);
+                    talentPanel.hittest = true;
+                    talentPanel.hittestchildren = false;
+                    // var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
+                    // if(talentImagePanel) {
+                    //     talentImagePanel.abilityname = talentsData[talentId].Ability;
+                    // }
+                    talentPanel.FindChildTraverse("TalentLevel").text = talentId;
+                }
+                else
+                {
+                    var talentPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column][row], "HeroTalent" + talentId);
+                    talentPanel.BLoadLayout("file://{resources}/layout/custom_game/talent_tree/talent.xml", false, false);
+                    talentPanel.hittest = true;
+                    talentPanel.hittestchildren = false;
+                    talentPanel.Data().ShowTalentTooltip = ShowTalentTooltip;
+                    talentPanel.Data().HideTalentTooltip = HideTalentTooltip;
+                    talentPanel.Data().OnTalentClick = OnTalentClick;
+                    var talentImagePanel = talentPanel.FindChildTraverse("TalentImage");
+                    if(talentImagePanel) {
+                        talentImagePanel.abilityname = talentsData[talentId].Ability;
+                    }
+                    if(column > TALENTS_LAYOUT["lastColumn"]) {
+                        TALENTS_LAYOUT["lastColumn"] = column;
+                    }
+                    talentsData[talentId].panel = talentPanel;
+                    talentsData[talentId].panel.levelLabel = talentPanel.FindChildTraverse("TalentLevel");
+                }
+            }
         }
+        //  else {
+        //     TALENTS_LAYOUT[column][row] = CreateTalentRows(column);
+        //     TALENTS_LAYOUT[column].MoveChildAfter(TALENTS_LAYOUT[column][row], TALENTS_LAYOUT[column].GetChild(0));
+        //     CreateTalentPanel(row, column, talentId);
+        // }
     } else {
         var talentColumnPanel = $.CreatePanel("Panel", TALENTS_CONTAINER, "");
         talentColumnPanel.SetHasClass("TalentTreeColumn", true);
         TALENTS_LAYOUT[column] = talentColumnPanel;
         talentColumnPanel.hittest = false;
         talentColumnPanel.hittestchildren = true;
-        var titleRow = CreateTalentRow(row, column, true);
-        var titleLabel = $.CreatePanel("Label", titleRow, "");
-        titleLabel.SetHasClass("TitleLabel", true);
-        titleLabel.text = $.Localize("#talent_tree_column_" + column + "_title");
-        titleRow.hittest = false;
-        titleRow.hittestchildren = true;
+        CreateTalentRows(column);
         CreateTalentPanel(row, column, talentId);
     }
 }
 
-function CreateTalentRow(row, column, isTitleRow) {
+function CreateTalentRows(column) {
     if (TALENTS_LAYOUT[column]) {
-        var talentRowPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column], "");
-        talentRowPanel.SetHasClass("TalentTreeRow", true);
-        if(isTitleRow == null) {
-            TALENTS_LAYOUT[column][row] = talentRowPanel;
+        var talentRowTitlePanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column], "");
+        talentRowTitlePanel.SetHasClass("TalentTreeRow", true);
+        var titleLabel = $.CreatePanel("Label", talentRowTitlePanel, "");
+        titleLabel.SetHasClass("TitleLabel", true);
+        titleLabel.text = $.Localize("#talent_tree_column_" + column + "_title");
+        talentRowTitlePanel.hittest = false;
+        talentRowTitlePanel.hittestchildren = true;
+        for (var key in ROWS_DATA) {
+            var talentRowPanel = $.CreatePanel("Panel", TALENTS_LAYOUT[column], "");
+            talentRowPanel.SetHasClass("TalentTreeRow", true);
+            TALENTS_LAYOUT[column][ROWS_DATA[key]] = talentRowPanel;
         }
-        return talentRowPanel
     }
 }
 
@@ -123,6 +146,7 @@ function OnTalentTreeWindowButtonClick() {
         TALENTS_WINDOW.style.visibility = "collapse";
     } else {
         TALENTS_WINDOW.style.visibility = "visible";
+	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
     }
     isWindowOpened = !isWindowOpened;
     Game.EmitSound("General.SelectAction");

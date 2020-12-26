@@ -472,6 +472,16 @@
 				"var_type"				"FIELD_INTEGER"
 				"armor"					"5"
 			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health_per_tp"			"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_per_tp"			"1"
+			}
 		}
 
 		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"
@@ -756,6 +766,16 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"move_speed"			"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bat_per_tp"			"0.1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_speed_per_tp"			"10"
 			}
 		}
 		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"

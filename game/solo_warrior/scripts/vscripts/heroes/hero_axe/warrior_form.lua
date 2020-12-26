@@ -61,12 +61,30 @@ function modifier_axe_warrior_form:OnCreated()
 	local ability = self:GetAbility()
 	self.health = ability:GetSpecialValueFor("health")
 	self.armor = ability:GetSpecialValueFor("armor")
+	self.health_ptp = ability:GetSpecialValueFor("health_per_tp")
+	self.armor_ptp = ability:GetSpecialValueFor("armor_per_tp")
+
+	if IsServer() then
+		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 1))
+		self:StartIntervalThink(1)
+	end
+end
+
+function modifier_axe_warrior_form:OnIntervalThink()
+	if IsServer() then
+		local old_stack_count = self:GetStackCount()
+		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 1))
+		if old_stack_count ~= self:GetStackCount() then
+			self:GetCaster():CalculateStatBonus(true)
+		end
+		return 1
+	end
 end
 
 function modifier_axe_warrior_form:GetModifierHealthBonus()
-	return self.health
+	return self.health + self.health_ptp * self:GetStackCount()
 end
 
 function modifier_axe_warrior_form:GetModifierPhysicalArmorBonus()
-	return self.armor
+	return self.armor + self.armor_ptp * self:GetStackCount()
 end
