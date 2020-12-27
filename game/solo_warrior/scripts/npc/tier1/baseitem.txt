@@ -2,7 +2,7 @@
 "DOTAAbilities"
 {
 
-	"item_str_1_3"
+	"item_str_1_3" //ТОПОР +СИЛЫ(ТОПОР ЛЕСНИКА). Не могу переименовать это, поэтому буду подписывать. Удачи всем кто будет рабоать с названием item_recipe_base1_base2_base3_base4_1_1
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_str_1"
@@ -12,7 +12,7 @@
 		"ItemAliases"    				"str"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"30"
+				"bonus_value"			"15"
 			}
 		}
 	}
@@ -36,7 +36,7 @@
 		"ItemAliases"    				"agi"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"30"
+				"bonus_value"			"15"
 			}
 		}
 	}
@@ -61,7 +61,7 @@
 		"ItemAliases"    				"int"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -70,13 +70,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"30"
+				"bonus_value"			"15"
 			}
 		}
 	}
 
 
-	"item_stat_1_3"
+	"item_stat_1_3" // РУННАЯ СФЕРА. +АТРИБУТЫ
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_stat_1"
@@ -86,7 +86,7 @@
 		"ItemAliases"    				"stat"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -95,13 +95,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"10"
+				"bonus_value"			"7"
 			}
 		}
 	}
 		
 
-	"item_armor_1_3"
+	"item_armor_1_3" //РЖАВАЯ КОЛЬЧУГА
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_armor_1"
@@ -111,7 +111,7 @@
 		"ItemAliases"    				"armor"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -120,7 +120,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"12"
+				"bonus_value"			"5"
 			}
 		}
 	}
@@ -136,7 +136,7 @@
 		"ItemAliases"    				"as"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -151,7 +151,7 @@
 	}
 	
 
-	"item_block_1_3"
+	"item_block_1_3" //ЩИТ. ДЕРЕВЯННЫЙ БАКЛЕР
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_block_1"
@@ -161,82 +161,7 @@
 		"ItemAliases"    				"block"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
- 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"60"
-			}
-		}
-	}
-	
-
-	"item_dmg_1_3"
-	{
-		"BaseClass"                     "item_lua"
-		"ScriptFile"                    "items/tier1/baseitem/item_dmg_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/baseitem/dmg_1_3"
-
-		"ItemAliases"    				"dmg"
-		"MaxUpgradeLevel"				"3"
-		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
- 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"60"
-			}
-		}
-	}
-	
-
-	"item_hp_1_3"
-	{
-		"BaseClass"                     "item_lua"
-		"ScriptFile"                    "items/tier1/baseitem/item_hp_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/baseitem/hp_1_3"
-
-		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"3"
-		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
- 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"1200"
-			}
-		}
-	}
-	
-
-	"item_hpreg_1_3"
-	{
-		"BaseClass"                     "item_lua"
-		"ScriptFile"                    "items/tier1/baseitem/item_hpreg_1"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"tier1/baseitem/hpreg_1_3"
-
-		"ItemAliases"    				"hpreg"
-		"MaxUpgradeLevel"				"3"
-		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -246,6 +171,81 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_value"			"15"
+			}
+		}
+	}
+	
+
+	"item_dmg_1_3" //РЖАВЫЙ МЕЧ. УРОН
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_dmg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/dmg_1_3"
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+		"ItemCost"						"100"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"15"
+			}
+		}
+	}
+	
+
+	"item_hp_1_3" //СФЕРА ЖИЗНИ. +ХП
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_hp_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/hp_1_3"
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+		"ItemCost"						"100"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"400"
+			}
+		}
+	}
+	
+
+	"item_hpreg_1_3" //ПЕЧАТЬ НАДЕЖДЫ. +РЕГЕН ХП
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/hpreg_1_3"
+
+		"ItemAliases"    				"hpreg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+		"ItemCost"						"100"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"10"
 			}
 		}
 	}
@@ -261,7 +261,7 @@
 		"ItemAliases"    				"mp"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -286,7 +286,7 @@
 		"ItemAliases"    				"mpreg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -311,7 +311,7 @@
 		"ItemAliases"    				"spell"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -326,7 +326,7 @@
 	}
 	
 
-	"item_resist_1_3"
+	"item_resist_1_3" //НАКИДКА ВЕДЬМОЛОВА
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_resist_1"
@@ -336,7 +336,7 @@
 		"ItemAliases"    				"resist"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"300"
+		"ItemCost"						"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -345,7 +345,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"20"
+				"bonus_value"			"15"
 			}
 		}
 	}
