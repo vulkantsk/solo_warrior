@@ -13,7 +13,7 @@
 				"ScriptFile"	"abilities/creature_split.lua"
 				"Function"		"SplitterInit"
 				"split_name"	"npc_rare_golem"//название юнита
-				"split_count"	"5"//количество юнитов
+				"split_count"	"4"//количество юнитов
 			}
 		}
 	}
@@ -31,7 +31,7 @@
 				"ScriptFile"	"abilities/creature_split.lua"
 				"Function"		"SplitterInit"
 				"split_name"	"npc_common_golem"//название юнита
-				"split_count"	"10"//количество юнитов
+				"split_count"	"6"//количество юнитов
 			}
 		}
 	}
@@ -137,7 +137,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -214,12 +214,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"125"
+				"damage"					"25"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"0.6"
+				"duration"					"0.1"
 			}
 			"03"
 			{

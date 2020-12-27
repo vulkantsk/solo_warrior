@@ -17,12 +17,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed"			"-40"
+				"attack_speed"			"-20"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_speed"		"-40"
+				"movement_speed"		"-30"
 			}
 			"03"
 			{
@@ -51,7 +51,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"900"
 		"AbilityCastPoint"				"0.3"
-		"AbilityCooldown"				"4.0"
+		"AbilityCooldown"				"5.0"
 		"AbilityManaCost"				"50"
 
 		// Special
@@ -61,7 +61,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"initial_damage"		"140"
+				"initial_damage"		"120"
 			}
 			"02"
 			{
@@ -102,7 +102,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"fiery_soul_attack_speed_bonus"	"40"
+				"fiery_soul_attack_speed_bonus"	"60"
 				"LinkedSpecialBonus"			"special_bonus_unique_lina_2"				
 			}
 			"02"
@@ -115,12 +115,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"fiery_soul_max_stacks"		"3"
+				"fiery_soul_max_stacks"		"10"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"fiery_soul_stack_duration"			"10"
+				"fiery_soul_stack_duration"			"100"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -175,11 +175,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18"
+		"AbilityCooldown"				"9"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"130"
+		"AbilityManaCost"				"100"
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
@@ -198,18 +198,18 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"strikes"					"4"
+				"strikes"					"8"
 				"LinkedSpecialBonus"		"special_bonus_unique_disruptor"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"strike_interval"			"2.0"
+				"strike_interval"			"0.5"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"strike_damage"				"45"
+				"strike_damage"				"15"
 				"LinkedSpecialBonus"		"special_bonus_unique_disruptor_3"
 			}
 		}
