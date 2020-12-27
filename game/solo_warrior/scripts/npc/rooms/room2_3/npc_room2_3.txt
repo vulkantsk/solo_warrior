@@ -107,7 +107,7 @@
 		//----------------------------------------------------------------
 		"Ability1"					"ogre_frost_armor"
 		"Ability2"					"ogre_bloodlust"
-		"Ability3"					"ogre_multicast"
+		"Ability3"					"ogre_magi_multicast"
 		"Ability4"					""
 
 		// General

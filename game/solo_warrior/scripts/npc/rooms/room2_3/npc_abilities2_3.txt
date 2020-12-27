@@ -214,11 +214,11 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 
-	"ogre_multicast"
+	"ogre_magi_multicast"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"							"ogre_magi_multicast"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"5441"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityCastAnimation"			"ACT_INVALID"
@@ -265,6 +265,7 @@
 			}
 		}
 	}
+
 
 
 	"ogre_swipes"
