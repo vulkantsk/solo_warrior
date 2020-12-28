@@ -31,11 +31,11 @@ GameSpawner.wave_list = {
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
 	[1]={reward_gold=200,reward_exp=200,
-			units={["npc_common_dog"]=12,["npc_rare_dog"]=4,["npc_unique_dog"]=1}},
+			units={["npc_common_dog"]=12,["npc_rare_dog"]=5,["npc_unique_dog"]=1}},
 	[2]={reward_gold=200,reward_exp=200,
-			units={["npc_common_troll"]=10,["npc_rare_troll"]=4,["npc_unique_troll"]=2}},
+			units={["npc_common_troll"]=8,["npc_rare_troll"]=4,["npc_unique_troll"]=2}},
 	[3]={reward_gold=200,reward_exp=200,
-			units={["npc_common_vulture"]=13,["npc_rare_vulture"]=4,["npc_unique_vulture"]=3,}},
+			units={["npc_common_vulture"]=14,["npc_rare_vulture"]=4,["npc_unique_vulture"]=3,}},
 	[4]={reward_gold=400,reward_exp=200,
 			units={["npc_boss_koboldini"]=3,["npc_boss_manowar"]=1,["npc_boss_brigadir"]=1}},
 	[5]={reward_gold=200,reward_exp=200,

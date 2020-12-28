@@ -16,7 +16,7 @@ modifier_item_hp_block_1 = class({
 	DeclareFunctions  = function(self) return {
 		MODIFIER_PROPERTY_HEALTH_BONUS,
 		MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,
-		MODIFIER_EVENT_ON_ATTACK_LANDED,
+		MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE,
 	}end,
 })
 
@@ -28,18 +28,7 @@ function modifier_item_hp_block_1:GetModifierPhysical_ConstantBlock()
 	return self:GetAbility():GetSpecialValueFor("bonus_block")
 end
 
-function modifier_item_hp_block_1:OnAttackLanded(data)
-	local target = data.target
-	local parent = self:GetParent()
-
-	if target==parent and parent:IsAlive() then
-		local ability = self:GetAbility()
-		local heal_per_attack = ability:GetSpecialValueFor("heal_per_attack")
-
-		parent:Heal(heal_per_attack, ability)
-		local nFXIndex = ParticleManager:CreateParticle( "particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, parent )
-		ParticleManager:ReleaseParticleIndex( nFXIndex )
-
-	end
-
+function modifier_item_hp_block_1:GetModifierHealthRegenPercentage()
+	return self:GetAbility():GetSpecialValueFor("hp_regen_pct")
 end
+
