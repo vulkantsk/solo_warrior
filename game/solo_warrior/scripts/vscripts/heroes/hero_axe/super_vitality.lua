@@ -8,7 +8,7 @@ function axe_super_vitality:OnSpellStart()
     caster:AddNewModifier(caster, self, "modifier_axe_super_vitality", {duration = self:GetSpecialValueFor("duration")})
 			
 	if caster:HasTalent("ability_talent_warrior_2") then
-		Purge(false, true, false, false, false)
+		caster:Purge(false, true, false, false, false)
 	end
 end
 
@@ -88,7 +88,7 @@ end
 function modifier_axe_super_vitality:OnIntervalThink()
 	if IsServer() then
 		if self.caster:HasTalent("ability_talent_warrior_11") then
-			Purge(false, true, false, false, false)
+			self.caster:Purge(false, true, false, false, false)
 		end
 	end
 end

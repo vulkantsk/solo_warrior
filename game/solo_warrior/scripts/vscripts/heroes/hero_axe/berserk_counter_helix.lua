@@ -50,7 +50,7 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 				local data = {iFlag = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES}
 				local enemies = caster:FindEnemyUnitsInRadius(point, radius, data)
 				local needcooldown = true
-				if caster:HasTalent("ability_talent_berserk_5") and caster:FindModifierByName("modifier_axe_berserk_blood") then
+				if caster:HasTalent("talent_axe_berserk_helix_2") and caster:FindModifierByName("modifier_axe_berserk_blood") then
 					needcooldown = false
 				end
 				ability:UseResources(true, true, needcooldown)
@@ -61,25 +61,23 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
 				local effect_cast = ParticleManager:CreateParticle( effect, PATTACH_ABSORIGIN_FOLLOW, caster )
 				ParticleManager:ReleaseParticleIndex( effect_cast )
 
-				local effect2 = "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
-				if caster:HasModifier("modifier_axe_berserk_form") then
-					effect2 = "particles/econ/items/axe/ti9_jungle_axe/ti9_jungle_axe_attack_blur_counterhelix.vpcf"
-				end
+				local effect2 = "particles/econ/items/axe/ti9_jungle_axe/ti9_jungle_axe_attack_blur_counterhelix.vpcf"
+
 				local effect_cast2 = ParticleManager:CreateParticle( effect2, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
 				ParticleManager:ReleaseParticleIndex( effect_cast2 )
 
 				for _, enemy in pairs(enemies) do
-					if caster:HasTalent("ability_talent_berserk_4") and RollPercentage(caster:FindTalentValue("ability_talent_berserk_4", "chance")) then
-						enemy:AddNewModifier(caster, ability, "modifier_stun", {duration = caster:FindTalentValue("ability_talent_berserk_4", "duration")})
+					if caster:HasTalent("talent_axe_berserk_helix_3") and RollPercentage(caster:FindTalentValue("talent_axe_berserk_helix_3", "chance")) then
+						enemy:AddNewModifier(caster, ability, "modifier_stun", {duration = caster:FindTalentValue("talent_axe_berserk_helix_3", "duration")})
 					end
-					if caster:HasTalent("ability_talent_berserk_13") then
+					if caster:HasTalent("talent_axe_berserk_helix_4") then
 						local mod = enemy:FindModifierByName("modifier_axe_berserk_counter_helix_debuff")
 						if mod then
-							mod:SetStackCount(mod:GetStackCount()+caster:FindTalentValue("ability_talent_berserk_13", "min_armor"))
-							mod:SetDuration(caster:FindTalentValue("ability_talent_berserk_13", "duration"), true)
+							mod:SetStackCount(mod:GetStackCount()+1)
+							mod:SetDuration(caster:FindTalentValue("talent_axe_berserk_helix_4", "duration"), true)
 						else
-							mod = enemy:AddNewModifier(caster, ability, "modifier_axe_berserk_counter_helix_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_13", "duration")})
-							mod:SetStackCount(caster:FindTalentValue("ability_talent_berserk_13", "min_armor"))
+							mod = enemy:AddNewModifier(caster, ability, "modifier_axe_berserk_counter_helix_debuff", {duration = caster:FindTalentValue("talent_axe_berserk_helix_4", "duration")})
+							mod:SetStackCount(1)
 						end
 					end
 					DealDamage(caster, enemy, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
@@ -102,7 +100,7 @@ function modifier_axe_berserk_counter_helix:GetModifierOverrideAbilitySpecial( p
 	
 	local szSpecialValueName = params.ability_special_value
 
-	if szSpecialValueName == "trigger_chance" and self:GetParent():HasModifier("modifier_ability_talent_berserk_1") then
+	if szSpecialValueName == "trigger_chance" and self:GetParent():HasModifier("modifier_talent_axe_berserk_helix_1") then
 		return 1
 	end
 
@@ -116,7 +114,7 @@ function modifier_axe_berserk_counter_helix:GetModifierOverrideAbilitySpecialVal
 		if szSpecialValueName == "trigger_chance" then
 			local nSpecialLevel = params.ability_special_level
 			local flBaseValue = params.ability:GetLevelSpecialValueNoOverride( szSpecialValueName, nSpecialLevel )
-			return flBaseValue + self:GetParent():GetModifierStackCount("modifier_ability_talent_berserk_1", self:GetParent())
+			return flBaseValue + self:GetParent():GetModifierStackCount("modifier_talent_axe_berserk_helix_1", self:GetParent())
 		end
 	end
 
@@ -137,5 +135,5 @@ modifier_axe_berserk_counter_helix_debuff = class({
 
 
 function modifier_axe_berserk_counter_helix_debuff:GetModifierPhysicalArmorBonus()
-	return -self:GetStackCount()
+	return -self:GetCaster():FindTalentValue("talent_axe_berserk_helix_4", "armor_debuff")
 end

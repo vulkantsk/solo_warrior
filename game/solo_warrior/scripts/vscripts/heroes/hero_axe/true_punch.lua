@@ -14,9 +14,9 @@ function axe_true_punch:Punch(hTarget)
     if IsServer() then
         local caster = self:GetCaster()
         
-        if caster:HasTalent("ability_talent_berserk_8") then
-            local mod = hTarget:AddNewModifier(caster, self, "modifier_axe_true_punch_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_8", "duration")})
-            mod:SetStackCount(caster:FindTalentValue("ability_talent_berserk_8", "min_armor_prc"))
+        if caster:HasTalent("talent_axe_berserk_punch_1") then
+            local mod = hTarget:AddNewModifier(caster, self, "modifier_axe_true_punch_debuff", {duration = caster:FindTalentValue("talent_axe_berserk_punch_1", "duration")})
+            mod:SetStackCount(caster:FindTalentValue("talent_axe_berserk_punch_1", "min_armor_prc"))
         end
 
         local damageInfo = 

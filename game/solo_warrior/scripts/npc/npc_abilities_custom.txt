@@ -554,7 +554,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityTextureName"			"axe/warrior_blood_bath"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"8"
+		"RequiredLevel"					"25"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -650,6 +650,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"			"axe/berserk_blood"
 		"MaxLevel"						"5"
+		"RequiredLevel"					"1"
+		"LevelsBetweenUpgrades"			"3"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -680,7 +682,7 @@
 			"03"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"move_speed"		"50"
+				"attack_bonus"		"50"
 			}
 			"04"
 			{
@@ -835,7 +837,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"axe/berserk_last_chance"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"8"
+		"RequiredLevel"					"25"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

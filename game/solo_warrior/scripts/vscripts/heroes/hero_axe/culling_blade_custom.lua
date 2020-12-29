@@ -19,7 +19,7 @@ function axe_culling_blade_custom:OnSpellStart()
 	local bonus_damage = self:GetSpecialValueFor("bonus_damage")
 	self.sound = "Hero_Axe.Culling_Blade_Fail"
 
-	if caster:HasTalent("ability_talent_berserk_2") then
+	if caster:HasTalent("talent_axe_berserk_culblade_1") then
 		damage = damage + caster:GetAverageTrueAttackDamage(caster)
 	end
 
@@ -28,9 +28,9 @@ function axe_culling_blade_custom:OnSpellStart()
 		self:KillTarget(target)
 	else
 		DealDamage(caster, target, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
-		if caster:HasTalent("ability_talent_berserk_7") then
+		if caster:HasTalent("talent_axe_berserk_culblade_2") then
 			self.duel_target = target
-			caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_duel", {duration = caster:FindTalentValue("ability_talent_berserk_7", "duration")})
+			caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_duel", {duration = caster:FindTalentValue("talent_axe_berserk_culblade_2", "duration")})
             target:MoveToTargetToAttack(caster)
 		end
 	end
@@ -66,13 +66,13 @@ function axe_culling_blade_custom:KillTarget(enemy)
 	ParticleManager:SetParticleControlEnt(pfx, 8, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target_location, true)
 	ParticleManager:ReleaseParticleIndex(pfx)
 
-	if caster:HasTalent("ability_talent_berserk_9") then
+	if caster:HasTalent("talent_axe_berserk_culblade_3") then
 		local point = caster:GetAbsOrigin()
-		local enemies = caster:FindEnemyUnitsInRadius(point, caster:FindTalentValue("ability_talent_berserk_9", "radius"), nil)
+		local enemies = caster:FindEnemyUnitsInRadius(point, caster:FindTalentValue("talent_axe_berserk_culblade_3", "radius"), nil)
 		
 		for _,enemy in pairs(enemies) do
-			local modifier = enemy:AddNewModifier(caster, self, "modifier_axe_culling_blade_debuff", {duration = caster:FindTalentValue("ability_talent_berserk_9", "duration")})
-			modifier:SetStackCount(caster:FindTalentValue("ability_talent_berserk_9", "min_armor"))
+			local modifier = enemy:AddNewModifier(caster, self, "modifier_axe_culling_blade_debuff", {duration = caster:FindTalentValue("talent_axe_berserk_culblade_3", "duration")})
+			modifier:SetStackCount(caster:FindTalentValue("talent_axe_berserk_culblade_3", "min_armor"))
 		end
 	end
 end
