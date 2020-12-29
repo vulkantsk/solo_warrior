@@ -21,12 +21,12 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime"			"5"
+		"AbilityChannelTime"			"2"
 		"AbilityCooldown"				"10"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"170"
+		"AbilityManaCost"				"1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"total_damage"		"360"
+				"total_damage"		"1060"
 			}
 			"03"
 			{
@@ -68,9 +68,9 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"4"
+		"AbilityCooldown"				"5"
 		"AbilityDuration"				"5.0"
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"300"
 		"AbilityCastPoint"				"0.0"
 		
 		// Stats
@@ -84,7 +84,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed_pct" 		"-60"
+				"slow_attack_speed_pct" 		"-80"
 				"LinkedSpecialBonus"	"special_bonus_unique_jakiro_4"
 			}
 			"02"
@@ -95,12 +95,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"24"
+				"damage"				"400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_duration"			"5"
+				"tooltip_duration"			"2"
 			}
 		}		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -123,7 +123,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"bonus_reset_time"				"20"
+				"bonus_reset_time"				"10"
 				"LinkedSpecialBonus"			"special_bonus_unique_ursa_4"
 			}
 			"02"
@@ -134,7 +134,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"				"28"
+				"damage_per_stack"				"420"
 				"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 			}
 		}
@@ -156,7 +156,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_leech_percent"		"3.75"
+				"hp_leech_percent"		"100"
 				"LinkedSpecialBonus"	"special_bonus_unique_lifestealer_3"
 			}
 		}

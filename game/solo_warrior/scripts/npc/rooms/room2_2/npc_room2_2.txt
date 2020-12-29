@@ -180,6 +180,17 @@
                 "1"         {"Item"        "item_vladmir"}
                 
             }
+            "AttachWearables"
+			{
+  			"Wearable1" { "ItemDef" "4918" }
+  			"Wearable2" { "ItemDef" "360" }
+  			"Wearable3" { "ItemDef" "358" }
+  			"Wearable4" { "ItemDef" "361"}
+  			"Wearable5" { "ItemDef" "362"}
+  			"Wearable6" { "ItemDef" "363"}
+  			"Wearable7" { "ItemDef" "364"}
+			}
+
         }
 
 		// General

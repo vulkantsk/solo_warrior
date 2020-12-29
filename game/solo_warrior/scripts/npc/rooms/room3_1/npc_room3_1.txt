@@ -6,21 +6,21 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"35"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"20"
         "MagicalResistance"			"25"
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRange"				"650"		// Range within a target can be attacked.	
-		"AttackRate"				"2"		    // Speed of attack.
-		"MovementSpeed"				"325"		// Speed.			
+		"AttackDamageMin"			"170"		// Damage range min.
+		"AttackDamageMax"			"175"		// Damage range max.
+		"AttackRange"				"450"		// Range within a target can be attacked.	
+		"AttackRate"				"1.8"		    // Speed of attack.
+		"MovementSpeed"				"550"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"ghost_attack"
@@ -79,21 +79,21 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1110"		// Base mana.
+		"StatusHealth"				"5555"		// Base health.
+		"StatusHealthRegen"			"35"		// Health regeneration rate.
+		"StatusMana"				"10"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"25"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------	
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
+		"AttackDamageMin"			"200"		// Damage range min.
+		"AttackDamageMax"			"250"		// Damage range max.
+		"AttackRate"				"1.1"		    // Speed of attack.
 		"AttackRange"				"650"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.			
+		"MovementSpeed"				"550"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"ghost_spirit_siphon"
@@ -153,27 +153,40 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"Creature"
+		{
+			
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "168" }
+  				"Wearable2" { "ItemDef" "169" }
+  				"Wearable3" { "ItemDef" "170" }
+  				"Wearable4" { "ItemDef" "171" }
+
+			}
+		}
 	}
 
 	"npc_rare_ghost"
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
+		"StatusHealth"				"2555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1110"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"0"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
-		"AttackRange"				"650"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.			
+		"AttackDamageMin"			"230"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.
+		"AttackRate"				"1.3"		    // Speed of attack.
+		"AttackRange"				"950"		// Range within a target can be attacked.
+		"MovementSpeed"				"170"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"ghost_dark_lord"
@@ -195,7 +208,7 @@
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
 		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf"
-		"ProjectileSpeed"			"900"		// Speed of projectile.		     
+		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
