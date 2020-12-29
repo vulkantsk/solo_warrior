@@ -4,7 +4,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"							"naga_siren_rip_tide"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"Baseclass"						"naga_siren_rip_tide"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -23,18 +23,18 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"chance"					"17"
+				"chance"					"50"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"armor_reduction"			"-2 -4 -6 -8"
+				"armor_reduction"			"-13"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_3"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"60"
+				"damage"					"360"
 			}
 			"04"
 			{
@@ -44,7 +44,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"4.0"
+				"duration"					"1.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -72,18 +72,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"75 125 175 225"
+				"bonus_damage"			"225"
 				"LinkedSpecialBonus"	"special_bonus_unique_slardar_2"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1 1.1 1.2 1.3"
+				"duration"				"1"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_count"			"3"
+				"attack_count"			"4"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -108,15 +108,15 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"1"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"95"
+		"AbilityDamage"					"295"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityModifierSupportValue"	"0.2"	// applies many mini-stuns
+		"AbilityModifierSupportValue"	"0.1"	// applies many mini-stuns
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -125,17 +125,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"275"
+				"radius"					"475"
 			}
 			"02"
 			{	
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"10.5"
+				"duration"					"4.5"
 			}
 			"03"
 			{	
 				"var_type"					"FIELD_FLOAT"
-				"interval"					"0.7"
+				"interval"					"0.8"
 				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk"
 			}
 		}
@@ -146,7 +146,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"					"morphling_waveform"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"Baseclass"						"morphling_waveform"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -165,11 +165,11 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"300"
+		"AbilityDamage"					"700"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"165"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -183,7 +183,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"width"					"200"
+				"width"					"300"
 			}
 			"03"
 			{
@@ -217,7 +217,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120"
+		"AbilityManaCost"				"1"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -230,7 +230,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"225"
+				"radius"					"325"
 				"LinkedSpecialBonus"		"special_bonus_unique_kunkka"
 			}
 			"02"
@@ -246,7 +246,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.6"
+				"stun_duration"				"1.3"
 			}
 			"05"
 			{
@@ -256,7 +256,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"torrent_damage"			"300"
+				"torrent_damage"			"500"
 				"LinkedSpecialBonus"		"special_bonus_unique_kunkka_2"
 			}
 		}		
@@ -310,12 +310,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1"
+				"stat_loss"				"0.5"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1000"
+				"duration"				"15"
 				"LinkedSpecialBonus"	"special_bonus_unique_slark_4"
 			}
 		}

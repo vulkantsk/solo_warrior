@@ -6,22 +6,22 @@
 	{	 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"2555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
 
-		"ArmorPhysical"				"1"
-        	"MagicalResistance"			"25"
+		"ArmorPhysical"				"80"
+        	"MagicalResistance"			"75"
         	// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackRange"				"125"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.
+		"AttackDamageMin"			"350"		// Damage range min.
+		"AttackDamageMax"			"350"		// Damage range max.
+		"AttackRate"				"1"		    // Speed of attack.
+		"AttackRange"				"175"		// Range within a target can be attacked.
+		"MovementSpeed"				"370"		// Speed.
 	
 		// Abilities
 		//----------------------------------------------------------------
@@ -68,25 +68,38 @@
 		"BountyXP"					""		// Experience earn.
 		"BountyGoldMin"				""		// Gold earned min.
 		"BountyGoldMax"				""		// Gold earned max.
+
+		"Creature"
+		{
+			
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "7711" }
+  				"Wearable2" { "ItemDef" "7710"}
+  				"Wearable3" { "ItemDef" "7712" }
+  				"Wearable4" { "ItemDef" "7713" }
+  				"Wearable5" { "ItemDef" "7714" }
+			}
+		}
 	}
 
 	"npc_rare_fish" //slardar
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"5555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1111"		// Base mana.
+		"StatusMana"				"3"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		"ArmorPhysical"				"25"
+        "MagicalResistance"			"75"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
+		"AttackDamageMin"			"450"		// Damage range min.
+		"AttackDamageMax"			"550"		// Damage range max.
+		"AttackRate"				"2"		    // Speed of attack.
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"MovementSpeed"				"325"		// Speed.	
 
@@ -139,6 +152,18 @@
 		"BountyXP"					""		// Experience earn.
 		"BountyGoldMin"				""		// Gold earned min.
 		"BountyGoldMax"				""		// Gold earned max.
+
+		"Creature"
+		{
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "273" }
+  				"Wearable2" { "ItemDef" "274"}
+  				"Wearable3" { "ItemDef" "275" }
+  				"Wearable4" { "ItemDef" "276" }
+			}
+		}
+
 	}
 
 
@@ -146,22 +171,22 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"4555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1111"		// Base mana.
+		"StatusMana"				"3"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        	"MagicalResistance"			"25"
+		"ArmorPhysical"				"55"
+        	"MagicalResistance"		"75"
         	// Attack
 		//----------------------------------------------------------------
 
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.	
-		"AttackRange"				"125"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.	
+		"AttackDamageMin"			"450"		// Damage range min.
+		"AttackDamageMax"			"550"		// Damage range max.
+		"AttackRate"				"1.3"		    // Speed of attack.	
+		"AttackRange"				"225"		// Range within a target can be attacked.
+		"MovementSpeed"				"525"		// Speed.	
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"fish_waveform"
@@ -207,5 +232,16 @@
 		"BountyXP"					""		// Experience earn.
 		"BountyGoldMin"				""		// Gold earned min.
 		"BountyGoldMax"				""		// Gold earned max.
+
+		"Creature"
+		{
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "191" }
+  				"Wearable2" { "ItemDef" "192"}
+  				"Wearable3" { "ItemDef" "193" }
+  				"Wearable4" { "ItemDef" "194" }
+			}
+		}
 	}
 }

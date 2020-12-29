@@ -134,6 +134,18 @@
 		//----------------------------------------------------------------
 		"RingRadius"				"50"
 		"HealthBarOffset"			"180"
+
+		"Creature"
+		{
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "56" }
+  				"Wearable2" { "ItemDef" "58"}
+  				"Wearable3" { "ItemDef" "59" }
+  				"Wearable4" { "ItemDef" "61" }
+  				"Wearable4" { "ItemDef" "57" }
+			}
+		}
 		
 	}
 
@@ -203,5 +215,17 @@
 		"BountyXP"					""		// Experience earn.
 		"BountyGoldMin"				""		// Gold earned min.
 		"BountyGoldMax"				""		// Gold earned max.
+
+		"Creature"
+		{
+            "AttachWearables"
+			{
+  				"Wearable1" { "ItemDef" "148" }
+  				"Wearable2" { "ItemDef" "149" }
+  				"Wearable3" { "ItemDef" "150" }
+  				"Wearable4" { "ItemDef" "151" }
+  				"Wearable4" { "ItemDef" "152" }
+			}
+		}
 	}
 }

@@ -6,20 +6,20 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1111"		// Base mana.
+		"StatusHealth"				"8555"	// Base health.
+		"StatusHealthRegen"			"405"		// Health regeneration rate.
+		"StatusMana"				"7"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		"ArmorPhysical"				"45"
+        "MagicalResistance"			"55"
         // Attack
 		//----------------------------------------------------------------
 
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.		
+		"AttackDamageMin"			"750"		// Damage range min.
+		"AttackDamageMax"			"850"		// Damage range max.
+		"AttackRate"				"0.8"		    // Speed of attack.		
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"MovementSpeed"				"325"		// Speed.		
 		
@@ -74,22 +74,22 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusHealth"				"9555"	// Base health.
+		"StatusHealthRegen"			"125"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		"ArmorPhysical"				"25"
+        "MagicalResistance"			"35"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack	
+		"AttackDamageMin"			"1055"		// Damage range min.
+		"AttackDamageMax"			"1560"		// Damage range max.
+		"AttackRate"				"0.3"		    // Speed of attack	
 		"AttackRange"				"125"		// Range within a target can be attacked.
-		"MovementSpeed"				"325"		// Speed.		
-	
+		"MovementSpeed"				"700"		// Speed.		
+		"HasInventory"				"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -136,5 +136,13 @@
 		"BountyXP"					""		// Experience earn.
 		"BountyGoldMin"				""		// Gold earned min.
 		"BountyGoldMax"				""		// Gold earned max.
+		"Creature"
+		{
+			"EquippedItems"                                                                     
+            {
+                "1"         {"Item"        "item_sphere"}
+                
+            }
+        }
 	}
 }
