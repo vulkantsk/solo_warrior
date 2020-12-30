@@ -89,8 +89,8 @@
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"150"		// Damage range min.
-		"AttackDamageMax"			"165"		// Damage range max.	
+		"AttackDamageMin"			"130"		// Damage range min.
+		"AttackDamageMax"			"145"		// Damage range max.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"AttackRate"				"1.7"		    // Speed of attack.
 		"MovementSpeed"				"400"		// Speed.		
@@ -163,8 +163,8 @@
 		"MagicalResistance"			"25"
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"170"		// Damage range min.
-		"AttackDamageMax"			"180"		// Damage range max.	
+		"AttackDamageMin"			"140"		// Damage range min.
+		"AttackDamageMax"			"155"		// Damage range max.	
 		"AttackRange"				"250"		// Range within a target can be attacked.	
 		"AttackRate"				"1.9"		// Speed of attack.
 		"MovementSpeed"				"400"		// Speed.

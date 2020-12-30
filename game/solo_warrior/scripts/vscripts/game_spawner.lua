@@ -57,7 +57,7 @@ GameSpawner.wave_list = {
 	[13]={reward_gold=200,reward_exp=200,
 			units={["npc_common_dragon"]=1,["npc_rare_dragon"]=2 ,["npc_unique_dragon"]=2}},
 	[14]={reward_gold=200,reward_exp=200,
-			units={["npc_common_skeleton"]=1,["npc_rare_skeleton"]=1 ,["npc_unique_skeleton"]=1}},
+			units={["npc_common_skeleton"]=5,["npc_rare_skeleton"]=3 ,["npc_unique_skeleton"]=1}},
 	[15]={reward_gold=200,reward_exp=200,
 			units={["npc_common_lizard"]=1,["npc_rare_lizard"]=1,["npc_unique_lizard"]=1}},
 	[16]={reward_gold=400,reward_exp=200,

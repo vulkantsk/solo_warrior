@@ -76,7 +76,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"							"huskar_burning_spear"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"Baseclass"						"huskar_burning_spear"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -124,7 +124,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"					""lina_light_strike_array""														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"Baseclass"						"lina_light_strike_array"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"

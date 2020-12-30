@@ -5,23 +5,23 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"3555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		"ArmorPhysical"				"25"
+        "MagicalResistance"			"75"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
+		"AttackDamageMin"			"350"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.
 		"AttackRate"				"1.5"		    // Speed of attack.	
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		// Movement
 		//----------------------------------------------------------------
-		"MovementSpeed"				"325"		// Speed.			
+		"MovementSpeed"				"370"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"skeleton_berserkers_blood"
@@ -73,19 +73,19 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"		// Base health.
+		"StatusHealth"				"3555"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1110"			// Base mana.
+		"StatusMana"				""			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
-        "MagicalResistance"			"25"
+		"ArmorPhysical"				"1000"
+        "MagicalResistance"			"-100"
         // Attack
 		//----------------------------------------------------------------	
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"2"		    // Speed of attack.
+		"AttackDamageMin"			"450"		// Damage range min.
+		"AttackDamageMax"			"550"		// Damage range max.
+		"AttackRate"				"0.9"		    // Speed of attack.
 		"AttackRange"				"650"		// Range within a target can be attacked		
 		"MovementSpeed"				"325"		// Speed.	
 
@@ -105,7 +105,7 @@
 		"VisionDaytimeRange"		"1400"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.01"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"5000"		// Range within a target can be acquired.
 		"ProjectileModel"			"particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf"
 		"ProjectileSpeed"			"900"		// Speed of projectile.		     
@@ -153,19 +153,19 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"7555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1110"			// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"30"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.		
+		"AttackDamageMin"			"750"		// Damage range min.
+		"AttackDamageMax"			"650"		// Damage range max.
+		"AttackRate"				"1.2"		    // Speed of attack.		
 		"AttackRange"				"125"		// Range within a target can be attacked.
 
 		"MovementSpeed"				"325"		// Speed.			

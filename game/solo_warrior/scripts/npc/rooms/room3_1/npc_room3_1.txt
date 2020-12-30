@@ -6,18 +6,18 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"		// Base health.
+		"StatusHealth"				"2800"		// Base health.
 		"StatusHealthRegen"			"35"		// Health regeneration rate.
 		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"
+		"ArmorPhysical"				"15"
         "MagicalResistance"			"25"
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"170"		// Damage range min.
-		"AttackDamageMax"			"175"		// Damage range max.
+		"AttackDamageMin"			"150"		// Damage range min.
+		"AttackDamageMax"			"165"		// Damage range max.
 		"AttackRange"				"450"		// Range within a target can be attacked.	
 		"AttackRate"				"1.8"		    // Speed of attack.
 		"MovementSpeed"				"550"		// Speed.			
@@ -79,13 +79,13 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5555"		// Base health.
+		"StatusHealth"				"5000"		// Base health.
 		"StatusHealthRegen"			"35"		// Health regeneration rate.
 		"StatusMana"				"10"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.		
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"25"
+		"ArmorPhysical"				"20"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------	
@@ -182,8 +182,8 @@
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"230"		// Damage range min.
-		"AttackDamageMax"			"300"		// Damage range max.
+		"AttackDamageMin"			"220"		// Damage range min.
+		"AttackDamageMax"			"270"		// Damage range max.
 		"AttackRate"				"1.3"		    // Speed of attack.
 		"AttackRange"				"950"		// Range within a target can be attacked.
 		"MovementSpeed"				"170"		// Speed.			
