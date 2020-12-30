@@ -81,7 +81,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -201,7 +201,7 @@
 			"01"						"item_dmg_1_3;item_armor_1_3"
 		}
 	}
-	"item_dmg_armor_1_1"
+	"item_dmg_armor_1_1"//шипованная каольчуга
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
@@ -230,7 +230,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_return_pct"			"50 100 200"
+				"dmg_return_pct"			"25 100 200"
 			}
 		}
 	}
@@ -243,7 +243,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -363,7 +363,7 @@
 			"01"						"item_hp_1_3;item_block_1_3"
 		}
 	}
-	"item_hp_block_1_1"
+	"item_hp_block_1_1"//ловек боли
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_block_1"
@@ -405,7 +405,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -567,7 +567,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -687,7 +687,7 @@
 			"01"						"item_stat_1_3;item_armor_1_3"
 		}
 	}
-	"item_stat_armor_1_1"
+	"item_stat_armor_1_1"//золотой нагрудник
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_stat_armor_1"
@@ -706,17 +706,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10 20 30"
+				"bonus_stat"			"25 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"12 24 36"
+				"bonus_armor"			"10 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_block_pct"			"25 50 100"
+				"chance_block_pct"			"10 50 100"
 			}
 		}
 	}
@@ -729,7 +729,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -849,7 +849,7 @@
 			"01"						"item_hp_1_3;item_hpreg_1_3"
 		}
 	}
-	"item_hp_hpreg_1_1"
+	"item_hp_hpreg_1_1"//Перстень с рубином
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
@@ -868,17 +868,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1200 2400 3600"
+				"bonus_hp"			"1000 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"15 30 45"
+				"bonus_hpreg"			"20 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"25 50 100"
+				"bonus_health_pct"			"10 50 100"
 			}
 		}
 	}
@@ -891,7 +891,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1011,7 +1011,7 @@
 			"01"						"item_dmg_1_3;item_str_1_3"
 		}
 	}
-	"item_dmg_str_1_1"
+	"item_dmg_str_1_1"//секира тора
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
@@ -1035,17 +1035,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"30 60 90"
+				"bonus_str"			"20 60 90"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"trigger_chance"			"100"
+				"trigger_chance"			"75"
 			}
 			"04"
-			{
+			{	
 				"var_type"				"FIELD_INTEGER"
-				"bounce_damage"			"25 50 100"
+				"bounce_damage"			"75 50 100"
 			}
 			"05"
 			{
@@ -1073,7 +1073,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1252,17 +1252,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1200 2400 3600"
+				"bonus_hp"			"1000 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10 20 30"
+				"bonus_stat"			"25 20 30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"			"2 4 8"
+				"spell_lifesteal_pct"			"15 4 8"
 			}
 		}
 	}
@@ -1275,7 +1275,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1437,7 +1437,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1604,7 +1604,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1713,7 +1713,7 @@
 			}
 		}
 	}
-	"item_recipe_stat_resist_1_1"//Реепт на рунный плащ
+	"item_recipe_stat_resist_1_1"//Рецепт на рунный плащ
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1753,17 +1753,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10 20 30"
+				"bonus_stat"			"17 17 17"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"25 40 60"
+				"bonus_resist"			"45 45 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"manacost_reduction"			"50 75"
+				"manacost_reduction"			"25 25"
 			}
 		}
 	}
@@ -1776,7 +1776,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1938,7 +1938,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2058,7 +2058,7 @@
 			"01"						"item_dmg_1_3;item_stat_1_3"
 		}
 	}
-	"item_dmg_stat_1_1"
+	"item_dmg_stat_1_1"//клинок света
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_stat_1"
@@ -2082,7 +2082,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10 20 30"
+				"bonus_stat"			"25 20 30"
 			}
 			"03"
 			{
@@ -2092,7 +2092,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"1 2 3" //"25 50 100"  для тестов аур
+				"dmg_per_sec"			"50 2 3" //"25 50 100"  для тестов аур клинок света.
 			}
 		}
 	}
@@ -2105,7 +2105,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2235,7 +2235,7 @@
 			"01"						"item_hp_1_3;item_armor_1_3"
 		}
 	}
-	"item_hp_armor_1_1"
+	"item_hp_armor_1_1" //кушак великана
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_armor_1"
@@ -2254,7 +2254,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1200 2400 3600"
+				"bonus_hp"			"1000 2400 3600"
 			}
 			"02"
 			{
@@ -2269,7 +2269,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_as_decrease"			"25 50 100"
+				"aura_as_decrease"			"35 50 100"
 			}
 			"05"
 			{
@@ -2287,7 +2287,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"0"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2318,7 +2318,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1200 2400 3600"
+				"bonus_hp"			"1000 2400 3600"
 			}
 			"02"
 			{

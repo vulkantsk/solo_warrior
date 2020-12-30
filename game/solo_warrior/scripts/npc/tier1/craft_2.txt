@@ -740,7 +740,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -749,7 +749,7 @@
 		"ItemResult"					"item_stat_resist_str_hpreg_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_stat_resist_1_3;item_str_hpreg_1_3"
+			"01"						"item_stat_resist_1_1;item_hp_block_1_1"
 		}
 	}
 	"item_stat_resist_str_hpreg_1_1"
