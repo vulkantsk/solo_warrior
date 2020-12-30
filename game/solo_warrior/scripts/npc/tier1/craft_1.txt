@@ -391,8 +391,8 @@
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"1"
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"0.5"
 			}
 		}
 	}
@@ -878,7 +878,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"10 50 100"
+				"bonus_health_pct"			"5 50 100"
 			}
 		}
 	}

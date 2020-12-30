@@ -277,7 +277,7 @@
 		}
 	}
 
-	"item_recipe_stat_armor_hp_hpreg_1_1"
+	"item_recipe_stat_armor_hp_hpreg_1_1"//Живой доспех рецпт
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -295,10 +295,10 @@
 		"ItemResult"					"item_stat_armor_hp_hpreg_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_stat_armor_1_3;item_hp_hpreg_1_3"
+			"01"						"item_stat_armor_1_1;item_hp_hpreg_1_1"
 		}
 	}
-	"item_stat_armor_hp_hpreg_1_1"
+	"item_stat_armor_hp_hpreg_1_1"//живой доспех
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_stat_armor_hp_hpreg_1"
@@ -317,56 +317,56 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"30 45"
+				"bonus_stat"			"50 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"36 54"
+				"bonus_armor"			"20 54"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"				"3600 5400"
+				"bonus_hp"				"2000 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"45 70"
+				"bonus_hpreg"			"40 70"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_block_pct"			"50 100"
+				"chance_block_pct"			"25 100"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"50 100"
+				"bonus_health_pct"			"10 100"
 			}
 		}
 	}
-	"item_recipe_stat_armor_hp_hpreg_1_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_datadriven"
-		"AbilityTextureName" 			"item_recipe"
+//"item_recipe_stat_armor_hp_hpreg_1_2"
+//{
+//	// General
+//	//-------------------------------------------------------------------------------------------------------------
+//	"BaseClass"						"item_datadriven"
+//	"AbilityTextureName" 			"item_recipe"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
-		"ItemShopTags"					""
+//	// Item Info
+//	//-------------------------------------------------------------------------------------------------------------
+//	"ItemCost"						"3500"
+//	"ItemShopTags"					""
 
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_stat_armor_hp_hpreg_1_2"
-		"ItemRequirements"
-		{
-			"01"						"item_stat_armor_hp_hpreg_1_1"
-		}
-	}
+//	// Recipe
+//	//-------------------------------------------------------------------------------------------------------------
+//	"ItemRecipe"					"1"
+//	"ItemResult"					"item_stat_armor_hp_hpreg_1_2"
+//	"ItemRequirements"
+//	{
+//		"01"						"item_stat_armor_hp_hpreg_1_1"
+//	}
+//}
 
 	"item_stat_armor_hp_hpreg_1_2"
 	{
@@ -771,56 +771,67 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"30 45"
+				"bonus_stat"			"50 45"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"60 80"
+				"bonus_resist"			"50 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"90 135"
+				"bonus_str"			"0 135"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"45 70"
+				"bonus_hpreg"			"0 70"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"manacost_reduction"			"8 16"
+				"manacost_reduction"			"50 16"
 			}
 			"06"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"8 16"
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"1.5 16"
 			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"2000"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"100"
+			}
+
 		}
 	}
-	"item_recipe_stat_resist_str_hpreg_1_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_datadriven"
-		"AbilityTextureName" 			"item_recipe"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
-		"ItemShopTags"					""
-
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_stat_resist_str_hpreg_1_2"
-		"ItemRequirements"
-		{
-			"01"						"item_stat_resist_str_hpreg_1_1"
-		}
-	}
+//	"item_recipe_stat_resist_str_hpreg_1_2"
+//	{
+//		// General
+//		//---------------------------------------------------------------------------------------------------------//----
+//		"BaseClass"						"item_datadriven"
+//		"AbilityTextureName" 			"item_recipe"
+//
+//		// Item Info
+//		//---------------------------------------------------------------------------------------------------------//----
+//		"ItemCost"						"3500"
+//		"ItemShopTags"					""
+//
+//		// Recipe
+//		//---------------------------------------------------------------------------------------------------------//----
+//		"ItemRecipe"					"1"
+//		"ItemResult"					"item_stat_resist_str_hpreg_1_2"
+//		"ItemRequirements"
+//		{
+//			"01"						"item_stat_resist_str_hpreg_1_1"
+//		}
+//	}
 
 	"item_stat_resist_str_hpreg_1_2"
 	{

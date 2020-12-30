@@ -3,7 +3,7 @@ LinkLuaModifier("modifier_item_stat_resist_str_hpreg_1", "items/tier1/craft_2/it
 item_stat_resist_str_hpreg_1 = class({})
 
 function item_stat_resist_str_hpreg_1:GetIntrinsicModifierName()
-	return "modifier_item_stat_resist_str_hpreg_1"
+	return "modifier_item_stat_resist_str_hpreg_1"	
 end
 
 item_stat_resist_str_hpreg_1_1 = class(item_stat_resist_str_hpreg_1)
@@ -18,13 +18,15 @@ modifier_item_stat_resist_str_hpreg_1 = class({
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
 		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
 		MODIFIER_PROPERTY_MANACOST_PERCENTAGE,
-		MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
+		--MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT,
 		MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE,
+		MODIFIER_PROPERTY_HEALTH_BONUS,
+		MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK,
 	}end,
 })
 
 function modifier_item_stat_resist_str_hpreg_1:GetModifierBonusStats_Strength()
-	return self:GetAbility():GetSpecialValueFor("bonus_stat")+self:GetAbility():GetSpecialValueFor("bonus_str")
+	return self:GetAbility():GetSpecialValueFor("bonus_stat")
 end
 
 function modifier_item_stat_resist_str_hpreg_1:GetModifierBonusStats_Agility()
@@ -49,4 +51,11 @@ end
 
 function modifier_item_stat_resist_str_hpreg_1:GetModifierHealthRegenPercentage()
 	return self:GetAbility():GetSpecialValueFor("hp_regen_pct")
+end
+function modifier_item_stat_resist_str_hpreg_1:GetModifierHealthBonus()
+	return self:GetAbility():GetSpecialValueFor("bonus_hp")
+end
+
+function modifier_item_stat_resist_str_hpreg_1:GetModifierPhysical_ConstantBlock()
+	return self:GetAbility():GetSpecialValueFor("bonus_block")
 end
