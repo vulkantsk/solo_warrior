@@ -40,15 +40,14 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"tiny_craggy_exterior"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"Baseclass"					"tiny_craggy_exterior"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"AbilitySound"					"Hero_Tiny.CraggyExterior.Stun"
 
 		"MaxLevel"						"1"
 		"FightRecapLevel"				"1"
-		"IsGrantedByShard"				"1"
-        "HasShardUpgrade"               "1"
+
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -214,12 +213,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"250"
+				"damage"					"200"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"0.3"
+				"duration"					"0.1"
 			}
 			"03"
 			{

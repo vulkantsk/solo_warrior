@@ -5,7 +5,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"Baseclass"							"ancient_apparition_chilling_touch"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -18,7 +18,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"30"
+		"AbilityManaCost"				"0"
 
 
 		// Special
@@ -28,7 +28,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"170"
+				"damage"				"1070"
 				"LinkedSpecialBonus"		"special_bonus_unique_ancient_apparition_2"
 			}
 			"02"
@@ -39,7 +39,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"0.5"
+				"duration"				"0"
 			}
 			"04"
 			{
@@ -48,6 +48,7 @@
 			}
 		}
 	}
+
 	"lizard_ice_path"
 	{
 		// General
@@ -69,7 +70,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"9.0"
+		"AbilityCooldown"				"5.0"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -77,7 +78,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90"		
+		"AbilityManaCost"				"0"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -91,18 +92,18 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"2.5"
+				"duration"					"1.5"
 				"LinkedSpecialBonus"		"special_bonus_unique_jakiro"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"path_radius"				"150"
+				"path_radius"				"250"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"50"
+				"damage"					"550"
 			}
 		}		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -125,7 +126,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityCastRange"				"1000"
 		"AbilityCastPoint"				"0.45"
 		
 		// Time		
@@ -134,7 +135,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90"
+		"AbilityManaCost"				"0"
 				
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -143,19 +144,19 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"5 6 7 8"
+				"duration"			"8"
 			}
 
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"burn_damage"		"26 34 42 50"
+				"burn_damage"		"450"
 			}		
 
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"slow_movement_speed_pct"		"-20 -22 -24 -26"
+				"slow_movement_speed_pct"		"0"
 			}
 
 			"04"
@@ -198,11 +199,11 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"310"
+		"AbilityDamage"					"1310"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"145"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -211,7 +212,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dragon_slave_speed"		"1200"
+				"dragon_slave_speed"		"300"
 			}
 			
 			"02"
@@ -222,184 +223,21 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dragon_slave_width_end"		"200"
+				"dragon_slave_width_end"		"500"
 			}
 			
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dragon_slave_distance"			"1075"
+				"dragon_slave_distance"			"950"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 
 
-	"lizards_blast"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"							"invoker_deafening_blast"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"MaxLevel"						"1"
-		"HotKeyOverride"				"B"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Invoker.DeafeningBlast"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1000"
-		"AbilityCastPoint"				"0.05"
-		"AbilityCastAnimation"			"ACT_INVALID"
-
-		"AbilityCooldown"				"40"
-		"AbilityManaCost"				"300"
-		"AbilityModifierSupportValue"	"0.5"	// Applies 2 modifiers
-
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_distance"		"1000"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_speed"			"1100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius_start"			"175"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius_end"			"225"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"end_vision_duration"	"1.75"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"damage"				"320"
-				
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"knockback_duration"	"2.0"
-				
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"disarm_duration"		"6.5"
-				
-			}
-		}
-		}
-
-		"lizards_chaos_meteor"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"Baseclass"						"invoker_chaos_meteor"												// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-		"MaxLevel"						"1"
-		"HotKeyOverride"				"D"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"FightRecapLevel"				"1"
-		"AbilitySound"					"Hero_Invoker.ChaosMeteor.Impact"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700"
-		"AbilityCastPoint"				"0.05"
-		"AbilityCastAnimation"			"ACT_INVALID"
-
-		"AbilityCooldown"				"55"
-		"AbilityManaCost"				"200"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityModifierSupportValue"	"0.0"	// Mainly about damage
-			
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"land_time"				"1.3"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"area_of_effect"		"275"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_distance"		"1575"
-				"levelkey"				"wexlevel"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_speed"			"300"
-			}			
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"damage_interval"		"0.5"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vision_distance"		"500"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"end_vision_duration"	"3.0"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"main_damage"			"180"
-				"LinkedSpecialBonus"		"special_bonus_unique_invoker_6"
-				
-			}
-			"09"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_duration"			"3.0"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_dps"				"36"
-				
-				"CalculateSpellDamageTooltip"	"1"
-			}
-		}
 	
-	}
+	
 	"lizards_dual_breath"
 	{
 		// General
@@ -422,7 +260,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"10.0"
-		"AbilityDuration"				"5.0"
+		"AbilityDuration"				"3.0"
 
 		
 		// Damage.
@@ -431,7 +269,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"170"
+		"AbilityManaCost"				"0"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -444,12 +282,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"start_radius"			"225"
+				"start_radius"			"325"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"end_radius"			"275"
+				"end_radius"			"675"
 			}
 			"03"
 			{
@@ -459,7 +297,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"					"1050"
+				"speed"					"350"
 			}
 			"05"
 			{
@@ -469,28 +307,28 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"80"
+				"burn_damage"			"800"
 				"LinkedSpecialBonus"	"special_bonus_unique_jakiro_2"
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"slow_movement_speed_pct"	"-40"
+				"slow_movement_speed_pct"	"-20"
 			}
 			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"slow_attack_speed_pct"		"-40"
+				"slow_attack_speed_pct"		"-20"
 			}
 			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_duration"		"5"
+				"tooltip_duration"		"3"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed_fire"			"1050"
+				"speed_fire"			"350"
 			}
 		}		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -506,12 +344,10 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"							// Changes dynamically with scepter	
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PYRE"	
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Ability.LagunaBladeImpact"
 
-		"HasShardUpgrade"               "1"
-		"HasScepterUpgrade"             "1"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -521,11 +357,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70 60 50"
+		"AbilityCooldown"				"5"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"250 400 550"
+		"AbilityManaCost"				"0"
 			
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -538,7 +374,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"500 700 900"
+				"damage"					"900"
 			}
 			"02"
 			{
@@ -547,14 +383,14 @@
 			}
 			"03"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"damage_delay"				"0.25"
+				"var_type"						"FIELD_FLOAT"
+				"damage_delay"					"0.25"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"scepter_width"		"125"
+				"scepter_width"				"125"
 			}
 		}
 	}
@@ -577,19 +413,19 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_DOTA_STATIC_STORM"
 		"AbilityCastGestureSlot"		"DEFAULT"
-		"AbilityCastPoint"				"0.05 0.05 0.05 0.05"
+		"AbilityCastPoint"				"0.05"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"90 80 70"
+		"AbilityCooldown"				"70"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 175 225"
+		"AbilityManaCost"				"0"
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800 800 800 800"
+		"AbilityCastRange"				"800"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -610,7 +446,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_max"				"200 275 350"
+				"damage_max"				"550"
 			}
 			"04"
 			{
