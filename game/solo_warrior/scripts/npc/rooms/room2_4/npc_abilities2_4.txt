@@ -61,7 +61,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"stun_chance"				"20"
+				"stun_chance"				"50"
 			}
 			"02"
 			{
@@ -71,7 +71,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"100"
+				"damage"					"400"
 			}
 			"04"
 			{
@@ -97,12 +97,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bash_chance"		"15"
+				"bash_chance"		"25"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"50"
+				"bonus_damage"		"250"
 			}
 			"03"
 			{
@@ -176,7 +176,7 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"avalanche_damage"			"300"
+				"avalanche_damage"			"700"
 				"LinkedSpecialBonus"		"special_bonus_unique_tiny"
 			}
 		}
@@ -200,7 +200,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"10"
 		"AbilityCastPoint"				"0.3"
 
 		// Cost
@@ -214,12 +214,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"25"
+				"damage"					"250"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"0.1"
+				"duration"					"0.3"
 			}
 			"03"
 			{
