@@ -19,7 +19,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -147,7 +147,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -286,7 +286,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -424,7 +424,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -433,7 +433,7 @@
 		"ItemResult"					"item_dmg_str_hp_stat_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_dmg_str_1_3;item_hp_stat_1_3"
+			"01"						"item_dmg_str_1_1;item_hp_stat_1_1"
 		}
 	}
 	"item_dmg_str_hp_stat_1_1"
@@ -455,37 +455,37 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"				"180 270"
+				"bonus_dmg"				"200 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"				"90 135"
+				"bonus_str"				"40 135"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"				"3600 5400"
+				"bonus_hp"				"2000 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"30 45"
+				"bonus_stat"			"50 45"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"	"10 20"
+				"spell_lifesteal_pct"	"25 20"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"trigger_chance"			"100"
+				"trigger_chance"			"75"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_damage"			"100 200"
+				"bounce_damage"			"200"
 			}
 			"08"
 			{
@@ -504,27 +504,27 @@
 			}
 		}
 	}
-	"item_recipe_dmg_str_hp_stat_1_2"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_datadriven"
-		"AbilityTextureName" 			"item_recipe"
+//"item_recipe_dmg_str_hp_stat_1_2"
+//{
+//	// General
+//	//-------------------------------------------------------------------------------------------------------------
+//	"BaseClass"						"item_datadriven"
+//	"AbilityTextureName" 			"item_recipe"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
-		"ItemShopTags"					""
+//	// Item Info
+//	//-------------------------------------------------------------------------------------------------------------
+//	"ItemCost"						"3500"
+//	"ItemShopTags"					""
 
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_dmg_str_hp_stat_1_2"
-		"ItemRequirements"
-		{
-			"01"						"item_dmg_str_hp_stat_1_1"
-		}
-	}
+//	// Recipe
+//	//-------------------------------------------------------------------------------------------------------------
+//	"ItemRecipe"					"1"
+//	"ItemResult"					"item_dmg_str_hp_stat_1_2"
+//	"ItemRequirements"
+//	{
+//		"01"						"item_dmg_str_hp_stat_1_1"
+//	}
+//}
 
 	"item_dmg_str_hp_stat_1_2"
 	{
@@ -602,7 +602,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -889,7 +889,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -898,10 +898,10 @@
 		"ItemResult"					"item_dmg_stat_hp_armor_1_1"
 		"ItemRequirements"
 		{
-			"01"						"item_dmg_stat_1_3;item_hp_armor_1_3"
+			"01"						"item_dmg_stat_1_1;item_hp_armor_1_1"
 		}
 	}
-	"item_dmg_stat_hp_armor_1_1"
+	"item_dmg_stat_hp_armor_1_1"//клинок зимы
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_2/item_dmg_stat_hp_armor_1"
@@ -920,22 +920,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_dmg"			"180 270"
+				"bonus_dmg"			"200 270"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"30 45"
+				"bonus_stat"			"40 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"3600 5400"
+				"bonus_hp"			"2000 5400"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"36 54"
+				"bonus_armor"			"20 54"
 			}
 			"05"
 			{
@@ -945,7 +945,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"1 2"   //"100 200" для тестов аур
+				"dmg_per_sec"			"125 2"   //"100 200" для тестов аур
 			}
 			"07"
 			{
