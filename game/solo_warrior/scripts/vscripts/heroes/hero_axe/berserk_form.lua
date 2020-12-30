@@ -10,8 +10,8 @@ function axe_berserk_form:OnSpellStart()
 			"axe_super_vitality",
 			"axe_warrior_counter_helix",
 			"axe_warrior_form",
-			"axe_power_of_pain",
 			"axe_blood_bath",
+			"axe_power_of_pain",
 		}
 		for i=0, 5 do
 			local old_abil = caster:GetAbilityByIndex(i)

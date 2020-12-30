@@ -1,9 +1,11 @@
 LinkLuaModifier( "modifier_axe_warrior_counter_helix", "heroes/hero_axe/warrior_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
+LinkLuaModifier( "modifier_axe_warrior_counter_helix_active", "heroes/hero_axe/warrior_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
+LinkLuaModifier( "modifier_axe_warrior_counter_helix_cooldown", "heroes/hero_axe/warrior_counter_helix", LUA_MODIFIER_MOTION_NONE ) 
 
 axe_warrior_counter_helix = class({})
 
 function axe_warrior_counter_helix:GetBehavior()
-	if self:GetCaster():HasModifier("modifier_ability_talent_warrior_6") then
+	if self:GetCaster():HasModifier("modifier_talent_axe_warrior_helix_5") and not self:GetCaster():HasModifier("modifier_axe_warrior_counter_helix_cooldown") then
 		return DOTA_ABILITY_BEHAVIOR_NO_TARGET
 	else
 		return DOTA_ABILITY_BEHAVIOR_PASSIVE
@@ -11,8 +13,16 @@ function axe_warrior_counter_helix:GetBehavior()
 end
 
 function axe_warrior_counter_helix:OnSpellStart()
+	local caster = self:GetCaster()
+		if caster:HasTalent("talent_axe_warrior_helix_5") then
+			local duration = caster:FindTalentValue("talent_axe_warrior_helix_3", "interval")
+			print("duration ="..duration)
+--			local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
+			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
+--			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
+		end
     if IsServer() then
-		self:CounterHelix()
+	
 	end
 end
 
@@ -29,15 +39,18 @@ function axe_warrior_counter_helix:CounterHelix()
     	local caster = self:GetCaster()
 		local point = caster:GetAbsOrigin()
 		local radius = self:GetSpecialValueFor("radius")
-		if caster:HasTalent("ability_talent_warrior_6") then
-			radius = radius * 2
+
+		if caster:HasTalent("talent_axe_warrior_helix_5") then
+			if caster.mega_helix then
+				caster.mega_helix = false
+				radius = radius * caster:FindTalentValue("talent_axe_warrior_helix_5", "radius_mult")
+			end
 		end
 		local base_damage = self:GetSpecialValueFor("base_damage")
 		local attack_damage = self:GetSpecialValueFor("attack_damage")/100
 		local damage = base_damage + caster:GetAverageTrueAttackDamage(caster)*attack_damage
 		local data = {iFlag = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES}
 		local enemies = caster:FindEnemyUnitsInRadius(point, radius, data)
-		self:UseResources(true, true, true)
 		caster:StartGestureWithPlaybackRate(ACT_DOTA_CAST_ABILITY_3, 1)
 		caster:EmitSound("hero_axe.counterhelix")
 
@@ -79,6 +92,16 @@ function modifier_axe_warrior_counter_helix:OnCreated( params )
     end
 end
 
+function modifier_axe_warrior_counter_helix:OnIntervalThink()
+	if IsServer() then
+    	local caster = self:GetCaster()
+		if caster:HasTalent("talent_axe_warrior_helix_3") then
+			self:GetAbility():CounterHelix()
+			return caster:FindTalentValue("talent_axe_warrior_helix_3", "interval")
+		end
+		return 1
+    end
+end
 function modifier_axe_warrior_counter_helix:OnAttackLanded( params )
     if IsServer() then
     	local caster = self:GetCaster()
@@ -87,8 +110,8 @@ function modifier_axe_warrior_counter_helix:OnAttackLanded( params )
 			local ability = self:GetAbility()
 			local trigger_chance = ability:GetSpecialValueFor("trigger_chance")
 			
-			-- if caster:HasTalent("ability_talent_warrior_1") then
-			-- 	trigger_chance = trigger_chance + caster:FindTalentValue("ability_talent_warrior_1", "bonus_chance")
+			-- if caster:HasTalent("talent_axe_warrior_helix_1") then
+			-- 	trigger_chance = trigger_chance + caster:FindTalentValue("talent_axe_warrior_helix_1", "bonus_chance")
 			-- end
 			
 			-- if caster:HasTalent("special_bonus_custom_axe_2") then
@@ -97,6 +120,7 @@ function modifier_axe_warrior_counter_helix:OnAttackLanded( params )
 
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then
 				ability:CounterHelix()
+				self:UseResources(true, true, true)
 			end
 		end
     end
@@ -115,11 +139,7 @@ function modifier_axe_warrior_counter_helix:GetModifierOverrideAbilitySpecial( p
 	
 	local szSpecialValueName = params.ability_special_value
 
-	if szSpecialValueName == "trigger_chance" and self:GetParent():HasModifier("modifier_ability_talent_warrior_1") then
-		return 1
-	end
-
-	if szSpecialValueName == "radius" and self:GetParent():HasModifier("modifier_ability_talent_warrior_6") then
+	if szSpecialValueName == "trigger_chance" and self:GetParent():HasModifier("modifier_talent_axe_warrior_helix_1") then
 		return 1
 	end
 
@@ -133,7 +153,7 @@ function modifier_axe_warrior_counter_helix:GetModifierOverrideAbilitySpecialVal
 		if szSpecialValueName == "trigger_chance" then
 			local nSpecialLevel = params.ability_special_level
 			local flBaseValue = params.ability:GetLevelSpecialValueNoOverride( szSpecialValueName, nSpecialLevel )
-			return flBaseValue + self:GetParent():GetModifierStackCount("modifier_ability_talent_warrior_1", self:GetParent())
+			return flBaseValue + self:GetParent():GetModifierStackCount("modifier_talent_axe_warrior_helix_1", self:GetParent())
 		end
 		if szSpecialValueName == "radius" then
 			local nSpecialLevel = params.ability_special_level
@@ -148,17 +168,19 @@ end
 function modifier_axe_warrior_counter_helix:OnTakeDamage( params )
 	if IsServer() then
     	local caster = self:GetCaster()
-		if caster:HasTalent("ability_talent_warrior_4") then
-			params.target = params.unit
-			self:OnAttackLanded( params )
+		if caster:HasTalent("talent_axe_warrior_helix_2") then
+			if ability:IsCooldownReady() and RollPercentage(caster:FindTalentValue("talent_axe_warrior_helix_2", "chance")) then
+				ability:CounterHelix()
+				self:UseResources(true, true, true)
+			end
 		end
-		if caster:HasTalent("ability_talent_warrior_14") then
+		if caster:HasTalent("talent_axe_warrior_helix_4") then
 			if params.attacker == self:GetParent() then
 				if params.unit and params.unit:GetHealth() < 1 and params.inflictor == self:GetAbility() then
 					local abil = params.attacker:FindAbilityByName("axe_power_of_pain")
 					local cooldown = abil:GetCooldownTimeRemaining()
 					if cooldown > 0 then
-						abil:StartCooldown(cooldown - caster:FindTalentValue("ability_talent_warrior_14", "cd_per_kill"))
+						abil:StartCooldown(cooldown - caster:FindTalentValue("talent_axe_warrior_helix_3", "cd_per_kill"))
 					end
 				end
 			end
@@ -166,13 +188,32 @@ function modifier_axe_warrior_counter_helix:OnTakeDamage( params )
 	end
 end
 
-function modifier_axe_warrior_counter_helix:OnIntervalThink()
-	if IsServer() then
+modifier_axe_warrior_counter_helix_active = class({
+	IsHidden = function() return false end,
+	IsPurgable = function() return false end,
+})
+
+function modifier_axe_warrior_counter_helix_active:OnCreated( params )
+    if IsServer() then
     	local caster = self:GetCaster()
-		if caster:HasTalent("ability_talent_warrior_5") then
-			self:GetAbility():CounterHelix()
-			return caster:FindTalentValue("ability_talent_warrior_5", "interval")
-		end
-		return 1
+    	print("111")
+		local interval = caster:FindTalentValue("talent_axe_warrior_helix_5", "interval")
+		print("interval = "..interval)
+		self:StartIntervalThink(interval)
+  end
+end
+
+function modifier_axe_warrior_counter_helix_active:OnIntervalThink()
+	if IsServer() then
+    	print("222")
+		local caster = self:GetCaster()
+		caster.mega_helix = true
+		self:GetAbility():CounterHelix()
     end
 end
+
+modifier_axe_warrior_counter_helix_cooldown = class({
+	IsHidden = function() return false end,
+	IsDebuff = function() return true end,
+	IsPurgable = function() return false end,
+})

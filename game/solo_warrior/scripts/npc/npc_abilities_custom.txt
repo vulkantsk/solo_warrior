@@ -278,6 +278,56 @@
 	}
 
 	//Warrior form
+
+	"axe_warrior_form"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/warrior_form"
+		"AbilityTextureName"			"axe/warrior_form"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET| DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"health"			"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor"					"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health_per_tp"			"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_per_tp"			"1"
+			}
+		}
+
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"
+	}
+
 	"axe_warrior_wave"
 	{
 		// General
@@ -349,7 +399,8 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -366,32 +417,22 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"3 5 7 10"
+				"duration"			"3 5 7 9 11"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"status_res"		"15 20 25 30 35"
+				"status_res"		"50"
 			}
 			"03"
-			{	
+			{
 				"var_type"			"FIELD_INTEGER"
-				"regen"				"10 20 30 40 50"
+				"buff_duration"			"5"
 			}
 			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"prc_health_for_bonus"	"10"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"bonus_status_res"	"5"
-			}
-			"06"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"bonus_regen"		"10"
+				"regen"				"50"
 			}
 		}
 	}
@@ -409,6 +450,7 @@
 		"LevelsBetweenUpgrades"			"3"
 
 		"AbilityCooldown"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_IDLE"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -440,55 +482,6 @@
 				//"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
 		}
-	}
-
-	"axe_warrior_form"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/warrior_form"
-		"AbilityTextureName"			"axe/warrior_form"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET| DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"MaxLevel"						"1"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
-
-		"AbilityCooldown"				"0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"0"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"health"			"1000"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor"					"5"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"health_per_tp"			"10"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_per_tp"			"1"
-			}
-		}
-
-		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"
 	}
 
 	"axe_power_of_pain"
@@ -586,6 +579,55 @@
 	}
 
 	//Berserk form
+
+	"axe_berserk_form"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_axe/berserk_form"
+		"AbilityTextureName"			"axe/berserk_form"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET| DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		"AbilityCooldown"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bat"				"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_speed"			"300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bat_per_tp"			"0.05"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_speed_per_tp"			"10"
+			}
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"
+	}
+
 	"axe_culling_blade_custom"                     //Разрубание / Казнь
 	{
 		// General
@@ -655,7 +697,8 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -739,54 +782,6 @@
 		}
 	}
 
-	"axe_berserk_form"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ScriptFile"					"heroes/hero_axe/berserk_form"
-		"AbilityTextureName"			"axe/berserk_form"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET| DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"MaxLevel"						"1"
-
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0"
-
-		"AbilityCooldown"				"0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"0"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"bat"				"1"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"move_speed"			"300"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bat_per_tp"			"0.05"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"move_speed_per_tp"			"10"
-			}
-		}
-		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_2"
-	}
-
 	"axe_true_punch"
 	{
 		// General
@@ -805,8 +800,8 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.35"
-		"AbilityCastAnimation"			"ACT_DOTA_OVERRIDE_ABILITY_1"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
 		"AbilityCastRange"				"200"
 
 		"AbilityCooldown"				"60"

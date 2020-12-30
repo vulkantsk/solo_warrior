@@ -20,8 +20,8 @@ function axe_warrior_form:OnSpellStart()
 			"axe_berserk_blood",
 			"axe_berserk_counter_helix",
 			"axe_berserk_form",
-			"axe_true_punch",
 			"axe_last_chance",
+			"axe_true_punch",
 		}
 		for i=0, 5 do
 			local old_abil = caster:GetAbilityByIndex(i)

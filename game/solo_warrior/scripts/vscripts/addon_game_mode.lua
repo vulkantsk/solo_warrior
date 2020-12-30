@@ -10,6 +10,9 @@ function Precache( context )
 	
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts", context )
 	PrecacheResource( "soundfile", "soundevents/voscripts/game_sounds_axe.vsndevts", context )
+
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts", context )
+	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts", context )
 end
 
 function Activate()

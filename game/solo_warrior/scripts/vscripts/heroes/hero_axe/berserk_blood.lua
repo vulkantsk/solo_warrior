@@ -5,6 +5,7 @@ axe_berserk_blood = class({})
 
 function axe_berserk_blood:OnSpellStart()
     self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_axe_berserk_blood", {duration = self:GetSpecialValueFor("duration")})
+    self:GetCaster():EmitSound("Hero_Axe.Battle_Hunger")
 end
 
 --------------------------------------------------------------------------------
@@ -48,6 +49,14 @@ function modifier_axe_berserk_blood:OnCreated()
 			self.talent_bonus = true
 		end
     end
+end
+
+function modifier_axe_berserk_blood:GetEffectName()
+	return "particles/units/heroes/hero_axe/axe_battle_hunger.vpcf"
+end
+
+function modifier_axe_berserk_blood:GetEffectAttachType()
+	return PATTACH_OVERHEAD_FOLLOW
 end
 
 function modifier_axe_berserk_blood:GetModifierAttackSpeedBonus_Constant()

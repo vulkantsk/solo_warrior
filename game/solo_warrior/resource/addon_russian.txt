@@ -66,8 +66,10 @@
 		"DOTA_Tooltip_ability_axe_warrior_counter_helix_trigger_chance"		"%ШАНС СРАБАТЫВАНИЯ:"
 		"DOTA_Tooltip_ability_axe_warrior_counter_helix_base_damage"		"БАЗОВЫЙ УРОН:"
 		"DOTA_Tooltip_ability_axe_warrior_counter_helix_attack_damage"		"%УРОНА ОТ АТАКИ:"
-		"DOTA_Tooltip_modifier_axe_warrior_counter_helix"							"Name"
-		"DOTA_Tooltip_modifier_axe_warrior_counter_helix_Description"				"Desc"
+		"DOTA_Tooltip_modifier_axe_warrior_counter_helix_active"							"Смертельный танец"
+		"DOTA_Tooltip_modifier_axe_warrior_counter_helix_active_Description"				"Смертельный танец"
+		"DOTA_Tooltip_modifier_axe_warrior_counter_helix_cooldown"							"Смертельный танец(перезарядка)"
+		"DOTA_Tooltip_modifier_axe_warrior_counter_helix_cooldown_Description"				"Перезяряжается"
 
 		"DOTA_Tooltip_ability_axe_power_of_pain"							"Power of pain"
 		"DOTA_Tooltip_ability_axe_power_of_pain_Description"				"Каждая атака по герою увеличивает его силу, после завершения эффекта создаётся колцо силы, которое наносит урон в зависимости от силы героя."
@@ -174,7 +176,77 @@
         "DOTA_Tooltip_ability_axe_true_strength_Lore"                           "Настоящая Сила не знает границ..."
 		"DOTA_Tooltip_ability_axe_true_strength_bonus_str_pct"			        "%Бонус к Силе:"       
 
-//Talents
+//Talents warrior
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_1"							"Расщепление волны"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_1_Description"				"Есть шанс, что герой может создать несколько волн одновременно !"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_1_chance"				"%ШАНС:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_2"							"Ослабляющая волна"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_2_Description"				"Ослабляет задетых врагов, снижая скорость передвижения и скорость атаки."
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_2_duration"				"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_2_ms_debuff"				"%СНИЖЕНИЕ СКОРОСТИ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_2_as_debuff"				"СНИЖЕНИЕ СКОРОСТИ АТАКИ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_3"					"Усиливающая волна"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_3_Description"				"Каждый задетый враг увеличивает броню героя!"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_3_duration"				"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_wave_3_armor_bonus"				"БОНУС БРОНИ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_1"				"Отчуждённость"
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_1_Description"				"Применяет сильное развеивание при использовании способности."
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_2"							"Теккай"
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_2_Description"				"Запрещает передвигаться во время действия эффекта, но увеличивает эффективность регенерации."
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_2_bonus_prc"				"%БОНУС ЭФФЕКТИВНОСТИ РЕГЕНЕРАЦИИ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_3"							"Хилимся-живём"
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_3_Description"				"Добавляет к эффекту регенерации бонус регенерации от максимального здоровья."
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_3_regen_pct"				"%РЕГЕНЕРАЦИЯ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_4"				"Каменная кожа"
+		"DOTA_Tooltip_ability_talent_axe_warrior_vitality_4_Description"				"На протяжении эффекта развеивает дебафы с героя."
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_1"							"Всегда на чеку!"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_1_Description"				"Увеличивает веростяность срабатывания способности."
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_1_bonus_chance"				"%БОНУС ШАНСА:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_2"							"И муха не проскочет!"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_2_Description"			"Теперь срабатывает не только от атак, но и от урона !"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_2_chance"				"%ШАНС СРАБАТЫВАНИЯ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_3"							"Мне что потанцевать нельзя?"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_3_Description"				"Начинает вращаться с определенным промежутком времени."
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_3_interval"				"ИНТЕРВАЛ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_4"							"Опа, еще один!"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_4_Description"				"Снижает перезарядку ультимативной способности за каждое убийство данной способностью!"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_4_cd_per_kill"				"СНИЖЕНИЕ ПЕРЕЗАРЯДКИ ЗА УБИЙСТВО:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5"			"Смертельный танец"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5_Description"			"Начинает усиленное верчение, которое сметает всех врагов на своём пути !"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5_duration"				"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5_interval"				"ИНТЕРВАЛ:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5_radius_mult"				"МНОЖИТЕЛЬ РАДИУСА:"
+		"DOTA_Tooltip_ability_talent_axe_warrior_helix_5_cooldown"				"ПЕРЕЗАРЯДКА:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_1"					"Мне не больно"
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_1_Description"		"Бонус силы за каждый полученный удар."
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_1_bonus_str"				"БОНУС СИЛЫ:"
+
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_2"				"Бог терпел и нам велел"
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_2_Description"		"Часть полученного урона преобразуется в финальный урон."
+		"DOTA_Tooltip_ability_talent_axe_warrior_pain_2_part"				"%КОНВЕРТАЦИЯ УРОНА:"
+
+		"DOTA_Tooltip_ability_"							"Name"
+		"DOTA_Tooltip_ability__Description"				"Desc"
+		"DOTA_Tooltip_ability__"				""
+
+//Talents besresrk
 
 		"DOTA_Tooltip_ability_"							"Name"
 		"DOTA_Tooltip_ability__Description"				"Desc"

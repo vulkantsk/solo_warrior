@@ -33,8 +33,8 @@ function axe_warrior_wave:OnSpellStart()
     }
     ProjectileManager:CreateLinearProjectile(info)
 			
-    if caster:HasTalent("ability_talent_warrior_3") then
-        if RollPercentage(caster:FindTalentValue("ability_talent_warrior_3", "chance")) then
+    if caster:HasTalent("talent_axe_warrior_wave_1") then
+        if RollPercentage(caster:FindTalentValue("talent_axe_warrior_wave_1", "chance")) then
             local locPos = Vector( 0, 0.5*(casterOrigin - point):Length2D(), 0 )
             local relPos = RotatePosition( Vector(0,0,0), caster:GetAngles(), locPos )
             local absPos = GetGroundPosition( relPos + point, caster )
@@ -53,22 +53,19 @@ function axe_warrior_wave:OnSpellStart()
             ProjectileManager:CreateLinearProjectile(info)
         end
     end
+
+    caster:EmitSound("Hero_Magnataur.ShockWave.Particle.Anvil")
 end
 
 function axe_warrior_wave:OnProjectileHit(hTarget, vLocation)
 	local caster = self:GetCaster()
 	local damage = self:GetSpecialValueFor("damage")
-    if caster:HasTalent("ability_talent_warrior_9") then
-        hTarget:AddNewModifier(caster, self, "modifier_axe_warrior_wave_debuff", {duration = 4})
+    if caster:HasTalent("talent_axe_warrior_wave_2") then
+        hTarget:AddNewModifier(caster, self, "modifier_axe_warrior_wave_debuff", {duration = caster:FindTalentValue("talent_axe_warrior_wave_2", "duration")})
     end
-    if caster:HasTalent("ability_talent_warrior_12") then
-        if caster:HasModifier("modifier_axe_warrior_wave_buff") then
-            local buff = caster:FindModifierByName("modifier_axe_warrior_wave_buff")
-            buff:SetStackCount(buff:GetStackCount()+1)
-        else
-            local buff = caster:AddNewModifier(caster, self, "modifier_axe_warrior_wave_buff", {duration = 7})
-            buff:SetStackCount(1)
-        end
+    if caster:HasTalent("talent_axe_warrior_wave_3") then
+        local buff = caster:AddNewModifier(caster, self, "modifier_axe_warrior_wave_buff", {duration = caster:FindTalentValue("talent_axe_warrior_wave_3", "duration")})
+         buff:SetStackCount(buff:GetStackCount()+1)
     end
 	DealDamage(caster, hTarget, damage, DAMAGE_TYPE_MAGICAL, nil, self)
 end
@@ -87,11 +84,11 @@ modifier_axe_warrior_wave_debuff = class({
 })
 
 function modifier_axe_warrior_wave_debuff:GetModifierMoveSpeedBonus_Percentage()
-	return -20
+	return (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "ms_debuff")
 end
 
 function modifier_axe_warrior_wave_debuff:GetModifierAttackSpeedBonus_Constant()
-	return -30
+	return (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "as_debuff")
 end
 
 --------------------------------------------------------------------------------
@@ -107,5 +104,5 @@ modifier_axe_warrior_wave_buff = class({
 })
 
 function modifier_axe_warrior_wave_buff:GetModifierPhysicalArmorBonus()
-	return self:GetStackCount()
+	return self:GetStackCount()*caster:FindTalentValue("talent_axe_warrior_wave_3", "armor_bonus")
 end

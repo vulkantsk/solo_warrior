@@ -6,47 +6,47 @@
 		{
 			"0"		//уровень необходимый для прокачки
 			{
-				"1"   "ability_talent_warrior_1"
+				"1"   "talent_axe_warrior_helix_1"
 			}
 			"3"
 			{
-				"1"   "ability_talent_warrior_2"
+				"1"   "talent_axe_warrior_vitality_1"
 			}
 			"5"
 			{
-				"1"   "ability_talent_warrior_3"
-				"2"   "ability_talent_warrior_4"
+				"1"   "talent_axe_warrior_wave_1"
+				"2"   "talent_axe_warrior_helix_2"
 			}
 			"8"
 			{
-				"1"   "ability_talent_warrior_5"
+				"1"   "talent_axe_warrior_helix_3"
 			}
 			"10"
 			{
-				"1"   "ability_talent_warrior_6"
-				"2"   "ability_talent_warrior_7"
+				"1"   "talent_axe_warrior_helix_5"
+				"2"   "talent_axe_warrior_vitality_3"
 			}
 			"13"
 			{
-				"1"   "ability_talent_warrior_8"
+				"1"   "talent_axe_warrior_pain_2"
 			}
 			"15"
 			{
-				"1"   "ability_talent_warrior_9"
-				"2"   "ability_talent_warrior_10"
+				"1"   "talent_axe_warrior_wave_2"
+				"2"   "talent_axe_warrior_vitality_2"
 			}
 			"18"
 			{
-				"1"   "ability_talent_warrior_11"
-				"2"   "ability_talent_warrior_12"
+				"1"   "talent_axe_warrior_vitality_4"
+				"2"   "talent_axe_warrior_wave_3"
 			}
 			"20"
 			{
-				"1"   "ability_talent_warrior_13"
+				"1"   "talent_axe_warrior_pain_1"
 			}
 			"23"
 			{
-				"1"   "ability_talent_warrior_14"
+				"1"   "talent_axe_warrior_helix_4"
 			}
 			// "25"
 			// {
