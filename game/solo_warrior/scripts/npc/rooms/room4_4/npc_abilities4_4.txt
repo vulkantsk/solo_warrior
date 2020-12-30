@@ -17,11 +17,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"17.0"
+		"AbilityCooldown"				"10.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"0"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -36,17 +36,17 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"100"
+				"bonus_damage"				"500"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_threshold"			"55"
+				"damage_threshold"			"105"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"17.0"
+				"duration"					"10.0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -76,11 +76,11 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"12"
-		"AbilityDuration"				" 4.0"
+		"AbilityDuration"				" 5.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -89,7 +89,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gush_damage"		"260"
+				"gush_damage"		"1260"
 				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_2"
 			}
 			"02"
@@ -100,12 +100,12 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"movement_speed"	"-40"
+				"movement_speed"	"10"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"negative_armor"		"7"
+				"negative_armor"		"27"
 				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter"
 			}
 			"05"
@@ -153,16 +153,16 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				" 9"
+		"AbilityCooldown"				"9"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"140"
+		"AbilityManaCost"				"0"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"300"
-		"AbilityDuration"				"2"
+		"AbilityDamage"					"10000"
+		"AbilityDuration"				"1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -171,19 +171,19 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"delay"				"0.35"
+				"delay"				"1"
 			}
 			
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"225"
+				"radius"			"125"
 			}
 			
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"2"
+				"duration"			"1"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -196,7 +196,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"Baseclass"					"razor_plasma_field"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PYRE"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Ability.PlasmaField"
@@ -206,7 +206,7 @@
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastGestureSlot"		"DEFAULT"
 		"AbilityCastRange"				"0"
-		"AbilityCastPoint"				"0 0 0 0"
+		"AbilityCastPoint"				"0"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -214,7 +214,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 125 125 125"		
+		"AbilityManaCost"				"0"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -223,22 +223,22 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_min"				"15 25 35 45"
+				"damage_min"				"105000"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_max"				"185"
+				"damage_max"				"158500"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"700"
+				"radius"					"200"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed"						"636"  // 1.2 second to reach radius
+				"speed"						"100"  // 1.2 second to reach radius
 			}
 			"05"
 			{
@@ -279,16 +279,16 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 22 22 22"
+		"AbilityCooldown"				"8"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"95 120 135 155"
+		"AbilityManaCost"				"0"
 		
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"8 20 32 44"
-		"AbilityDuration"				"10"
+		"AbilityDamage"					"4040"
+		"AbilityDuration"				"3"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -297,14 +297,14 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"num_explosions"		"40"
+				"num_explosions"		"12"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_1"
 			}
 			
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"500"
+				"radius"			"100"
 			}
 			"03"
 			{
@@ -357,13 +357,13 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"60 90 120 150"
+				"bonus_damage"				"150"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_2"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lifesteal"					"15 30 45 60"
+				"lifesteal"					"60"
 			}
 			"06"
 			{

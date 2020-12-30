@@ -1,29 +1,29 @@
-"DOTAUnits"
+ "DOTAUnits"
 {
 	"npc_boss_satyr"
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"9555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 		"StatusMana"				"1111"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"45"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
-		"AttackRange"				"125"		// Range within a target can be attacked.		
-		"MovementSpeed"				"325"		// Speed.			
+		"AttackDamageMin"			"1350"		// Damage range min.
+		"AttackDamageMax"			"1500"		// Damage range max.
+		"AttackRate"				"1.1"		    // Speed of attack.
+		"AttackRange"				"250"		// Range within a target can be attacked.		
+		"MovementSpeed"				"380"		// Speed.			
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"boss_satyr_plasma_field"
-		"Ability2"					"boss_satyr_diabolic_edict"
+		"Ability2"					""
 		"Ability3"					"boss_satyr_jingu_mastery"
 		"Ability4"					""
 			 
@@ -47,7 +47,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 				"1"
+		"ModelScale" 				"1.5"
 		
 		"ProjectileModel"			""
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     
@@ -72,26 +72,26 @@
 	{	
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"555"	// Base health.
+		"StatusHealth"				"8555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1111"		// Base mana.
+		"StatusMana"				""		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"
+		"ArmorPhysical"				"25"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"35"		// Damage range min.
-		"AttackDamageMax"			"50"		// Damage range max.
-		"AttackRate"				"1.5"		    // Speed of attack.
+		"AttackDamageMin"			"1035"		// Damage range min.
+		"AttackDamageMax"			"1550"		// Damage range max.
+		"AttackRate"				"1.3"		    // Speed of attack.
 		"AttackRange"				"125"		// Range within a target can be attacked.		
-		"MovementSpeed"				"325"		// Speed.			
+		"MovementSpeed"				"510"		// Speed.			
 
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"boss_satyr_gush"
-		"Ability2"					"boss_satyr_split_earth"
+		"Ability2"					"boss_satyr_diabolic_edict"
 		"Ability3"					""
 		"Ability4"					""
 			 
@@ -139,25 +139,25 @@
 	{
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
+		"StatusHealth"				"7500"		// Base health.
 		"StatusHealthRegen"			"0"		// Health regeneration rate.
 		"StatusMana"				"500"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"
+		"ArmorPhysical"				"35"
         "MagicalResistance"			"25"
         // Attack
 		//----------------------------------------------------------------
-        "AttackDamageMin"			"85"		// Damage range min.
-		"AttackDamageMax"			"90"		// Damage range max.
+        "AttackDamageMin"			"1050"		// Damage range min.
+		"AttackDamageMax"			"1100"		// Damage range max.
 		"AttackRange"				"650"		// Range within a target can be attacked.
-		"AttackRate"				"2"		    // Speed of attack.
-		"MovementSpeed"				"350"		// Speed.		
+		"AttackRate"				"0.7"		    // Speed of attack.
+		"MovementSpeed"				"530"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"boss_satyr_refraction"
-		"Ability2"					""
+		"Ability2"					"boss_satyr_split_earth"
 		"Ability3"					""
 		"Ability4"					""			
 

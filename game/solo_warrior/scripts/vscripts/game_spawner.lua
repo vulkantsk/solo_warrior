@@ -61,7 +61,7 @@ GameSpawner.wave_list = {
 	[15]={reward_gold=200,reward_exp=200,
 			units={["npc_common_lizard"]=5,["npc_rare_lizard"]=4,["npc_unique_lizard"]=3}},
 	[16]={reward_gold=400,reward_exp=200,
-			units={["npc_boss_satyr"]=1,["npc_boss_middle_satyr"]=1,["npc_boss_little_satyr"]=1}},
+			units={["npc_boss_satyr"]=1,["npc_boss_middle_satyr"]=1,["npc_boss_little_satyr"]=3}},
 --[[	[2]={reward_gold=125,reward_exp=250,
 				units={["npc_melee_troll"]=5,["npc_troll_shaman"]=1,["npc_troll_healer"]=2,["npc_troll_dd"]=3,["npc_troll_mini_boss"]=1}},
 		[3]={reward_gold=150,reward_exp=300,
