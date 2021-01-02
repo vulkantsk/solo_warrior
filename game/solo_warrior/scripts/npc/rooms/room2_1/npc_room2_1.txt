@@ -184,6 +184,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 				"1"
+		"ConsideredHero"			"1"
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		

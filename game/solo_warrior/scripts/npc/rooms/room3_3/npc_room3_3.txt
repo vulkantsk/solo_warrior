@@ -215,6 +215,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
+		"ConsideredHero"			"1"
 
 		"ProjectileModel"			""
 		"ProjectileSpeed"			"0"		// Speed of projectile.		     

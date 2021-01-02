@@ -197,7 +197,8 @@
         "vscripts"					"ai/ai_neutral_autocast"                                    //посылает на аи за поведением
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/centaur/diretide_centaur.vmdl"	// Model.
-       
+   		"ConsideredHero"			"1"
+    
 		"BaseClass"					"npc_dota_creature"                                                        //класс - сильно влияет на поведение. даже если ссылается на аи
 		"SoundSet"					"n_creep_Melee"
 		"ConsideredHero"				"1"

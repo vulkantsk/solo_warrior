@@ -179,6 +179,7 @@
 			 
 		
 		
+		"ConsideredHero"			"1"
 		"Model"						"models/items/wraith_king/arcana/wraith_king_arcana.vmdl"	// Model.
 		// Team
 		//----------------------------------------------------------------

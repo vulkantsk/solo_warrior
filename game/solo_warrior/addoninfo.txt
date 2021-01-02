@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-	"maps"			"warrior testroom"
+	"maps"			"warrior"
 	"IsPlayable"	"1"
-	"MaxPlayers"	"5"
+	"MaxPlayers"	"1"
 }

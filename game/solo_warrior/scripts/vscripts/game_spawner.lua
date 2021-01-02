@@ -30,7 +30,7 @@ GameSpawner.wave_list = {
 --["npc_wolf"]=7,["npc_alfa_wolf"]=1,["npc_beta_wolf"]=3,["npc_black_wolf"]=4
 --["npc_gorgule"]=10,["npc_gorgule_prime"]=3,["npc_harpy"]=7,["npc_harpy_witch"]=2,["npc_gorgule_mini_boss"]=1
 --"npc_skeleton" "npc_skeleton_archer" "npc_skeleton_mage" "npc_skeleton_big" "npc_zombie" "npc_creeping_zombie"
-	[1]={reward_gold=200,reward_exp=200,
+	[1]={reward_gold=200,reward_exp=300,
 			units={["npc_common_dog"]=12,["npc_rare_dog"]=5,["npc_unique_dog"]=1}},
 	[2]={reward_gold=200,reward_exp=200,
 			units={["npc_common_troll"]=8,["npc_rare_troll"]=4,["npc_unique_troll"]=2}},

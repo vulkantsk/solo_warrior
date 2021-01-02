@@ -164,7 +164,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"1 2 3 4 5"
+					"bonus_chance"			"2 4 6 8 10"
 				}
 			}
 
@@ -270,7 +270,7 @@
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 			"AbilityTextureName"			"axe/warrior_counter_helix"
 			"MaxLevel"						"5"
-			"IsOnCastBar"					"1"
+			"IsOnCastBar"					"0"
 			
 			"AbilitySpecial"
 			{
@@ -370,7 +370,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"1 2 3 4 5"
+					"bonus_chance"			"2 4 6 8 10"
 				}
 			}
 

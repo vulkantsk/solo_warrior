@@ -110,6 +110,7 @@
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"1"
 		"ModelScale" 				"0.8"
+		"ConsideredHero"			"1"
 
 		
 		

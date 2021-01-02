@@ -12,8 +12,9 @@ ItemDrop.item_drop = {
 		{items = {"item_lifesteal"}, units ={"npc_neutral_boss_3"}},
 		--все что ниже нахимичил ЕНОТ. А енотов бить нельзя кста!!!=)
 		{items = {"item_clarity"}, chance = 10, duration = 10, units = {"npc_line_creep_2","npc_line_creep_4"}},-- chance = шанс дропа со всех -Х(стока-то)%, пропадает(уничтожается с карты) через duration = 10 сек если не поднять!
-		{items = {"item_faerie_fire"}, chance = 10, duration = 15},
-		{items = {"item_greater_faerie_fire"}, chance = 3, duration = 10},
+--		{items = {"item_faerie_fire"}, chance = 10, duration = 15},
+--		{items = {"item_greater_faerie_fire"}, chance = 2, duration = 10},
+        {items = {"item_havoc_hammer"}, chance = 1, limit = 1},
         {items = {"item_dmg_stat_1_1"}, limit = 1, units ={"npc_line_boss_1"}},
 }
 

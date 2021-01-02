@@ -26,6 +26,11 @@ function axe_culling_blade_custom:OnSpellStart()
 	FindClearSpaceForUnit(caster, point, true)
 	if target:GetHealth() < kill_threshold then
 		self:KillTarget(target)
+		if target:IsConsideredHero() then
+			 local modifier = caster:AddNewModifier(caster, self, "modifier_axe_culling_blade_custom", {})
+			 local current_stack = modifier:GetStackCount()
+			 modifier:SetStackCount(current_stack + bonus_damage)
+		end
 	else
 		DealDamage(caster, target, damage, DAMAGE_TYPE_PHYSICAL, nil, ability)
 		if caster:HasTalent("talent_axe_berserk_culblade_2") then

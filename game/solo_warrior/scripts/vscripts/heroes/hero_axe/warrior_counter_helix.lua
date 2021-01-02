@@ -120,7 +120,7 @@ function modifier_axe_warrior_counter_helix:OnAttackLanded( params )
 
 			if ability:IsCooldownReady() and RollPercentage(trigger_chance) then
 				ability:CounterHelix()
-				self:UseResources(true, true, true)
+				ability:UseResources(true, true, true)
 			end
 		end
     end
@@ -168,15 +168,16 @@ end
 function modifier_axe_warrior_counter_helix:OnTakeDamage( params )
 	if IsServer() then
     	local caster = self:GetCaster()
+    	local ability = self:GetAbility()
 		if caster:HasTalent("talent_axe_warrior_helix_2") then
 			if ability:IsCooldownReady() and RollPercentage(caster:FindTalentValue("talent_axe_warrior_helix_2", "chance")) then
 				ability:CounterHelix()
-				self:UseResources(true, true, true)
+				ability:UseResources(true, true, true)
 			end
 		end
 		if caster:HasTalent("talent_axe_warrior_helix_4") then
 			if params.attacker == self:GetParent() then
-				if params.unit and params.unit:GetHealth() < 1 and params.inflictor == self:GetAbility() then
+				if params.unit and params.unit:GetHealth() < 1 and params.inflictor == ability then
 					local abil = params.attacker:FindAbilityByName("axe_power_of_pain")
 					local cooldown = abil:GetCooldownTimeRemaining()
 					if cooldown > 0 then

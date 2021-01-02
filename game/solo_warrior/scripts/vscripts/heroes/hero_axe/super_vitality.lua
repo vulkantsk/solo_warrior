@@ -46,15 +46,18 @@ function modifier_axe_super_vitality:OnCreated()
 end
 
 function modifier_axe_super_vitality:OnDestroy()
-	self.caster:AddNewModifier(self.caster, self:GetAbility(), "modifier_axe_super_vitality_buff", {duration = self.buff_duration, total_damage = self.taken_damage})
+	if IsServer() then
+		print("taken damage = "..self.taken_damage)
+		self:GetCaster().total_damage = self.taken_damage
+		local regen_buff = self.caster:AddNewModifier(self.caster, self:GetAbility(), "modifier_axe_super_vitality_buff", {duration = self.buff_duration})
+		regen_buff:SetStackCount(self.taken_damage)
+	end
 end
 
 function modifier_axe_super_vitality:OnTakeDamage( params )
-	if IsServer() then
-        if params.unit == self:GetParent() then
-			self.taken_damage = self.taken_damage + params.damage
-        end
-	end
+    if params.unit == self:GetParent() then
+		self.taken_damage = self.taken_damage + params.damage
+    end
 end
 
 function modifier_axe_super_vitality:CheckState()
@@ -92,29 +95,33 @@ modifier_axe_super_vitality_buff = class({
 		} end,
 })
 
-function modifier_axe_super_vitality:GetModifierConstantHealthRegen()
-	return self.regen
+function modifier_axe_super_vitality_buff:GetModifierConstantHealthRegen()
+	return self:GetStackCount()*self.regen
 end
 
-function modifier_axe_super_vitality:GetModifierHealthRegenPercentage()
+function modifier_axe_super_vitality_buff:GetModifierHealthRegenPercentage()
 	return self.regen_pct
 end
 
 function modifier_axe_super_vitality_buff:OnCreated(data)
-	local ability = self:GetAbility()
-	local caster = self:GetCaster()
-	self.regen = data.total_damage * ability:GetSpecialValueFor("regen")/100 /ability:GetSpecialValueFor("buff_duration")
-	print("regen = "..self.regen)
-	self.regen_pct = 0
-	caster:EmitSound("Rune.Regen")
+--	if IsServer() then
+		local ability = self:GetAbility()
+		local caster = self:GetCaster()
+		print("total damage = ".. self:GetStackCount())
+		self.regen = ability:GetSpecialValueFor("damage_convert")/100 /ability:GetSpecialValueFor("buff_duration")
+		self.regen_pct = 0
+		caster:EmitSound("Rune.Regen")
 
-	if caster:HasTalent("talent_axe_warrior_vitality_2") then
-		self.regen = self.regen * (1+ caster:FindTalentValue("talent_axe_warrior_vitality_2", "bonus_prc")/100)
-	end
+		if caster:HasTalent("talent_axe_warrior_vitality_2") then
+			self.regen = self.regen * (1+ caster:FindTalentValue("talent_axe_warrior_vitality_2", "bonus_prc")/100)
+		end
 
-	if caster:HasTalent("talent_axe_warrior_vitality_3") then
-		self.regen_pct = caster:FindTalentValue("talent_axe_warrior_vitality_3", "prc_hp")/100
-	end
+		if caster:HasTalent("talent_axe_warrior_vitality_3") then
+			self.regen_pct = caster:FindTalentValue("talent_axe_warrior_vitality_3", "regen_pct")
+			print("talent_3")
+			print(self.regen_pct)
+		end
+--	end
 end
 
 function modifier_axe_super_vitality_buff:OnRefresh()

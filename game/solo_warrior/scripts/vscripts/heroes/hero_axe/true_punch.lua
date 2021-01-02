@@ -55,7 +55,7 @@ end
 ---------------------------------------------------------------------
 
 modifier_axe_true_punch = class({
-    IsHidden                = function(self) return true end,
+    IsHidden                = function(self) return false end,
     IsPurgable              = function(self) return false end,
     DeclareFunctions        = function(self) return 
         {           

@@ -306,7 +306,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"health"			"1000"
+				"health"			"500"
 			}
 			"02"
 			{
@@ -316,7 +316,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health_per_tp"			"10"
+				"health_per_tp"			"100"
 			}
 			"04"
 			{
@@ -363,12 +363,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"range"				"600"
+				"range"				"800"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"damage"			"200 300 500 1000 1500"
+				"damage"			"150 300 450 600 800"
 			}
 			"03"
 			{	
@@ -404,7 +404,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"16"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -417,7 +417,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"3 5 7 9 11"
+				"duration"			"6 7 8 9 10"
 			}
 			"02"
 			{
@@ -432,7 +432,7 @@
 			"04"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"regen"				"50"
+				"damage_convert"	"100"
 			}
 		}
 	}
@@ -449,7 +449,7 @@
 		"RequiredLevel"					"1"
 		"LevelsBetweenUpgrades"			"3"
 
-		"AbilityCooldown"				"0.3"
+		"AbilityCooldown"				"0.2"
 		"AbilityCastAnimation"			"ACT_DOTA_IDLE"
 
 		// Special
@@ -470,7 +470,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"base_damage"			"50 100 200 300 500"
+				"base_damage"			"50 75 100 125 175"
 				//"LinkedSpecialBonus"		"special_bonus_custom_axe_2"
 				//"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
@@ -515,12 +515,13 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"5 7 10"
+				"duration"			"10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_str"				"1 2 3"
+//				"bonus_str"				"10"
 			}
 			"03"
 			{
@@ -607,12 +608,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"bat"				"1"
+				"bat"				"1.25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_speed"			"300"
+				"move_speed"			"100"
 			}
 			"03"
 			{
@@ -649,7 +650,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.2"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		"AbilityCastRange"				"400"
+		"AbilityCastRange"				"500"
 
 
 		"AbilityCooldown"				"10"
@@ -667,17 +668,17 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"75 150 400 750 2000"
+				"damage"			"225 450 675 900 1200"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"kill_threshold"	"100 200 500 1000 2500"
+				"kill_threshold"	"225 450 675 900 1200"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"50"
+				"bonus_damage"		"25 30 35 40 50"
 			}
 		}
 	}
@@ -702,7 +703,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"16"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -715,17 +716,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"3 5 7 10"
+				"duration"			"6 7 8 9 10"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"attack_speed"		"50"
+				"attack_speed"		"20"
 			}
 			"03"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"attack_bonus"		"50"
+				"attack_bonus"		"20"
 			}
 			"04"
 			{
@@ -748,7 +749,7 @@
 		"RequiredLevel"					"1"
 		"LevelsBetweenUpgrades"			"3"
 
-		"AbilityCooldown"				"0.3"
+		"AbilityCooldown"				"0.2"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -762,20 +763,20 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"trigger_chance"		"8 10 12 14 15"
+				"trigger_chance"		"10 12 15 17 20"
 				// "LinkedSpecialBonus"			"special_bonus_custom_axe_1"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"base_damage"			"35 50 100 200 500"
+				"base_damage"			"50 75 100 125 175"
 				// "LinkedSpecialBonus"		"special_bonus_custom_axe_2"
 				// "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"attack_damage"			"75"
+				"attack_damage"			"50"
 				// "LinkedSpecialBonus"		"special_bonus_custom_axe_2"
 				// "LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
 			}
@@ -817,7 +818,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"crit"				"300 500 1000"
+				"crit"				"1000 1500 2000"
 			}
 		}
 	}
@@ -853,17 +854,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"4 7 10"
+				"duration"			"10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"30 70 150"
+				"bonus_damage"			"150"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_move_speed"		"100"
+				"bonus_move_speed"		"300"
 			}
 			"04"
 			{

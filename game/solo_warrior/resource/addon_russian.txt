@@ -53,7 +53,7 @@
 		"DOTA_Tooltip_ability_axe_super_vitality_Description"				"Увеличивает сопротивление героя, после завершения эффекта герой восстанавливает часть потраченного здоровья в течение времени."
 		"DOTA_Tooltip_ability_axe_super_vitality_duration"				"ДЛИТЕЛЬНОСТЬ:"
 		"DOTA_Tooltip_ability_axe_super_vitality_status_res"			"%СОПРОТИВЛЕНИЕ ЭФФЕКТАМ:"
-		"DOTA_Tooltip_ability_axe_super_vitality_regen"				"%ВОССТАНОВЛЕНИЕ ЗДОРОВЬЯ:"
+		"DOTA_Tooltip_ability_axe_super_vitality_damage_convert"				"%ВОССТАНОВЛЕНИЕ ПОТЕРЯННОГО ЗДОРОВЬЯ:"
 		"DOTA_Tooltip_ability_axe_super_vitality_buff_duration"		"ДЛИТЕЛЬНОСТЬ ВОССТАНОВЛЕНИЯ:"
 		"DOTA_Tooltip_modifier_axe_super_vitality"							"Super vitality"
 		"DOTA_Tooltip_modifier_axe_super_vitality_Description"				"Сопротивление повышено"

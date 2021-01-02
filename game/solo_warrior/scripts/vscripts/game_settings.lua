@@ -9,7 +9,7 @@ PLAYER_COUNT_CUSTOM_2 = 0
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
 HERO_RESPAWN_TIME = 5					--
 STARTING_GOLD = 0						-- What starting gold player have ?
-HERO_START_LEVEL = 2
+HERO_START_LEVEL = 1
 
 ALLOW_SAME_HERO_SELECTION = false        -- Should we let people select the same hero as each other
 FREE_COURIER_ENABLED = false

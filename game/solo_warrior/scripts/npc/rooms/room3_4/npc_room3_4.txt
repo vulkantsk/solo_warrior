@@ -90,6 +90,7 @@
 		"AttackRange"				"125"		// Range within a target can be attacked.
 		"MovementSpeed"				"700"		// Speed.		
 		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		
 		// Abilities
 		//----------------------------------------------------------------

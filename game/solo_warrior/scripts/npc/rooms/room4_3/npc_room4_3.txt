@@ -168,6 +168,7 @@
 		"Model"						"models/heroes/disruptor/disruptor.vmdl"	// Model.
 		"ProjectileModel"			"particles/units/heroes/hero_disruptor/disruptor_base_attack.vpcf"
 		"ModelScale" 				"1"
+		"ConsideredHero"			"1"
 		
 		// Vision
 		//----------------------------------------------------------------

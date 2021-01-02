@@ -193,6 +193,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 				"1"
+		"ConsideredHero"			"1"
 
 		
 
