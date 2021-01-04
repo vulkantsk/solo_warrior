@@ -763,7 +763,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"trigger_chance"		"10 12 15 17 20"
+				"trigger_chance"		"100"
 				// "LinkedSpecialBonus"			"special_bonus_custom_axe_1"
 			}
 			"03"

@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-	"maps"			"warrior"
+	"maps"			"main"
 	"IsPlayable"	"1"
 	"MaxPlayers"	"1"
 }

@@ -4,7 +4,7 @@ LinkLuaModifier( "modifier_axe_berserk_counter_helix_debuff", "heroes/hero_axe/b
 axe_berserk_counter_helix = class({})
 
 function axe_berserk_counter_helix:GetCastRange()
-	return self:GetSpecialValueFor("trigger_chance")
+	return self:GetSpecialValueFor("radius")
 end
 
 function axe_berserk_counter_helix:GetIntrinsicModifierName()
@@ -29,7 +29,7 @@ function modifier_axe_berserk_counter_helix:OnAttackLanded( params )
     if IsServer() then
     	local caster = self:GetCaster()
 
-		if params.target == caster and not caster:PassivesDisabled() then
+		if params.attacker == caster and not caster:PassivesDisabled() then
 			local ability = self:GetAbility()
 			local trigger_chance = ability:GetSpecialValueFor("trigger_chance")
 			local radius = ability:GetSpecialValueFor("radius")

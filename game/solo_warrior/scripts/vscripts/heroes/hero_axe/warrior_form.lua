@@ -48,8 +48,7 @@ end
 modifier_axe_warrior_form = class({
 	IsHidden 				= function(self) return true end,
 	IsPurgable 				= function(self) return false end,
-	IsDebuff 				= function(self) return false end,
-	IsBuff                  = function(self) return true end,
+	RemoveOnDeath 			= function(self) return false end,
 	DeclareFunctions		= function(self) return 
 		{
 			MODIFIER_PROPERTY_HEALTH_BONUS,
