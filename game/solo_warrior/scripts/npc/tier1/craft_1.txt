@@ -18,27 +18,27 @@
 
 "DOTAAbilities"
 {
-	//"item_recipe_str_armor_1_1"
-	//{
-	//	// General
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"BaseClass"						"item_datadriven"
-	//	"AbilityTextureName" 			"item_recipe"
-//
-	//	// Item Info
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"ItemCost"						"300"
-	//	"ItemShopTags"					""
-//
-	//	// Recipe
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"ItemRecipe"					"1"
-	//	"ItemResult"					"item_str_armor_1_1"
-	//	"ItemRequirements"
-	//	{
-	//		"01"						"item_str_1_3;item_armor_1_3"
-	//	}
-	//}
+	"item_recipe_str_armor_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_armor_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_armor_1_3"
+		}
+	}
 	"item_str_armor_1_1"
 	{
 		"BaseClass"                     "item_lua"
@@ -81,7 +81,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -189,7 +189,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -201,7 +201,7 @@
 			"01"						"item_dmg_1_3;item_armor_1_3"
 		}
 	}
-	"item_dmg_armor_1_1"//шипованная каольчуга
+	"item_dmg_armor_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
@@ -230,31 +230,31 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_return_pct"			"25 100 200"
+				"dmg_return_pct"			"50 100 200"
 			}
 		}
 	}
-//	"item_recipe_dmg_armor_1_2"
-//	{
-//		// General
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemCost"						"0"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_dmg_armor_1_2"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_dmg_armor_1_1"
-//		}
-//	}
+	"item_recipe_dmg_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_armor_1_1"
+		}
+	}
 
 	"item_dmg_armor_1_2"
 	{
@@ -351,7 +351,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -363,7 +363,7 @@
 			"01"						"item_hp_1_3;item_block_1_3"
 		}
 	}
-	"item_hp_block_1_1"//ловец боли
+	"item_hp_block_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_block_1"
@@ -372,7 +372,7 @@
 
 		"ItemCost"						"1"
 		"ItemAliases"    				"hp"
-		"MaxUpgradeLevel"				"1"
+		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"1"
  
 		// Special
@@ -382,41 +382,41 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1000"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_block"			"30"
+				"bonus_block"			"60 120 180"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"hp_regen_pct"			"0.5"
+				"var_type"				"FIELD_INTEGER"
+				"heal_per_attack"			"12 25 50"
 			}
 		}
 	}
-	//"item_recipe_hp_block_1_2"
-	//{
-	//	// General
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"BaseClass"						"item_datadriven"
-	//	"AbilityTextureName" 			"item_recipe"
+	"item_recipe_hp_block_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
 
-	//	// Item Info
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemCost"						"0"
-	//	"ItemShopTags"					""
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
 
-	//	// Recipe
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemRecipe"					"1"
-	//	"ItemResult"					"item_hp_block_1_2"
-	//	"ItemRequirements"
-	//	{
-	//		"01"						"item_hp_block_1_1"
-	//	}
-	//}
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_block_1_1"
+		}
+	}
 
 	"item_hp_block_1_2"
 	{
@@ -504,27 +504,27 @@
 			}
 		}
 	}
-//	"item_recipe_stat_block_1_1"
-//	{
-//		// General
-//		//-------------------------------------------------------------------------------------------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//-------------------------------------------------------------------------------------------------------------
-//		"ItemCost"						"300"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//-------------------------------------------------------------------------------------------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_stat_block_1_1"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_stat_1_3;item_block_1_3"
-//		}
-//	}
+	"item_recipe_stat_block_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_block_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_block_1_3"
+		}
+	}
 	"item_stat_block_1_1"
 	{
 		"BaseClass"                     "item_lua"
@@ -567,7 +567,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -675,7 +675,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -687,7 +687,7 @@
 			"01"						"item_stat_1_3;item_armor_1_3"
 		}
 	}
-	"item_stat_armor_1_1"//золотой нагрудник
+	"item_stat_armor_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_stat_armor_1"
@@ -706,41 +706,41 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"25 20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"10 24 36"
+				"bonus_armor"			"12 24 36"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_block_pct"			"10 50 100"
+				"chance_block_pct"			"25 50 100"
 			}
 		}
 	}
-//	"item_recipe_stat_armor_1_2"
-//	{
-//		// General
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemCost"						"0"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_stat_armor_1_2"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_stat_armor_1_1"
-//		}
-//	}
+	"item_recipe_stat_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_armor_1_1"
+		}
+	}
 
 	"item_stat_armor_1_2"
 	{
@@ -837,7 +837,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -849,7 +849,7 @@
 			"01"						"item_hp_1_3;item_hpreg_1_3"
 		}
 	}
-	"item_hp_hpreg_1_1"//Перстень с рубином
+	"item_hp_hpreg_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_hpreg_1"
@@ -868,41 +868,41 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1000 2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"20 30 45"
+				"bonus_hpreg"			"15 30 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"5 50 100"
+				"bonus_health_pct"			"25 50 100"
 			}
 		}
 	}
-//	"item_recipe_hp_hpreg_1_2"
-//	{
-//		// General
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemCost"						"0"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_hp_hpreg_1_2"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_hp_hpreg_1_1"
-//		}
-//	}
+	"item_recipe_hp_hpreg_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_hpreg_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_hpreg_1_1"
+		}
+	}
 
 	"item_hp_hpreg_1_2"
 	{
@@ -999,7 +999,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1011,7 +1011,7 @@
 			"01"						"item_dmg_1_3;item_str_1_3"
 		}
 	}
-	"item_dmg_str_1_1"//секира тора
+	"item_dmg_str_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
@@ -1035,17 +1035,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"20 60 90"
+				"bonus_str"			"30 60 90"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"trigger_chance"			"75"
+				"trigger_chance"			"100"
 			}
 			"04"
-			{	
+			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_damage"			"75 50 100"
+				"bounce_damage"			"25 50 100"
 			}
 			"05"
 			{
@@ -1064,27 +1064,27 @@
 			}
 		}
 	}
-//	"item_recipe_dmg_str_1_2"
-//	{
-//		// General
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemCost"						"0"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_dmg_str_1_2"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_dmg_str_1_1"
-//		}
-//	}
+	"item_recipe_dmg_str_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_str_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_str_1_1"
+		}
+	}
 
 	"item_dmg_str_1_2"
 	{
@@ -1221,7 +1221,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1252,41 +1252,41 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1000 2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"25 20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_pct"			"15 4 8"
+				"spell_lifesteal_pct"			"2 4 8"
 			}
 		}
 	}
-	//"item_recipe_hp_stat_1_2"
-	//{
-	//	// General
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"BaseClass"						"item_datadriven"
-	//	"AbilityTextureName" 			"item_recipe"
-//
-	//	// Item Info
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemCost"						"0"
-	//	"ItemShopTags"					""
-//
-	//	// Recipe
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemRecipe"					"1"
-	//	"ItemResult"					"item_hp_stat_1_2"
-	//	"ItemRequirements"
-	//	{
-	//		"01"						"item_hp_stat_1_1"
-	//	}
-	//}
+	"item_recipe_hp_stat_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_stat_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_stat_1_1"
+		}
+	}
 
 	"item_hp_stat_1_2"
 	{
@@ -1374,27 +1374,27 @@
 			}
 		}
 	}
-//"item_recipe_str_resist_1_1"
-//{
-//	// General
-//	//-------------------------------------------------------------------------------------------------------------
-//	"BaseClass"						"item_datadriven"
-//	"AbilityTextureName" 			"item_recipe"
+	"item_recipe_str_resist_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
 
-//	// Item Info
-//	//-------------------------------------------------------------------------------------------------------------
-//	"ItemCost"						"300"
-//	"ItemShopTags"					""
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					""
 
-//	// Recipe
-//	//-------------------------------------------------------------------------------------------------------------
-//	"ItemRecipe"					"1"
-//	"ItemResult"					"item_str_resist_1_1"
-//	"ItemRequirements"
-//	{
-//		"01"						"item_str_1_3;item_resist_1_3"
-//	}
-//}
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_resist_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_resist_1_3"
+		}
+	}
 	"item_str_resist_1_1"
 	{
 		"BaseClass"                     "item_lua"
@@ -1437,7 +1437,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1536,27 +1536,27 @@
 			}
 		}
 	}
-	//"item_recipe_stat_hpreg_1_1"
-	//{
-	//	// General
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"BaseClass"						"item_datadriven"
-	//	"AbilityTextureName" 			"item_recipe"
-//
-	//	// Item Info
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"ItemCost"						"300"
-	//	"ItemShopTags"					""
-//
-	//	// Recipe
-	//	//-------------------------------------------------------------------------------------------------------------
-	//	"ItemRecipe"					"1"
-	//	"ItemResult"					""
-	//	"ItemRequirements"
-	//	{
-	//		"01"						"item_stat_1_3;item_hpreg_1_3"
-	//	}
-	//}
+	"item_recipe_stat_hpreg_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_hpreg_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_hpreg_1_3"
+		}
+	}
 	"item_stat_hpreg_1_1"
 	{
 		"BaseClass"                     "item_lua"
@@ -1604,7 +1604,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1713,7 +1713,7 @@
 			}
 		}
 	}
-	"item_recipe_stat_resist_1_1"//Рецепт на рунный плащ
+	"item_recipe_stat_resist_1_1"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -1722,7 +1722,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1753,41 +1753,41 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"17 17 17"
+				"bonus_stat"			"10 20 30"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_resist"			"45 45 45"
+				"bonus_resist"			"20 40 60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"manacost_reduction"			"25 25"
+				"manacost_reduction"			"50 75"
 			}
 		}
 	}
-	//"item_recipe_stat_resist_1_2"
-	//{
-	//	// General
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"BaseClass"						"item_datadriven"
-	//	"AbilityTextureName" 			"item_recipe"
-//
-	//	// Item Info
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemCost"						"0"
-	//	"ItemShopTags"					""
-//
-	//	// Recipe
-	//	//------------------------------------------------------------------------------------//-------------------------
-	//	"ItemRecipe"					"1"
-	//	"ItemResult"					"item_stat_resist_1_2"
-	//	"ItemRequirements"
-	//	{
-	//		"01"						"item_stat_resist_1_1"
-	//	}
-	//}
+	"item_recipe_stat_resist_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_stat_resist_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_resist_1_1"
+		}
+	}
 
 	"item_stat_resist_1_2"
 	{
@@ -1875,27 +1875,27 @@
 			}
 		}
 	}
-//	"item_recipe_str_hpreg_1_1"
-//	{
-//		// General
-//		//-------------------------------------------------------------------------------------------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//-------------------------------------------------------------------------------------------------------------
-//		"ItemCost"						"300"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//-------------------------------------------------------------------------------------------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_str_hpreg_1_1"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_str_1_3;item_hpreg_1_3"
-//		}
-//	}
+	"item_recipe_str_hpreg_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_str_hpreg_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_str_1_3;item_hpreg_1_3"
+		}
+	}
 	"item_str_hpreg_1_1"
 	{
 		"BaseClass"                     "item_lua"
@@ -1938,7 +1938,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2046,7 +2046,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2058,7 +2058,7 @@
 			"01"						"item_dmg_1_3;item_stat_1_3"
 		}
 	}
-	"item_dmg_stat_1_1"//клинок света
+	"item_dmg_stat_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_dmg_stat_1"
@@ -2082,7 +2082,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"25 20 30"
+				"bonus_stat"			"10 20 30"
 			}
 			"03"
 			{
@@ -2092,31 +2092,31 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dmg_per_sec"			"50 2 3" //"25 50 100"  для тестов аур клинок света.
+				"dmg_per_sec"			"1 2 3" //"25 50 100"  для тестов аур
 			}
 		}
 	}
-//"item_recipe_dmg_stat_1_2"
-//{
-//	// General
-//	//-------------------------------------------------------------------------------------------------------------
-//	"BaseClass"						"item_datadriven"
-//	"AbilityTextureName" 			"item_recipe"
+	"item_recipe_dmg_stat_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
 
-//	// Item Info
-//	//-------------------------------------------------------------------------------------------------------------
-//	"ItemCost"						"0"
-//	"ItemShopTags"					""
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
 
-//	// Recipe
-//	//-------------------------------------------------------------------------------------------------------------
-//	"ItemRecipe"					"1"
-//	"ItemResult"					"item_dmg_stat_1_2"
-//	"ItemRequirements"
-//	{
-//		"01"						"item_dmg_stat_1_1"
-//	}
-//}
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dmg_stat_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dmg_stat_1_1"
+		}
+	}
 
 	"item_dmg_stat_1_2"
 	{
@@ -2223,7 +2223,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"300"
+		"ItemCost"						"100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2235,7 +2235,7 @@
 			"01"						"item_hp_1_3;item_armor_1_3"
 		}
 	}
-	"item_hp_armor_1_1" //кушак великана
+	"item_hp_armor_1_1"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/craft_1/item_hp_armor_1"
@@ -2254,7 +2254,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1000 2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{
@@ -2269,7 +2269,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_as_decrease"			"35 50 100"
+				"aura_as_decrease"			"25 50 100"
 			}
 			"05"
 			{
@@ -2278,27 +2278,27 @@
 			}
 		}
 	}
-//	"item_recipe_hp_armor_1_2"
-//	{
-//		// General
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"BaseClass"						"item_datadriven"
-//		"AbilityTextureName" 			"item_recipe"
-//
-//		// Item Info
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemCost"						"0"
-//		"ItemShopTags"					""
-//
-//		// Recipe
-//		//------------------------------------------------------------------------------------//-------------------------
-//		"ItemRecipe"					"1"
-//		"ItemResult"					"item_hp_armor_1_2"
-//		"ItemRequirements"
-//		{
-//			"01"						"item_hp_armor_1_1"
-//		}
-//	}
+	"item_recipe_hp_armor_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_armor_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_armor_1_1"
+		}
+	}
 
 	"item_hp_armor_1_2"
 	{
@@ -2318,7 +2318,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hp"			"1000 2400 3600"
+				"bonus_hp"			"1200 2400 3600"
 			}
 			"02"
 			{

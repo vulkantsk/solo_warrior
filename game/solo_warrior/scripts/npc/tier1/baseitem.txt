@@ -2,7 +2,7 @@
 "DOTAAbilities"
 {
 
-	"item_str_1_3" //ТОПОР +СИЛЫ(ТОПОР ЛЕСНИКА). Не могу переименовать это, поэтому буду подписывать. Удачи всем кто будет рабоать с названием item_recipe_base1_base2_base3_base4_1_1
+	"item_str_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_str_1"
@@ -12,7 +12,7 @@
 		"ItemAliases"    				"str"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"15"
+				"bonus_value"			"30"
 			}
 		}
 	}
@@ -36,7 +36,7 @@
 		"ItemAliases"    				"agi"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"15"
+				"bonus_value"			"30"
 			}
 		}
 	}
@@ -61,7 +61,7 @@
 		"ItemAliases"    				"int"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -70,13 +70,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"15"
+				"bonus_value"			"30"
 			}
 		}
 	}
 
 
-	"item_stat_1_3" // РУННАЯ СФЕРА. +АТРИБУТЫ
+	"item_stat_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_stat_1"
@@ -86,7 +86,7 @@
 		"ItemAliases"    				"stat"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -95,13 +95,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"7"
+				"bonus_value"			"10"
 			}
 		}
 	}
 		
 
-	"item_armor_1_3" //РЖАВАЯ КОЛЬЧУГА
+	"item_armor_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_armor_1"
@@ -111,7 +111,7 @@
 		"ItemAliases"    				"armor"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -120,7 +120,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"5"
+				"bonus_value"			"12"
 			}
 		}
 	}
@@ -136,7 +136,7 @@
 		"ItemAliases"    				"as"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -151,7 +151,7 @@
 	}
 	
 
-	"item_block_1_3" //ЩИТ. ДЕРЕВЯННЫЙ БАКЛЕР
+	"item_block_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_block_1"
@@ -161,7 +161,7 @@
 		"ItemAliases"    				"block"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -170,13 +170,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"15"
+				"bonus_value"			"60"
 			}
 		}
 	}
 	
 
-	"item_dmg_1_3" //РЖАВЫЙ МЕЧ. УРОН
+	"item_dmg_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_dmg_1"
@@ -186,7 +186,7 @@
 		"ItemAliases"    				"dmg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -195,13 +195,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"30"
+				"bonus_value"			"60"
 			}
 		}
 	}
 	
 
-	"item_hp_1_3" //СФЕРА ЖИЗНИ. +ХП
+	"item_hp_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_hp_1"
@@ -211,7 +211,7 @@
 		"ItemAliases"    				"hp"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -220,13 +220,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"400"
+				"bonus_value"			"1200"
 			}
 		}
 	}
 	
 
-	"item_hpreg_1_3" //ПЕЧАТЬ НАДЕЖДЫ. +РЕГЕН ХП
+	"item_hpreg_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_hpreg_1"
@@ -236,7 +236,7 @@
 		"ItemAliases"    				"hpreg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -245,7 +245,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"10"
+				"bonus_value"			"15"
 			}
 		}
 	}
@@ -261,7 +261,7 @@
 		"ItemAliases"    				"mp"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -286,7 +286,7 @@
 		"ItemAliases"    				"mpreg"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -311,7 +311,7 @@
 		"ItemAliases"    				"spell"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -326,7 +326,7 @@
 	}
 	
 
-	"item_resist_1_3" //НАКИДКА ВЕДЬМОЛОВА
+	"item_resist_1_3"
 	{
 		"BaseClass"                     "item_lua"
 		"ScriptFile"                    "items/tier1/baseitem/item_resist_1"
@@ -336,7 +336,7 @@
 		"ItemAliases"    				"resist"
 		"MaxUpgradeLevel"				"3"
 		"ItemBaseLevel"					"3"
-		"ItemCost"						"100"
+		"ItemCost"						"300"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -345,7 +345,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_value"			"15"
+				"bonus_value"			"20"
 			}
 		}
 	}
