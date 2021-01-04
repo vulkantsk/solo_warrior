@@ -1,4 +1,8 @@
 <root>
+	<script>
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ACTION_MINIMAP, false );
+	</script>
+
     <Panel>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/testroom.xml"/>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/reward_chest.xml"/>
