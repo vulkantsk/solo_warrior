@@ -5,6 +5,9 @@ require("talent_tree")
 require("libraries")
 require("gamemode")
 
+--require zpr stuff
+require("debug/commands")
+
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)
 	
@@ -18,7 +21,6 @@ end
 function Activate()
 	GameSettings:InitGameSettings()
 
-
 	local GM = GameRules:GetGameModeEntity()
 	GM:SetCustomGameForceHero("npc_dota_hero_axe")
 	GameRules:SetHeroSelectionTime(0)
@@ -27,4 +29,7 @@ function Activate()
 	GameRules:SetCustomGameSetupAutoLaunchDelay(0)
 
 	Convars:SetBool("sv_cheats", true)
+	
+	--init zpr stuff
+	Commands:init()
 end

@@ -1,0 +1,17 @@
+"addon"
+{
+	"lang"											"English"
+	"addonname"										"Solo Warrior"
+	
+	//Teams
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+	"DOTA_GoodGuys"   								"Good Guys"
+	
+	//talent tree
+	"talent_tree_current_talent_points"				"Current Points: %POINTS%"
+	"talent_tree_reset_talents"						"Reset Talents"
+	
+}

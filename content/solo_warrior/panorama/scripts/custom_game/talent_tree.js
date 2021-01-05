@@ -6,6 +6,7 @@ var talentsData = {
     "talentsCount": 0,
 };
 
+// инициализация древа талантов
 function OnTalentsData(event) {
     // $.Msg(event);
     // $.Msg(Object.keys(event.talents).length);
@@ -22,6 +23,7 @@ function OnTalentsData(event) {
     // }
 }
 
+// обнова значания талантов и кол во поитнов
 function OnTalentsState(event) {
     var talentPoints = event.points;
     var parsedStateData = JSON.parse(event.talents);
@@ -31,6 +33,11 @@ function OnTalentsState(event) {
         talentsData[talentId].panel.levelLabel.text = parsedStateData[i].level + " / " + parsedStateData[i].maxlevel;
     }
     TALENTS_LAYOUT["TalentPointsLabel"].text = $.Localize("talent_tree_current_talent_points").replace("%POINTS%", talentPoints);
+	
+	//если есть поинтов нет прячем верхнюю картинку, если есть - анонируем, простите анимируем то есть
+	var hasZeroTalentPoints = talentPoints <= 0
+	$("#TalentTreeWindowButtonActiveImage").SetHasClass("hide", hasZeroTalentPoints)
+	$("#TalentTreeWindowButtonActiveImage").SetHasClass("Animate", !hasZeroTalentPoints)
 }
 
 function BuildTalentTree(data) {
@@ -144,8 +151,10 @@ var isWindowOpened = false;
 function OnTalentTreeWindowButtonClick() {
     if(isWindowOpened == true) {
         TALENTS_WINDOW.style.visibility = "collapse";
+		$("#TalentsWindowContainer").GetParent().hittest = false
     } else {
         TALENTS_WINDOW.style.visibility = "visible";
+		$("#TalentsWindowContainer").GetParent().hittest = true
 	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
     }
     isWindowOpened = !isWindowOpened;
@@ -156,8 +165,10 @@ function OnTalentTreeWindowButtonClick() {
     TALENTS_WINDOW = $("#TalentsWindowContainer")
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
     TALENTS_LAYOUT["TalentPointsLabel"] = $("#CurrentTalentPoints");
+	
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
     GameEvents.Subscribe("talent_tree_get_state_from_server", OnTalentsState);
+	
 	GameEvents.SendCustomGameEventToServer( "talent_tree_get_talents", {});
 })();
 

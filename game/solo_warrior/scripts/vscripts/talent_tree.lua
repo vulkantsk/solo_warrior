@@ -6,11 +6,13 @@ function TalentTree:Init()
     if (not IsServer() or TalentTree.initialized) then
         return
     end
+	
+	-- объявление переменных и кв
     self.abilitiesData = LoadKeyValues("scripts/npc/npc_hero_talents.txt")
     local data = LoadKeyValues("scripts/kv/hero_talents.txt")
     self.talentsData = {}
     self.tabs = {}
-    self.rows = {}
+    self.rows = {}	
     if (not data) then
         print("[TalentTree] Error loading scripts/kv/hero_talents.txt.")
         return
@@ -19,10 +21,15 @@ function TalentTree:Init()
         print("[TalentTree] Can't find talents data.")
         return
     end
+	
+	-- инициализация талантов
     for tabName, tabData in pairs(data["npc_dota_hero_axe"]) do
         table.insert(self.tabs, tabName)
+		-- проход по вкладкам
         for nlvl, talents in pairs(tabData) do
+			-- проход по строчкам
             table.insert(self.rows, tonumber(nlvl))
+			-- проход по талантам
             for _, talent in pairs(talents) do
                 local talentData = {
                     Ability = talent,
@@ -38,6 +45,7 @@ function TalentTree:Init()
             end
         end
     end
+	
     local loclenght = 1
     local locarr = {}
     table.sort(self.rows)
@@ -47,6 +55,7 @@ function TalentTree:Init()
             loclenght = loclenght + 1
         end
     end
+	
     self.rows = locarr
     TalentTree:InitPanaromaEvents()
     TalentTree.initialized = true
@@ -83,6 +92,7 @@ function TalentTree:GetColumnTalentPoints(hero, tab)
 end
 
 function TalentTree:GetLatestTalentID()
+	--[[
     -- local id = -1
     -- for talentId, _ in pairs(TalentTree.talentsData) do
     --     local convertedId = tonumber(talentId)
@@ -90,6 +100,7 @@ function TalentTree:GetLatestTalentID()
     --         id = convertedId
     --     end
     -- end
+	]]
     return #TalentTree.talentsData
 end
 
@@ -171,13 +182,15 @@ end
 
 function TalentTree:SetHeroTalentLevel(hero, talentId, level)
     level = tonumber(level)
-    if (TalentTree:IsHeroHaveTalentTree(hero) == true and talentId > 0 and level and level > -1) then
+    if (hero.talents and talentId > 0 and level and level > -1) then
         hero.talents.level[talentId] = level
+		-- если нада удалить
         if (level == 0) then
             if (hero.talents.abilities[talentId]) then
                 hero.talents.abilities[talentId]:GetCaster():RemoveAbilityByHandle(hero.talents.abilities[talentId])
                 hero.talents.abilities[talentId] = nil
             end
+		-- если нада вкачать
         else
             if (not hero.talents.abilities[talentId]) then
                 hero.talents.abilities[talentId] = hero:AddAbility(TalentTree.talentsData[talentId].Ability)
@@ -186,13 +199,12 @@ function TalentTree:SetHeroTalentLevel(hero, talentId, level)
                 hero.talents.abilities[talentId]:SetLevel(level)
             end
         end
-        local event = {
-            PlayerID = hero:GetPlayerOwnerID()
-        }
-        TalentTree:OnTalentTreeStateRequest(event)
+        
+        TalentTree:OnTalentTreeStateRequest({ PlayerID = hero:GetPlayerOwnerID() })
     end
 end
 
+--[[
 -- function TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId)
 --     if (not TalentTree.talentsData[talentId]) then
 --         return false
@@ -217,6 +229,7 @@ end
 --     end
 --     return false
 -- end
+]]
 
 function TalentTree:IsHeroCanLevelUpTalent(hero, talentId)
     if (not TalentTree.talentsData[talentId]) then
@@ -287,9 +300,10 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
     if (not hero) then
         return
     end
-    if (TalentTree:IsHeroHaveTalentTree(hero) == false) then
+    if not hero.talents then
         return
     end
+	
     if TalentTree:IsHeroCanLevelUpTalent(hero, talentId) then--(TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, talentId) and TalentTree:IsHeroCanLevelUpTalent(hero, talentId)) then
         local talentLvl = TalentTree:GetHeroTalentLevel(hero, talentId)
         TalentTree:AddTalentPointsToHero(hero, -1)
@@ -297,6 +311,7 @@ function TalentTree:OnTalentTreeLevelUpRequest(event)
     end
 end
 
+-- отправляет текущее состояние талантов и ково поинтов на клиент игрока
 function TalentTree:OnTalentTreeStateRequest(event)
     if (not IsServer()) then
         return
@@ -308,35 +323,41 @@ function TalentTree:OnTalentTreeStateRequest(event)
     if (not player) then
         return
     end
-    Timers:CreateTimer(0,
-            function()
-                local hero = player:GetAssignedHero()
-                if (hero == nil) then
-                    return 1.0
-                end
-                if (TalentTree:IsHeroHaveTalentTree(hero) == false) then
-                    return 1.0
-                end
-                local resultTable = {}
-                for i = 1, TalentTree:GetLatestTalentID() do
-                    local talentLvl = TalentTree:GetHeroTalentLevel(hero, i)
-                    local talentMaxLvl = TalentTree:GetTalentMaxLevel(i)
-                    local isDisabled = TalentTree:IsHeroCanLevelUpTalent(hero, i) == false--(TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, i) == false) or 
-                    if (talentLvl == talentMaxLvl) then
-                        isDisabled = false
-                    end
-                    table.insert(resultTable, { id = i, disabled = isDisabled, level = talentLvl, maxlevel = talentMaxLvl })
-                end
-                if (TalentTree:GetHeroCurrentTalentPoints(hero) == 0) then
-                    for _, talent in pairs(resultTable) do
-                        if (TalentTree:GetHeroTalentLevel(hero, talent.id) == 0) then
-                            talent.disabled = true
-                            talent.lvlup = false
-                        end
-                    end
-                end
-                CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_state_from_server", { talents = json.encode(resultTable), points = TalentTree:GetHeroCurrentTalentPoints(hero) })
-            end)
+	
+    Timers:CreateTimer(0, function()
+        local hero = player:GetAssignedHero()
+        if (hero == nil) then
+            return 1.0
+        end
+		
+        if not hero.talents then
+            return 1.0
+        end
+		
+        local resultTable = {}
+        for i = 1, TalentTree:GetLatestTalentID() do
+		local talentLvl = TalentTree:GetHeroTalentLevel(hero, i)
+		local talentMaxLvl = TalentTree:GetTalentMaxLevel(i)
+		
+		local isDisabled = TalentTree:IsHeroCanLevelUpTalent(hero, i) == false--(TalentTree:IsHeroSpendEnoughPointsInColumnForTalent(hero, i) == false) or 
+			if (talentLvl == talentMaxLvl) then
+				isDisabled = false
+			end
+			table.insert(resultTable, { id = i, disabled = isDisabled, level = talentLvl, maxlevel = talentMaxLvl })
+		end
+		
+		if (TalentTree:GetHeroCurrentTalentPoints(hero) == 0) then
+			for _, talent in pairs(resultTable) do
+				if (TalentTree:GetHeroTalentLevel(hero, talent.id) == 0) then
+					talent.disabled = true
+					talent.lvlup = false
+				end
+			end
+		end
+		
+		CustomGameEventManager:Send_ServerToPlayer(player, "talent_tree_get_state_from_server", { talents = json.encode(resultTable), points = TalentTree:GetHeroCurrentTalentPoints(hero) })
+	end)
 end
 
+--
 TalentTree:Init()
