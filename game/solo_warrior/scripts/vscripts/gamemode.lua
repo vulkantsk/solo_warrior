@@ -19,6 +19,7 @@ function GameMode:OnGameRulesStateChange()
 	end
 end
 
+--ФИЛЬТРЫ
 function GameMode:ExecuteOrderFilter(filterTable)
 	local order_type = filterTable.order_type
 	local unit
@@ -72,6 +73,7 @@ function GameMode:SellItem(playerId, unit, item)
 	PlayerResource:ModifyGold(playerId, cost, false, 0)
 end
 
+--ИВЕНТЫ
 function GameMode:OnNPCSpawned(keys)
 	local npc = EntIndexToHScript(keys.entindex)
 	local name = npc:GetUnitName()
@@ -102,4 +104,5 @@ function GameMode:OnEntityKilled(keys)
 	
 end
 
+--
 GameMode:InitGameMode()
