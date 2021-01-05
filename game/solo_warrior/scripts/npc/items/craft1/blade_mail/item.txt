@@ -1,0 +1,100 @@
+"DOTAAbilities"
+{
+		"item_dmg_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5 8 12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"8 12 18"
+			}
+		}
+	}
+	"item_dmg_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_2"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5 8 12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"8 12 18"
+			}
+		}
+	}
+	"item_dmg_armor_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_armor_1_3"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5 8 12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"			"8 12 18"
+			}
+		}
+	}
+}

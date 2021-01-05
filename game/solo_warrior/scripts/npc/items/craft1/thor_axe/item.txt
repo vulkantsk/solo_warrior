@@ -1,0 +1,161 @@
+"DOTAAbilities"
+{
+		"item_dmg_str_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			    "15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"	    "15 23 35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"33 50 75"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"1 2 3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"250 375 600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"1"
+			}
+		}
+	}
+
+	"item_dmg_str_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_2"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			    "15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"	    "15 23 35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"33 50 75"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"1 2 3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"250 375 600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"1"
+			}
+		}
+	}
+	"item_dmg_str_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_dmg_str_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/dmg_str_1_3"		//icon
+
+		"ItemAliases"    				"dmg"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			    "15 23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"	    "15 23 35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"33 50 75"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"1 2 3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"250 375 600"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"1"
+			}
+		}
+	}
+}

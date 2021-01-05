@@ -1,0 +1,100 @@
+"DOTAAbilities"
+{
+		"item_stat_block_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"15 23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"			    "3 5 8"
+			}
+		}
+	}
+	"item_stat_block_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_2"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"15 23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"			    "3 5 8"
+			}
+		}
+	}
+	"item_stat_block_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_stat_block_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/stat_block_1_3"		//icon
+
+		"ItemAliases"    				"stat"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_block"			"15 23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abs_block"				"3 5 8"
+			}
+		}
+	}
+}

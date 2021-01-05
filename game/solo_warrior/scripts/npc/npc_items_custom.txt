@@ -1,14 +1,18 @@
-#base "tier1/baseitem.txt"
-#base "tier1/craft_1.txt"
+//#base "tier1/baseitem.txt"
+
+#base "items/_.txt"
+
+
+//#base "tier1/craft_1.txt"
 #base "tier1/craft_2.txt"
 
-#base "tier2/baseitem.txt"
-#base "tier2/craft_1.txt"
-#base "tier2/craft_2.txt"
+//#base "tier2/baseitem.txt"
+//#base "tier2/craft_1.txt"
+//#base "tier2/craft_2.txt"
 
-#base "tier3/baseitem.txt"
-#base "tier3/craft_1.txt"
-#base "tier3/craft_2.txt"
+//#base "tier3/baseitem.txt"
+//#base "tier3/craft_1.txt"
+//#base "tier3/craft_2.txt"
 
 
 "DOTAAbilities"

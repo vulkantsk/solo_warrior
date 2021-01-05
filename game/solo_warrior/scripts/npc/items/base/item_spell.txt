@@ -1,0 +1,26 @@
+"DOTAAbilities"
+{
+	"item_spell_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_spell_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/spell_1_3"
+
+		"ItemAliases"    				"spell"
+//		"MaxUpgradeLevel"				"3"
+//		"ItemBaseLevel"					"3"
+		"ItemCost"						"150"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"30"
+			}
+		}
+	}
+}

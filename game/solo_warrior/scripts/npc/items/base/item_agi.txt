@@ -1,0 +1,26 @@
+"DOTAAbilities"
+{
+	"item_agi_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_agi_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/agi_1_3"
+
+		"ItemAliases"    				"agi"
+//		"MaxUpgradeLevel"				"3"
+//		"ItemBaseLevel"					"3"
+		"ItemCost"						"150"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"30"
+			}
+		}
+	}
+}

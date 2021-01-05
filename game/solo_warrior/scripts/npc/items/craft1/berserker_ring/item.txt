@@ -1,0 +1,102 @@
+"DOTAAbilities"
+{
+		"item_str_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"30 60 90"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"15 30 45"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"2 4 8"
+			}
+		}
+	}
+
+	"item_str_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_2"		//icon
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "10 15 23"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"5 8 12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"2 3 5"
+			}
+		}
+	}
+
+	"item_str_hpreg_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/str_hpreg_1_3"		//icon
+
+		"ItemAliases"    				"str"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "10 15 23"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"5 8 12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"2 3 5"
+			}
+		}
+	}
+}

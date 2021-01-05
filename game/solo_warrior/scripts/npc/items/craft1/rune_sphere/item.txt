@@ -1,0 +1,100 @@
+"DOTAAbilities"
+{
+		"item_hp_stat_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			    "450 675 1013"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"	"2 3 5"
+			}
+		}
+	}
+	"item_hp_stat_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_2"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			    "450 675 1013"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"	"2 3 5"
+			}
+		}
+	}
+	"item_hp_stat_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_1/item_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_1/hp_stat_1_3"		//icon
+
+		"ItemAliases"    				"hp"
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			    "450 675 1013"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"7 11 17"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"	"2 3 5"
+			}
+		}
+	}
+}
