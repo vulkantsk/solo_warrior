@@ -1,0 +1,98 @@
+"DOTAAbilities"
+{
+		"item_stat_resist_str_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_stat_resist_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/stat_resist_str_hpreg_1_1"			//ico
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"stat;resist;str;hpreg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"23 35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"80 120"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"5 8"
+			}
+		}
+	}
+	"item_stat_resist_str_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_stat_resist_str_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/stat_resist_str_hpreg_1_2"			//ico
+
+		"ItemAliases"    				"stat;resist;str;hpreg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			"23 35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"80 120"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_pct"			"5 8"
+			}
+		}
+	}
+}

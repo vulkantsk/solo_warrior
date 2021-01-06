@@ -1,0 +1,98 @@
+"DOTAAbilities"
+{
+		"item_str_resist_stat_hpreg_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_str_resist_stat_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_2/str_resist_stat_hpreg_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str;resist;stat;hpreg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"				"23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"5 8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_regen"			"80 120"
+			}
+		}
+	}
+	"item_str_resist_stat_hpreg_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_str_resist_stat_hpreg_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"tier1/craft_2/str_resist_stat_hpreg_1_2"		//icon
+
+		"ItemAliases"    				"str;resist;stat;hpreg"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"				"23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_resist"			"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hpreg"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_duration"			"5 8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"buff_regen"			"80 120"
+			}
+		}
+	}
+}

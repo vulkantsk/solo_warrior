@@ -1,0 +1,138 @@
+"DOTAAbilities"
+{
+		"item_dmg_str_hp_stat_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_dmg_str_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/dmg_str_hp_stat_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg;str;hp;stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"				"35 53"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"				"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"				"1013 1520"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"	"5 8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"			"35 53"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"75 113"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"3 5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"600 900"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"			"1	0.5"
+			}
+		}
+	}
+	"item_dmg_str_hp_stat_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_dmg_str_hp_stat_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/dmg_str_hp_stat_1_2"		//icon
+
+		"ItemAliases"    				"dmg;str;hp;stat"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"				"35 53"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"				"23 35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"				"1013 1520"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_pct"	"5 8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"trigger_chance"		"35 53"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_damage"			"75 113"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_count"			"3 5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bounce_radius"			"600 900"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bounce_interval"		"1	0.5"
+			}
+		}
+	}
+}

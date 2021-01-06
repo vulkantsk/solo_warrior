@@ -1,0 +1,89 @@
+"DOTAAbilities"
+{
+		"item_str_armor_dmg_armor_1_1" //БМ
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_str_armor_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/str_armor_dmg_armor_1_1"			//иконка
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"str;armor;dmg;armor"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"18 27"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			    "35 53"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_resist_pct"	    "12 18"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"	    "18 27"
+			}
+		}
+
+	}
+	"item_str_armor_dmg_armor_1_2" //БМ
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_str_armor_dmg_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/str_armor_dmg_armor_1_2"		//иконка
+
+		"ItemAliases"    				"str;armor;dmg;armor"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_str"			    "23 35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"18 27"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			    "35 53"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_resist_pct"	    "12 18"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_return_pct"	    "18 27"
+			}
+		}
+	}
+}

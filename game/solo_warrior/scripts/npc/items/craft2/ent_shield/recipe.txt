@@ -1,0 +1,45 @@
+"DOTAAbilities"
+{
+		"item_recipe_hp_block_stat_block_1_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"900"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_stat_block_1_1"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_block_1_3;item_stat_block_1_3"
+		}
+	}
+	"item_recipe_hp_block_stat_block_1_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1350"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hp_block_stat_block_1_2"
+		"ItemRequirements"
+		{
+			"01"						"item_hp_block_stat_block_1_1"
+		}
+	}
+}

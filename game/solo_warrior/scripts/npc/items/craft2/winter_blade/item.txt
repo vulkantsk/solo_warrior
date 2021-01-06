@@ -1,0 +1,118 @@
+"DOTAAbilities"
+{
+	"item_dmg_stat_hp_armor_1_1"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_dmg_stat_hp_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/dmg_stat_hp_armor_1_1"		//icon
+
+		"ItemCost"						"1"
+		"ItemAliases"    				"dmg;stat;hp;armor"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"35 53"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1013 1520"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"788 1182"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_per_sec"			"113 170"   //"100 200" для тестов аур
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_decrease"			"35 53"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_ms_decrease"			"35 53"
+			}
+		}
+	}
+"item_dmg_stat_hp_armor_1_2"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/craft_2/item_dmg_stat_hp_armor_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/craft_2/dmg_stat_hp_armor_1_2"		//icon
+
+		"ItemAliases"    				"dmg;stat;hp;armor"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_dmg"			"35 53"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"17 26"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_hp"			"1013 1520"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"12 18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"788 1182"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dmg_per_sec"			"113 170"   //"100 200" для тестов аур
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_as_decrease"			"35 53"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_ms_decrease"			"35 53"
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+#base "blade_mail/_.txt"
+#base "ent_shield/_.txt"
+#base "living_armor/_.txt"
+#base "rune_ring/_.txt"
+#base "sky_reaper/_.txt"
+#base "winter_blade/_.txt"
+#base "wolf_cloak/_.txt"
