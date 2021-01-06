@@ -7,6 +7,7 @@ require("gamemode")
 
 --require zpr stuff
 require("debug/commands")
+require("debug/dprint")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)

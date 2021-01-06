@@ -515,10 +515,14 @@ function CDOTA_BaseNPC:HighestTalentTypeValue(talentType)
 end
 
 function CDOTA_BaseNPC:FindTalentValue(talentName, value)
+	if not value then local value = "value" end
+	return self:FindAbilityByName(talentName):GetSpecialValueFor(tostring(value))
+	--[[
 	if self:HasAbility(talentName) then
 		return self:FindAbilityByName(talentName):GetSpecialValueFor(value or "value")
 	end
 	return 0
+	]]
 end
 
 function CDOTA_BaseNPC:FindSpecificTalentValue(talentName, value)

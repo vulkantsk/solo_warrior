@@ -12,14 +12,18 @@ end
 
 -- функции конваров:
 function Commands:GiveTalentPoints(pid, count) --tpoints
+	if not count then count = pid; pid = 0 end
 	pid = tonumber(pid)
+	
 	if PlayerResource:IsValidPlayer(pid) then
 		TalentTree:AddTalentPointsToHero(PlayerResource:GetPlayer(pid):GetAssignedHero(), tonumber(count))
 	end
 end
 
 function Commands:GreedIsGood(pid) --gig
+	if not pid then pid = 0 end
 	pid = tonumber(pid)
+	
 	if PlayerResource:IsValidPlayer(pid) then
 		local hero = PlayerResource:GetPlayer(pid):GetAssignedHero()
 		hero:AddExperience(1000000, DOTA_ModifyXP_Unspecified, false, false)

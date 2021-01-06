@@ -6,7 +6,7 @@
         <include src="file://{resources}/scripts/custom_game/talent_tree.js"/>
     </scripts>
     <Button hittest="false" class="TalentTreeRoot" onactivate='OnTalentTreeWindowButtonClick()' oncontextmenu='OnTalentTreeWindowButtonClick()'>
-        <Panel hittest="true" id="TalentsWindowContainer">
+        <Panel hittest="true" id="TalentsWindowContainer" onactivate=''>
             <Panel id="TalentTreeColumnsContainer"/>
             <Label id="CurrentTalentPoints" text="#talent_tree_current_talent_points"/>
             <Button id="TalentsResetButton" class="Button" onactivate='OnResetTalentsButtonClick()'>

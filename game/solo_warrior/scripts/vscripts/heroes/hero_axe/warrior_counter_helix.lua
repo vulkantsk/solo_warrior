@@ -13,14 +13,42 @@ function axe_warrior_counter_helix:GetBehavior()
 end
 
 function axe_warrior_counter_helix:OnSpellStart()
+	--DPRINTTABLE(self)
 	local caster = self:GetCaster()
-		if caster:HasTalent("talent_axe_warrior_helix_5") then
-			local duration = caster:FindTalentValue("talent_axe_warrior_helix_3", "interval")
-			print("duration ="..duration)
---			local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
-			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
---			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
-		end
+	if caster:HasTalent("talent_axe_warrior_helix_5") then
+		self:CounterHelix()
+	
+		--[[ с какова то хуя не работает хотя вроде должно
+		local duration = caster:FindTalentValue("talent_axe_warrior_helix_5", "duration")
+		local interval = caster:FindTalentValue("talent_axe_warrior_helix_5", "interval")
+		]]		
+		local tability = caster:FindAbilityByName("talent_axe_warrior_helix_5")
+		local duration = tability:GetSpecialValueFor("duration")
+		local interval = tability:GetSpecialValueFor("interval")
+		self:StartCooldown(tability:GetSpecialValueFor("cooldown"))
+		local spent = 0
+		
+		DPRINT("counterhelix: "..interval.." "..duration.." "..spent)
+		
+		Timers:CreateTimer(interval, function()
+			self:CounterHelix()
+		
+			spent = spent + interval
+			if spent >= duration then
+				return nil
+			end
+			return interval
+		end)
+		
+		--[[
+		local duration = caster:FindTalentValue("talent_axe_warrior_helix_3", "interval")
+		print("duration ="..duration)
+		--			local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
+		caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
+		--			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
+		]]
+	end
+		
     if IsServer() then
 	
 	end
