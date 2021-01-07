@@ -105,7 +105,7 @@
 			"08"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"knockback_distance"		"50"
+				"knockback_distance"		"0"
 			}		
 			"09"
 			{
@@ -138,7 +138,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_stats"			"100"
+				"bonus_stats"			"10"
 			}
 
 		}

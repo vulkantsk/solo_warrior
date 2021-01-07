@@ -4,7 +4,9 @@ LinkLuaModifier( "modifier_axe_berserk_counter_helix_debuff", "heroes/hero_axe/b
 axe_berserk_counter_helix = class({})
 
 function axe_berserk_counter_helix:GetCastRange()
-	return self:GetSpecialValueFor("radius")
+	if IsServer() then
+		return self:GetSpecialValueFor("radius")
+	end
 end
 
 function axe_berserk_counter_helix:GetIntrinsicModifierName()

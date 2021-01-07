@@ -23,14 +23,16 @@ modifier_axe_power_of_pain = class({
 })
 
 function modifier_axe_power_of_pain:OnCreated()
-	local ability = self:GetAbility()
-    self.caster = self:GetCaster()
-    self.bonus_str = ability:GetSpecialValueFor("bonus_str")
-	if self.caster:HasTalent("talent_axe_warrior_pain_1") then
-		self.bonus_str = self.bonus_str + self.caster:FindTalentValue("talent_axe_warrior_pain_1", "bonus_str")
+	if IsServer() then 
+		local ability = self:GetAbility()
+		self.caster = self:GetCaster()
+		self.bonus_str = ability:GetSpecialValueFor("bonus_str")
+		if self.caster:HasTalent("talent_axe_warrior_pain_1") then
+			self.bonus_str = self.bonus_str + self.caster:FindTalentValue("talent_axe_warrior_pain_1", "bonus_str")
+		end
+		self.damage_per_str = ability:GetSpecialValueFor("damage_per_str")
+		self.radius = ability:GetSpecialValueFor("radius")
 	end
-	self.damage_per_str = ability:GetSpecialValueFor("damage_per_str")
-	self.radius = ability:GetSpecialValueFor("radius")
 end
 
 function modifier_axe_power_of_pain:GetModifierBonusStats_Strength()

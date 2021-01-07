@@ -8,6 +8,7 @@ require("gamemode")
 --require zpr stuff
 require("debug/commands")
 require("debug/dprint")
+require("stats/speedrun")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)
@@ -33,4 +34,5 @@ function Activate()
 	
 	--init zpr stuff
 	Commands:init()
+	Speedrun:init()
 end

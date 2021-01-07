@@ -13,5 +13,8 @@
 	//talent tree
 	"talent_tree_current_talent_points"				"Current Points: %POINTS%"
 	"talent_tree_reset_talents"						"Reset Talents"
-	
+
+	//speedrun
+	"speedrun_personalbest"							"PB: "
+	"speedrun_worldrecord"							"WR: "
 }

@@ -516,13 +516,13 @@ end
 
 function CDOTA_BaseNPC:FindTalentValue(talentName, value)
 	if not value then local value = "value" end
-	return self:FindAbilityByName(talentName):GetSpecialValueFor(tostring(value))
-	--[[
+--	return self:FindAbilityByName(talentName):GetSpecialValueFor(tostring(value))
+--	--[[
 	if self:HasAbility(talentName) then
 		return self:FindAbilityByName(talentName):GetSpecialValueFor(value or "value")
 	end
 	return 0
-	]]
+--	]]
 end
 
 function CDOTA_BaseNPC:FindSpecificTalentValue(talentName, value)
@@ -1140,6 +1140,7 @@ function CDOTA_Buff:IsStun()
 	if GLOBAL_STUN_LIST[self:GetName()] then return true else return false end
 end
 
+--[[
 function CDOTA_Buff:GetModifierPropertyValue(propertyname)
 	if not self:GetAbility() then return 0 end
 	local kv = self:GetAbility():GetAbilityKeyValues()
@@ -1164,6 +1165,7 @@ function CDOTA_Buff:GetModifierPropertyValue(propertyname)
 	end
 	return value
 end
+]]
 
 function CDOTABaseAbility:GetTalentSpecialValueFor(value)
 	local base = self:GetSpecialValueFor(value)
@@ -2259,14 +2261,14 @@ function GiveExperiencePlayers( experience )
 		end
 	end
 end
-
+--[[
 function CDOTA_BaseNPC:FindTalentValue(talentName)
     if self:HasAbility(talentName) then
         return self:FindAbilityByName(talentName):GetSpecialValueFor("value")
     end
     return nil
 end
-
+]]
 function AttackMove ( unit, point )
 --	print("that shit work !!!")
 	Timers:CreateTimer(0.1, function()

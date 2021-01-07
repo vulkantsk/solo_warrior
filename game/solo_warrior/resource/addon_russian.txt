@@ -46,8 +46,10 @@
 		"DOTA_Tooltip_ability_axe_warrior_wave_Description"				"Создаёт волну силы, наносящую урон всем врагам на линии."
 		"DOTA_Tooltip_ability_axe_warrior_wave_range"				"ДАЛЬНОСТЬ:"
 		"DOTA_Tooltip_ability_axe_warrior_wave_damage"				"УРОН:"
-		"DOTA_Tooltip_modifier_"							"Name"
-		"DOTA_Tooltip_modifier__Description"				"Desc"
+		"DOTA_Tooltip_modifier_axe_warrior_wave_buff"							"Wave buff"
+		"DOTA_Tooltip_modifier_axe_warrior_wave_buff_Description"				""
+		"DOTA_Tooltip_modifier_axe_warrior_wave_debuff"							"Wave slow"
+		"DOTA_Tooltip_modifier_axe_warrior_wave_debuff_Description"				""
 
 		"DOTA_Tooltip_ability_axe_super_vitality"							"Super vitality"
 		"DOTA_Tooltip_ability_axe_super_vitality_Description"				"Увеличивает сопротивление героя, после завершения эффекта герой восстанавливает часть потраченного здоровья в течение времени."
@@ -77,8 +79,8 @@
 		"DOTA_Tooltip_ability_axe_power_of_pain_bonus_str"			"СИЛЫ ЗА СТАК:"
 		"DOTA_Tooltip_ability_axe_power_of_pain_damage_per_str"		"УРОНА ЗА СИЛУ:"
 		"DOTA_Tooltip_ability_axe_power_of_pain_radius"				"РАДИУС:"
-		"DOTA_Tooltip_modifier_axe_power_of_pain"							"Name"
-		"DOTA_Tooltip_modifier_axe_power_of_pain_Description"				"Desc"
+		"DOTA_Tooltip_modifier_axe_power_of_pain"							"Power of pain"
+		"DOTA_Tooltip_modifier_axe_power_of_pain_Description"				""
 
 		"DOTA_Tooltip_ability_axe_blood_bath"						"Blood bath"
 		"DOTA_Tooltip_ability_axe_blood_bath_Description"			"Использует собственное здоровье, чтобы нанести огромный урон! "
@@ -136,6 +138,10 @@
 		"DOTA_Tooltip_ability_axe_true_punch"							"True punch"
 		"DOTA_Tooltip_ability_axe_true_punch_Description"				"Наносит сокрушительный удар врагу!"
 		"DOTA_Tooltip_ability_axe_true_punch_crit"				"%МНОЖИТЕЛЬ УРОНА:"
+		"DOTA_Tooltip_modifier_axe_true_punch"							"Hits remain"
+		"DOTA_Tooltip_modifier_axe_true_punch_Description"				"Количество нанесёных ударов"
+		"DOTA_Tooltip_modifier_axe_true_punch_debuff"							"Armor crash"
+		"DOTA_Tooltip_modifier_axe_true_punch_debuff_Description"				"Броня снижена"
 
 		"DOTA_Tooltip_ability_axe_last_chance"							"Last chance"
 		"DOTA_Tooltip_ability_axe_last_chance_Description"			"При получении смертельного урона берсерк входит в неконтролируемое состояние, увеличивая боевую мощь !"
@@ -273,7 +279,7 @@
 
 		"DOTA_Tooltip_ability_talent_axe_berserk_blood_1"							"Жажда крови"
 		"DOTA_Tooltip_ability_talent_axe_berserk_blood_1_Description"				"Каждый убитый враг восстонавливает часть здоровья."
-		"DOTA_Tooltip_ability_talent_axe_berserk_blood_1_hp_required"				"%ЛЕЧЕНИЕ ОТ ЗДОРОВЬЯ ВРАГА:"
+		"DOTA_Tooltip_ability_talent_axe_berserk_blood_1_hp_pct"				"%ЛЕЧЕНИЕ ОТ ЗДОРОВЬЯ ВРАГА:"
 
 		"DOTA_Tooltip_ability_talent_axe_berserk_blood_2"							"Жажда жизни"
 		"DOTA_Tooltip_ability_talent_axe_berserk_blood_2_Description"				"Если во время использования способности порог здоровье было ниже порога здоровья, то герой не может умереть !"

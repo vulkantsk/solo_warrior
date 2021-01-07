@@ -4,6 +4,7 @@
 	</script>
 
     <Panel>
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hud.xml"/>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/testroom.xml"/>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/reward_chest.xml"/>
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/talent_tree/window.xml"/>

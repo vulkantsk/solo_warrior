@@ -76,7 +76,7 @@
 				"02"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"armor_bonus"			"0.5"
+					"armor_bonus"			"10.5"
 				}
 			}
 		}
@@ -435,7 +435,7 @@
 				}
 				"02"
 				{
-					"var_type"				"FIELD_INTEGER"
+					"var_type"				"FIELD_FLOAT"
 					"duration"				"0.35"
 				}
 			}
