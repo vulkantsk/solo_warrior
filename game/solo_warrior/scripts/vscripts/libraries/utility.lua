@@ -1140,6 +1140,7 @@ function CDOTA_Buff:IsStun()
 	if GLOBAL_STUN_LIST[self:GetName()] then return true else return false end
 end
 
+--[[
 function CDOTA_Buff:GetModifierPropertyValue(propertyname)
 	if not self:GetAbility() then return 0 end
 	local kv = self:GetAbility():GetAbilityKeyValues()
@@ -1164,6 +1165,7 @@ function CDOTA_Buff:GetModifierPropertyValue(propertyname)
 	end
 	return value
 end
+]]
 
 function CDOTABaseAbility:GetTalentSpecialValueFor(value)
 	local base = self:GetSpecialValueFor(value)

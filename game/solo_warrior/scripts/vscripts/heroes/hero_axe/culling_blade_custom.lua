@@ -10,6 +10,8 @@ axe_culling_blade_custom = class({})
 -- end
 
 function axe_culling_blade_custom:OnSpellStart()
+	if IsServer() then
+	
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
 	local point = target:GetAbsOrigin()
@@ -54,9 +56,13 @@ function axe_culling_blade_custom:OnSpellStart()
 		end
 	]]	
 	caster:EmitSound(self.sound)
+	
+	end
 end
 
 function axe_culling_blade_custom:KillTarget(enemy)
+	if IsServer() then
+
 	local caster = self:GetCaster()
 	enemy:Kill(self, caster)
 	local target_location = enemy:GetAbsOrigin()
@@ -79,6 +85,8 @@ function axe_culling_blade_custom:KillTarget(enemy)
 			local modifier = enemy:AddNewModifier(caster, self, "modifier_axe_culling_blade_debuff", {duration = caster:FindTalentValue("talent_axe_berserk_culblade_3", "duration")})
 			modifier:SetStackCount(caster:FindTalentValue("talent_axe_berserk_culblade_3", "min_armor"))
 		end
+	end
+	
 	end
 end
 

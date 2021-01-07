@@ -1,0 +1,44 @@
+.root
+{
+	width: 100%;
+	height: 100%;
+}
+
+#SpeedrunPanel
+{
+	width: 300px;
+	height: 100px;
+	align: left bottom;
+	margin-left: 150px;
+	flow-children: down;
+	
+	background-color: #00000000;
+}
+
+#SpeedrunCT
+{
+	width: 100%;
+	font-size: 50px;
+	color: white;
+}
+
+#SpeedrunPB
+{
+	width: 100%;
+	font-size: 16px;
+	color: green;
+}
+
+#SpeedrunWR
+{
+	width: 100%;
+	font-size: 16px;
+	color: yellow;
+}
+
+.text
+{
+	font-family: "Comic Sans MS";
+	text-overflow: shrink;
+}
+

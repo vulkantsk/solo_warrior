@@ -4,12 +4,14 @@ LinkLuaModifier( "modifier_axe_super_vitality_buff", "heroes/hero_axe/super_vita
 axe_super_vitality = class({})
 
 function axe_super_vitality:OnSpellStart()
-	local caster = self:GetCaster()
-    caster:AddNewModifier(caster, self, "modifier_axe_super_vitality", {duration = self:GetSpecialValueFor("duration")})
-    caster:EmitSound("Hero_Axe.BerserkersCall.Item.Shoutmask")
-			
-	if caster:HasTalent("talent_axe_warrior_vitality_1") then
-		caster:Purge(false, true, false, false, false)
+	if IsServer() then
+		local caster = self:GetCaster()
+		caster:AddNewModifier(caster, self, "modifier_axe_super_vitality", {duration = self:GetSpecialValueFor("duration")})
+		caster:EmitSound("Hero_Axe.BerserkersCall.Item.Shoutmask")
+				
+		if caster:HasTalent("talent_axe_warrior_vitality_1") then
+			caster:Purge(false, true, false, false, false)
+		end
 	end
 end
 
@@ -96,17 +98,21 @@ modifier_axe_super_vitality_buff = class({
 })
 
 function modifier_axe_super_vitality_buff:GetModifierConstantHealthRegen()
-	return self:GetStackCount()*self.regen
+	if IsServer() then
+		return self:GetStackCount()*self.regen
+	end
 end
 
 function modifier_axe_super_vitality_buff:GetModifierHealthRegenPercentage()
-	if self:GetCaster():HasTalent("talent_axe_warrior_vitality_3") then
-		return self:GetCaster():FindTalentValue("talent_axe_warrior_vitality_3", "regen_pct")
+	if IsServer() then
+		if self:GetCaster():HasTalent("talent_axe_warrior_vitality_3") then
+			return self:GetCaster():FindTalentValue("talent_axe_warrior_vitality_3", "regen_pct")
+		end
 	end
 end
 
 function modifier_axe_super_vitality_buff:OnCreated(data)
---	if IsServer() then
+	if IsServer() then
 		local ability = self:GetAbility()
 		local caster = self:GetCaster()
 		print("total damage = ".. self:GetStackCount())
@@ -118,7 +124,7 @@ function modifier_axe_super_vitality_buff:OnCreated(data)
 			self.regen = self.regen * (1+ caster:FindTalentValue("talent_axe_warrior_vitality_2", "bonus_prc")/100)
 		end
 
---	end
+	end
 end
 
 function modifier_axe_super_vitality_buff:OnRefresh()

@@ -13,14 +13,15 @@ function axe_warrior_counter_helix:GetBehavior()
 end
 
 function axe_warrior_counter_helix:OnSpellStart()
-	--DPRINTTABLE(self)
-	local caster = self:GetCaster()
-	if caster:HasTalent("talent_axe_warrior_helix_5") then
-		local duration = caster:FindTalentValue("talent_axe_warrior_helix_5", "duration")
-		local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
+	if IsServer() then
+		local caster = self:GetCaster()
+		if caster:HasTalent("talent_axe_warrior_helix_5") then
+			local duration = caster:FindTalentValue("talent_axe_warrior_helix_5", "duration")
+			local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
 
-		caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
-		caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
+			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
+			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
+		end
 	end
 end
 
