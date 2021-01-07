@@ -516,13 +516,13 @@ end
 
 function CDOTA_BaseNPC:FindTalentValue(talentName, value)
 	if not value then local value = "value" end
-	return self:FindAbilityByName(talentName):GetSpecialValueFor(tostring(value))
-	--[[
+--	return self:FindAbilityByName(talentName):GetSpecialValueFor(tostring(value))
+--	--[[
 	if self:HasAbility(talentName) then
 		return self:FindAbilityByName(talentName):GetSpecialValueFor(value or "value")
 	end
 	return 0
-	]]
+--	]]
 end
 
 function CDOTA_BaseNPC:FindSpecificTalentValue(talentName, value)
@@ -2259,14 +2259,14 @@ function GiveExperiencePlayers( experience )
 		end
 	end
 end
-
+--[[
 function CDOTA_BaseNPC:FindTalentValue(talentName)
     if self:HasAbility(talentName) then
         return self:FindAbilityByName(talentName):GetSpecialValueFor("value")
     end
     return nil
 end
-
+]]
 function AttackMove ( unit, point )
 --	print("that shit work !!!")
 	Timers:CreateTimer(0.1, function()

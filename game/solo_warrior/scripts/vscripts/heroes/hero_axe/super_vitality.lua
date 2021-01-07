@@ -100,7 +100,9 @@ function modifier_axe_super_vitality_buff:GetModifierConstantHealthRegen()
 end
 
 function modifier_axe_super_vitality_buff:GetModifierHealthRegenPercentage()
-	return self.regen_pct
+	if self:GetCaster():HasTalent("talent_axe_warrior_vitality_3") then
+		return self:GetCaster():FindTalentValue("talent_axe_warrior_vitality_3", "regen_pct")
+	end
 end
 
 function modifier_axe_super_vitality_buff:OnCreated(data)
@@ -116,11 +118,6 @@ function modifier_axe_super_vitality_buff:OnCreated(data)
 			self.regen = self.regen * (1+ caster:FindTalentValue("talent_axe_warrior_vitality_2", "bonus_prc")/100)
 		end
 
-		if caster:HasTalent("talent_axe_warrior_vitality_3") then
-			self.regen_pct = caster:FindTalentValue("talent_axe_warrior_vitality_3", "regen_pct")
-			print("talent_3")
-			print(self.regen_pct)
-		end
 --	end
 end
 

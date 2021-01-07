@@ -14,7 +14,7 @@ end
 function axe_true_punch:Punch(hTarget)
     if IsServer() then
         local caster = self:GetCaster()
-        hTarget:EmitSound("Hero_Dark_Seer.NormalPunch.Lv"..RandomInt(1, 3))
+        hTarget:EmitSound("Hero_Dark_Seer.NormalPunch.Lv"..RandomInt(2, 3))
        
         local effect = "particles/units/heroes/hero_dark_seer/dark_seer_attack_normal_punch.vpcf"
         local pfx = ParticleManager:CreateParticle(effect, PATTACH_ABSORIGIN_FOLLOW, caster)
@@ -46,7 +46,7 @@ end
 
 function axe_true_punch:GetIntrinsicModifierName()
     if IsServer() then
-        if self:GetCaster():HasTalent("ability_talent_berserk_12") then
+        if self:GetCaster():HasTalent("talent_axe_berserk_punch_2") then
             return "modifier_axe_true_punch"
         end
     end
@@ -66,11 +66,11 @@ modifier_axe_true_punch = class({
 function modifier_axe_true_punch:OnAttackLanded( params )
     if IsServer() then
     	local caster = self:GetCaster()
-        if caster:HasTalent("ability_talent_berserk_12") then
+        if caster:HasTalent("talent_axe_berserk_punch_2") then
             if params.attacker == caster then--and not caster:PassivesDisabled()
                 local mod = caster:FindModifierByName("modifier_axe_true_punch")
                 local stacks = mod:GetStackCount()
-                if stacks >= caster:FindTalentValue("ability_talent_berserk_12", "attacks") then
+                if stacks >= caster:FindTalentValue("talent_axe_berserk_punch_2", "attacks") then
                     self:GetAbility():Punch(params.target)
                     mod:SetStackCount(0)
                 else
@@ -108,7 +108,7 @@ modifier_axe_true_punch_debuff = class({
 })
 
 function modifier_axe_true_punch_debuff:OnCreated( kv )
-	self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue() / 100
+	self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue(false) / 100
 end
 
 

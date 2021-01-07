@@ -16,41 +16,11 @@ function axe_warrior_counter_helix:OnSpellStart()
 	--DPRINTTABLE(self)
 	local caster = self:GetCaster()
 	if caster:HasTalent("talent_axe_warrior_helix_5") then
-		self:CounterHelix()
-	
-		--[[ с какова то хуя не работает хотя вроде должно
 		local duration = caster:FindTalentValue("talent_axe_warrior_helix_5", "duration")
-		local interval = caster:FindTalentValue("talent_axe_warrior_helix_5", "interval")
-		]]		
-		local tability = caster:FindAbilityByName("talent_axe_warrior_helix_5")
-		local duration = tability:GetSpecialValueFor("duration")
-		local interval = tability:GetSpecialValueFor("interval")
-		self:StartCooldown(tability:GetSpecialValueFor("cooldown"))
-		local spent = 0
-		
-		DPRINT("counterhelix: "..interval.." "..duration.." "..spent)
-		
-		Timers:CreateTimer(interval, function()
-			self:CounterHelix()
-		
-			spent = spent + interval
-			if spent >= duration then
-				return nil
-			end
-			return interval
-		end)
-		
-		--[[
-		local duration = caster:FindTalentValue("talent_axe_warrior_helix_3", "interval")
-		print("duration ="..duration)
-		--			local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
+		local cooldown = caster:FindTalentValue("talent_axe_warrior_helix_5", "cooldown")
+
 		caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_active", {duration = duration})
-		--			caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
-		]]
-	end
-		
-    if IsServer() then
-	
+		caster:AddNewModifier(caster, self, "modifier_axe_warrior_counter_helix_cooldown", {duration = cooldown})
 	end
 end
 
@@ -225,16 +195,13 @@ modifier_axe_warrior_counter_helix_active = class({
 function modifier_axe_warrior_counter_helix_active:OnCreated( params )
     if IsServer() then
     	local caster = self:GetCaster()
-    	print("111")
-		local interval = caster:FindTalentValue("talent_axe_warrior_helix_5", "interval")
-		print("interval = "..interval)
+ 		local interval = caster:FindTalentValue("talent_axe_warrior_helix_5", "interval")
 		self:StartIntervalThink(interval)
   end
 end
 
 function modifier_axe_warrior_counter_helix_active:OnIntervalThink()
 	if IsServer() then
-    	print("222")
 		local caster = self:GetCaster()
 		caster.mega_helix = true
 		self:GetAbility():CounterHelix()

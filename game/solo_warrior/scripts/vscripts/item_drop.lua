@@ -20,7 +20,7 @@ ItemDrop.item_drop = {
 
 ItemDrop.secret_items = {
 --	["point_name"] = "item_name",
-	["item_spawner_1"] = "item_power_treads",
+	["item_spawner_1"] = "item_extra_life",
 	["item_spawner_2"] = "item_test",
 
 }
