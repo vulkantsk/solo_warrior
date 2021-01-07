@@ -28,10 +28,13 @@ function modifier_axe_berserk_blood:DeclareFunctions()
 	return DFtable
 end
 
-function modifier_axe_berserk_blood:OnCreated()
+function modifier_axe_berserk_blood:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
+
+function modifier_axe_berserk_blood:OnRefresh(kv)
 	local ability = self:GetAbility()
-	self.attack_speed = ability:GetSpecialValueFor("attack_speed")
-    self.attack_bonus = ability:GetSpecialValueFor("attack_bonus")
     if IsServer() then
 		local caster = self:GetCaster()
 		local health_prc = caster:GetHealth()/caster:GetMaxHealth()*100
@@ -48,6 +51,11 @@ function modifier_axe_berserk_blood:OnCreated()
 		if caster:HasTalent("talent_axe_berserk_blood_2") and health_prc < caster:FindTalentValue("talent_axe_berserk_blood_2", "hp_required") then
 			self.talent_bonus = true
 		end
+		
+		self.attack_speed = ability:GetSpecialValueFor("attack_speed") * self:GetStackCount()/100
+		self.attack_bonus = ability:GetSpecialValueFor("attack_bonus") * self:GetStackCount()/100
+		
+		self:SendBuffRefreshToClients()
     end
 end
 
@@ -60,11 +68,11 @@ function modifier_axe_berserk_blood:GetEffectAttachType()
 end
 
 function modifier_axe_berserk_blood:GetModifierAttackSpeedBonus_Constant()
-	return self.attack_speed * self:GetStackCount()/100
+	return self.attack_speed 
 end
 
 function modifier_axe_berserk_blood:GetModifierPreAttack_BonusDamage()
-	return self.attack_bonus * self:GetStackCount()/100
+	return self.attack_bonus 
 end
 
 function modifier_axe_berserk_blood:OnTakeDamage( params )
@@ -83,4 +91,24 @@ end
 
 function modifier_axe_berserk_blood:GetMinHealth()
 	return 1
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_berserk_blood:AddCustomTransmitterData( )
+	return
+	{
+		attack_speed = self.attack_speed,
+		attack_bonus = self.attack_bonus,
+	}
+end
+
+function modifier_axe_berserk_blood:HandleCustomTransmitterData( data )
+	if data.attack_speed ~= nil then
+		self.attack_speed = tonumber( data.attack_speed )
+	end
+
+	if data.attack_bonus ~= nil then
+		self.attack_bonus = tonumber( data.attack_bonus )
+	end
 end

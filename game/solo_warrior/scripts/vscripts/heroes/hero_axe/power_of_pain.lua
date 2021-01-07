@@ -21,8 +21,12 @@ modifier_axe_power_of_pain = class({
             MODIFIER_EVENT_ON_TAKEDAMAGE,
 		} end,
 })
+function modifier_axe_power_of_pain:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
 
-function modifier_axe_power_of_pain:OnCreated()
+function modifier_axe_power_of_pain:OnRefresh(kv)
 	if IsServer() then 
 		local ability = self:GetAbility()
 		self.caster = self:GetCaster()
@@ -32,6 +36,8 @@ function modifier_axe_power_of_pain:OnCreated()
 		end
 		self.damage_per_str = ability:GetSpecialValueFor("damage_per_str")
 		self.radius = ability:GetSpecialValueFor("radius")
+		
+		self:SendBuffRefreshToClients()
 	end
 end
 
@@ -88,5 +94,20 @@ function modifier_axe_power_of_pain:OnTakeDamage( params )
 			if not self.take_damage then self.take_damage = 0 end
 			self.take_damage = self.take_damage + params.damage
 		end
+	end
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_power_of_pain:AddCustomTransmitterData( )
+	return
+	{
+		bonus_str = self.bonus_str,
+	}
+end
+
+function modifier_axe_power_of_pain:HandleCustomTransmitterData( data )
+	if data.bonus_str ~= nil then
+		self.bonus_str = tonumber( data.bonus_str )
 	end
 end

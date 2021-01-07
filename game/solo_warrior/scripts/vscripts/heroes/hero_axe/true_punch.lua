@@ -107,11 +107,34 @@ modifier_axe_true_punch_debuff = class({
 		} end,
 })
 
-function modifier_axe_true_punch_debuff:OnCreated( kv )
-	self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue(false) / 100
+function modifier_axe_true_punch_debuff:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
+
+function modifier_axe_true_punch_debuff:OnRefresh(kv)
+	if IsServer() then
+		self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue(false) / 100
+		self:SendBuffRefreshToClients()
+	end
 end
 
 
 function modifier_axe_true_punch_debuff:GetModifierPhysicalArmorBonus()
 	return -self:GetStackCount() * self.nArmorReductionPerStack
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_true_punch_debuff:AddCustomTransmitterData( )
+	return
+	{
+		nArmorReductionPerStack = self.nArmorReductionPerStack,
+	}
+end
+
+function modifier_axe_true_punch_debuff:HandleCustomTransmitterData( data )
+	if data.nArmorReductionPerStack ~= nil then
+		self.nArmorReductionPerStack = tonumber( data.nArmorReductionPerStack )
+	end
 end

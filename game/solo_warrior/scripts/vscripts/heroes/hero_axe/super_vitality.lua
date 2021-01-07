@@ -98,7 +98,7 @@ modifier_axe_super_vitality_buff = class({
 })
 
 function modifier_axe_super_vitality_buff:GetModifierConstantHealthRegen()
-	if IsServer() then
+	if IsServer() and self then
 		return self:GetStackCount()*self.regen
 	end
 end

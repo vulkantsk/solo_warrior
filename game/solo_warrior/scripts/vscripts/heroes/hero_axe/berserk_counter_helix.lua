@@ -135,7 +135,33 @@ modifier_axe_berserk_counter_helix_debuff = class({
 		} end,
 })
 
+function modifier_axe_berserk_counter_helix_debuff:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
+
+function modifier_axe_berserk_counter_helix_debuff:OnRefresh(kv)
+	if IsServer() then
+		self.armor = -self:GetCaster():FindTalentValue("talent_axe_berserk_helix_4", "armor_debuff")
+		self:SendBuffRefreshToClients()
+	end
+end
 
 function modifier_axe_berserk_counter_helix_debuff:GetModifierPhysicalArmorBonus()
-	return -self:GetCaster():FindTalentValue("talent_axe_berserk_helix_4", "armor_debuff")
+	return self.armor
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_berserk_counter_helix_debuff:AddCustomTransmitterData( )
+	return
+	{
+		armor = self.armor,
+	}
+end
+
+function modifier_axe_berserk_counter_helix_debuff:HandleCustomTransmitterData( data )
+	if data.armor ~= nil then
+		self.armor = tonumber( data.armor )
+	end
 end

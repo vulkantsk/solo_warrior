@@ -89,15 +89,41 @@ modifier_axe_warrior_wave_debuff = class({
 		} end,
 })
 
-function modifier_axe_warrior_wave_debuff:GetModifierMoveSpeedBonus_Percentage()
+function modifier_axe_warrior_wave_debuff:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
+
+function modifier_axe_warrior_wave_debuff:OnRefresh(kv)
 	if IsServer() then
-		return (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "ms_debuff")
+		self.ms = (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "ms_debuff")
+		self.as = (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "as_debuff")
+		self:SendBuffRefreshToClients()
 	end
 end
 
+function modifier_axe_warrior_wave_debuff:GetModifierMoveSpeedBonus_Percentage()
+	return self.ms
+end
+
 function modifier_axe_warrior_wave_debuff:GetModifierAttackSpeedBonus_Constant()
-	if IsServer() then
-		return (-1)*self:GetCaster():FindTalentValue("talent_axe_warrior_wave_2", "as_debuff")
+	return self.as
+end
+
+function modifier_axe_warrior_wave_debuff:AddCustomTransmitterData( )
+	return
+	{
+		ms = self.ms,
+		as = self.as,
+	}
+end
+
+function modifier_axe_warrior_wave_debuff:HandleCustomTransmitterData( data )
+	if data.ms ~= nil then
+		self.ms = tonumber( data.ms )
+	end
+	if data.as ~= nil then
+		self.as = tonumber( data.as )
 	end
 end
 
@@ -114,13 +140,32 @@ modifier_axe_warrior_wave_buff = class({
 })
 
 function modifier_axe_warrior_wave_buff:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
+
+function modifier_axe_warrior_wave_buff:OnRefresh(kv)
 	if IsServer() then
 		self.armor_bonus = self:GetCaster():FindTalentValue("talent_axe_warrior_wave_3", "armor_bonus")
+		self:SendBuffRefreshToClients()
 	end
 end
 
 function modifier_axe_warrior_wave_buff:GetModifierPhysicalArmorBonus()
-	if IsServer() then
-		return self:GetStackCount()*self.armor_bonus
+	return self:GetStackCount()*self.armor_bonus
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_warrior_wave_buff:AddCustomTransmitterData( )
+	return
+	{
+		armor = self.armor_bonus,
+	}
+end
+
+function modifier_axe_warrior_wave_buff:HandleCustomTransmitterData( data )
+	if data.armor ~= nil then
+		self.armor_bonus = tonumber( data.armor )
 	end
 end

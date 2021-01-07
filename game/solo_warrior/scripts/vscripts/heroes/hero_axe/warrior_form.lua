@@ -55,8 +55,12 @@ modifier_axe_warrior_form = class({
 			MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
 		} end,
 })
+function modifier_axe_warrior_form:OnCreated(kv)
+	self:SetHasCustomTransmitterData( true )
+	self:OnRefresh( kv )
+end
 
-function modifier_axe_warrior_form:OnCreated()
+function modifier_axe_warrior_form:OnRefresh(kv)
 	local ability = self:GetAbility()
 	self.health = ability:GetSpecialValueFor("health")
 	self.armor = ability:GetSpecialValueFor("armor")
@@ -66,6 +70,7 @@ function modifier_axe_warrior_form:OnCreated()
 	if IsServer() then
 		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 1))
 		self:StartIntervalThink(1)
+		self:SendBuffRefreshToClients()
 	end
 end
 
@@ -86,4 +91,34 @@ end
 
 function modifier_axe_warrior_form:GetModifierPhysicalArmorBonus()
 	return self.armor + self.armor_ptp * self:GetStackCount()
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_axe_warrior_form:AddCustomTransmitterData( )
+	return
+	{
+		health = self.health,
+		armor = self.armor,
+		health_per_tp = self.health_per_tp,
+		armor_per_tp = self.armor_per_tp,
+	}
+end
+
+function modifier_axe_warrior_form:HandleCustomTransmitterData( data )
+	if data.health ~= nil then
+		self.health = tonumber( data.health )
+	end
+
+	if data.armor ~= nil then
+		self.armor = tonumber( data.armor )
+	end
+
+	if data.health_per_tp ~= nil then
+		self.health_per_tp = tonumber( data.health_per_tp )
+	end
+
+	if data.armor_per_tp ~= nil then
+		self.armor_per_tp = tonumber( data.armor_per_tp )
+	end
 end
