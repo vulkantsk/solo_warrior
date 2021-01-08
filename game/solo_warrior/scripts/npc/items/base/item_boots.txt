@@ -1,0 +1,27 @@
+"DOTAAbilities"
+{
+	"item_boots_1_3"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFile"                    "items/tier1/baseitem/item_boots_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"tier1/baseitem/boots_1_3"
+
+
+		"ItemAliases"    				"ms"
+//		"MaxUpgradeLevel"				"3"
+//		"ItemBaseLevel"					"3"
+		"ItemCost"						"150"
+ 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_value"			"150"
+			}
+		}
+	}
+}

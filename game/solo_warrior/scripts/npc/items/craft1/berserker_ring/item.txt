@@ -19,7 +19,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"			"30 60 90"
+				"bonus_str"				"30 60 90"
 			}
 			"02"
 			{
@@ -29,7 +29,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_regen_pct"			"2 4 8"
+				"hp_regen_pct"			"1 2 3"
 			}
 		}
 	}
@@ -62,7 +62,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"2 3 5"
+				"hp_regen_pct"			"1 2 3"
 			}
 		}
 	}
@@ -95,7 +95,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"2 3 5"
+				"hp_regen_pct"			"1 2 3"
 			}
 		}
 	}

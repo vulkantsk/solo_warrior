@@ -29,7 +29,10 @@
 		"item"		"item_armor_1_3"
 		"item"		"item_block_1_3"
 		"item"		"item_resist_1_3"
-//		"item"		"item_spell_1_3"		
+//		"item"		"item_spell_1_3"	
+		"item"		"item_boots_1_3"	
+
+
 	}
 
 	"weapons_armor"

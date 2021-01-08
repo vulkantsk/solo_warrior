@@ -44,7 +44,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"5 8"
+				"hp_regen_pct"			"3 4"
 			}
 		}
 	}
@@ -91,7 +91,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"5 8"
+				"hp_regen_pct"			"3 4"
 			}
 		}
 	}

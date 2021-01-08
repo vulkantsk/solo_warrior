@@ -12,3 +12,4 @@
 #base "item_spell.txt"
 #base "item_stat.txt"
 #base "item_str.txt"
+#base "item_boots.txt"
