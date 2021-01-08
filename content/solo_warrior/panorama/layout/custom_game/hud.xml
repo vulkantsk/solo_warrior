@@ -8,14 +8,20 @@
 	
 	<Panel hittest="false" class="root">
 		<Panel id="SpeedrunPanel">
+			<!-->
 			<Panel id="SpeedrunCT">
 				<Label id="currenttime" class="text" text="00:00"/>
 			</Panel>
+			-->
 			<Panel id="SpeedrunPB">
-				<Label id="personalbest" class="text" text="PB: 00:00"/>
+				<Label id="personalbest" class="text" text="Personal Best is 00:00"/>
 			</Panel>
 			<Panel id="SpeedrunWR">
-				<Label id="worldrecord" class="text" text="WR: 00:00"/>
+				<Label id="worldrecord" class="text" text="World Record is 00:00 by aaad"/>
+				<Panel id="SpeedrunWRsteam">
+					<DOTAAvatarImage id="worldrecordAva" class="avatar" steamid="local" />
+					<DOTAUserName id="worldrecordName" class="text" steamid="local" />
+				</Panel>
 			</Panel>
 		</Panel>
 	</Panel>

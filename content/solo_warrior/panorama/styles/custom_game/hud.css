@@ -6,11 +6,11 @@
 
 #SpeedrunPanel
 {
-	width: 300px;
-	height: 100px;
-	align: left bottom;
-	margin-left: 150px;
-	flow-children: down;
+	width: 450px;
+	height: 35px;
+	align: center top;
+	margin-left: 620px;
+	flow-children: right;
 	
 	background-color: #00000000;
 }
@@ -24,21 +24,36 @@
 
 #SpeedrunPB
 {
-	width: 100%;
-	font-size: 16px;
-	color: green;
+	align: left middle;
+	vertical-align: middle;
+	width: 40%;
+	color: white;
+	font-size: 15px;
 }
 
 #SpeedrunWR
 {
+	align: right middle;
 	width: 100%;
+	color: white;
 	font-size: 16px;
-	color: yellow;
+	flow-children: down;
+}
+#SpeedrunWRsteam
+{
+	flow-children: right;
+}
+
+.avatar
+{
+	width: 15px;
+	height: 15px;
 }
 
 .text
 {
-	font-family: "Comic Sans MS";
+	text-align: center;
+	font-family: monospaceNumbersFont;
+	font-weight: bold;
 	text-overflow: shrink;
 }
-

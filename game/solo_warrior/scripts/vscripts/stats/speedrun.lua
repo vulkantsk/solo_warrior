@@ -43,13 +43,17 @@ function Speedrun:GetRecords()
 	
 	Timers:CreateTimer(1.0, function()
 		if Speedrun.LastRequestBody["LOADTOP"] == nil then return 0.1 end
-		Speedrun:SetWR(Speedrun:Decode(Speedrun.LastRequestBody["LOADTOP"])[1]["time"])	
-		Speedrun:SetPB(Speedrun:Decode(Speedrun.LastRequestBody["LOADSTAT"])[1]["time"])			
+		
+		local wr = Speedrun:Decode(Speedrun.LastRequestBody["LOADTOP"])[1]
+		Speedrun:SetWR(wr["time"], wr["sid"])
+		local pb = Speedrun:Decode(Speedrun.LastRequestBody["LOADSTAT"])[1]
+		Speedrun:SetPB(pb["time"])			
 	end)
 end
-function Speedrun:SetWR(time)
+function Speedrun:SetWR(time, sid)
 	Speedrun.wr = time
-	CustomGameEventManager:Send_ServerToAllClients( "speedrun_wr", {time = time} )
+	Speedrun.wrSid = sid
+	CustomGameEventManager:Send_ServerToAllClients( "speedrun_wr", {time = time, sid32 = sid, sid64 = Speedrun:ConvertSteamId(sid)} )
 end
 function Speedrun:SetPB(time)
 	Speedrun.pb = time
@@ -104,7 +108,7 @@ function Speedrun:OnPlayerReconnect(keys)
 	Timers:CreateTimer(0, function()
 		if PlayerResource:GetConnectionState(keys.PlayerID) == DOTA_CONNECTION_STATE_CONNECTED then
 			Timers:CreateTimer(2.25, function()
-				Speedrun:SetWR(Speedrun.wr)
+				Speedrun:SetWR(Speedrun.wr, Speedrun.wrSid)
 				Speedrun:SetPB(Speedrun.pb)
 			end)
 		else return 0.1 end
@@ -118,4 +122,13 @@ function Speedrun:OnEntityKilled(keys)
 		Speedrun.alive = false
 		DPRINT("Run's Dead")
 	end
+end
+
+function Speedrun:ConvertSteamId(sid)
+    local a = BigNum.new(sid)
+	local b = BigNum.new("76561197960265728")
+    local c = BigNum.new(0)
+	BigNum.add(a, b, c)
+	c = tostring(c)
+	return c
 end

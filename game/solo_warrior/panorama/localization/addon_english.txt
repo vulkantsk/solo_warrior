@@ -15,6 +15,6 @@
 	"talent_tree_reset_talents"						"Reset Talents"
 
 	//speedrun
-	"speedrun_personalbest"							"PB: "
-	"speedrun_worldrecord"							"WR: "
+	"speedrun_personalbest"							"Personal Best: "
+	"speedrun_worldrecord"							"World Record: $TIME$ by "
 }

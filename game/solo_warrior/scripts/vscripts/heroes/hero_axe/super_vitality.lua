@@ -10,7 +10,7 @@ function axe_super_vitality:OnSpellStart()
 		caster:EmitSound("Hero_Axe.BerserkersCall.Item.Shoutmask")
 				
 		if caster:HasTalent("talent_axe_warrior_vitality_1") then
-			caster:Purge(false, true, false, false, false)
+			caster:Purge(false, true, false, true, false)
 		end
 	end
 end
@@ -71,7 +71,7 @@ function modifier_axe_super_vitality:CheckState()
 end
 
 function modifier_axe_super_vitality:OnIntervalThink()
-	if IsServer() then
+	if IsServer() and self then
 		if self.caster:HasTalent("talent_axe_warrior_vitality_4") then
 			self.caster:Purge(false, true, false, false, false)
 		end
@@ -98,7 +98,7 @@ modifier_axe_super_vitality_buff = class({
 })
 
 function modifier_axe_super_vitality_buff:GetModifierConstantHealthRegen()
-	if IsServer() and self then
+	if IsServer() and self and self.regen then
 		return self:GetStackCount()*self.regen
 	end
 end
@@ -112,7 +112,7 @@ function modifier_axe_super_vitality_buff:GetModifierHealthRegenPercentage()
 end
 
 function modifier_axe_super_vitality_buff:OnCreated(data)
-	if IsServer() then
+	if IsServer() and self and self:GetAbility() then
 		local ability = self:GetAbility()
 		local caster = self:GetCaster()
 		print("total damage = ".. self:GetStackCount())

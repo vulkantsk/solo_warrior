@@ -9,6 +9,7 @@ require("gamemode")
 require("debug/commands")
 require("debug/dprint")
 require("stats/speedrun")
+require("libraries/BigNum")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)
