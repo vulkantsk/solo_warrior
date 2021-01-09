@@ -24,5 +24,130 @@
 				</Panel>
 			</Panel>
 		</Panel>
+		
+		<Button id="SpeedrunRecordsBtn" onactivate="ShowRecords();">
+			<Label class="text speedrunRecordsText" text="#speedrun_records_button"/>
+		</Button>
+		<Panel id="SpeedrunRecords" class="hide">
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr1id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr1name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr1time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+			
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr2id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr2name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr2time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>			
+			
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr3id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr3name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr3time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr4id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr4name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr4time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr5id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr5name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr5time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr6id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr6name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr6time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr7id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr7name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr7time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr8id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr8name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr8time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr9id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr9name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr9time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>
+
+			<Panel class="speedrunrecord">
+				<Panel class="speedrunrecordThing speedrunrecordId">
+					<Label id="sr10id" class="speedrunRecordText" text=""/>
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordName">
+					<DOTAUserName id="sr10name" class="speedrunRecordName" steamid="" />
+				</Panel>
+				<Panel class="speedrunrecordThing speedrunrecordTime">
+					<Label id="sr10time" class="speedrunRecordText" text="00:00"/>
+				</Panel>				
+			</Panel>			
+		</Panel>
 	</Panel>
 </root>

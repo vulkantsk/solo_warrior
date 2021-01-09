@@ -19,9 +19,27 @@ function OnPB(data)
 }
 function OnWR(data)
 {	
-	$("#worldrecord").text = $.Localize("#speedrun_worldrecord").replace("$TIME$", SecondsToMinsNSecs(data["time"]))
+	$("#worldrecord").text = $.Localize("#speedrun_worldrecord").replace("$TIME$", SecondsToMinsNSecs(data["obj"]["1"]["time"]))
 	$("#worldrecordAva").steamid = data["sid64"]
-	$("#worldrecordName").steamid = data["sid32"]
+	$("#worldrecordName").steamid = data["obj"]["1"]["sid"]
+	
+	for(var i = 1; i <= 10; i++)
+	{
+		var j = i.toString()
+		var record = data["obj"][j]
+		
+		if (record != null)
+		{
+			$("#sr"+j+"id").text = "#" + j
+			$("#sr"+j+"name").steamid = record["sid"]
+			$("#sr"+j+"time").text = SecondsToMinsNSecs(record["time"])
+			$("#sr"+j+"id").GetParent().GetParent().SetHasClass("hide", false)
+		}
+		else
+		{
+			$("#sr"+j+"id").GetParent().GetParent().SetHasClass("hide", true)
+		}
+	}
 }
 
 function SecondsToMinsNSecs(seconds)
@@ -33,6 +51,11 @@ function SecondsToMinsNSecs(seconds)
 	if (secs < 10) {secs = "0"+secs}
 	
 	return mins + ":" + secs;
+}
+
+function ShowRecords()
+{
+	$("#SpeedrunRecords").ToggleClass("hide")
 }
 
 function hax()

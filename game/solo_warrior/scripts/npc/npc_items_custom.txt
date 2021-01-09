@@ -1263,11 +1263,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}
@@ -1382,11 +1382,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}
@@ -1501,11 +1501,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}
@@ -1619,11 +1619,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}
@@ -1738,11 +1738,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}
@@ -1857,11 +1857,11 @@
 								
 						"Action"
 						{
-							"Damage"
+							"RunScript"
 							{
-								"Damage"	"%damage"
-								"Type"		"DAMAGE_TYPE_PHYSICAL"
-								"Target"	"TARGET"
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
 							}
 						}
 					}

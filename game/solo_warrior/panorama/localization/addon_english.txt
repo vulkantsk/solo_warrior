@@ -17,4 +17,5 @@
 	//speedrun
 	"speedrun_personalbest"							"Personal Best: "
 	"speedrun_worldrecord"							"World Record: $TIME$ by "
+	"speedrun_records_button"						"Records"
 }

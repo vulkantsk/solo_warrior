@@ -56,4 +56,93 @@
 	font-family: monospaceNumbersFont;
 	font-weight: bold;
 	text-overflow: shrink;
+	text-shadow: 2px 2px 8px 3.0 #000000FF;	
+}
+
+#SpeedrunRecordsBtn
+{
+	align: right top;
+	margin-right: 540px;
+	margin-top: 40px;
+	
+	width: 100px;
+	height: 25px;
+	
+	border: 1px solid #FFFFFF50;	
+	
+	background-color: #FFFFFFFF;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), to( #c0c0c0c0 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), color-stop( 0.3, #ebebebff ), to( #c0c0c0c0 ) );
+	background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #00ff00ff ), to( #0000ffff ) );
+	background-color: #0d1c22ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #3a464bff ), color-stop( 0.23, #0d1c22ff ), to( #0d1c22ff ) );		
+}
+
+.speedrunRecordsText
+{
+	align: middle center;
+	font-size: 20px;
+	color: white;
+}
+
+#SpeedrunRecords
+{
+	align: right top;
+	margin-right: 490px;
+	margin-top: 66px;	
+	
+	width: 200px;
+	height: 300px;
+	flow-children: down;
+}
+
+.hide
+{
+	visibility: collapse;
+}
+
+.speedrunrecord
+{
+	width: 100%;
+	height: 10%;
+	
+	flow-children: right;
+	
+	background-color: #FFFFFFFF;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), to( #c0c0c0c0 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), color-stop( 0.3, #ebebebff ), to( #c0c0c0c0 ) );
+	background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #00ff00ff ), to( #0000ffff ) );
+	background-color: #0d1c22ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #3a464bff ), color-stop( 0.23, #0d1c22ff ), to( #0d1c22ff ) );	
+}
+
+.speedrunRecordText
+{
+	font-family: monospaceNumbersFont;
+	align: middle center;
+	font-size: 17px;
+	text-overflow: shrink;
+	color: white;
+}
+
+.speedrunrecordThing
+{
+	height: 100%;
+}
+.speedrunrecordId
+{
+	width: 15%;
+}
+.speedrunrecordName
+{
+	width: 55%;
+}
+.speedrunrecordTime
+{
+	width: 100%;
+}
+
+.speedrunRecordName
+{
+	font-family: Arial;
+	color: white;
+	text-overflow: shrink;
 }
