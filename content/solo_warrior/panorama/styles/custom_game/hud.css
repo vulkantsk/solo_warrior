@@ -6,7 +6,7 @@
 
 #SpeedrunPanel
 {
-	width: 450px;
+	width: 600px;
 	height: 35px;
 	align: center top;
 	margin-left: 620px;
@@ -29,12 +29,14 @@
 	width: 40%;
 	color: white;
 	font-size: 15px;
+	
+	flow-children: down;
 }
 
 #SpeedrunWR
 {
-	align: right middle;
-	width: 100%;
+	align: right center;
+	width: 54%;
 	color: white;
 	font-size: 16px;
 	flow-children: down;
@@ -145,4 +147,9 @@
 	font-family: Arial;
 	color: white;
 	text-overflow: shrink;
+}
+
+.pbb
+{
+	align: middle center;
 }

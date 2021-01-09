@@ -46,17 +46,20 @@ function Speedrun:GetRecords()
 		
 		local wr = Speedrun:Decode(Speedrun.LastRequestBody["LOADTOP"])
 		Speedrun:SetWR(wr)
-		local pb = Speedrun:Decode(Speedrun.LastRequestBody["LOADSTAT"])[1]
-		Speedrun:SetPB(pb["time"])			
+		local pb = Speedrun:Decode(Speedrun.LastRequestBody["LOADSTAT"])
+		--DPRINTTABLE(pb)
+		Speedrun:SetPB(pb["0"]["time"], pb["pos"]["COUNT(*)"], pb["count"]["COUNT(*)"])		
 	end)
 end
 function Speedrun:SetWR(obj)
 	Speedrun.wr = obj
 	CustomGameEventManager:Send_ServerToAllClients( "speedrun_wr", {obj = obj, sid64 = Speedrun:ConvertSteamId(obj[1]["sid"])} )
 end
-function Speedrun:SetPB(time)
+function Speedrun:SetPB(time, pos, max)
 	Speedrun.pb = time
-	CustomGameEventManager:Send_ServerToAllClients( "speedrun_pb", {time = time} )
+	Speedrun.pbPos = pos
+	Speedrun.pbMax = max
+	CustomGameEventManager:Send_ServerToAllClients( "speedrun_pb", {time = time, pos = pos, max = max} )
 end
 
 function Speedrun:Decode(body)
@@ -108,7 +111,7 @@ function Speedrun:OnPlayerReconnect(keys)
 		if PlayerResource:GetConnectionState(keys.PlayerID) == DOTA_CONNECTION_STATE_CONNECTED then
 			Timers:CreateTimer(2.25, function()
 				Speedrun:SetWR(Speedrun.wr)
-				Speedrun:SetPB(Speedrun.pb)
+				Speedrun:SetPB(Speedrun.pb, Speedrun.pbPos, Speedrun.pbMax)
 			end)
 		else return 0.1 end
 	end)

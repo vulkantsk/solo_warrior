@@ -16,6 +16,7 @@ function OnTime(data)
 function OnPB(data)
 {
 	$("#personalbest").text = $.Localize("#speedrun_personalbest") + SecondsToMinsNSecs(data["time"])
+	$("#personalpos").text = "#" + data["pos"] + "/" + data["max"] 
 }
 function OnWR(data)
 {	
@@ -65,6 +66,20 @@ function hax()
 		parent = parent.GetParent();
 	
 	parent.FindChildTraverse("TopBarDireTeamContainer").visible = false;
+	parent.FindChildTraverse("TopBarRadiantScore").visible = false;
+	
+	var players = parent.FindChildrenWithClassTraverse("TopBarPlayerSlot")
+	for (var i = 0; i < players.length; i++)
+	{
+		if (players[i].id != "RadiantPlayer0")
+		{
+			players[i].visible = false;
+		}
+		else
+		{
+			players[i].style.marginRight = "15px;"
+		}
+	}
 	
 	return parent;
 }

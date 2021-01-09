@@ -14,7 +14,8 @@
 			</Panel>
 			-->
 			<Panel id="SpeedrunPB">
-				<Label id="personalbest" class="text" text="Personal Best is 00:00"/>
+				<Label id="personalbest" class="pbb text" text="Personal Best is 00:00"/>
+				<Label id="personalpos" class="pbb text" text="0/0"/>
 			</Panel>
 			<Panel id="SpeedrunWR">
 				<Label id="worldrecord" class="text" text="World Record is 00:00 by aaad"/>
