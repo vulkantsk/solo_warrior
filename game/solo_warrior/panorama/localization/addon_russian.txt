@@ -1,0 +1,21 @@
+"addon"
+{
+	"lang"											"Russian"
+	"addonname"										"Solo Warrior"
+	
+	//Teams
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+	"DOTA_GoodGuys"   								"Good Guys"
+	
+	//talent tree
+	"talent_tree_current_talent_points"				"Количество Очков: %POINTS%"
+	"talent_tree_reset_talents"						"Сбросить Таланты"
+
+	//speedrun
+	"speedrun_personalbest"							"Личный Рекорд: "
+	"speedrun_worldrecord"							"Мировой Рекорд: $TIME$, поставил "
+	"speedrun_records_button"						"Рекорды"
+}

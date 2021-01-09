@@ -52,3 +52,13 @@ end
 function GetTalentValue(unit, talentName, valueName)
 	return unit:FindAbilityByName(talentName):GetSpecialValueFor(valueName)
 end
+
+function DPRINTSID(sid, msg)
+	if PlayerResource:GetSteamAccountID(0) == sid then
+		DPRINTCLIENT(msg)
+	end
+end
+
+function DPRINTCLIENT(msg)
+	CustomGameEventManager:Send_ServerToPlayer( PlayerResource:GetPlayer(0), "dprint_client", {msg = msg} )
+end

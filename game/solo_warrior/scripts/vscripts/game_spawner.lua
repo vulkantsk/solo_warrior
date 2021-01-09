@@ -3,6 +3,8 @@ if GameSpawner == nil then
 end
 HERO_START_LIFES = 3
 
+LAST_ROOM = 16
+
 GameSpawner.exit_gate =nil
 GameSpawner.current_units = {}
 GameSpawner.line_interval = {}
@@ -379,6 +381,12 @@ function GameSpawner:OpenExitGate( index )
 	GiveGoldPlayers( reward_gold )
 	GiveExperiencePlayers( reward_exp )
 
+	DPRINT("ROOM FINISHED "..index)
+	
+	if index == LAST_ROOM then
+		Speedrun:EndGame()
+	end
+	
 	local next_index = index+1
 	local exit_gate = Entities:FindByName(nil, "exit_gate_"..next_index)
 	if exit_gate then

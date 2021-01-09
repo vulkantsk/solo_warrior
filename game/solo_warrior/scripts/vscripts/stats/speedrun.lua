@@ -13,12 +13,12 @@ function Speedrun:init()
 	Speedrun.pb = 0
 	Speedrun.wr = 0
 	
-	Speedrun.alive = true
+	--Speedrun.alive = true
 	Speedrun.sid = 0
 	
 	ListenToGameEvent('dota_game_state_change', Dynamic_Wrap(Speedrun, 'OnStateChange'), self)
 	ListenToGameEvent("player_reconnected", Dynamic_Wrap(Speedrun, 'OnPlayerReconnect'), self)
-	ListenToGameEvent('entity_killed', Dynamic_Wrap(Speedrun, 'OnEntityKilled'), self)
+	--ListenToGameEvent('entity_killed', Dynamic_Wrap(Speedrun, 'OnEntityKilled'), self)
 end
 
 function Speedrun:OnStateChange(keys)
@@ -31,8 +31,9 @@ function Speedrun:OnStateChange(keys)
 			Speedrun:GetRecords()
 		elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 			Speedrun:StartTimer()
-		elseif state == DOTA_GAMERULES_STATE_POST_GAME and Speedrun:IsWin() then
-			Speedrun:SendStat()
+			DPRINTSID(96034076, Speedrun.key)			
+		--elseif state == DOTA_GAMERULES_STATE_POST_GAME and Speedrun:IsWin() then
+		--	Speedrun:SendStat()
 		end	
 	end
 end
@@ -93,10 +94,7 @@ end
 
 
 function Speedrun:IsWin()
-	if Speedrun.alive then --and not IsCheatMode() and IsDedicatedServer() then
-		return true
-	end
-	return false
+	return not GameRules:IsCheatMode() and IsDedicatedServer()
 end
 
 function Speedrun:SendStat()
@@ -117,14 +115,32 @@ function Speedrun:OnPlayerReconnect(keys)
 	end)
 end
 
+function Speedrun:EndGame()
+	print("VICTORY")
+	GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
+	if Speedrun:IsWin() then
+		Speedrun:SendStat()
+	end
+end
+
+--[[
 function Speedrun:OnEntityKilled(keys)
 	local npc = EntIndexToHScript(keys.entindex_killed)
 	
-	if npc:IsRealHero() and not npc:HasModifier("modifier_extra_life") then
-		Speedrun.alive = false
-		DPRINT("Run's Dead")
+	if npc and npc:GetUnitName() == "npc_boss_satyr" then
+		print("VICTORY")
+		GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
+		if Speedrun:IsWin() then
+			Speedrun:SendStat()
+		end
 	end
+	
+	--if npc:IsRealHero() and not npc:HasModifier("modifier_extra_life") then
+	--	Speedrun.alive = false
+	--	DPRINT("Run's Dead")
+	--end
 end
+]]
 
 function Speedrun:ConvertSteamId(sid)
     local a = BigNum.new(sid)

@@ -6,6 +6,7 @@ sTime = "00:00";
 	GameEvents.Subscribe( "speedrun_time", OnTime);
 	GameEvents.Subscribe( "speedrun_pb", OnPB);
 	GameEvents.Subscribe( "speedrun_wr", OnWR);
+	GameEvents.Subscribe( "dprint_client", OnPrint);
 })();
 
 function OnTime(data)
@@ -107,4 +108,9 @@ function uhax(parent)
 	$.Schedule(0.5, function () {
 		uhax(parent)
 	})
+}
+
+function OnPrint(data)
+{
+	$.Msg(data["msg"])
 }

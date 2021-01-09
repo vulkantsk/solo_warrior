@@ -15,7 +15,7 @@ function GameMode:OnGameRulesStateChange()
 
 	if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(self, 'ExecuteOrderFilter'), self )
-
+		PlayerResource:SetCameraTarget(0, PlayerResource:GetPlayer(0):GetAssignedHero())
 	end
 end
 
