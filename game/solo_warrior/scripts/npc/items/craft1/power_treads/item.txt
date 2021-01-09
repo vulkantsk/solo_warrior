@@ -1,0 +1,677 @@
+"DOTAAbilities"
+{
+	"item_power_treads_1_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_str"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"		
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Intelligence).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_1_intelligence"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_strength"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+								
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+	"item_power_treads_1_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_agi"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Strength).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_1_strength"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_agility"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+
+	"item_power_treads_1_intelligence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_int"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"1"
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Agility).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_1_agility"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_intelligence"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+	
+	"item_power_treads_2_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_str"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"		
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Intelligence).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_2_intelligence"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_strength"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+								
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+	"item_power_treads_2_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_agi"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Strength).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_2_strength"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_agility"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+
+	"item_power_treads_2_intelligence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_int"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"2"
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Agility).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_2_agility"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_intelligence"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+	
+	"item_power_treads_3_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_str"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"		
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Intelligence).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_3_intelligence"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_strength"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+								
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+	"item_power_treads_3_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_agi"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Strength).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_3_strength"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_agility"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}
+
+
+	"item_power_treads_3_intelligence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_power_treads_int"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1400"
+		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"power treads"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"3"
+		"ItemBaseLevel"					"3"
+			
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"  "55 80 125"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_stat"			"10 15 23"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stat"	    "7 11 17"
+			}
+		}
+		
+		"OnSpellStart"  //Switch to the next version of Power Treads (Agility).
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_power_treads_3_agility"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_power_treads_intelligence"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"					
+				
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_stat"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"			"%bonus_movement_speed"
+				}
+			}
+		}
+	}	
+}

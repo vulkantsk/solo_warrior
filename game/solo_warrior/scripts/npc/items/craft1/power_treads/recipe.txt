@@ -1,0 +1,75 @@
+"DOTAAbilities"
+{
+	"item_recipe_power_treads_1_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"200"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_power_treads_1_strength"
+		"ItemRequirements"
+		{
+			"01"						"item_stat_1_3;item_boots_1_3;"
+		}
+	}
+	
+	"item_recipe_power_treads_2_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_power_treads_2_strength"
+		"ItemRequirements"
+		{
+			"01"						"item_power_treads_1_strength"
+			"02"						"item_power_treads_1_agility"
+			"03"						"item_power_treads_1_intelligence"
+		}
+	}	
+		
+	"item_recipe_power_treads_3_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"450"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_power_treads_3_strength"
+		"ItemRequirements"
+		{
+			"01"						"item_power_treads_2_strength"
+			"02"						"item_power_treads_2_agility"
+			"03"						"item_power_treads_2_intelligence"
+		}
+	}
+}

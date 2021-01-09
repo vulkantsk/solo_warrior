@@ -12,3 +12,5 @@
 #base "rune_sphere/_.txt"
 #base "strong_armor/_.txt"
 #base "thor_axe/_.txt"
+#base "power_treads/_.txt"
+#base "phase_boots/_.txt"

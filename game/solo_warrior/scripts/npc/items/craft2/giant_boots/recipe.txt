@@ -1,0 +1,53 @@
+"DOTAAbilities"
+{
+	
+	"item_recipe_boots_giga_1_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"100"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_boots_giga_1_strength"
+		"ItemRequirements"
+		{
+			"01"						"item_phase_boots_3;item_power_treads_3_strength;"
+			"02"						"item_phase_boots_3;item_power_treads_3_agility;"
+			"03"						"item_phase_boots_3;item_power_treads_3_intelligence;"			
+		}
+	}
+	
+	"item_recipe_boots_giga_2_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_boots_giga_2_strength"
+		"ItemRequirements"
+		{
+			"01"						"item_boots_giga_1_strength"
+			"02"						"item_boots_giga_1_agility"
+			"03"						"item_boots_giga_1_intelligence"			
+		}
+	}		
+}

@@ -1,0 +1,714 @@
+"DOTAAbilities"
+{
+	"item_boots_giga_1_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_1_agility"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}
+	
+	"item_boots_giga_1_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_1_intelligence"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}
+
+	"item_boots_giga_1_intelligence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_1_strength"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}
+
+	"item_boots_giga_2_strength"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_2_agility"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}
+	
+	"item_boots_giga_2_agility"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_2_intelligence"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}
+
+	"item_boots_giga_2_intelligence"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_travel_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3333"
+		"ItemShopTags"					"damage;move_speed;hard_to_tag"
+		"ItemQuality"					"common"
+		"ItemAliases"					"giga"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemPurchasable"				"0"
+		
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"125 145"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"35 53"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_stat"				"23 35"
+			}				
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_all_stat"			"17 26"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"			    	"15 20"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_radius"			    "200"
+			}					
+		}
+		
+		"OnSpellStart"  
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/boots/item_power_treads.lua"
+				"Function"				"OnSpellStart"
+				"itemname"				"item_boots_giga_2_strength"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_item_boots_giga"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stat"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_stat"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stat"	
+				
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+				
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				
+				"ThinkInterval"		"1"
+				"OnIntervalThink"
+				{
+					"ActOnTargets"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Radius"	"%damage_radius"
+							"Teams"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"		"DOTA_UNIT_TARGET_CREEP"
+							"Flags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+						}
+								
+						"Action"
+						{
+							"RunScript"
+							{
+								"ScriptFile"			"items/boots/item_boots_giga.lua"
+								"Function"				"Damage"
+								"Target"				"TARGET"
+							}
+						}
+					}
+				}					
+			}		
+		}
+	}	
+}

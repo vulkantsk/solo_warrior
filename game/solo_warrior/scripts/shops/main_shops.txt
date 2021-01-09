@@ -39,6 +39,9 @@
 
 		"item"		"item_dmg_stat_1_3"
 		"item"		"item_hp_armor_1_3"
+
+		"item"		"item_phase_boots_3"
+		"item"		"item_power_treads_3_strength"
 	}
 			
 	"misc"
@@ -50,6 +53,7 @@
 		"item"		"item_str_resist_stat_hpreg_1_2"
 		"item"		"item_stat_resist_str_hpreg_1_2"
 		"item"		"item_dmg_stat_hp_armor_1_2"
+		"item"		"item_boots_giga_2_strength"
 	}
 	
 	// Level 1 - Green Recipes

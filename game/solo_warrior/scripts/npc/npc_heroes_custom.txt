@@ -17,14 +17,14 @@
 		"Ability6"		"axe_power_of_pain"		
 		"Ability7"		""		                // 7-8 пустая или скрытая ячейка , может служить для замены. например тролль-герой ближник или дальник
 		"Ability8"					"generic_hidden"	                    // 7-8 	, куда 9 делась?)))
-		"Ability10"		"special_bonus_movement_speed_25"                        //10-17 это все таланты
-		"Ability11"		"special_bonus_armor_5"
-		"Ability12"		"special_bonus_attack_speed_25"
-		"Ability13"		"special_bonus_hp_regen_25"
-		"Ability14"		"special_bonus_movement_speed_50"        
-		"Ability15"		"special_bonus_armor_10"
-		"Ability16"		"special_bonus_attack_speed_50"
-		"Ability17"		"special_bonus_hp_regen_50"                        //10-17 это все таланты
+		"Ability10"		""                        //10-17 это все таланты
+		"Ability11"		""
+		"Ability12"		""
+		"Ability13"		""
+		"Ability14"		""        
+		"Ability15"		""
+		"Ability16"		""
+		"Ability17"		""                        //10-17 это все таланты
 
 		// Attack
 		//-------------------------------------------------------------------------------------------------------------

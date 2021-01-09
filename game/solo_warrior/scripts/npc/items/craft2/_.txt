@@ -5,3 +5,4 @@
 #base "sky_reaper/_.txt"
 #base "winter_blade/_.txt"
 #base "wolf_cloak/_.txt"
+#base "giant_boots/_.txt"
