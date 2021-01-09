@@ -68,6 +68,23 @@ function hax()
 	parent.FindChildTraverse("TopBarDireTeamContainer").visible = false;
 	parent.FindChildTraverse("TopBarRadiantScore").visible = false;
 	
+	parent.FindChildTraverse("AghsStatusContainer").visible = false;
+	
+	parent.FindChildTraverse("HUDElements").FindChildTraverse("level_stats_frame").visible = false;
+	parent.FindChildTraverse("HUDElements").FindChildTraverse("StatBranch").visible = false; 
+	parent.FindChildTraverse("HUDElements").FindChildTraverse("PortraitBacker").style.width = "160px;";
+	parent.FindChildTraverse("HUDElements").FindChildTraverse("PortraitBackerColor").style.width = "160px;";
+	parent.FindChildTraverse("StatBranch").SetHasClass("ShowStatBranch", false)
+	parent.FindChildTraverse("StatBranch").style.visibility = "collapse;";
+	parent.FindChildTraverse("StatBranch").enabled = false;
+	parent.FindChildTraverse("StatBranch").hittest = false;
+	parent.FindChildTraverse("StatBranch").hittestchildren = false;
+	parent.FindChildTraverse("StatBranch").SetPanelEvent("onhover", function () {
+		parent.FindChildTraverse("StatBranch").enabled = false;
+		parent.FindChildTraverse("StatBranch").hittest = false;
+		parent.FindChildTraverse("StatBranch").hittestchildren = false;
+	})	
+
 	var players = parent.FindChildrenWithClassTraverse("TopBarPlayerSlot")
 	for (var i = 0; i < players.length; i++)
 	{
