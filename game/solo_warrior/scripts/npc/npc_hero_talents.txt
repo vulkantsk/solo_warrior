@@ -19,7 +19,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"chance"				"20 40 60 80 100"
+					"chance"				"10 20 30 40 50"
 				}
 			}
 		}
@@ -41,17 +41,17 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"duration"				"4"
+					"duration"				"1 2 3 4 5"
 				}
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"ms_debuff"				"30"
+					"ms_debuff"				"15 20 25 30 45"
 				}
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"as_debuff"				"20"
+					"as_debuff"				"5 10 15 20 25"
 				}
 			}
 		}
@@ -76,7 +76,7 @@
 				"02"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"armor_bonus"			"10.5"
+					"armor_bonus"			"3.5"
 				}
 			}
 		}
@@ -109,7 +109,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_prc"				"50 100 150 200 250"
+					"bonus_prc"				"25 50 75 100 125"
 				}
 			}
 		}
@@ -131,7 +131,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"regen_pct"				"1 2 3 4 5"
+					"regen_pct"				"1 1.5 2 2.5 3"
 				}
 			}
 		}
@@ -164,7 +164,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"2 4 6 8 10"
+					"bonus_chance"			"1 2 3 4 5"
 				}
 			}
 
@@ -236,7 +236,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"interval"				"0.75"
+					"interval"				"1.5"
 				}
 			}
 		}
@@ -257,8 +257,8 @@
 			{
 				"01"
 				{
-					"var_type"				"FIELD_INTEGER"
-					"cd_per_kill"			"1"
+					"var_type"				"FIELD_FLOAT"
+					"cd_per_kill"			"0.5"
 				}
 			}
 		}
@@ -282,12 +282,12 @@
 				"02"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"interval"				"1 0.9 0.8 0.7 0.5"
+					"interval"				"2.5 2 1.5 1 0.5"
 				}
 				"03"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"radius_mult"			"2"
+					"radius_mult"			"1.5"
 				}
 				"04"
 				{
@@ -324,7 +324,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"bonus_str"				"0.5 1 1.5 2 2.5"
+					"bonus_str"				"0.1 0.2 0.3 0.4 0.5"
 				}
 			}
 		}
@@ -346,7 +346,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"part"					"20"
+					"part"					"5"
 				}
 			}
 		}
@@ -370,7 +370,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"2 4 6 8 10"
+					"bonus_chance"			"1 2 3 4 5"
 				}
 			}
 
@@ -458,7 +458,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"armor_debuff"			"1"
+					"armor_debuff"			"5 "
 				}
 				"02"
 				{
@@ -523,7 +523,7 @@
 				"02"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"min_armor"				"2 4 6"
+					"min_armor"				"2 4 6 8 10"
 				}
 				"03"
 				{
