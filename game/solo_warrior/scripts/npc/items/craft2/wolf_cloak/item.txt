@@ -43,8 +43,8 @@
 			}
 			"06"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"3 4"
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"0.9 1.2"
 			}
 		}
 	}
@@ -90,7 +90,7 @@
 			}
 			"06"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"				"FIELD_FLOAT"
 				"hp_regen_pct"			"0.9 1.2"
 			}
 		}

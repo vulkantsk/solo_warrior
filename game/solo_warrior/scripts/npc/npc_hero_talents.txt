@@ -19,7 +19,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"chance"				"10 20 30 40 50"
+					"chance"				"20 25 35 45 50"
 				}
 			}
 		}
@@ -164,7 +164,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"1 2 3 4 5"
+					"bonus_chance"			"3 5 7 10 13"
 				}
 			}
 
@@ -214,7 +214,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"chance"				"1 2 3 4 5"
+					"chance"				"3 5 7 10 13"
 				}
 			}
 		}
@@ -236,7 +236,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_FLOAT"
-					"interval"				"1.5"
+					"interval"				"1.3"
 				}
 			}
 		}

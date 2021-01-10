@@ -19,12 +19,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"				"30 60 90"
+				"bonus_str"				"10 15 23"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_hpreg"			"15 30 45"
+				"bonus_hpreg"			"5 8 12"
 			}
 			"03"
 			{
@@ -61,8 +61,8 @@
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"1 2 3"
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"0.3 0.6 0.9"
 			}
 		}
 	}
@@ -94,8 +94,8 @@
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_pct"			"1 2 3"
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen_pct"			"0.3 0.6 0.9"
 			}
 		}
 	}
