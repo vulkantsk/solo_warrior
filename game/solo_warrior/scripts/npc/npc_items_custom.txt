@@ -185,7 +185,7 @@
 		"01"
 		{
 		  "var_type"          "FIELD_INTEGER"
-		  "amount"              "150"
+		  "amount"              "500"
 		}
 	  }
 
