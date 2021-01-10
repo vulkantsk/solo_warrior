@@ -1,3 +1,5 @@
+var DISABLE_RESET_TALENTS_BTN = true
+
 var TALENTS_CONTAINER, TALENTS_WINDOW, ROWS_DATA;
 var TALENTS_LAYOUT = {
     "lastColumn": -1
@@ -170,5 +172,7 @@ function OnTalentTreeWindowButtonClick() {
     GameEvents.Subscribe("talent_tree_get_state_from_server", OnTalentsState);
 	
 	GameEvents.SendCustomGameEventToServer( "talent_tree_get_talents", {});
+	
+	TALENTS_WINDOW.FindChildTraverse("TalentsResetButton").SetHasClass("hide", DISABLE_RESET_TALENTS_BTN)
 })();
 
