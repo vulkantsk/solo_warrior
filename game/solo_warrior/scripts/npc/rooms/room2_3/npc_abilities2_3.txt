@@ -26,7 +26,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_pct"			"17"
+				"chance_pct"			"20"
 				"LinkedSpecialBonus"	"special_bonus_unique_spirit_breaker_1"
 			}
 			"02"
@@ -48,12 +48,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"knockback_distance"	"143"
+				"knockback_distance"	"0"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"knockback_height"		"50"
+				"knockback_height"		"0"
 			}
 			"07"
 			{
@@ -83,14 +83,14 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_health_regen"			"4 8 12 16"
+				"bonus_health_regen"			"16"
 				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_armor"					"3 6 9 12"
+				"bonus_armor"					"12"
 				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
@@ -116,9 +116,9 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"0.56"
-		"AbilityCooldown"				"5.0"
-		"AbilityManaCost"				"40"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"4.0"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -169,15 +169,15 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"600"
-		"AbilityCastPoint"				"0.45"
+		"AbilityCastPoint"				"0"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20 18 16 14"
+		"AbilityCooldown"				"4"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"65"
+		"AbilityManaCost"				"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -191,18 +191,18 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"8 10 12 14"
+				"bonus_movement_speed"		"14"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"30 40 50 60"
+				"bonus_attack_speed"	"60"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"self_bonus"	"30 50 70 90"
+				"self_bonus"			"90"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
 			}
 			"05"
@@ -285,7 +285,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"bonus_reset_time"				"8 12 16 20"
+				"bonus_reset_time"				"8"
 				"LinkedSpecialBonus"			"special_bonus_unique_ursa_4"
 			}
 			"02"
@@ -296,7 +296,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"				"7 14 21 28"
+				"damage_per_stack"				"28"
 				"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 			}
 		}

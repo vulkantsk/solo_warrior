@@ -82,7 +82,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"knockback_distance"			"100"
+				"knockback_distance"			"0"
 				"LinkedSpecialBonus"	"special_bonus_unique_sniper_3"
 			}
 			"04"
