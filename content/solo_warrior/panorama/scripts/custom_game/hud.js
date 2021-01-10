@@ -66,6 +66,11 @@ function hax()
 	while(parent.id != "Hud")
 		parent = parent.GetParent();
 	
+	if (parent.BHasClass("HUDFlipped"))
+	{
+		parent.FindChildTraverse("TalentTreeWindowButton").style.horizontalAlign = "right"
+	}
+	
 	parent.FindChildTraverse("TopBarDireTeamContainer").visible = false;
 	parent.FindChildTraverse("TopBarRadiantScore").visible = false;
 	
@@ -103,6 +108,8 @@ function hax()
 }
 function uhax(parent)
 {
+	//parent.SetHasClass("HUDFlipped", false)
+	
 	parent.FindChildTraverse("GameTime").text = sTime;
 	
 	$.Schedule(0.5, function () {
