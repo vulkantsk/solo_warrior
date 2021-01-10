@@ -12,6 +12,9 @@
 		"MaxUpgradeLevel"				"2"
 		"ItemBaseLevel"					"1"
  
+ 		"AbilityCooldown"				"20"
+ 		"AbilityManaCost"				"100"
+ 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -58,6 +61,9 @@
 		"ItemAliases"    				"str;resist;stat;hpreg"
 		"MaxUpgradeLevel"				"2"
 		"ItemBaseLevel"					"2"
+ 
+ 		"AbilityCooldown"				"20"
+ 		"AbilityManaCost"				"100"
  
 		// Special
 		//-------------------------------------------------------------------------------------------------------------

@@ -114,7 +114,7 @@ function TalentTree:SetupForHero(hero)
     for i = 1, TalentTree:GetLatestTalentID() do
         hero.talents.level[i] = 0
     end
-    hero.talents.currentPoints = 10
+    hero.talents.currentPoints = 0
 end
 
 function TalentTree:GetHeroCurrentTalentPoints(hero)

@@ -2,6 +2,7 @@
 {
 	"consumables"
 	{
+		"item"		"item_boots_1_3"
 	}
 
 	"attributes"
