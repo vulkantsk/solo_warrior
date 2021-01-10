@@ -59,6 +59,9 @@ function TalentTree:Init()
     self.rows = locarr
     TalentTree:InitPanaromaEvents()
     TalentTree.initialized = true
+	
+	self.talentData = data
+	ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(self, 'OnPlayerLevelUp'), self)	
 end
 
 function TalentTree:InitPanaromaEvents()
@@ -66,6 +69,23 @@ function TalentTree:InitPanaromaEvents()
     CustomGameEventManager:RegisterListener("talent_tree_level_up_talent", Dynamic_Wrap(TalentTree, 'OnTalentTreeLevelUpRequest'))
     CustomGameEventManager:RegisterListener("talent_tree_get_state", Dynamic_Wrap(TalentTree, 'OnTalentTreeStateRequest'))
     CustomGameEventManager:RegisterListener("talent_tree_reset_talents", Dynamic_Wrap(TalentTree, 'OnTalentTreeResetRequest'))
+end
+
+function TalentTree:OnPlayerLevelUp(keys)
+	local player = PlayerResource:GetPlayer(keys.player_id)
+	local level = keys.level
+	local hero = player:GetAssignedHero()
+	local kv = TalentTree.talentData["Points"] 
+	
+	if hero and level >= kv["min_level"] and level <= kv["max_level"] then
+		local points = tonumber(kv["amount"])
+		for k,v in pairs(kv["special_levels"]) do
+			if k == tostring(level) then
+				points = tonumber(v)
+			end
+		end
+		TalentTree:AddTalentPointsToHero(hero, points)
+	end
 end
 
 function TalentTree:OnTalentTreeTalentsRequest(event)

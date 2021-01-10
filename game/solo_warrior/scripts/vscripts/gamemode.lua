@@ -7,7 +7,6 @@ function GameMode:InitGameMode()
 	ListenToGameEvent("npc_spawned",Dynamic_Wrap( self, 'OnNPCSpawned' ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(self, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_non_player_used_ability', Dynamic_Wrap(self, 'OnAbilityUsed'), self)
-	ListenToGameEvent('dota_player_gained_level', Dynamic_Wrap(self, 'OnPlayerLevelUp'), self)
 end
 
 function GameMode:OnGameRulesStateChange()
@@ -104,14 +103,5 @@ function GameMode:OnEntityKilled(keys)
 	
 end
 
-function GameMode:OnPlayerLevelUp(keys)
-	local player = PlayerResource:GetPlayer(keys.player_id)
-	local level = keys.level
-	local hero = player:GetAssignedHero()
-	
-	if hero then
-		TalentTree:AddTalentPointsToHero(hero, 1)
-	end
-end
 --
 GameMode:InitGameMode()
