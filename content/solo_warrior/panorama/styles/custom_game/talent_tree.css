@@ -114,8 +114,8 @@
 }
 
 #TalentTreeWindowButton {
-	width: 124px;
-	height: 125px;
+	width: 150px;
+	height: 150px;
 
     horizontal-align: left;
     vertical-align: bottom;
@@ -152,7 +152,7 @@
 	}
 	100%	
 	{ 
-		opacity: 0.0; 
+		opacity: 0.1; 
 	}
 }
 

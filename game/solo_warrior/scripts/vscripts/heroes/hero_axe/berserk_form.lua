@@ -50,14 +50,28 @@ modifier_axe_berserk_form = class({
 
 function modifier_axe_berserk_form:OnCreated()
 	local ability = self:GetAbility()
+	local caster = self:GetCaster()
 	self.bat = ability:GetSpecialValueFor("bat")
 	self.move_speed = ability:GetSpecialValueFor("move_speed")
 	self.bat_ptp = ability:GetSpecialValueFor("bat_per_tp")
 	self.move_speed_ptp = ability:GetSpecialValueFor("move_speed_per_tp")
 
+	if self.item == nil and caster:GetUnitName()=="npc_dota_hero_axe" then
+		local model = "models/items/axe/ti9_jungle_axe/ti9_jungle_axe_belt.vmdl"
+		self.item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = model})
+		Timers:CreateTimer(0.01,function () self.item:FollowEntity(caster, true) end)
+	end
+
 	if IsServer() then
 		self:SetStackCount(TalentTree:GetColumnTalentPoints(self:GetCaster(), 2))
 		self:StartIntervalThink(1)
+	end
+end
+
+function modifier_axe_berserk_form:OnDestroy()
+	if self.item then
+		self.item:RemoveSelf()
+		self.item = nil
 	end
 end
 
