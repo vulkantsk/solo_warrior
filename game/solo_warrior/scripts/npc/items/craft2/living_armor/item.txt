@@ -44,7 +44,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"8 12"
+				"bonus_health_pct"			"4 5"
 			}
 		}
 	}

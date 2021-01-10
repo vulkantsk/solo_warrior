@@ -29,7 +29,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_pct"			"3 5 8"
+				"bonus_health_pct"			"2 3 4"
 			}
 		}
 	}
