@@ -22,7 +22,7 @@
 		"MovementSpeed"				"350"		// Speed.			
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"spirit_breaker_greater_bash"
+		"Ability1"					"ogre_bash"
 		"Ability2"					"ogre_dragon_knight_blood"
 		"Ability3"					""
 		"Ability4"					""
@@ -179,7 +179,7 @@
 		"MovementSpeed"				"300"		// Speed.		
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					"ursa_fury_swipes"
+		"Ability1"					"ogre_swipes"
 		"Ability2"					"ogre_fervor"
 		"Ability3"					"ogre_chaos_strike"
 		"Ability4"					""
