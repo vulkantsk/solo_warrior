@@ -3,6 +3,8 @@
 	"lang"											"English"
 	"addonname"										"Solo Warrior"
 	
+	"sw_sell_price"									"Sell Price: Item's full cost"
+	
 	//Teams
 	"Unassigned"      								"Unassigned Team"
 	"Spectator"       								"Spectator Team"
@@ -18,4 +20,5 @@
 	"speedrun_personalbest"							"Personal Best: "
 	"speedrun_worldrecord"							"World Record: $TIME$ by "
 	"speedrun_records_button"						"Records"
+	"speedrun_uncompleted"							"Beat the game to see your best time here"
 }

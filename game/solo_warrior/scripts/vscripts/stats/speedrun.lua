@@ -31,7 +31,7 @@ function Speedrun:OnStateChange(keys)
 			Speedrun:GetRecords()
 		elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 			Speedrun:StartTimer()
-			DPRINTSID(96034076, Speedrun.key)			
+			--DPRINTSID(96034076, Speedrun.key)			
 		--elseif state == DOTA_GAMERULES_STATE_POST_GAME and Speedrun:IsWin() then
 		--	Speedrun:SendStat()
 		end	
