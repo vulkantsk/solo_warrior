@@ -3,6 +3,8 @@
 	"lang"											"Russian"
 	"addonname"										"Solo Warrior"
 	
+	"sw_sell_price"									"Цена Продажи: Полная стоимость предмета"
+	
 	//Teams
 	"Unassigned"      								"Unassigned Team"
 	"Spectator"       								"Spectator Team"
@@ -18,4 +20,5 @@
 	"speedrun_personalbest"							"Личный Рекорд: "
 	"speedrun_worldrecord"							"Мировой Рекорд: $TIME$, поставил "
 	"speedrun_records_button"						"Рекорды"
+	"speedrun_uncompleted"							"Пройди игру, чтобы здесь было твоё лучшее время"	
 }
