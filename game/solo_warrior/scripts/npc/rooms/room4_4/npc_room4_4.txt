@@ -5,13 +5,13 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"9555"	// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"1111"		// Base mana.
+		"StatusHealthRegen"			"100// Health regeneration rate.
+		"StatusMana"				"6"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"45"
-        "MagicalResistance"			"25"
+        "MagicalResistance"			"45"
         // Attack
 		//----------------------------------------------------------------
 		"AttackDamageMin"			"1350"		// Damage range min.
@@ -23,8 +23,8 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"boss_satyr_plasma_field"
-		"Ability2"					""
-		"Ability3"					"boss_satyr_jingu_mastery"
+		"Ability2"					"boss_satyr_refraction"
+		"Ability3"					""
 		"Ability4"					""
 			 
 		
@@ -75,7 +75,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"8555"	// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				""		// Base mana.
+		"StatusMana"				"0"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
@@ -142,7 +142,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"7500"		// Base health.
 		"StatusHealthRegen"			"0"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
+		"StatusMana"				"10"		// Base mana.
 		"StatusManaRegen"			"0"		// Mana regeneration rate.	
 		// Armor
 		//----------------------------------------------------------------
