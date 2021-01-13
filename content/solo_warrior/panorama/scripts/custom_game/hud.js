@@ -112,12 +112,14 @@ function uhax(parent)
 	
 	parent.FindChildTraverse("GameTime").text = sTime;
 	
-	var items = parent.FindChildrenWithClassTraverse("AbilityDraftIcon")
+	var items = parent.FindChildrenWithClassTraverse("AbilityDraftUpgradeHeader")
 	for (i = 0; i < items.length; i++)
 	{
 		var desc = items[i].GetParent().GetParent().FindChildTraverse("SellPriceLabel")
-		if (desc != null && desc.text != null) 
+		if (desc != null)
+		{
 			desc.text = $.Localize("sw_sell_price")
+		}
 	}
 	
 	$.Schedule(0.5, function () {
