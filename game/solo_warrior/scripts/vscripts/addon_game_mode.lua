@@ -19,6 +19,8 @@ function Precache( context )
 
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts", context )
 	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts", context )
+	
+	PrecacheResource("particle", "particles/units/heroes/hero_dark_seer/dark_seer_attack_normal_punch.vpcf", context)
 end
 
 function Activate()

@@ -20,7 +20,7 @@ HERO_SHOWCASE_TIME = 0					-- Shocase time on start game
 
 GAMESETUP_lOCK = false
 GAMESETUP_TIME = 15
-PRE_GAME_TIME = 10.0                    -- How long after people select their heroes should the horn blow and the game start?
+PRE_GAME_TIME = 3.0                    -- How long after people select their heroes should the horn blow and the game start?
 POST_GAME_TIME = 30.0                   -- How long should we let people look at the scoreboard before closing the server automatically?
 TREE_REGROW_TIME = 30.0                 -- How long should it take individual trees to respawn after being cut down/destroyed?
 

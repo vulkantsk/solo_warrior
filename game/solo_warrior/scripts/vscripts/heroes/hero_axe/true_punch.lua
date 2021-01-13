@@ -12,24 +12,34 @@ function axe_true_punch:OnSpellStart()
 end
 
 function axe_true_punch:Punch(hTarget)
-    if IsServer() then
-        local caster = self:GetCaster()
+    if IsServer() and hTarget and hTarget:IsAlive()	then
+        DPRINT("NO CRASH 1")
+
+		local caster = self:GetCaster()
         hTarget:EmitSound("Hero_Dark_Seer.NormalPunch.Lv"..RandomInt(2, 3))
        
+		DPRINT("NO CRASH 2")
+	   
         local effect = "particles/units/heroes/hero_dark_seer/dark_seer_attack_normal_punch.vpcf"
         local pfx = ParticleManager:CreateParticle(effect, PATTACH_ABSORIGIN_FOLLOW, caster)
         ParticleManager:SetParticleControl(pfx, 1, hTarget:GetAbsOrigin())
         ParticleManager:SetParticleControl(pfx, 2, hTarget:GetAbsOrigin())
         ParticleManager:ReleaseParticleIndex(pfx)
 
+		DPRINT("NO CRASH 3")
+		
         if caster:HasTalent("talent_axe_berserk_punch_1") then
             local mod = hTarget:AddNewModifier(caster, self, "modifier_axe_true_punch_debuff", {duration = caster:FindTalentValue("talent_axe_berserk_punch_1", "duration")})
             mod:SetStackCount(caster:FindTalentValue("talent_axe_berserk_punch_1", "min_armor_prc"))
         end
 
-        caster:AddNewModifier(caster, self, "modifier_axe_true_punch_crit", {duration = 0.01})
+		DPRINT("NO CRASH 4")
+		
+        caster:AddNewModifier(caster, self, "modifier_axe_true_punch_crit", {})
         caster:PerformAttack(hTarget, true, true, true, true, false, false, true)
         caster:RemoveModifierByName("modifier_axe_true_punch_crit")
+		
+		DPRINT("NO CRASH 5")
 --[[       
           local damageInfo = 
           {
@@ -71,9 +81,14 @@ function modifier_axe_true_punch:OnAttackLanded( params )
                 local mod = caster:FindModifierByName("modifier_axe_true_punch")
                 local stacks = mod:GetStackCount()
                 if stacks >= caster:FindTalentValue("talent_axe_berserk_punch_2", "attacks") then
-                    self:GetAbility():Punch(params.target)
-                    mod:SetStackCount(0)
+					DPRINT("NO CRASH 0")
+					mod:SetStackCount(0)
+					if mod.bool ~= false then
+						mod.bool = false
+						self:GetAbility():Punch(params.target)
+					end
                 else
+					mod.bool = true
                     mod:SetStackCount(stacks+1)
                 end
             end
@@ -113,15 +128,18 @@ function modifier_axe_true_punch_debuff:OnCreated(kv)
 end
 
 function modifier_axe_true_punch_debuff:OnRefresh(kv)
-	if IsServer() then
-		self.nArmorReductionPerStack = self:GetParent():GetPhysicalArmorValue(false) / 100
+	if IsServer() and self:GetParent():IsAlive() then
+		self.nArmorReductionPerStack = (self:GetParent():GetPhysicalArmorValue(false) / 100 * self:GetCaster():FindTalentValue("talent_axe_berserk_punch_1", "min_armor_prc"))
+		DPRINT("axe ult armor red "..self.nArmorReductionPerStack)
 		self:SendBuffRefreshToClients()
 	end
 end
 
 
 function modifier_axe_true_punch_debuff:GetModifierPhysicalArmorBonus()
-	return -self:GetStackCount() * self.nArmorReductionPerStack
+	if self.nArmorReductionPerStack then 
+		return -self:GetStackCount() * self.nArmorReductionPerStack
+	end
 end
 
 --------------------------------------------------------------------------------

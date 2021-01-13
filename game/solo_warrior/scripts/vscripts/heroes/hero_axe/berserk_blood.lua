@@ -21,6 +21,7 @@ function modifier_axe_berserk_blood:DeclareFunctions()
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
         MODIFIER_EVENT_ON_TAKEDAMAGE,
+		MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT,
 	}
     if IsServer() and self.talent_bonus then
 		table.insert(DFtable, MODIFIER_PROPERTY_MIN_HEALTH)
@@ -29,13 +30,14 @@ function modifier_axe_berserk_blood:DeclareFunctions()
 end
 
 function modifier_axe_berserk_blood:OnCreated(kv)
+	self.invu = false
 	self:SetHasCustomTransmitterData( true )
 	self:OnRefresh( kv )
 end
 
 function modifier_axe_berserk_blood:OnRefresh(kv)
 	local ability = self:GetAbility()
-    if IsServer() then
+    if IsServer() then	
 		local caster = self:GetCaster()
 		local health_prc = caster:GetHealth()/caster:GetMaxHealth()*100
 		local stackCount = 0
@@ -78,16 +80,39 @@ end
 function modifier_axe_berserk_blood:OnTakeDamage( params )
 	if IsServer() then
     	local caster = self:GetCaster()
-		if caster:HasTalent("talent_axe_berserk_blood_1") then
-			if params.attacker == self:GetParent() then
-				if params.unit and params.unit:GetHealth() < 1 then
+		if caster:HasTalent("talent_axe_berserk_blood_2") then
+			if params.unit == self:GetParent() then
+				if params.unit and params.unit:GetHealth() <= (params.unit:GetMaxHealth() / 100 * caster:FindTalentValue("talent_axe_berserk_blood_2", "hp_required")) then
+					DPRINT("axe less then 30 hp talent")
+					--[[
 					local heal = params.unit:GetMaxHealth()*caster:FindTalentValue("talent_axe_berserk_blood_1", "hp_pct")/100
 					caster:Heal(heal, caster)	
+					]]
+					self.invu = true
 				end
 			end
 		end
 	end
 end
+
+function modifier_axe_berserk_blood:OnTakeDamageKillCredit( params )
+    if IsServer() then
+        if params.attacker == self:GetParent() and self:GetParent():HasTalent("talent_axe_berserk_blood_1")	then 
+			local amount = (self:GetParent():GetMaxHealth() * (self:GetParent():FindTalentValue("talent_axe_berserk_blood_1", "hp_pct") / 100))
+			self:GetParent():Heal(amount, self:GetAbility())
+			SendOverheadEventMessage( self:GetParent(), OVERHEAD_ALERT_HEAL , self:GetParent(), math.floor( amount ), nil )
+        end 
+    end 
+end
+
+function modifier_axe_berserk_blood:CheckState()
+	if IsServer() then
+		return {
+			[MODIFIER_STATE_INVULNERABLE] = self.invu,
+		}
+	end
+end
+
 
 function modifier_axe_berserk_blood:GetMinHealth()
 	return 1
