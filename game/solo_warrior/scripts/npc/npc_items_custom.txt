@@ -200,4 +200,30 @@
 		}
 	  }
 	}	
+	
+	"item_help"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ItemBaseLevel"                 "1"
+		
+		"Modifiers"
+		{
+			"modifier_ancient"
+			{	
+				"Passive"	"1"
+			    "IsHidden"	"1"
+				"Priority"  "MODIFIER_PRIORITY_ULTRA"
+			
+				"Properties"
+				{
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"  "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"   "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"  "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
 }

@@ -103,5 +103,11 @@ function GameMode:OnEntityKilled(keys)
 	
 end
 
+function GameMode:ItemHelp_GiveModifier(unit, sModifierName, keys)
+	local item = CreateItem("item_help", nil, nil)
+    item:ApplyDataDrivenModifier(unit, unit, sModifierName, keys)
+	UTIL_Remove(item)
+end
+
 --
 GameMode:InitGameMode()

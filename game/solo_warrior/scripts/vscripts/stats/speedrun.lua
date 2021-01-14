@@ -73,11 +73,12 @@ function Speedrun:StartTimer()
     useGameTime = false,
     endTime = 0,
     callback = function()
-		if not (GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME) then
+		if not Speedrun.Endend then
 			Speedrun.time = Speedrun.time + 1
-			CustomGameEventManager:Send_ServerToAllClients( "speedrun_time", {time = Speedrun.time} )
-			return 1.0
 		end
+		
+		CustomGameEventManager:Send_ServerToAllClients( "speedrun_time", {time = Speedrun.time} )
+		return 1.0
 	end
 	})
 end
@@ -117,10 +118,12 @@ end
 
 function Speedrun:EndGame()
 	print("VICTORY")
-	GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
+	--GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
 	if Speedrun:IsWin() then
 		Speedrun:SendStat()
 	end
+	Speedrun.Endend = true
+	Ending:Start()
 end
 
 --[[

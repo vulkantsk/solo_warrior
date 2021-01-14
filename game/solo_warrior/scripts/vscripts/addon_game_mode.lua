@@ -10,6 +10,7 @@ require("debug/commands")
 require("debug/dprint")
 require("stats/speedrun")
 require("libraries/BigNum")
+require("end")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)
@@ -38,4 +39,5 @@ function Activate()
 	--init zpr stuff
 	Commands:init()
 	Speedrun:init()
+	Ending:init()
 end

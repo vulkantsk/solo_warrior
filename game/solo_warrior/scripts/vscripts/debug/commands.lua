@@ -10,6 +10,7 @@ function Commands:init()
 	--[[ДЕНЬГИ И УРОВЕНЬ]] 		Convars:RegisterCommand( "gig", Dynamic_Wrap(Commands, 'GreedIsGood'), "Greed Is Good, usage: gig {pid}", FCVAR_CHEAT )
 	--[[ПРОВЕРКА ПЕРЕЗАХОДА]]   Convars:RegisterCommand( "trec", Dynamic_Wrap(Commands, 'TestReconnect'), "Test Reconnect", FCVAR_CHEAT ) -- только для speedrun.lua, можно добавить и для events, если будет такой
 	--[[ВЫИГРАТЬ ИГРУ]]  		Convars:RegisterCommand( "win", Dynamic_Wrap(Commands, 'Win'), "win {team}", FCVAR_CHEAT )
+	--[[концовка]]  		Convars:RegisterCommand( "tend", Dynamic_Wrap(Commands, 'TestEnding'), "Test Ending", FCVAR_CHEAT )
 end
 
 -- функции конваров:
@@ -40,4 +41,8 @@ end
 function Commands:Win(team)
 	if not team then team = 2 end
 	GameRules:SetGameWinner(tonumber(team))
+end
+
+function Commands:TestEnding()
+	Ending:Start()
 end

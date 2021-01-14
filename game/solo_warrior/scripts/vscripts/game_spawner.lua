@@ -1,14 +1,14 @@
 if GameSpawner == nil then
 	_G.GameSpawner = class({})
+	
+	HERO_START_LIFES = 3
+	LAST_ROOM = 16
+
+	GameSpawner.exit_gate =nil
+	GameSpawner.current_units = {}
+	GameSpawner.line_interval = {}
+	GameSpawner.wave_index = 0		
 end
-HERO_START_LIFES = 3
-
-LAST_ROOM = 16
-
-GameSpawner.exit_gate =nil
-GameSpawner.current_units = {}
-GameSpawner.line_interval = {}
-GameSpawner.wave_index = 0
 
 GameSpawner.reward_tier = {
 	[1] = {"item_str_1_3","item_stat_1_3","item_dmg_1_3","item_hp_1_3","item_hpreg_1_3","item_str_1_3",},
@@ -261,6 +261,7 @@ function GameSpawner:SpawnUnits(index)
 
 		for i=1, unit_count do			
 			local point = points[RandomInt(1,#points)]:GetAbsOrigin() 
+			DPRINT("spawning "..unit_name)
 			local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
 			unit.reward = true
 			local ent_index = unit:entindex()
