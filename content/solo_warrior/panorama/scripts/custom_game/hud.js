@@ -7,7 +7,33 @@ sTime = "00:00";
 	GameEvents.Subscribe( "speedrun_pb", OnPB);
 	GameEvents.Subscribe( "speedrun_wr", OnWR);
 	GameEvents.Subscribe( "dprint_client", OnPrint);
+	//GameEvents.Subscribe( "sw_msg", OnChat);
 })();
+
+/*
+function OnChat(data)
+{
+	var parent = $.GetContextPanel().GetParent();
+	while(parent.id != "Hud")
+		parent = parent.GetParent();
+	
+	var chat = parent.FindChildTraverse("ChatLinesPanel")
+	var cMsg = chat.GetChild(chat.GetChildCount()-1)
+	
+	if(cMsg && cMsg.text)
+	{
+		var arr = cMsg.text.split("$$")
+		cMsg.text = ""
+		for(i = 0; i < arr.length; i++)
+		{
+			cMsg.text = cMsg.text + " " + $.Localize(arr[i])
+		}
+		
+		if(data["s2"] > 0){cMsg.text = cMsg.text.replace("%s2", data["s2"].toString)}
+		if(data["s1"] > 0){cMsg.text = cMsg.text.replace("%s1", data["s1"].toString)}
+	}
+}
+*/
 
 function OnTime(data)
 {

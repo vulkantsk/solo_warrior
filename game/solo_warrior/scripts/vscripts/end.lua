@@ -2,6 +2,9 @@ if Ending == nil then
 	_G.Ending = class({})
 end
 
+END_ALLIES_COUNT = 4
+END_ENEMIES_COUNT = 5
+
 --[[
 vmap point name example:
 sTeam_sName
@@ -9,11 +12,29 @@ sTeam_sName
 dire_ancient
 radiant_spawn1
 ]]
+function Ending:precache(context)
+	for i = 1, END_ALLIES_COUNT do
+		PrecacheUnitByNameSync("npc_sw_ending_unit_radiant_"..i, context)
+	end
+	
+	for i = 1, END_ENEMIES_COUNT do
+		PrecacheUnitByNameSync("npc_sw_ending_unit_dire_"..i, context)
+	end
+	
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_axe.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts", context)	
+end
+
 function Ending:init()
 	DPRINT("ENDING INIT")
-
-	Ending.alliesCount = 4
-	Ending.enemiesCount = 5
 	
 	Ending.point = {}
 	Ending.point["radiant"] = {index = "radiant",}
@@ -36,15 +57,15 @@ end
 
 function Ending:Start()
 	DPRINT("ENDING START")
+	local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
 	
 	--preparing heroes
-	Ending:CreateHeroes(Ending.alliesCount, "radiant", DOTA_TEAM_GOODGUYS)
-	Ending:CreateHeroes(Ending.enemiesCount, "dire", DOTA_TEAM_BADGUYS)
-	FindClearSpaceForUnit(PlayerResource:GetPlayer(0):GetAssignedHero(), Ending.point["radiant"]["spawn5"], true)
+	Ending:CreateHeroes(END_ALLIES_COUNT, "radiant", DOTA_TEAM_GOODGUYS)
+	Ending:CreateHeroes(END_ENEMIES_COUNT, "dire", DOTA_TEAM_BADGUYS)
 	--
 	
 	--preparing buildings
-	Ending:SpawnAncient(DOTA_TEAM_GOODGUYS, Ending.point["radiant"]["ancient"])
+	local ancient = Ending:SpawnAncient(DOTA_TEAM_GOODGUYS, Ending.point["radiant"]["ancient"])
 	Ending:SpawnAncient(DOTA_TEAM_BADGUYS, Ending.point["dire"]["ancient"])
 	--
 	
@@ -53,7 +74,24 @@ function Ending:Start()
 	--
 	
 	--anouncing
-	Ending:ChatMessagesAndPings()
+	Ending:ChatMessagesAndPings(hero)
+	--
+	
+	--hero teleporting
+	Timers:CreateTimer(4.0, function()
+		hero:AddItemByName("item_tpscroll") hero:AddItemByName("item_tpscroll")
+		
+		PlayerResource:SetCameraTarget(0, ancient)
+		Timers:CreateTimer(1.0, function()
+			PlayerResource:SetCameraTarget(0, nil)
+		end)
+	end)
+	
+	--[[
+	Timers:CreateTimer(5.0, function()
+		FindClearSpaceForUnit(hero, Ending.point["radiant"]["spawn5"], true)
+	end)
+	]]
 	--
 end
 
@@ -62,43 +100,82 @@ function Ending:CreateHeroes(count, teamIndex, team)
 	if team == PlayerResource:GetPlayer(0):GetTeam() then owner = PlayerResource:GetPlayer(0) end
 	
 	for i = 1, count do
-		Ending:CreateHero(team, Ending.point[teamIndex]["spawn"..i], owner)
+		Ending:CreateHero(team, Ending.point[teamIndex]["spawn"..i], owner, teamIndex, i)
 	end
 end
 
-function Ending:CreateHero(team, pos, owner)
-	local hero = CreateUnitByName("npc_sw_ending_unit", pos, true, owner, owner, team)
+function Ending:CreateHero(team, pos, owner, teamIndex, id)
+	local name = "npc_sw_ending_unit"
+	if id then name = "npc_sw_ending_unit_"..teamIndex.."_"..id end
+
+	local hero = CreateUnitByName(name, pos, true, owner, owner, team)
 	if owner then
 		hero:SetControllableByPlayer(owner:GetPlayerID(), false)
 		hero:SetOwner(owner)
 	end
 	
-	Timers:CreateTimer(2.0, function()
-		local pos = Ending.point["dire"]["ancient"]
-		if team == DOTA_TEAM_BADGUYS then pos = Ending.point["radiant"]["ancient"] end
-		
-		ExecuteOrderFromTable({ 
-			UnitIndex = hero:GetEntityIndex(), 
-            OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
-            Position = pos,
-            Queue = false
-        }) 
-	end)
+	if team == DOTA_TEAM_BADGUYS then -- убрать если нужно всем давать приказ идти а не только врагам
+		Timers:CreateTimer(2.0, function()
+			local pos = Ending.point["dire"]["ancient"]
+			if team == DOTA_TEAM_BADGUYS then pos = Ending.point["radiant"]["ancient"] end
+			
+			ExecuteOrderFromTable({ 
+				UnitIndex = hero:GetEntityIndex(), 
+				OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+				Position = pos,
+				Queue = false
+			}) 
+		end)
+	end
 end
 
 function Ending:SpawnAncient(team, pos)
 	local ancient = CreateUnitByName("npc_sw_ending_ancient", pos, false, nil, nil, team)
-	
+	ancient:RemoveModifierByName("modifier_invulnerable")
 	GameMode:ItemHelp_GiveModifier(ancient, "modifier_ancient", {})
 	
 	if team == DOTA_TEAM_BADGUYS then
 		ancient:SetOriginalModel("models/props_structures/dire_ancient_base001.vmdl")
 		ancient:SetModel("models/props_structures/dire_ancient_base001.vmdl")
 	end
+	
+	return ancient
 end
 
-function Ending:ChatMessagesAndPings()
+function Ending:ChatMessagesAndPings(unit)
+	local function over()
+		for i = 1,4 do
+			Timers:CreateTimer(i/RandomInt(2,3), function()
+				Ending:SayChat("sw_disconnect_"..i)
+				Timers:CreateTimer(RandomFloat(0.25, 1.25), function()
+					Ending:SayChat("sw_abandone_"..i)
+				end)
+			end)
+		end
+	end
+	
+	Timers:CreateTimer(RandomFloat(0, 4), function()
+		Ending:SayChat("sw_teammate_msg_"..tostring(RandomInt(1,3)))
+	end)
+	
+	for i = 1, 20 do
+		Timers:CreateTimer(i/5, function()
+			Ending:PingUnit(unit, RandomInt(0, 1), {r=RandomInt(0, 255),g=RandomInt(0, 255),b=RandomInt(0, 255)})
+			if i >= 20 then over() end
+		end)
+	end
+end
 
+function Ending:PingUnit(unit, iPingType, color) --ping type: 0 - exclamation mark, 1 - cross --color: {0-255, 0-255, 0-255}
+	if color then
+		PlayerResource:SetCustomPlayerColor(unit:GetPlayerOwnerID(), color.r, color.g, color.b)
+	end
+
+	GameRules:ExecuteTeamPing(unit:GetTeamNumber(), unit:GetOrigin().x, unit:GetOrigin().y, unit, iPingType)
+end
+
+function Ending:SayChat(msg, s1, s2)
+	GameRules:SendCustomMessage(msg, s1 or 0, s2 or 0)
 end
 
 function Ending:OnEntityKilled(keys)
@@ -118,8 +195,4 @@ function Ending:OnEntityKilled(keys)
 			GameRules:SetGameWinner(winner)
 		end
 	end
-end
-
-function Ending:SayChat(msg)
-	GameRules:SendCustomMessage(msg, 0, 0)
 end

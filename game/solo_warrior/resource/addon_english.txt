@@ -25,6 +25,21 @@
 		"DOTA_SUBSHOP_RECIPE_DEFENSE"		            "Armor"
 		"DOTA_SUBSHOP_RECIPE_WEAPONS"		            "Weapon"
 		"DOTA_SUBSHOP_RECIPE_ARTIFACTS"		            "Artifacts"
+		
+		//ENDING
+		"sw_teammate_msg_1"	"<font color='#FFFF00'>vulkantsk</font>: акс ты даун"
+		"sw_teammate_msg_2"	"<font color='#FFFF00'>vulkantsk</font>: axehole delete the game pls</font>"
+		"sw_teammate_msg_3"	"<font color='#FFFF00'>vulkantsk</font>: axe is living in jungle IRL</font>"
+		
+		"sw_disconnect_1"	"<font color='#FF0000'><b>AnnaDemidova has disconnected from the game.</b></font>"
+		"sw_abandone_1"		"AnnaDemidova has abandoned the game."
+		"sw_disconnect_2"	"<font color='#FF0000'><b>vulkantsk has disconnected from the game.</b></font>"
+		"sw_abandone_2"		"vulkantsk has abandoned the game."
+		"sw_disconnect_3"	"<font color='#FF0000'><b>AVONDALE has disconnected from the game.</b></font>"
+		"sw_abandone_3"		"AVONDALE has abandoned the game."
+		"sw_disconnect_4"	"<font color='#FF0000'><b>操你 has disconnected from the game.</b></font>"
+		"sw_abandone_4"		"操你 has abandoned the game."		
+		
 // --HERO   -- ГЕРОЙ
 //Axe       -- Наш Соло Вариор
 		"npc_dota_hero_axe"		"Воитель"
