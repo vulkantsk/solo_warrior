@@ -17,3 +17,5 @@
 #base "room4_2/npc_room4_2.txt"
 #base "room4_3/npc_room4_3.txt"
 #base "room4_4/npc_room4_4.txt"
+
+#base "tfHeroes/_.txt"
