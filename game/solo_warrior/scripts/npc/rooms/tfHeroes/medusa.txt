@@ -25,15 +25,15 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
-        "MagicalResistance"			"0"
+		"ArmorPhysical"				"23"
+        "MagicalResistance"			"65"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"24"
-		"AttackDamageMax"		"30"
-		"AttackRate"		"1.700000"
+		"AttackDamageMin"		"190"
+		"AttackDamageMax"		"210"
+		"AttackRate"		"1.200000"
 		"AttackAnimationPoint"		"0.500000"
 		"AttackAcquisitionRange"		"800"
 		"AttackRange"		"600"
@@ -54,13 +54,13 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.			
+		"MovementSpeed"				"290"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
+		"StatusHealth"				"2300"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
+		"StatusMana"				"2000"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -85,6 +85,7 @@
                 "2"         {"Item"        "item_power_treads"}
                 "3"         {"Item"        "item_skadi"}
                 "4"         {"Item"        "item_butterfly"}
+                "5"         {"Item"        "item_heart"}
             }
 			
             "AttachWearables"

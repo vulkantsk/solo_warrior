@@ -25,14 +25,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
-        "MagicalResistance"			"0"
+		"ArmorPhysical"				"14"
+        "MagicalResistance"			"65"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"		"40"
-		"AttackDamageMax"		"46"
+		"AttackDamageMin"		"90"
+		"AttackDamageMax"		"116"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.500000"
 		"AttackAcquisitionRange"		"600"
@@ -57,9 +57,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
+		"StatusHealth"				"2500"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
+		"StatusMana"				"800"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -82,7 +82,8 @@
                 "1"         {"Item"        "item_cloak"}
                 "2"         {"Item"        "item_tranquil_boots"}
                 "3"         {"Item"        "item_urn_of_shadows"}
-                "3"         {"Item"        "item_rod_of_atos"}
+                "4"         {"Item"        "item_rod_of_atos"}
+                "5"         {"Item"        "item_heart"}
             }
 			
             "AttachWearables"

@@ -9,7 +9,7 @@
 		"IdleExpression"		"scenes/shredder/shredder_exp_idle_01.vcd"
 		"SoundSet"		"Hero_Shredder"
 		"BaseClass"					"npc_dota_creature"
-		"Level"						"17"
+		"Level"						"10"
 		"ModelScale" 				"1"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
@@ -27,14 +27,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
-        "MagicalResistance"			"0"
+		"ArmorPhysical"				"8"
+        "MagicalResistance"			"25"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"		"26"
-		"AttackDamageMax"		"30"
+		"AttackDamageMin"		"110"
+		"AttackDamageMax"		"130"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.360000"
 		"AttackAcquisitionRange"		"600"
@@ -60,8 +60,8 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"1500"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
-		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
+		"StatusMana"				"300"		// Base mana.
+		"StatusManaRegen"			"9"		// Mana regeneration rate.		 
 		
 		// Vision
 		//----------------------------------------------------------------
@@ -80,9 +80,9 @@
 		{
 		"EquippedItems"                                                                     
             {
-                "1"         {"Item"        "item_arcane_boots"}
-                "2"         {"Item"        "item_hood_of_defiance"}
-                "3"         {"Item"        "item_lotus_orb"}
+                "1"         {"Item"        "item_boots"}
+                "2"         {"Item"        "item_cloak"}
+                "3"         {"Item"        "item_bracer"}
                 
             }
 			

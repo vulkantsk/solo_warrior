@@ -25,14 +25,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
-        "MagicalResistance"			"0"
+		"ArmorPhysical"				"18"
+        "MagicalResistance"			"65"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"33"
-		"AttackDamageMax"		"41"
+		"AttackDamageMin"		"133"
+		"AttackDamageMax"		"141"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.4500"
 		"AttackAcquisitionRange"		"800"
@@ -58,9 +58,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
+		"StatusHealth"				"2300"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
+		"StatusMana"				"1700"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -84,6 +84,7 @@
                 "2"         {"Item"        "item_travel_boots"}
                 "3"         {"Item"        "item_aether_lens"}
                 "4"         {"Item"        "item_null_talisman"}
+                "4"         {"Item"        "item_aeon_disk"}
             }
 			
             "AttachWearables"

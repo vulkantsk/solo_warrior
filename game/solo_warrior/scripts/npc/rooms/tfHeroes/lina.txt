@@ -26,14 +26,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"
-        "MagicalResistance"			"0"
+		"ArmorPhysical"				"13"
+        "MagicalResistance"			"25"
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"21"
-		"AttackDamageMax"		"33"
+		"AttackDamageMin"		"70"
+		"AttackDamageMax"		"80"
 		"AttackRate"		"1.600000"
 		"AttackAnimationPoint"		"0.750000"
 		"AttackAcquisitionRange"		"800"
@@ -59,9 +59,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
-		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"500"		// Base mana.
+		"StatusHealth"				"1800"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"1200"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
