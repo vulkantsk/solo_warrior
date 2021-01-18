@@ -79,10 +79,21 @@ function Ending:Start()
 	
 	--hero teleporting
 	Timers:CreateTimer(4.0, function()
-		hero:AddItemByName("item_tpscroll") hero:AddItemByName("item_tpscroll")
-		
 		PlayerResource:SetCameraTarget(0, ancient)
-		Timers:CreateTimer(1.0, function()
+		
+		GameMode.blockOrders = true
+		local item = hero:AddItemByName("item_tpscroll")
+		
+		ExecuteOrderFromTable({
+			UnitIndex = hero:entindex(),
+			OrderType = DOTA_UNIT_ORDER_CAST_POSITION,
+			AbilityIndex = item:entindex(),
+			Position = ancient:GetOrigin(),
+			Queue = false,
+		})
+		
+		Timers:CreateTimer(3.0, function()
+			GameMode.blockOrders = false
 			PlayerResource:SetCameraTarget(0, nil)
 		end)
 	end)

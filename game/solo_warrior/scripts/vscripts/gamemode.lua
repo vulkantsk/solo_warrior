@@ -7,6 +7,8 @@ function GameMode:InitGameMode()
 	ListenToGameEvent("npc_spawned",Dynamic_Wrap( self, 'OnNPCSpawned' ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(self, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_non_player_used_ability', Dynamic_Wrap(self, 'OnAbilityUsed'), self)
+	
+	GameMode.blockOrders = false
 end
 
 function GameMode:OnGameRulesStateChange()
@@ -41,7 +43,7 @@ function GameMode:ExecuteOrderFilter(filterTable)
 		GameMode:SellItem(playerId, unit, ability)
 	end
 
-	return true
+	return not ( GameMode.blockOrders == true and order_type ~= DOTA_UNIT_ORDER_CAST_POSITION) 
 end
 
 function GameMode:SellItem(playerId, unit, item)
