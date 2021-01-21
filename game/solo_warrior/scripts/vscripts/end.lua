@@ -47,8 +47,10 @@ function Ending:init()
 		v["spawn2"] = Ending:GetPoint(index, "spawn2")
 		v["spawn3"] = Ending:GetPoint(index, "spawn3")
 		v["spawn4"] = Ending:GetPoint(index, "spawn4")
-		v["spawn5"] = Ending:GetPoint(index, "spawn5")		
+		v["spawn5"] = Ending:GetPoint(index, "spawn5")	
 	end
+	
+	Ending.point["final_dest"] = Ending:GetPoint("final", "axe_dest")
 end
 
 function Ending:GetPoint(team, name)
@@ -203,7 +205,20 @@ function Ending:OnEntityKilled(keys)
 			local winner = DOTA_TEAM_GOODGUYS
 			if npc:GetTeam() == winner then winner = DOTA_TEAM_BADGUYS end
 			
-			GameRules:SetGameWinner(winner)
+			local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
+			PlayerResource:SetCameraTarget(0, npc)
+			GameMode:ItemHelp_GiveModifier(hero, "modifier_ending", {})
+			ExecuteOrderFromTable({ 
+				UnitIndex = hero:GetEntityIndex(), 
+				OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+				Position = Ending.point["final_dest"],
+				Queue = false
+			}) 
+			GameMode.blockOrders = true
+			
+			Timers:CreateTimer(7.0, function()
+				GameRules:SetGameWinner(winner)
+			end)
 		end
 	end
 end
