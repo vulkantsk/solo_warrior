@@ -25,6 +25,10 @@ ItemDrop.secret_items = {
 	["item_spawner_3"] = "item_gold_coin",
 	["item_spawner_4"] = "item_gold_coin",
 	["item_spawner_5"] = "item_gold_coin",
+	["item_spawner_6"] = "item_gold_coin",
+	["item_spawner_7"] = "item_gold_coin",
+	["item_spawner_8"] = "item_gold_coin",
+	["item_spawner_9"] = "item_gold_coin",
 
 }
 function ItemDrop:InitGameMode()
