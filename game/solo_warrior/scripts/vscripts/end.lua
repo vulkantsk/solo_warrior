@@ -27,12 +27,17 @@ function Ending:precache(context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts", context)
-	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lina.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context)
-	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shadowshaman.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context)
-	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_templar_assassin.vsndevts", context)	
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context)
+	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts", context)	
+	
+	PrecacheUnitByNameSync("npc_dota_goodguys_tower4")
+	PrecacheUnitByNameSync("npc_sw_ending_ancient")
 end
 
 function Ending:init()
@@ -52,6 +57,9 @@ function Ending:init()
 		v["spawn4"] = Ending:GetPoint(index, "spawn4")
 		v["spawn5"] = Ending:GetPoint(index, "spawn5")	
 	end
+	
+	Ending.point["radiant_tower1"] = Ending:GetPoint("radiant", "tower1")
+	Ending.point["radiant_tower2"] = Ending:GetPoint("radiant", "tower2")
 	
 	Ending.point["final_dest"] = Ending:GetPoint("final", "axe_dest")
 	--
@@ -88,6 +96,9 @@ function Ending:Start()
 	--preparing buildings
 	Ending.ancient = Ending:SpawnAncient(DOTA_TEAM_GOODGUYS, Ending.point["radiant"]["ancient"])
 	Ending:SpawnAncient(DOTA_TEAM_BADGUYS, Ending.point["dire"]["ancient"])
+	
+	Ending:SpawnTower(DOTA_TEAM_GOODGUYS, Ending.point["radiant_tower1"])
+	Ending:SpawnTower(DOTA_TEAM_GOODGUYS, Ending.point["radiant_tower2"])
 	--
 	
 	--listeners
@@ -179,6 +190,16 @@ function Ending:SpawnAncient(team, pos)
 	return ancient
 end
 
+function Ending:SpawnTower(team, pos)
+	local tower = CreateUnitByName("npc_dota_goodguys_tower4", pos, false, nil, nil, team)
+	tower:RemoveModifierByName("modifier_invulnerable")
+	GameMode:ItemHelp_GiveModifier(tower, "modifier_ancient", {})
+	
+	tower:SetHealth(tower:GetHealth()*0.15)
+	
+	return tower
+end
+
 function Ending:ChatMessagesAndPings(unit)
 	local function over()
 		for i = 1,4 do
@@ -223,6 +244,12 @@ function Ending:OnEntityKilled(keys)
 		if npc:GetUnitName() == "npc_sw_ending_unit" then
 		
 		end
+		
+		--tower killed
+		if npc:GetUnitName() == "npc_dota_goodguys_tower4" then
+			npc:SetModel("models/props_structures/radiant_tower002_destruction.vmdl")
+			npc:SetOriginalModel("models/props_structures/radiant_tower002_destruction.vmdl")
+		end
 	
 		--ancient killed
 		if npc:GetUnitName() == "npc_sw_ending_ancient" then
@@ -230,6 +257,9 @@ function Ending:OnEntityKilled(keys)
 			if npc:GetTeam() == winner then winner = DOTA_TEAM_BADGUYS end
 			
 			if winner == DOTA_TEAM_GOODGUYS then
+				npc:SetModel("models/props_structures/dire_ancient_base001_destruction.vmdl")
+				npc:SetOriginalModel("models/props_structures/dire_ancient_base001_destruction.vmdl")
+			
 				local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
 				PlayerResource:SetCameraTarget(0, npc)
 				GameMode:ItemHelp_GiveModifier(hero, "modifier_ending", {})
@@ -245,6 +275,9 @@ function Ending:OnEntityKilled(keys)
 					GameRules:SetGameWinner(winner)
 				end)
 			else
+				npc:SetModel("models/props_structures/radiant_ancient001_rock_destruction.vmdl")
+				npc:SetOriginalModel("models/props_structures/radiant_ancient001_rock_destruction.vmdl")
+			
 				GameRules:SetGameWinner(winner)
 			end
 		end
