@@ -4,11 +4,11 @@
 "npc_sw_ending_unit_dire_4" //lina
 	{
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"		"models/heroes/lina/lina.vmdl"
-		"IdleExpression"		"scenes/lina/lina_exp_idle_01.vcd"
-		"SoundSet"		"Hero_Lina"
+		"Model"		"models/heroes/beastmaster/beastmaster.vmdl"
+		"IdleExpression"		"scenes/beastmaster/beastmaster_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Beastmaster"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -17,12 +17,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"lina_dragon_slave"
-		"Ability2"		"lina_light_strike_array"
-		"Ability3"		"lina_fiery_soul"
-		"Ability4"		"generic_hidden"
+		"Ability1"		"beastmaster_wild_axes"
+		"Ability2"		"beastmaster_call_of_the_wild_boar"
+		"Ability3"		"beastmaster_call_of_the_wild_hawk"
+		"Ability4"		"beastmaster_inner_beast"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"lina_laguna_blade"
+		"Ability6"		"beastmaster_primal_roar"
 
 		// Armor
 		//----------------------------------------------------------------

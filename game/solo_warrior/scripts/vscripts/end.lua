@@ -5,6 +5,8 @@ end
 END_ALLIES_COUNT = 4
 END_ENEMIES_COUNT = 5
 
+require("ai/ai_end")
+
 --[[
 vmap point name example:
 sTeam_sName
@@ -73,6 +75,8 @@ function Ending:Start()
 	--preparing heroes
 	Ending:CreateHeroes(END_ALLIES_COUNT, "radiant", DOTA_TEAM_GOODGUYS)
 	Ending:CreateHeroes(END_ENEMIES_COUNT, "dire", DOTA_TEAM_BADGUYS)
+	
+	Timers:CreateTimer(3.0, function() AI_END:Start() end)
 	--[[
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, END_ENEMIES_COUNT)
 	for i = 1, END_ENEMIES_COUNT do
@@ -82,7 +86,7 @@ function Ending:Start()
 	--
 	
 	--preparing buildings
-	local ancient = Ending:SpawnAncient(DOTA_TEAM_GOODGUYS, Ending.point["radiant"]["ancient"])
+	Ending.ancient = Ending:SpawnAncient(DOTA_TEAM_GOODGUYS, Ending.point["radiant"]["ancient"])
 	Ending:SpawnAncient(DOTA_TEAM_BADGUYS, Ending.point["dire"]["ancient"])
 	--
 	
@@ -96,7 +100,7 @@ function Ending:Start()
 	
 	--hero teleporting
 	Timers:CreateTimer(4.0, function()
-		PlayerResource:SetCameraTarget(0, ancient)
+		PlayerResource:SetCameraTarget(0, Ending.ancient)
 		
 		GameMode.blockOrders = true
 		local item = hero:AddItemByName("item_tpscroll")
@@ -105,7 +109,7 @@ function Ending:Start()
 			UnitIndex = hero:entindex(),
 			OrderType = DOTA_UNIT_ORDER_CAST_POSITION,
 			AbilityIndex = item:entindex(),
-			Position = ancient:GetOrigin(),
+			Position = Ending.ancient:GetOrigin(),
 			Queue = false,
 		})
 		
@@ -153,7 +157,12 @@ function Ending:CreateHero(team, pos, owner, teamIndex, id)
 				Position = pos,
 				Queue = false
 			}) 
+			
+			hero.initialGoal = pos
+			hero:SetInitialGoalPosition(pos)
 		end)
+		
+		AI_END:AddUnit(hero)
 	end
 end
 

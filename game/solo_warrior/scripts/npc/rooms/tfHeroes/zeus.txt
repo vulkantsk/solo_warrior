@@ -3,11 +3,11 @@
 "npc_sw_ending_unit_dire_1" //zeus
 	{
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"              "models/heroes/zeus/zeus.vmdl"
-		"IdleExpression"		"scenes/zuus/zuus_exp_idle_01.vcd"
-		"SoundSet"		"Hero_zuus"
+		"Model"		"models/heroes/dazzle/dazzle.vmdl"
+		"IdleExpression"		"scenes/dazzle/dazzle_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Dazzle"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -16,12 +16,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"zuus_arc_lightning"
-		"Ability2"		"zuus_lightning_bolt"
-		"Ability3"		"zuus_static_field"
-		"Ability4"		"zuus_cloud"
+		"Ability1"		"dazzle_poison_touch"
+		"Ability2"		"dazzle_shallow_grave"
+		"Ability3"		"dazzle_shadow_wave"
+		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"zuus_thundergods_wrath"	
+		"Ability6"		"dazzle_bad_juju"
 
 		// Armor
 		//----------------------------------------------------------------

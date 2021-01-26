@@ -4,11 +4,10 @@
 	"npc_sw_ending_unit_dire_3" //cent
 	{
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"		"models/heroes/centaur/centaur.vmdl"
-		"SoundSet"		"Hero_Centaur"
-		"IdleExpression"		"scenes/centaur/centaur_exp_idle_01.vcd"
+		"Model"		"models/heroes/lycan/lycan.vmdl"
+		"SoundSet"		"Hero_Lycan"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -17,12 +16,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"centaur_hoof_stomp"
-		"Ability2"		"centaur_double_edge"
-		"Ability3"		"centaur_return"
+		"Ability1"		"lycan_summon_wolves"
+		"Ability2"		"lycan_howl"
+		"Ability3"		"lycan_feral_impulse"
 		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"centaur_stampede"
+		"Ability6"		"lycan_shapeshift"
 
 		// Armor
 		//----------------------------------------------------------------

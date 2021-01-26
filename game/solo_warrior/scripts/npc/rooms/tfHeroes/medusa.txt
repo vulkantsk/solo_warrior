@@ -3,11 +3,11 @@
 "npc_sw_ending_unit_dire_5" //medusa
 	{
 		// General
-        "vscripts"					"ai/ai_neutral_autocast"
+        //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"		"models/heroes/medusa/medusa.vmdl"
-		"SoundSet"		"Hero_Medusa"
-		"IdleExpression"		"scenes/medusa/medusa_exp_idle_01.vcd"
+		"Model"		"models/heroes/huskar/huskar.vmdl"
+		"IdleExpression"		"scenes/huskar/huskar_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Huskar"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -16,12 +16,12 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"medusa_split_shot"
-		"Ability2"		"medusa_mystic_snake"
-		"Ability3"		"medusa_mana_shield"
+		"Ability1"		"huskar_inner_fire"
+		"Ability2"		"huskar_burning_spear"
+		"Ability3"		"huskar_berserkers_blood"
 		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"medusa_stone_gaze"
+		"Ability6"		"huskar_life_break"
 
 		// Armor
 		//----------------------------------------------------------------
