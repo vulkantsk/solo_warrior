@@ -79,6 +79,18 @@ function GameMode:OnNPCSpawned(keys)
 	local npc = EntIndexToHScript(keys.entindex)
 	local name = npc:GetUnitName()
 	
+	--[[
+	if ZBots:IsBot(npc:GetPlayerOwnerID()) then
+		npc:AddExperience(5000, DOTA_ModifyXP_Unspecified, false, false)
+		
+		ExecuteOrderFromTable({ 
+			UnitIndex = npc:GetEntityIndex(), 
+			OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+			Position = Ending.point["radiant"]["ancient"],
+			Queue = false
+		}) 
+	end
+	]]
 end
 
 function GameMode:OnAbilityUsed(keys)

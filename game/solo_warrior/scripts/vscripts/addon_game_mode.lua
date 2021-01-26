@@ -11,6 +11,7 @@ require("debug/dprint")
 require("stats/speedrun")
 require("libraries/BigNum")
 require("end")
+--require("libraries/zbots")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)

@@ -36,6 +36,7 @@ end
 function Ending:init()
 	DPRINT("ENDING INIT")
 	
+	--finding points origins
 	Ending.point = {}
 	Ending.point["radiant"] = {index = "radiant",}
 	Ending.point["dire"] = {index = "dire",}
@@ -51,6 +52,14 @@ function Ending:init()
 	end
 	
 	Ending.point["final_dest"] = Ending:GetPoint("final", "axe_dest")
+	--
+	
+	--bots
+	--[[
+	ZBots:preload()
+	--GameMode:SetBotsInLateGame(true)
+	]]
+	--
 end
 
 function Ending:GetPoint(team, name)
@@ -64,6 +73,12 @@ function Ending:Start()
 	--preparing heroes
 	Ending:CreateHeroes(END_ALLIES_COUNT, "radiant", DOTA_TEAM_GOODGUYS)
 	Ending:CreateHeroes(END_ENEMIES_COUNT, "dire", DOTA_TEAM_BADGUYS)
+	--[[
+	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, END_ENEMIES_COUNT)
+	for i = 1, END_ENEMIES_COUNT do
+		ZBots:CreateBotForTeam(DOTA_TEAM_BADGUYS, i*0.1)
+	end
+	]]
 	--
 	
 	--preparing buildings
@@ -205,20 +220,24 @@ function Ending:OnEntityKilled(keys)
 			local winner = DOTA_TEAM_GOODGUYS
 			if npc:GetTeam() == winner then winner = DOTA_TEAM_BADGUYS end
 			
-			local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
-			PlayerResource:SetCameraTarget(0, npc)
-			GameMode:ItemHelp_GiveModifier(hero, "modifier_ending", {})
-			ExecuteOrderFromTable({ 
-				UnitIndex = hero:GetEntityIndex(), 
-				OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
-				Position = Ending.point["final_dest"],
-				Queue = false
-			}) 
-			GameMode.blockOrders = true
-			
-			Timers:CreateTimer(7.0, function()
+			if winner == DOTA_TEAM_GOODGUYS then
+				local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
+				PlayerResource:SetCameraTarget(0, npc)
+				GameMode:ItemHelp_GiveModifier(hero, "modifier_ending", {})
+				ExecuteOrderFromTable({ 
+					UnitIndex = hero:GetEntityIndex(), 
+					OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+					Position = Ending.point["final_dest"],
+					Queue = false
+				}) 
+				GameMode.blockOrders = true
+				
+				Timers:CreateTimer(7.0, function()
+					GameRules:SetGameWinner(winner)
+				end)
+			else
 				GameRules:SetGameWinner(winner)
-			end)
+			end
 		end
 	end
 end
