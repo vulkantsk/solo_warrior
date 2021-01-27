@@ -36,8 +36,8 @@ function Ending:precache(context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts", context)
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts", context)	
 	
-	PrecacheUnitByNameSync("npc_dota_goodguys_tower4")
-	PrecacheUnitByNameSync("npc_sw_ending_ancient")
+	PrecacheUnitByNameSync("npc_dota_goodguys_tower4", context)
+	PrecacheUnitByNameSync("npc_sw_ending_ancient", context)
 end
 
 function Ending:init()
@@ -82,9 +82,11 @@ function Ending:Start()
 	
 	--preparing heroes
 	Ending:CreateHeroes(END_ALLIES_COUNT, "radiant", DOTA_TEAM_GOODGUYS)
-	Ending:CreateHeroes(END_ENEMIES_COUNT, "dire", DOTA_TEAM_BADGUYS)
 	
-	Timers:CreateTimer(3.0, function() AI_END:Start() end)
+	Timers:CreateTimer(8.0, function() 
+		Ending:CreateHeroes(END_ENEMIES_COUNT, "dire", DOTA_TEAM_BADGUYS)
+		AI_END:Start() 
+	end)
 	--[[
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, END_ENEMIES_COUNT)
 	for i = 1, END_ENEMIES_COUNT do
@@ -106,11 +108,12 @@ function Ending:Start()
 	--
 	
 	--anouncing
+	EmitGlobalSound("sw.end_voice")
 	Ending:ChatMessagesAndPings(hero)
 	--
 	
 	--hero teleporting
-	Timers:CreateTimer(4.0, function()
+	Timers:CreateTimer(9.0, function()
 		PlayerResource:SetCameraTarget(0, Ending.ancient)
 		
 		GameMode.blockOrders = true
@@ -158,7 +161,7 @@ function Ending:CreateHero(team, pos, owner, teamIndex, id)
 	end
 	
 	if team == DOTA_TEAM_BADGUYS then -- убрать если нужно всем давать приказ идти а не только врагам
-		Timers:CreateTimer(2.0, function()
+		Timers:CreateTimer(5.0, function()
 			local pos = Ending.point["dire"]["ancient"]
 			if team == DOTA_TEAM_BADGUYS then pos = Ending.point["radiant"]["ancient"] end
 			
@@ -195,7 +198,7 @@ function Ending:SpawnTower(team, pos)
 	tower:RemoveModifierByName("modifier_invulnerable")
 	GameMode:ItemHelp_GiveModifier(tower, "modifier_ancient", {})
 	
-	tower:SetHealth(tower:GetHealth()*0.15)
+	tower:SetHealth(tower:GetHealth()*0.20)
 	
 	return tower
 end
@@ -216,10 +219,10 @@ function Ending:ChatMessagesAndPings(unit)
 		Ending:SayChat("sw_teammate_msg_"..tostring(RandomInt(1,3)))
 	end)
 	
-	for i = 1, 20 do
+	for i = 1, 30 do
 		Timers:CreateTimer(i/5, function()
 			Ending:PingUnit(unit, RandomInt(0, 1), {r=RandomInt(0, 255),g=RandomInt(0, 255),b=RandomInt(0, 255)})
-			if i >= 20 then over() end
+			if i >= 30 then Timers:CreateTimer(3.0, function() over()end) end
 		end)
 	end
 end
@@ -259,6 +262,8 @@ function Ending:OnEntityKilled(keys)
 			if winner == DOTA_TEAM_GOODGUYS then
 				npc:SetModel("models/props_structures/dire_ancient_base001_destruction.vmdl")
 				npc:SetOriginalModel("models/props_structures/dire_ancient_base001_destruction.vmdl")
+			
+				CustomGameEventManager:Send_ServerToAllClients( "ending_show", {} )
 			
 				local hero = PlayerResource:GetPlayer(0):GetAssignedHero()
 				PlayerResource:SetCameraTarget(0, npc)

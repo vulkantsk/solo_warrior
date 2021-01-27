@@ -21,4 +21,17 @@
 	"speedrun_worldrecord"							"World Record: $TIME$ by "
 	"speedrun_records_button"						"Records"
 	"speedrun_uncompleted"							"Beat the game to see your best time here"
+	
+	//ending
+	"end_customgame"	"A DotA 2 Custom Game"
+	"end_dev1"			"Vitaly 'vulkantsk' Medvedev"
+	"end_dev1_credits" 	"Idea, Financing"
+	"end_dev2"			"Ivan '//xtz' Ivanov"
+	"end_dev2_credits" 	"Game Design, Level Design"
+	"end_dev3"			"Kiril Zaharenko"
+	"end_dev3_credits" 	"Programing, UI/UX"
+	"end_dev4"			"Matvey Khoroshikh"
+	"end_dev4_credits" 	"Game Design"
+	"end_dev5"			"Roman 'TheProma' Avondale"
+	"end_dev5_credits" 	"Programing, Level Design, UI/UX"	
 }

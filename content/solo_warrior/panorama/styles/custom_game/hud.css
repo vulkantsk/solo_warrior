@@ -4,6 +4,47 @@
 	height: 100%;
 }
 
+#EndingPanel
+{
+	width: 1024px;
+	height: 1024px;
+	align: center middle;
+	flow-children: down;
+}
+
+.endingTitle
+{
+	margin-top: 25px;
+	width: 100%;
+	height: 10%;
+	flow-children: down;
+}
+
+.endingTitle Label
+{
+	horizontal-align: center;
+	color: white;
+	text-shadow: 2px 2px 8px 3.0 #333333b0;
+}
+
+.endingFontSmall
+{
+	font-size: 16px;
+	font-family: "Courier New";
+}
+
+.endingFontBig
+{
+	font-family: "Comic Sans MS";
+	font-size: 28px;
+}
+
+.endingFontHuge
+{
+	font-family: Radiance;
+	font-size: 64px;
+}
+
 #SpeedrunPanel
 {
 	width: 600px;

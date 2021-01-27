@@ -8,7 +8,13 @@ sTime = "00:00";
 	GameEvents.Subscribe( "speedrun_wr", OnWR);
 	GameEvents.Subscribe( "dprint_client", OnPrint);
 	//GameEvents.Subscribe( "sw_msg", OnChat);
+	GameEvents.Subscribe( "ending_show", OnEnding);
 })();
+
+function OnEnding()
+{
+	$("#EndingPanel").SetHasClass("hide", false);
+}
 
 /*
 function OnChat(data)

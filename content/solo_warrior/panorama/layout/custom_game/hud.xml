@@ -7,6 +7,38 @@
     </scripts>
 	
 	<Panel hittest="false" class="root">
+		<Panel id="EndingPanel" class="hide">
+			<Panel class="endingTitle">
+				<Label class="endingFontHuge" text="#addonname"/>
+				<Label class="endingFontSmall" text="#end_customgame"/>
+			</Panel>
+			
+			<Panel class="endingTitle">
+				<Label class="endingFontBig" text="#end_dev1"/>
+				<Label class="endingFontSmall" text="#end_dev1_credits"/>
+			</Panel>	
+
+			<Panel class="endingTitle">
+				<Label class="endingFontBig" text="#end_dev2"/>
+				<Label class="endingFontSmall" text="#end_dev2_credits"/>
+			</Panel>	
+
+			<Panel class="endingTitle">
+				<Label class="endingFontBig" text="#end_dev3"/>
+				<Label class="endingFontSmall" text="#end_dev3_credits"/>
+			</Panel>	
+
+			<Panel class="endingTitle">
+				<Label class="endingFontBig" text="#end_dev4"/>
+				<Label class="endingFontSmall" text="#end_dev4_credits"/>
+			</Panel>	
+
+			<Panel class="endingTitle">
+				<Label class="endingFontBig" text="#end_dev5"/>
+				<Label class="endingFontSmall" text="#end_dev5_credits"/>
+			</Panel>				
+		</Panel>
+	
 		<Panel id="SpeedrunPanel">
 			<!-->
 			<Panel id="SpeedrunCT">
