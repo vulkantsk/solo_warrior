@@ -198,7 +198,7 @@ function Ending:SpawnTower(team, pos)
 	tower:RemoveModifierByName("modifier_invulnerable")
 	GameMode:ItemHelp_GiveModifier(tower, "modifier_ancient", {})
 	
-	tower:SetHealth(tower:GetHealth()*0.20)
+	tower:SetHealth(tower:GetHealth()*0.16)
 	
 	return tower
 end
