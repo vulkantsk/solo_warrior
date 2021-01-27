@@ -1,13 +1,13 @@
 "DOTAUnits"
 {
-"npc_sw_ending_unit_dire_2" //pudge
+"npc_sw_ending_unit_dire_1" //zeus
 	{
 		// General
         //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"		"models/heroes/shadowshaman/shadowshaman.vmdl"
-		"IdleExpression"		"scenes/shadowshaman/shadowshaman_exp_idle_01.vcd"
-		"SoundSet"		"Hero_ShadowShaman"
+		"Model"		"models/heroes/dazzle/dazzle.vmdl"
+		"IdleExpression"		"scenes/dazzle/dazzle_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Dazzle"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -16,28 +16,29 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"shadow_shaman_ether_shock"
-		"Ability2"		"shadow_shaman_voodoo"
-		"Ability3"		"shadow_shaman_shackles"
+		"Ability1"		"dazzle_poison_touch"
+		"Ability2"		"dazzle_shallow_grave"
+		"Ability3"		"dazzle_shadow_wave"
 		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"shadow_shaman_mass_serpent_ward"
+		"Ability6"		"dazzle_bad_juju"
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"14"
+		"ArmorPhysical"				"18"
         "MagicalResistance"			"65"
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"		"90"
-		"AttackDamageMax"		"116"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"133"
+		"AttackDamageMax"		"141"
 		"AttackRate"		"1.700000"
-		"AttackAnimationPoint"		"0.500000"
-		"AttackAcquisitionRange"		"600"
-		"AttackRange"		"150"
-		"ProjectileSpeed"		"0"
+		"AttackAnimationPoint"		"0.4500"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"380"
+		"ProjectileModel"		"particles/units/heroes/hero_zuus/zuus_base_attack.vpcf"
+		"ProjectileSpeed"		"1100"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -57,9 +58,9 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"		// Base health.
+		"StatusHealth"				"2300"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"3000"		// Base mana.
+		"StatusMana"				"1700"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -79,23 +80,20 @@
 		{
 			"EquippedItems"                                                                     
             {
-                "1"         {"Item"        "item_cloak"}
-                "2"         {"Item"        "item_tranquil_boots"}
-                "3"         {"Item"        "item_urn_of_shadows"}
-                "4"         {"Item"        "item_rod_of_atos"}
-                "5"         {"Item"        "item_heart"}
+                "1"         {"Item"        "item_ultimate_scepter"}
+                "2"         {"Item"        "item_travel_boots"}
+                "3"         {"Item"        "item_aether_lens"}
+                "4"         {"Item"        "item_null_talisman"}
+                "4"         {"Item"        "item_aeon_disk"}
             }
 			
             "AttachWearables"
 			{
-  				"Wearable1" { "ItemDef" "4007" }
-  				"Wearable2" { "ItemDef" "258" }
-  				"Wearable3" { "ItemDef" "260" }
-  				"Wearable4" { "ItemDef" "261" }
-  				"Wearable5" { "ItemDef" "262" }	
-			  	"Wearable6" { "ItemDef" "4760" }	
+  				"Wearable1" { "ItemDef" "263" }
+				"Wearable2" { "ItemDef" "264" }
+				"Wearable3" { "ItemDef" "265" }
+				"Wearable3" { "ItemDef" "266" }
 			}
 		}
-
-	}		
+	}	
 }

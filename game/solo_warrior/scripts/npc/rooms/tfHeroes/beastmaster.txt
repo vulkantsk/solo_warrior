@@ -1,7 +1,7 @@
 "DOTAUnits"
 {
 
-"npc_sw_ending_unit_dire_4" //lina
+"npc_sw_ending_unit_dire_4" //beast
 	{
 		// General
         //"vscripts"					"ai/ai_neutral_autocast"
@@ -84,15 +84,16 @@
             {
                 "1"         {"Item"        "item_boots"}
                 "2"         {"Item"        "item_cyclone"}
-                "3"         {"Item"        "item_aether_lens"}
+                "3"         {"Item"        "item_necronomicon_3"}
             }
 			
             "AttachWearables"
 			{
-  				"Wearable1" { "ItemDef" "318" }
-  				"Wearable2" { "ItemDef" "319" }
-  				"Wearable3" { "ItemDef" "320" }
-  				"Wearable4" { "ItemDef" "321" }
+  				"Wearable1" { "ItemDef" "313" }
+  				"Wearable2" { "ItemDef" "314" }
+  				"Wearable3" { "ItemDef" "315" }
+  				"Wearable4" { "ItemDef" "316" }
+  				"Wearable5" { "ItemDef" "317" }
 
 			}
 		}

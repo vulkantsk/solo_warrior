@@ -1,13 +1,13 @@
 "DOTAUnits"
 {
-"npc_sw_ending_unit_dire_5" //medusa
+"npc_sw_ending_unit_dire_2" //pudge
 	{
 		// General
         //"vscripts"					"ai/ai_neutral_autocast"
 		//----------------------------------------------------------------
-		"Model"		"models/heroes/huskar/huskar.vmdl"
-		"IdleExpression"		"scenes/huskar/huskar_exp_idle_01.vcd"
-		"SoundSet"		"Hero_Huskar"
+		"Model"		"models/heroes/shadowshaman/shadowshaman.vmdl"
+		"IdleExpression"		"scenes/shadowshaman/shadowshaman_exp_idle_01.vcd"
+		"SoundSet"		"Hero_ShadowShaman"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"35"
 		"ModelScale" 				"1"
@@ -16,29 +16,28 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"		"huskar_inner_fire"
-		"Ability2"		"huskar_burning_spear"
-		"Ability3"		"huskar_berserkers_blood"
+		"Ability1"		"shadow_shaman_ether_shock"
+		"Ability2"		"shadow_shaman_voodoo"
+		"Ability3"		"shadow_shaman_shackles"
 		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
-		"Ability6"		"huskar_life_break"
+		"Ability6"		"shadow_shaman_mass_serpent_ward"
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"23"
+		"ArmorPhysical"				"14"
         "MagicalResistance"			"65"
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"190"
-		"AttackDamageMax"		"210"
-		"AttackRate"		"1.200000"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"90"
+		"AttackDamageMax"		"116"
+		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.500000"
-		"AttackAcquisitionRange"		"800"
-		"AttackRange"		"600"
-		"ProjectileModel"		"particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"
-		"ProjectileSpeed"		"1200"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -54,13 +53,13 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"290"		// Speed.			
+		"MovementSpeed"				"325"		// Speed.			
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2300"		// Base health.
+		"StatusHealth"				"2500"		// Base health.
 		"StatusHealthRegen"			"15"		// Health regeneration rate.
-		"StatusMana"				"2000"		// Base mana.
+		"StatusMana"				"3000"		// Base mana.
 		"StatusManaRegen"			"5"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -78,25 +77,25 @@
 		"HasInventory"				"1"
 		"Creature"
 		{
-
 			"EquippedItems"                                                                     
             {
-                "1"         {"Item"        "item_manta"}
-                "2"         {"Item"        "item_power_treads"}
-                "3"         {"Item"        "item_skadi"}
-                "4"         {"Item"        "item_butterfly"}
+                "1"         {"Item"        "item_cloak"}
+                "2"         {"Item"        "item_tranquil_boots"}
+                "3"         {"Item"        "item_urn_of_shadows"}
+                "4"         {"Item"        "item_rod_of_atos"}
                 "5"         {"Item"        "item_heart"}
             }
 			
             "AttachWearables"
 			{
-  				"Wearable1" { "ItemDef" "381" }
-  				"Wearable2" { "ItemDef" "382" }
-  				"Wearable3" { "ItemDef" "383" }
-  				"Wearable4" { "ItemDef" "384" }
-  				"Wearable5" { "ItemDef" "385" }	
-	
+  				"Wearable1" { "ItemDef" "246" }
+  				"Wearable2" { "ItemDef" "247" }
+  				"Wearable3" { "ItemDef" "248" }
+  				"Wearable4" { "ItemDef" "249" }
+  				"Wearable5" { "ItemDef" "250" }	
+			  	"Wearable6" { "ItemDef" "251" }	
 			}
 		}
-	}
+
+	}		
 }
