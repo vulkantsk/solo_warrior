@@ -9,130 +9,132 @@
 		{
 		}
 	}
-
-	"npc_dota_hero_axe"
+	"HeroesTalents"
 	{
-		"Warrior"
+		"npc_dota_hero_axe"
 		{
-			"0"		//уровень необходимый для прокачки
+			"Warrior"
 			{
-				"1"   "talent_axe_warrior_helix_1"
+				"0"		//уровень необходимый для прокачки
+				{
+					"1"   "talent_axe_warrior_helix_1"
+				}
+				"3"
+				{
+					"1"   "talent_axe_warrior_vitality_1"
+				}
+				"5"
+				{
+					"1"   "talent_axe_warrior_wave_1"
+					"2"   "talent_axe_warrior_helix_2"
+				}
+				"8"
+				{
+					"1"   "talent_axe_warrior_helix_3"
+				}
+				"10"
+				{
+					"1"   "talent_axe_warrior_helix_5"
+					"2"   "talent_axe_warrior_vitality_3"
+				}
+				"13"
+				{
+					"1"   "talent_axe_warrior_pain_2"
+				}
+				"15"
+				{
+					"1"   "talent_axe_warrior_wave_2"
+					"2"   "talent_axe_warrior_vitality_2"
+				}
+				"18"
+				{
+					"1"   "talent_axe_warrior_vitality_4"
+					"2"   "talent_axe_warrior_wave_3"
+				}
+				"20"
+				{
+					"1"   "talent_axe_warrior_pain_1"
+				}
+				"23"
+				{
+					"1"   "talent_axe_warrior_helix_4"
+				}
+				// "25"
+				// {
+				// 	"1"   "ability_talent_warrior_15"
+				// }
 			}
-			"3"
+			"Berserk"
 			{
-				"1"   "talent_axe_warrior_vitality_1"
+				"0"		//уровень необходимый для прокачки
+				{
+					"1"   "talent_axe_berserk_helix_1"
+				}
+				"3"
+				{
+					"1"   "talent_axe_berserk_culblade_1"
+					"2"   "talent_axe_berserk_blood_1"
+				}
+				"5"
+				{
+					"1"   "talent_axe_berserk_helix_3"
+				}
+				"8"
+				{
+					"1"   "talent_axe_berserk_helix_2"
+					"2"   "talent_axe_berserk_blood_2"
+				}
+				"10"
+				{
+					"1"   "talent_axe_berserk_culblade_2"
+				}
+				"13"
+				{
+					"1"   "talent_axe_berserk_punch_1"
+				}
+				"15"
+				{
+					"1"   "talent_axe_berserk_culblade_3"
+					"2"   "talent_axe_berserk_blood_3"
+				}
+				"18"
+				{
+					"1"   "talent_axe_berserk_blood_4"
+				}
+				"20"
+				{
+					"1"   "talent_axe_berserk_punch_2"
+				}
+				"23"
+				{
+					"1"   "talent_axe_berserk_helix_4"
+				}
+				// "25"
+				// {
+				// 	"1"   "talent_axe_berserk_helix_14"
+				// }
 			}
-			"5"
-			{
-				"1"   "talent_axe_warrior_wave_1"
-				"2"   "talent_axe_warrior_helix_2"
-			}
-			"8"
-			{
-				"1"   "talent_axe_warrior_helix_3"
-			}
-			"10"
-			{
-				"1"   "talent_axe_warrior_helix_5"
-				"2"   "talent_axe_warrior_vitality_3"
-			}
-			"13"
-			{
-				"1"   "talent_axe_warrior_pain_2"
-			}
-			"15"
-			{
-				"1"   "talent_axe_warrior_wave_2"
-				"2"   "talent_axe_warrior_vitality_2"
-			}
-			"18"
-			{
-				"1"   "talent_axe_warrior_vitality_4"
-				"2"   "talent_axe_warrior_wave_3"
-			}
-			"20"
-			{
-				"1"   "talent_axe_warrior_pain_1"
-			}
-			"23"
-			{
-				"1"   "talent_axe_warrior_helix_4"
-			}
-			// "25"
+			// "Util"
 			// {
-			// 	"1"   "ability_talent_warrior_15"
+			// 	"0"		//уровень необходимый для прокачки
+			// 	{
+			// 		"1"   "ability_talent_warrior_1" 	
+			// 		"2"   "ability_talent_warrior_2"
+			// 		"3"   "talent_axe_berserk_helix_1"
+			// 	}
+			// 	"3"
+			// 	{
+			// 		"1"   "ability_talent_1"
+			// 		"2"   "ability_talent_2"
+			// 		"3"   "ability_talent_3"
+			// 	}
+			// 	"5"
+			// 	{
+			// 		"1"   "ability_talent_1"
+			// 		"2"   "ability_talent_2"
+			// 		"3"   "ability_talent_3"
+			// 	}
 			// }
 		}
-		"Berserk"
-		{
-			"0"		//уровень необходимый для прокачки
-			{
-				"1"   "talent_axe_berserk_helix_1"
-			}
-			"3"
-			{
-				"1"   "talent_axe_berserk_culblade_1"
-				"2"   "talent_axe_berserk_blood_1"
-			}
-			"5"
-			{
-				"1"   "talent_axe_berserk_helix_3"
-			}
-			"8"
-			{
-				"1"   "talent_axe_berserk_helix_2"
-				"2"   "talent_axe_berserk_blood_2"
-			}
-			"10"
-			{
-				"1"   "talent_axe_berserk_culblade_2"
-			}
-			"13"
-			{
-				"1"   "talent_axe_berserk_punch_1"
-			}
-			"15"
-			{
-				"1"   "talent_axe_berserk_culblade_3"
-				"2"   "talent_axe_berserk_blood_3"
-			}
-			"18"
-			{
-				"1"   "talent_axe_berserk_blood_4"
-			}
-			"20"
-			{
-				"1"   "talent_axe_berserk_punch_2"
-			}
-			"23"
-			{
-				"1"   "talent_axe_berserk_helix_4"
-			}
-			// "25"
-			// {
-			// 	"1"   "talent_axe_berserk_helix_14"
-			// }
-		}
-		// "Util"
-		// {
-		// 	"0"		//уровень необходимый для прокачки
-		// 	{
-		// 		"1"   "ability_talent_warrior_1" 	
-		// 		"2"   "ability_talent_warrior_2"
-		// 		"3"   "talent_axe_berserk_helix_1"
-		// 	}
-		// 	"3"
-		// 	{
-		// 		"1"   "ability_talent_1"
-		// 		"2"   "ability_talent_2"
-		// 		"3"   "ability_talent_3"
-		// 	}
-		// 	"5"
-		// 	{
-		// 		"1"   "ability_talent_1"
-		// 		"2"   "ability_talent_2"
-		// 		"3"   "ability_talent_3"
-		// 	}
-		// }
 	}
 }

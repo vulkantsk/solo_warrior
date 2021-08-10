@@ -1,32 +1,49 @@
-var DISABLE_RESET_TALENTS_BTN = true
+var DISABLE_RESET_TALENTS_BTN = true,
 
-var TALENTS_CONTAINER, TALENTS_WINDOW, ROWS_DATA;
-var TALENTS_LAYOUT = {
+TALENTS_CONTAINER, TALENTS_WINDOW, ROWS_DATA, ALL_TALENTS, ALL_ROWS, SelectedHero,
+
+TALENTS_LAYOUT = {
     "lastColumn": -1
-};
-var talentsData = {
+},
+talentsData = {
     "talentsCount": 0,
-};
+},
+button = $("#TalentTreeWindowButton"),
+talentsPanel = $("#TalentTreeColumnsContainer")
+
+
+function UpdateSelectedUnit() {
+    let selectedEntity = Players.GetLocalPlayerPortraitUnit()
+    SelectedHero = Entities.GetUnitName(selectedEntity)
+    if(ALL_TALENTS[SelectedHero]){
+        ROWS_DATA = ALL_ROWS[SelectedHero]
+        talentsData = ALL_TALENTS[SelectedHero]
+        talentsData.talentsCount = Object.keys(talentsData).length;
+        talentsPanel.RemoveAndDeleteChildren()
+        TALENTS_LAYOUT = {
+            "lastColumn": -1,
+            "TalentPointsLabel": TALENTS_LAYOUT["TalentPointsLabel"]
+        }
+        BuildTalentTree()
+        GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {"entityIndex": selectedEntity});
+        TALENTS_LAYOUT[TALENTS_LAYOUT["lastColumn"]].SetHasClass("last", true);
+        button.visible = true
+    }else{
+        button.visible = false
+    }
+}
 
 // инициализация древа талантов
 function OnTalentsData(event) {
-    // $.Msg(event);
-    // $.Msg(Object.keys(event.talents).length);
-    // var parsedTalents = JSON.parse(event.talents);
-    // for(var i=1; i <= Object.keys(event.talents).length; i++) {
-        ROWS_DATA = event.rows
-        talentsData = event.talents
-    // }
-    BuildTalentTree(event);
-    talentsData.talentsCount = Object.keys(event.talents).length;
-    // if(talentsData.talentsCount >= event.count) {
-	    GameEvents.SendCustomGameEventToServer( "talent_tree_get_state", {});
-	    TALENTS_LAYOUT[TALENTS_LAYOUT["lastColumn"]].SetHasClass("last", true);
-    // }
+    ALL_ROWS = event.rows
+    ALL_TALENTS = event.talents
+
+    UpdateSelectedUnit()
 }
 
 // обнова значания талантов и кол во поитнов
 function OnTalentsState(event) {
+    $.Msg(event)
     var talentPoints = event.points;
     var parsedStateData = JSON.parse(event.talents);
     for(var i=0; i < parsedStateData.length; i++) {
@@ -42,13 +59,15 @@ function OnTalentsState(event) {
 	$("#TalentTreeWindowButtonActiveImage").SetHasClass("Animate", !hasZeroTalentPoints)
 }
 
-function BuildTalentTree(data) {
-    for (var key in data.talents) {
-        var talentColumn = data.talents[key].Tab;
-        var talentRow = data.rows[data.talents[key].NeedLevel];
+function BuildTalentTree() {
+    for (var key in talentsData) {
+        var talentColumn = talentsData[key].Tab;
+        if(!talentColumn)
+            continue
+        var talentRow = ROWS_DATA[talentsData[key].NeedLevel];
         if (talentColumn == 1)
         {
-            CreateTalentPanel(talentRow, 0, data.talents[key].NeedLevel);
+            CreateTalentPanel(talentRow, 0, talentsData[key].NeedLevel);
         }
         CreateTalentPanel(talentRow, talentColumn, key);
     }
@@ -167,6 +186,10 @@ function OnTalentTreeWindowButtonClick() {
     TALENTS_WINDOW = $("#TalentsWindowContainer")
     TALENTS_CONTAINER = $("#TalentTreeColumnsContainer");
     TALENTS_LAYOUT["TalentPointsLabel"] = $("#CurrentTalentPoints");
+
+    GameEvents.Subscribe("dota_player_update_query_unit",UpdateSelectedUnit)
+    GameEvents.Subscribe('dota_player_update_hero_selection', UpdateSelectedUnit)
+    GameEvents.Subscribe('dota_player_update_selected_unit', UpdateSelectedUnit)
 	
     GameEvents.Subscribe("talent_tree_get_talents_from_server", OnTalentsData);
     GameEvents.Subscribe("talent_tree_get_state_from_server", OnTalentsState);
