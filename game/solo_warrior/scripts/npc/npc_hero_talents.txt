@@ -164,7 +164,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"3 5 7 10 13"
+					"bonus_chance"			"2 4 6 8 10"
 				}
 			}
 
@@ -370,7 +370,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_chance"			"1 2 3 4 5"
+					"bonus_chance"			"2 4 6 8 10"
 				}
 			}
 
@@ -548,7 +548,7 @@
 				"01"
 				{
 					"var_type"				"FIELD_INTEGER"
-					"hp_pct"				"5"
+					"hp_pct"				"10"
 				}
 			}
 		}

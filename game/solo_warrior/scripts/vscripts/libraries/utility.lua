@@ -1879,11 +1879,11 @@ function get_core_cdr(caster)
     return octarine_multiplier
 end
 
-function CDOTAGamerules:GetMaxRound()
+function CDOTAGameRules:GetMaxRound()
 	return GameRules.maxRounds
 end
 
-function CDOTAGamerules:GetCurrentRound()
+function CDOTAGameRules:GetCurrentRound()
 	return GameRules._roundnumber
 end
 
